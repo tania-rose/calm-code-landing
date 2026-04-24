@@ -1,0 +1,159 @@
+<!--
+  carousel.html: Two auto-scrolling carousel variants.
+
+  VARIANT 1: ASHA image carousel (3/2 aspect ratio cards, 40s loop)
+  VARIANT 2: Logo marquee (text or image logos, 20-24s loop)
+
+  DEPENDENCIES: base.html
+
+  USAGE: Duplicate the items array to make the loop seamless. Pause on hover.
+-->
+
+
+<!-- ============================================================
+     VARIANT 1: ASHA IMAGE CAROUSEL
+============================================================ -->
+
+<style>
+  @keyframes carouselSlide {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .location-carousel-track {
+    display: flex; gap: 16px;
+    animation: carouselSlide 40s linear infinite;
+    width: max-content;
+  }
+  .location-carousel-track:hover { animation-play-state: paused; }
+  .location-carousel-wrap { overflow: hidden; position: relative; }
+  .location-carousel-wrap::before,
+  .location-carousel-wrap::after {
+    content: ''; position: absolute;
+    top: 0; bottom: 0; width: 60px;
+    z-index: 2; pointer-events: none;
+  }
+  .location-carousel-wrap::before { left: 0;  background: linear-gradient(to right, #1a1a18, transparent); }
+  .location-carousel-wrap::after  { right: 0; background: linear-gradient(to left,  #1a1a18, transparent); }
+  .location-carousel-item {
+    flex: 0 0 clamp(280px, 30vw, 400px);
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .location-carousel-item img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .location-carousel-item:hover img { transform: scale(1.03); }
+</style>
+
+<section style="background:#1a1a18;padding:64px 0 0;">
+  <div class="max-w-6xl mx-auto px-6 mb-10">
+    <p class="eyebrow mb-4">The Setting</p>
+    <div class="gold-rule"></div>
+    <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-0.02em;color:#fff;margin-bottom:8px;">
+      ASHA Retreat Centre. Tuscany, Italy.
+    </h2>
+    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,0.55);max-width:560px;">
+      15 hectares of untouched land in the Tuscan hills. Stone buildings, olive groves, vineyards, and a natural quiet that does its own work.
+    </p>
+  </div>
+
+  <div class="location-carousel-wrap">
+    <div class="location-carousel-track">
+      <!-- Set 1 -->
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA retreat spaces" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="" loading="lazy" aria-hidden="true" /></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 2: LOGO MARQUEE ("as featured in")
+============================================================ -->
+
+<style>
+  @keyframes logoScroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .logo-marquee {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  }
+  .logo-marquee-track {
+    display: flex; align-items: center; gap: 80px;
+    width: max-content;
+    animation: logoScroll 40s linear infinite;
+  }
+  .logo-marquee:hover .logo-marquee-track { animation-play-state: paused; }
+  .logo-mark {
+    flex-shrink: 0;
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: clamp(20px, 2vw, 26px);
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    transition: color 0.35s, transform 0.35s;
+    line-height: 1;
+    display: flex; align-items: center;
+  }
+  .logo-mark:hover { color: #cc9924; transform: translateY(-2px); }
+  .logo-mark img {
+    height: 34px; width: auto;
+    opacity: 0.6;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.35s, filter 0.35s;
+    display: block;
+  }
+  .logo-mark:hover img { opacity: 0.95; filter: brightness(0) saturate(100%) invert(70%) sepia(60%) saturate(420%) hue-rotate(2deg) brightness(95%) contrast(85%); }
+  @media (max-width: 768px) {
+    .logo-marquee-track { gap: 48px; }
+    .logo-mark img { height: 26px; }
+  }
+</style>
+
+<section class="grain relative overflow-hidden" style="background:#1a1a18;padding:56px 0;">
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(ellipse at 50% 50%, rgba(204,153,36,0.04) 0%, transparent 60%);"></div>
+  <div class="relative z-10">
+    <p class="eyebrow text-center mb-8" style="opacity:0.8;">As Featured In &nbsp;&middot;&nbsp; Trusted By</p>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track">
+        <!-- Set 1: replace text with <img> when transparent logos are available -->
+        <div class="logo-mark">[BRAND_1]</div>
+        <div class="logo-mark">[BRAND_2]</div>
+        <div class="logo-mark">[BRAND_3]</div>
+        <div class="logo-mark">[BRAND_4]</div>
+        <div class="logo-mark">[BRAND_5]</div>
+        <div class="logo-mark">[BRAND_6]</div>
+        <!-- Set 2 (duplicate) -->
+        <div class="logo-mark" aria-hidden="true">[BRAND_1]</div>
+        <div class="logo-mark" aria-hidden="true">[BRAND_2]</div>
+        <div class="logo-mark" aria-hidden="true">[BRAND_3]</div>
+        <div class="logo-mark" aria-hidden="true">[BRAND_4]</div>
+        <div class="logo-mark" aria-hidden="true">[BRAND_5]</div>
+        <div class="logo-mark" aria-hidden="true">[BRAND_6]</div>
+      </div>
+    </div>
+  </div>
+</section>

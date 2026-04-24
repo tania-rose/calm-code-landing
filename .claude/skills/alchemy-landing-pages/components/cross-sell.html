@@ -1,0 +1,58 @@
+<!--
+  cross-sell.html: Route visitors to an adjacent tier.
+
+  USE FOR: Every page should cross-sell one tier up or one tier down.
+           Place before the final CTA or after the pricing section.
+
+  DEPENDENCIES: base.html
+
+  EXAMPLES OF ROUTING:
+  - Workshop  → Inner Journey ("ready for a deeper container?")
+  - Inner Journey → Facilitator Training ("ready to hold space for others?")
+  - Regulation Method → Facilitator Training ("want to go further?")
+  - BreathCamp (returning attendee) → Facilitator Training
+  - Any tier → BreathCamp ("want the in-person experience first?")
+-->
+
+<section class="py-20" style="background:#fff;border-top:1px solid #d3cdb3;">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="lift-card" style="padding:0;overflow:hidden;border:1px solid #d3cdb3;background:#fff;">
+      <div class="grid md:grid-cols-5 gap-0 items-stretch">
+        <!-- Image side -->
+        <div class="md:col-span-2" style="aspect-ratio:4/3;overflow:hidden;">
+          <img src="[CROSS_SELL_IMAGE_URL]"
+               alt="[CROSS_SELL_IMAGE_ALT]"
+               loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;display:block;" />
+        </div>
+
+        <!-- Content side -->
+        <div class="md:col-span-3" style="padding:40px 44px;display:flex;flex-direction:column;justify-content:center;">
+          <p class="eyebrow mb-3">[DIRECTION_LABEL]</p>
+          <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.4vw,28px);color:#1a1a18;margin-bottom:10px;line-height:1.3;letter-spacing:-0.01em;">
+            [CROSS_SELL_HEADLINE]
+          </h3>
+          <p style="font-size:15px;color:#4a4a46;line-height:1.7;margin-bottom:24px;">
+            [CROSS_SELL_BODY]
+          </p>
+          <div>
+            <a href="[CROSS_SELL_HREF]" class="btn-outline-dark">[CROSS_SELL_CTA_LABEL]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+  EXAMPLE USAGE (on the Inner Journey page, routing to Facilitator Training):
+
+  [DIRECTION_LABEL]     = "Ready for the Next Step?"
+  [CROSS_SELL_HEADLINE] = "Train as a breathwork facilitator."
+  [CROSS_SELL_BODY]     = "If you have completed the Inner Journey and find
+                           yourself wanting to hold space for others, the
+                           Facilitator Training is the next chapter. 8 months
+                           of training. Graduate at BreathCamp in Tuscany."
+  [CROSS_SELL_CTA_LABEL]= "See the Facilitator Training"
+  [CROSS_SELL_HREF]     = "/facilitator-training"
+-->

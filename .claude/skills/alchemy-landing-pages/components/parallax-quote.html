@@ -1,0 +1,32 @@
+<!--
+  parallax-quote.html: Parallax quote break.
+
+  USE FOR: Between heavy content sections to give the reader a breath.
+           Particularly good on online-course and certification archetypes.
+
+  DEPENDENCIES: base.html (.parallax, .parallax-overlay)
+
+  USAGE: Maximum 2 parallax quote breaks per page. More than that is noise.
+         The quote should be short (one or two sentences), and written in
+         the founder voice or the lived-experience voice.
+-->
+
+<section class="parallax"
+         style="background-image: url('[QUOTE_BG_IMAGE_URL]');min-height:340px;">
+  <div class="parallax-overlay"
+       style="background: linear-gradient(to bottom, rgba(26,26,24,0.4), rgba(26,26,24,0.6));"></div>
+  <div class="parallax-content max-w-3xl mx-auto px-6 py-24 text-center">
+    <!-- Optional eyebrow -->
+    <p class="eyebrow mb-4" style="color:rgba(204,153,36,0.95);">[EYEBROW_OPTIONAL]</p>
+
+    <!-- The quote -->
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.8vw,32px);line-height:1.4;color:#fff;letter-spacing:-0.01em;margin-bottom:0;">
+      "[QUOTE_TEXT]"
+    </p>
+
+    <!-- Optional attribution -->
+    <p style="font-size:13px;color:rgba(255,255,255,0.55);letter-spacing:0.08em;margin-top:24px;">
+      [ATTRIBUTION_OPTIONAL e.g. "Anthony Abbagnano"]
+    </p>
+  </div>
+</section>

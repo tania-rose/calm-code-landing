@@ -1,0 +1,322 @@
+<!--
+  breathing.html: Two breathing primitive variants.
+
+  VARIANT 1 (Orb): Simple coherence / box breath. 5-sec inhale, 5-sec exhale.
+                   Use on residential, workshop, and online-course pages.
+
+  VARIANT 2 (Mandala): Sacred geometry, 4-phase box breath (4-4-4-4).
+                       Reserved for certification / flagship pages only.
+
+  DEPENDENCIES: base.html
+
+  USAGE: Drop either variant into a section. The mandala is usually in the hero.
+         The orb is usually in its own "Try it now" section below the hero.
+-->
+
+
+<!-- ============================================================
+     VARIANT 1: SIMPLE BREATHING ORB
+============================================================ -->
+
+<style>
+  .breath-orb {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(204,153,36,0.4);
+    background: radial-gradient(circle, rgba(204,153,36,0.12) 0%, transparent 70%);
+    transition: transform 5s cubic-bezier(0.4,0,0.2,1), border-color 5s, box-shadow 5s;
+  }
+  .breath-orb.inhale {
+    transform: scale(1.6);
+    border-color: rgba(204,153,36,0.7);
+    box-shadow: 0 0 60px rgba(204,153,36,0.15), 0 0 120px rgba(204,153,36,0.06);
+  }
+  .breath-orb.exhale {
+    transform: scale(1);
+    border-color: rgba(204,153,36,0.3);
+    box-shadow: 0 0 20px rgba(204,153,36,0.05);
+  }
+  .breath-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.68);
+  }
+  .breath-counter {
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 28px;
+    color: #cc9924;
+    line-height: 1;
+  }
+  @media (max-width: 768px) { .breath-orb { width: 110px; height: 110px; } }
+</style>
+
+<section class="grain relative overflow-hidden" style="background:#1a1a18;padding:80px 24px;">
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(ellipse at 50% 50%, rgba(204,153,36,0.06) 0%, transparent 60%);"></div>
+
+  <div class="relative z-10 max-w-xl mx-auto text-center">
+    <p class="eyebrow mb-3">Try It Now</p>
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;letter-spacing:-0.02em;margin-bottom:8px;">
+      One breath can change your state.
+    </p>
+    <p style="font-size:15px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:40px;max-width:400px;margin:0 auto 40px;">
+      Match your breath to the circle. Five seconds in, five seconds out. This is coherence breathing, one of the practices you will learn.
+    </p>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:24px;padding-bottom:40px;">
+      <div style="padding:40px 0;">
+        <div id="breathOrb" class="breath-orb exhale"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <span id="breathLabel" class="breath-label">Tap to begin</span>
+        <span id="breathCounter" class="breath-counter" style="opacity:0;">&nbsp;</span>
+      </div>
+      <button id="breathToggle"
+              onclick="toggleBreathing()"
+              style="background:none;border:1px solid rgba(204,153,36,0.4);color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:10px 24px;cursor:pointer;transition:border-color 0.2s,background 0.2s;"
+              onmouseover="this.style.borderColor='#cc9924';this.style.background='rgba(204,153,36,0.08)'"
+              onmouseout="this.style.borderColor='rgba(204,153,36,0.4)';this.style.background='none'">
+        Start Breathing
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  let breathingActive = false, countInterval = null;
+  function toggleBreathing() {
+    const orb = document.getElementById('breathOrb');
+    const label = document.getElementById('breathLabel');
+    const counter = document.getElementById('breathCounter');
+    const btn = document.getElementById('breathToggle');
+    if (breathingActive) {
+      breathingActive = false;
+      clearInterval(countInterval);
+      orb.className = 'breath-orb exhale';
+      label.textContent = 'Tap to begin';
+      counter.style.opacity = '0';
+      btn.textContent = 'Start Breathing';
+      return;
+    }
+    breathingActive = true;
+    btn.textContent = 'Stop';
+    counter.style.opacity = '1';
+    function runCount(s, cb) {
+      let t = s; counter.textContent = t;
+      clearInterval(countInterval);
+      countInterval = setInterval(() => {
+        t--;
+        if (t > 0) counter.textContent = t;
+        else { clearInterval(countInterval); if (cb) cb(); }
+      }, 1000);
+    }
+    function inhale() {
+      if (!breathingActive) return;
+      orb.className = 'breath-orb inhale';
+      label.textContent = 'Breathe in';
+      runCount(5, () => { if (breathingActive) exhale(); });
+    }
+    function exhale() {
+      if (!breathingActive) return;
+      orb.className = 'breath-orb exhale';
+      label.textContent = 'Breathe out';
+      runCount(5, () => { if (breathingActive) inhale(); });
+    }
+    inhale();
+  }
+</script>
+
+
+<!-- ============================================================
+     VARIANT 2: BREATHING MANDALA (certification/flagship only)
+     4-phase box breath 4-4-4-4. Auto-starts on load (with reduced-motion guard).
+============================================================ -->
+
+<style>
+  .breath-stage {
+    position: relative;
+    width: 360px; height: 360px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; user-select: none;
+  }
+  .breath-stage > * { pointer-events: none; }
+  .breath-orb-wrap {
+    position: relative;
+    width: 200px; height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 4s linear;
+  }
+  .breath-aura {
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(204,153,36,0.32);
+    background: radial-gradient(circle, rgba(204,153,36,0.1) 0%, rgba(204,153,36,0.02) 55%, transparent 75%);
+    box-shadow: 0 0 24px rgba(204,153,36,0.06), 0 0 60px rgba(204,153,36,0.04),
+                0 0 120px rgba(204,153,36,0.02), inset 0 0 30px rgba(204,153,36,0.04);
+    transition: box-shadow 4s linear, border-color 4s linear, background 4s linear;
+  }
+  .breath-ring {
+    position: absolute; inset: -14px;
+    width: calc(100% + 28px); height: calc(100% + 28px);
+  }
+  .breath-ring circle { fill: none; stroke: rgba(204,153,36,0.35); stroke-width: 1; transition: stroke 4s linear; }
+  .breath-ring line { stroke: rgba(204,153,36,0.55); stroke-width: 1; stroke-linecap: round; }
+  .breath-vesica {
+    position: absolute;
+    width: 105px; height: 70px;
+    opacity: 0.22; transition: opacity 2s ease;
+  }
+  .breath-vesica circle { fill: none; stroke: #cc9924; stroke-width: 1; }
+  .breath-core {
+    position: absolute;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #cc9924;
+    box-shadow: 0 0 12px rgba(204,153,36,0.55), 0 0 24px rgba(204,153,36,0.25);
+    transition: box-shadow 4s linear, transform 4s linear;
+  }
+  .breath-mote {
+    position: absolute;
+    left: 50%; top: 50%;
+    width: 5px; height: 5px;
+    margin: -2.5px 0 0 -2.5px;
+    border-radius: 50%;
+    background: rgba(204,153,36,0.75);
+    box-shadow: 0 0 8px rgba(204,153,36,0.5);
+    transform: rotate(var(--angle, 0deg)) translate(135px) rotate(calc(-1 * var(--angle, 0deg)));
+    opacity: 0.55;
+    transition: transform 4s cubic-bezier(0.4,0,0.2,1), opacity 4s linear;
+  }
+  .breath-stage.is-inhale .breath-orb-wrap,
+  .breath-stage.is-hold-in .breath-orb-wrap { transform: scale(1.55); }
+  .breath-stage.is-exhale .breath-orb-wrap,
+  .breath-stage.is-hold-out .breath-orb-wrap { transform: scale(1); }
+  .breath-stage.is-inhale .breath-aura,
+  .breath-stage.is-hold-in .breath-aura {
+    border-color: rgba(204,153,36,0.75);
+    background: radial-gradient(circle, rgba(204,153,36,0.2) 0%, rgba(204,153,36,0.06) 55%, transparent 75%);
+    box-shadow: 0 0 50px rgba(204,153,36,0.2), 0 0 110px rgba(204,153,36,0.1),
+                0 0 200px rgba(204,153,36,0.05), inset 0 0 40px rgba(204,153,36,0.08);
+  }
+  .breath-stage.is-inhale .breath-ring circle,
+  .breath-stage.is-hold-in .breath-ring circle { stroke: rgba(204,153,36,0.7); }
+  .breath-stage.is-inhale .breath-vesica,
+  .breath-stage.is-hold-in .breath-vesica { opacity: 0.75; }
+  .breath-stage.is-hold-in .breath-core {
+    box-shadow: 0 0 20px rgba(204,153,36,0.9), 0 0 40px rgba(204,153,36,0.5), 0 0 60px rgba(204,153,36,0.25);
+  }
+  .breath-stage.is-inhale .breath-mote,
+  .breath-stage.is-hold-in .breath-mote {
+    transform: rotate(var(--angle,0deg)) translate(35px) rotate(calc(-1 * var(--angle,0deg)));
+    opacity: 0.95;
+  }
+  .breath-stage.is-hold-out .breath-mote { opacity: 0.4; }
+  .breath-phase-label {
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 16px; letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.92);
+    text-transform: uppercase; text-align: center;
+    min-height: 22px; transition: opacity 0.5s ease;
+  }
+  .breath-cycle-counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; font-size: 10px; letter-spacing: 0.22em;
+    color: rgba(204,153,36,0.65);
+    text-transform: uppercase; text-align: center;
+    min-height: 14px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .breath-orb-wrap, .breath-aura, .breath-core, .breath-mote,
+    .breath-vesica, .breath-ring circle { transition: none !important; }
+    .breath-stage { cursor: default; }
+  }
+  @media (max-width: 768px) {
+    .breath-stage { width: 280px; height: 280px; }
+    .breath-orb-wrap { width: 150px; height: 150px; }
+    .breath-mote { transform: rotate(var(--angle,0deg)) translate(105px) rotate(calc(-1 * var(--angle,0deg))); }
+    .breath-stage.is-inhale .breath-mote,
+    .breath-stage.is-hold-in .breath-mote { transform: rotate(var(--angle,0deg)) translate(26px) rotate(calc(-1 * var(--angle,0deg))); }
+  }
+</style>
+
+<div id="breathStage" class="breath-stage is-hold-out"
+     onclick="startBreathingMandala()"
+     role="button" tabindex="0"
+     aria-label="Start guided box breathing">
+  <div class="breath-mote" style="--angle:0deg;"></div>
+  <div class="breath-mote" style="--angle:60deg;"></div>
+  <div class="breath-mote" style="--angle:120deg;"></div>
+  <div class="breath-mote" style="--angle:180deg;"></div>
+  <div class="breath-mote" style="--angle:240deg;"></div>
+  <div class="breath-mote" style="--angle:300deg;"></div>
+  <div class="breath-orb-wrap">
+    <div class="breath-aura"></div>
+    <svg class="breath-ring" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="98"/>
+      <line x1="100" y1="0" x2="100" y2="8"/>
+      <line x1="200" y1="100" x2="192" y2="100"/>
+      <line x1="100" y1="200" x2="100" y2="192"/>
+      <line x1="0" y1="100" x2="8" y2="100"/>
+    </svg>
+    <svg class="breath-vesica" viewBox="0 0 100 60" aria-hidden="true">
+      <circle cx="38" cy="30" r="22"/>
+      <circle cx="62" cy="30" r="22"/>
+    </svg>
+    <div class="breath-core"></div>
+  </div>
+</div>
+
+<div class="flex flex-col items-center gap-1 mt-1 mb-5">
+  <span id="breathMandalaLabel" class="breath-phase-label">Try one breath</span>
+  <span id="breathMandalaCounter" class="breath-cycle-counter">Box breath &middot; 4-4-4-4</span>
+</div>
+
+<script>
+  const BREATH_PHASES = [
+    { name: 'Inhale',  cls: 'is-inhale',   ms: 4000 },
+    { name: 'Hold',    cls: 'is-hold-in',  ms: 4000 },
+    { name: 'Exhale',  cls: 'is-exhale',   ms: 4000 },
+    { name: 'Hold',    cls: 'is-hold-out', ms: 4000 }
+  ];
+  const breathMandalaState = { active: false, phase: 0, cycle: 0, timer: null };
+  function startBreathingMandala() {
+    if (breathMandalaState.active) { pauseBreathingMandala(); return; }
+    breathMandalaState.active = true;
+    runBreathMandalaPhase();
+  }
+  function pauseBreathingMandala() {
+    breathMandalaState.active = false;
+    clearTimeout(breathMandalaState.timer);
+    const stage = document.getElementById('breathStage');
+    stage.className = 'breath-stage is-hold-out';
+    document.getElementById('breathMandalaLabel').textContent = 'Paused';
+    document.getElementById('breathMandalaCounter').textContent = 'Tap to resume';
+  }
+  function runBreathMandalaPhase() {
+    if (!breathMandalaState.active) return;
+    const stage = document.getElementById('breathStage');
+    const label = document.getElementById('breathMandalaLabel');
+    const counter = document.getElementById('breathMandalaCounter');
+    const phase = BREATH_PHASES[breathMandalaState.phase];
+    stage.className = 'breath-stage ' + phase.cls;
+    label.textContent = phase.name;
+    counter.textContent = 'Box breath · 4-4-4-4';
+    breathMandalaState.timer = setTimeout(() => {
+      breathMandalaState.phase = (breathMandalaState.phase + 1) % BREATH_PHASES.length;
+      if (breathMandalaState.phase === 0) breathMandalaState.cycle++;
+      runBreathMandalaPhase();
+    }, phase.ms);
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    const stage = document.getElementById('breathStage');
+    if (!stage) return;
+    stage.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); startBreathingMandala(); }
+    });
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) setTimeout(() => startBreathingMandala(), 1200);
+  });
+</script>

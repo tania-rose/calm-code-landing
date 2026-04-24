@@ -1,0 +1,102 @@
+<!--
+  faq.html: Single-open accordion FAQ section.
+
+  DEPENDENCIES: base.html (for toggleFaq() and .faq-* styles)
+
+  USAGE: Wrap in a section with id="faq" for nav anchoring.
+         Include a tertiary CTA after the last item.
+-->
+
+<style>
+  .faq-item { border-bottom: 1px solid #d3cdb3; }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 22px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1a1a18;
+    line-height: 1.5;
+    gap: 16px;
+  }
+  .faq-question:hover { color: #354d4c; }
+  .faq-question:focus-visible { outline: 2px solid #cc9924; outline-offset: 2px; }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border: 1px solid #d3cdb3;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #cc9924;
+    font-size: 14px;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.2s;
+  }
+  .faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+    border-color: #cc9924;
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .faq-answer.open { max-height: 500px; }
+  .faq-answer-inner {
+    padding-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a4a46;
+  }
+</style>
+
+<section id="faq" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="eyebrow mb-4">Questions</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3vw,38px);line-height:1.2;letter-spacing:-0.02em;color:#1a1a18;">
+        Frequently asked.
+      </h2>
+    </div>
+
+    <!-- Duplicate .faq-item blocks for each question -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>[QUESTION_TEXT]</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">[ANSWER_TEXT]</div>
+      </div>
+    </div>
+
+    <!-- Canonical final FAQ item (always include) -->
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>I still have questions.</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Book a free 15-minute discovery call with our team. We will answer anything and help you figure out if this is the right fit. No pressure.
+        </div>
+      </div>
+    </div>
+
+    <!-- Tertiary CTA after FAQ -->
+    <p class="text-center reveal mt-12" style="font-size:14px;color:#4a4a46;">
+      Still not sure?
+      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page"
+         style="color:#cc9924;text-decoration:none;font-weight:500;margin-left:6px;">
+        Book a free 15-minute call
+      </a>
+    </p>
+  </div>
+</section>

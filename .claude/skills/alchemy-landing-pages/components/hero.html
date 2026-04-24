@@ -1,0 +1,136 @@
+<!--
+  hero.html: Three hero variants.
+
+  VARIANT 1 (Parallax Hero): ijourney-style, background image with parallax,
+             bottom-aligned content. Use for online-course archetype and any
+             page where the north-star design is the primary reference.
+
+  VARIANT 2 (Image Hero): Residential/workshop archetype. Dark image background,
+             bottom-aligned content, gradient overlay.
+
+  VARIANT 3 (Mandala Hero): Certification/flagship only. Solid dark background
+             with breathing mandala centered. Reserved for facilitator training.
+
+  SLOTS in every variant:
+  - [EYEBROW_TEXT]: the pre-title label
+  - [HERO_HEADLINE]: main h1, supports <br/>
+  - [HERO_SUBHEAD]: 1-2 sentence subhead
+  - [HERO_IMAGE_URL]: for parallax and image variants
+  - [PRIMARY_CTA_LABEL], [PRIMARY_CTA_HREF]
+  - [SECONDARY_CTA_LABEL]: default "Try a Free Breathwork Session"
+  - [SECONDARY_CTA_HREF]: free resources URL
+
+  DEPENDENCIES: base.html (for .grain, .parallax, .btn-gold, .btn-outline, .eyebrow)
+-->
+
+
+<!-- ============================================================
+     VARIANT 1: PARALLAX HERO (ijourney-style)
+============================================================ -->
+<section class="parallax grain flex items-end overflow-hidden"
+         style="background-image: url('[HERO_IMAGE_URL]'); min-height: min(720px, 82vh);">
+  <div class="parallax-overlay"
+       style="background: linear-gradient(to bottom, rgba(26,26,24,0.5) 0%, rgba(26,26,24,0.3) 40%, rgba(26,26,24,0.92) 100%);"></div>
+  <div class="parallax-content max-w-6xl mx-auto px-6 pb-20 pt-32 w-full">
+    <div class="max-w-2xl">
+      <p class="eyebrow mb-5">[EYEBROW_TEXT]</p>
+      <h1 class="text-white mb-6 leading-tight" style="font-size:clamp(36px,5vw,58px);letter-spacing:-0.02em;">
+        [HERO_HEADLINE]
+      </h1>
+      <p class="text-white mb-10 max-w-xl" style="font-size:18px;line-height:1.7;font-weight:300;opacity:0.88;">
+        [HERO_SUBHEAD]
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="[PRIMARY_CTA_HREF]" class="btn-gold">[PRIMARY_CTA_LABEL]</a>
+        <a href="[SECONDARY_CTA_HREF]" class="btn-outline">[SECONDARY_CTA_LABEL]</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 2: IMAGE HERO (residential/workshop-style)
+============================================================ -->
+<section class="relative min-h-screen flex items-end grain overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0">
+    <img src="[HERO_IMAGE_URL]"
+         alt="[HERO_IMAGE_ALT]"
+         class="w-full h-full object-cover object-center"
+         style="filter: brightness(0.55);" />
+    <div class="absolute inset-0"
+         style="background: radial-gradient(ellipse at 60% 40%, rgba(53,77,76,0.35) 0%, transparent 65%),
+                           linear-gradient(to top, rgba(26,26,24,0.92) 0%, rgba(26,26,24,0.3) 45%, transparent 70%);"></div>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 pt-40 w-full">
+    <div class="max-w-2xl">
+      <p class="eyebrow mb-5">[EYEBROW_TEXT]</p>
+      <h1 class="text-white mb-6 leading-tight"
+          style="font-family:'Marcellus',Georgia,serif;font-size:clamp(36px,5vw,60px);letter-spacing:-0.02em;">
+        [HERO_HEADLINE]
+      </h1>
+      <p class="text-white mb-10 max-w-xl" style="font-size:18px;line-height:1.7;font-weight:300;opacity:0.85;">
+        [HERO_SUBHEAD]
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="[PRIMARY_CTA_HREF]" class="btn-gold">[PRIMARY_CTA_LABEL]</a>
+        <a href="[SECONDARY_CTA_HREF]" class="btn-outline">[SECONDARY_CTA_LABEL]</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
+    <span style="font-size:10px;letter-spacing:0.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
+    <div style="width:1px;height:40px;background:rgba(255,255,255,0.4);"></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 3: MANDALA HERO (certification/flagship only)
+     NOTE: requires breathing-mandala component to be included
+============================================================ -->
+<section class="relative min-h-screen flex items-center justify-center grain overflow-hidden" style="background:#141412;">
+  <!-- Depth layers -->
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(ellipse at 50% 40%, rgba(53,77,76,0.4) 0%, transparent 55%),
+                         radial-gradient(ellipse at 50% 35%, rgba(204,153,36,0.1) 0%, transparent 40%),
+                         radial-gradient(ellipse at 20% 90%, rgba(53,77,76,0.2) 0%, transparent 50%),
+                         radial-gradient(ellipse at 80% 90%, rgba(26,26,24,0.8) 0%, transparent 60%);"></div>
+
+  <!-- Ghost vesica piscis (flagship signature) -->
+  <svg class="absolute left-1/2 top-1/2 pointer-events-none"
+       style="transform:translate(-50%,-50%);width:min(110vmin,1100px);height:min(110vmin,1100px);opacity:0.05;"
+       viewBox="0 0 800 800" aria-hidden="true">
+    <circle cx="340" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
+    <circle cx="460" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
+    <circle cx="400" cy="400" r="360" fill="none" stroke="#cc9924" stroke-width="1" stroke-dasharray="2 8"/>
+    <circle cx="400" cy="400" r="220" fill="none" stroke="#cc9924" stroke-width="1"/>
+  </svg>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 pt-24 pb-16 w-full flex flex-col items-center text-center">
+    <p class="eyebrow mb-4">[EYEBROW_TEXT]</p>
+    <h1 class="text-white mb-4 leading-tight"
+        style="font-size:clamp(30px,4.2vw,52px);letter-spacing:-0.02em;max-width:720px;">
+      [HERO_HEADLINE]
+    </h1>
+    <p class="mb-8"
+       style="font-size:16px;line-height:1.7;font-weight:300;color:rgba(255,255,255,0.7);max-width:520px;">
+      [HERO_SUBHEAD]
+    </p>
+
+    <!-- Insert breathing-mandala.html here -->
+
+    <div class="flex flex-wrap gap-4 justify-center mt-10">
+      <a href="[PRIMARY_CTA_HREF]" class="btn-gold">[PRIMARY_CTA_LABEL]</a>
+      <a href="[SECONDARY_CTA_HREF]" class="btn-outline">[SECONDARY_CTA_LABEL]</a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
+    <span style="font-size:10px;letter-spacing:0.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
+    <div style="width:1px;height:40px;background:rgba(255,255,255,0.4);"></div>
+  </div>
+</section>

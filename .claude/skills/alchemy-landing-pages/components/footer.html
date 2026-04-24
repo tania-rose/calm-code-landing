@@ -1,0 +1,67 @@
+<!--
+  footer.html: Site footer with contact, programs, disclaimer.
+
+  DEPENDENCIES: base.html
+
+  USAGE: Last element of every page. Replace [PROGRAM_NAME] in the disclaimer
+         to match the current page's offer.
+-->
+
+<footer style="background:#1a1a18;padding:48px 24px 32px;">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+      <!-- Brand -->
+      <div>
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
+             alt="Alchemy of Breath"
+             class="h-8 w-auto mb-6"
+             style="opacity:0.7;" />
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:280px;">
+          Alchemy of Breath. Breath as a tool for life.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-3">
+        <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:500;margin-bottom:4px;">Contact</p>
+        <a href="mailto:hello@alchemyofbreath.com"
+           style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">
+          hello@alchemyofbreath.com
+        </a>
+        <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page"
+           style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">
+          Book a discovery call
+        </a>
+      </div>
+
+      <!-- Programs -->
+      <div class="flex flex-col gap-3">
+        <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:500;margin-bottom:4px;">Programs</p>
+        <a href="[REGULATION_METHOD_URL]" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">Alchemy Regulation Method</a>
+        <a href="[INNER_JOURNEY_URL]"     style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">Inner Journey</a>
+        <a href="[FACILITATOR_URL]"       style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">Facilitator Training</a>
+        <a href="[BREATHCAMP_URL]"        style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">BreathCamp</a>
+      </div>
+
+      <!-- Organization -->
+      <div class="flex flex-col gap-3">
+        <p style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);font-weight:500;margin-bottom:4px;">Organization</p>
+        <a href="https://alchemyofbreath.com" style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">alchemyofbreath.com</a>
+        <a href="https://www.asha.global/"    style="font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;">ASHA Retreat Centre</a>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;flex-direction:column;gap:8px;">
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);line-height:1.6;">
+        [PROGRAM_NAME] is an educational program. It is not a substitute for medical or psychological treatment. If you have a mental health condition, please consult your doctor or therapist before beginning.
+      </p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);line-height:1.6;">
+        Accredited by the Federation of Holistic Therapists (FHT), the American Association of Drugless Practitioners (AADP), and the Global Professional Breathwork Alliance (GPBA).
+      </p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.3);">
+        &copy; 2026 Alchemy of Breath. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

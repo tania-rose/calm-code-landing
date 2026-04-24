@@ -1,0 +1,240 @@
+<!--
+  pricing.html: Pricing patterns.
+
+  VARIANTS:
+  - Single-tier card (with featured + deposit option)
+  - Dual-tier cards (self-paced vs guided, a la ijourney)
+  - Pricing tabs (pay-in-full / monthly toggle, a la facilitator)
+  - Accommodation cards grid (a la BreathCamp)
+
+  SUPPORTING ELEMENTS:
+  - Ribbon ("Most Popular")
+  - Scarcity badge ("Filling Fast", "A Few Spots Left")
+  - Early bird badge
+  - Price strike-through
+
+  DEPENDENCIES: base.html
+-->
+
+<style>
+  .price-card {
+    background: #fff;
+    border: 1px solid #d3cdb3;
+    padding: 40px 36px;
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+    height: 100%;
+  }
+  .price-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(53,77,76,0.12); }
+  .price-card.featured { background: #354d4c; border-color: #cc9924; color: #fff; }
+  .price-card .feature-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(211,205,179,0.4);
+    font-size: 14px; line-height: 1.6;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .price-card.featured .feature-list li {
+    border-bottom-color: rgba(211,205,179,0.15);
+    color: rgba(255,255,255,0.85);
+  }
+  .price-card .feature-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 14px; height: 14px;
+    background: #52bb90;
+    border-radius: 50%;
+    margin-top: 4px;
+  }
+
+  .ribbon {
+    position: absolute; top: -1px; right: 24px;
+    background: #cc9924; color: #fff;
+    font-family: 'Roboto', sans-serif; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 6px 14px;
+  }
+
+  .spots-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #cc9924; color: #fff;
+    font-family: 'Roboto', sans-serif; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 5px 11px;
+    border-radius: 100px;
+    animation: pulse-gold 2.4s ease-in-out infinite;
+    margin-bottom: 12px;
+  }
+  .spots-badge::before {
+    content: ''; width: 6px; height: 6px;
+    background: #fff; border-radius: 50%;
+    display: inline-block;
+    animation: pulse-dot 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(204,153,36,0.5); }
+    50%      { box-shadow: 0 0 0 10px rgba(204,153,36,0); }
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  .eb-badge {
+    display: inline-block;
+    background: rgba(82,187,144,0.12);
+    color: #2e8a65;
+    font-family: 'Roboto', sans-serif; font-weight: 500;
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-left: 8px;
+  }
+  .price-strike {
+    text-decoration: line-through;
+    text-decoration-color: rgba(197,195,194,0.8);
+    color: #c5c3c2;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .price-tab {
+    padding: 12px 24px;
+    font-family: 'Roboto', sans-serif; font-weight: 500;
+    font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .price-tab:hover { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3); }
+  .price-tab.active { color: #cc9924; border-color: #cc9924; background: rgba(204,153,36,0.08); }
+  .price-tab:focus-visible { outline: 2px solid #cc9924; outline-offset: 2px; }
+</style>
+
+
+<!-- ============================================================
+     VARIANT 1: DUAL TIER (self-paced vs guided) ‚Äî Inner Journey style
+============================================================ -->
+
+<section id="pricing" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <p class="eyebrow mb-4">Choose Your Path</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-0.02em;color:#1a1a18;margin-bottom:16px;">
+        [TWO_TIER_HEADLINE]
+      </h2>
+      <p style="font-size:16px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">
+        [PRICING_SUBHEAD]
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <!-- Tier A -->
+      <div class="price-card">
+        <p class="eyebrow mb-3">[TIER_A_LABEL]</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:26px;color:#1a1a18;margin-bottom:6px;letter-spacing:-0.01em;">
+          [TIER_A_TITLE]
+        </h3>
+        <p style="font-size:14px;color:#c5c3c2;margin-bottom:20px;">[TIER_A_DESCRIPTION]</p>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:40px;color:#1a1a18;">$[PRICE_A]</span>
+          <span style="font-size:18px;color:#c5c3c2;text-decoration:line-through;">$[ORIGINAL_A]</span>
+        </div>
+        <p style="font-size:13px;color:#4a4a46;margin-bottom:24px;">[PRICING_TERMS_A]</p>
+        <ul class="feature-list" style="list-style:none;padding:0;margin:0 0 28px;">
+          <li>[FEATURE_1]</li>
+          <li>[FEATURE_2]</li>
+          <li>[FEATURE_3]</li>
+        </ul>
+        <a href="[CTA_A_HREF]" class="btn-gold text-center" style="display:block;">[CTA_A_LABEL]</a>
+      </div>
+
+      <!-- Tier B (featured) -->
+      <div class="price-card featured">
+        <span class="ribbon">Most Popular</span>
+        <p class="eyebrow mb-3" style="color:#cc9924;">[TIER_B_LABEL]</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:26px;color:#fff;margin-bottom:6px;letter-spacing:-0.01em;">
+          [TIER_B_TITLE]
+        </h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:20px;">[TIER_B_DESCRIPTION]</p>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:40px;color:#fff;">$[PRICE_B]</span>
+          <span style="font-size:18px;color:rgba(255,255,255,0.4);text-decoration:line-through;">$[ORIGINAL_B]</span>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:24px;">[PRICING_TERMS_B]</p>
+        <ul class="feature-list" style="list-style:none;padding:0;margin:0 0 28px;">
+          <li>[FEATURE_1]</li>
+          <li>[FEATURE_2]</li>
+          <li>[FEATURE_3]</li>
+        </ul>
+        <a href="[CTA_B_HREF]" class="btn-gold text-center" style="display:block;background:#cc9924;">[CTA_B_LABEL]</a>
+      </div>
+    </div>
+
+    <p class="text-center reveal" style="font-size:14px;color:#4a4a46;margin-top:40px;">
+      Not sure which path?
+      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page"
+         style="color:#cc9924;text-decoration:none;font-weight:500;">
+        Book a free 15-minute call
+      </a>
+      and we will help you choose.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 2: PRICING TABS (pay-in-full / monthly) ‚Äî Facilitator style
+============================================================ -->
+
+<section id="pricing" class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">Investment</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;color:#fff;">[PRICING_TABS_HEADLINE]</h2>
+    </div>
+
+    <div class="flex justify-center gap-2 mb-10 flex-wrap">
+      <button class="price-tab active" onclick="showPricing('full')"  id="tab-full">Pay in Full</button>
+      <button class="price-tab"        onclick="showPricing('6mo')"  id="tab-6mo">6-Month Plan</button>
+      <button class="price-tab"        onclick="showPricing('8mo')"  id="tab-8mo">8-Month Plan</button>
+    </div>
+
+    <div class="glass-card" style="padding:48px 40px;position:relative;">
+      <div id="price-full">
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:rgba(255,255,255,0.35);text-decoration:line-through;margin-bottom:6px;">$[ORIGINAL]</p>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-0.02em;line-height:1;">$[PRICE_FULL]</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-top:8px;">[FULL_TERMS]</p>
+      </div>
+      <div id="price-6mo" style="display:none;">
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-0.02em;line-height:1;">
+          $[PRICE_6MO]<span style="font-size:24px;color:rgba(255,255,255,0.4);">/mo</span>
+        </p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-top:8px;">[6MO_TERMS]</p>
+      </div>
+      <div id="price-8mo" style="display:none;">
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-0.02em;line-height:1;">
+          $[PRICE_8MO]<span style="font-size:24px;color:rgba(255,255,255,0.4);">/mo</span>
+        </p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-top:8px;">[8MO_TERMS]</p>
+      </div>
+
+      <a href="[CTA_HREF]" class="btn-gold mt-8 w-full text-center block">[CTA_LABEL]</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showPricing(plan) {
+    document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + plan).classList.add('active');
+    document.getElementById('price-full').style.display = plan === 'full' ? 'block' : 'none';
+    document.getElementById('price-6mo').style.display  = plan === '6mo'  ? 'block' : 'none';
+    document.getElementById('price-8mo').style.display  = plan === '8mo'  ? 'block' : 'none';
+  }
+</script>

@@ -1,0 +1,148 @@
+<!--
+  testimonials.html: Three testimonial variants.
+
+  VARIANT 1: Video testimonial card grid
+  VARIANT 2: Written quote card
+  VARIANT 3: Founder video feature (single large video with surrounding context)
+
+  DEPENDENCIES: base.html
+
+  VOICE NOTE: Testimonials use real names and locations when consent is given.
+              If anonymized, use first name + country or "Graduate of [program]".
+-->
+
+
+<!-- ============================================================
+     VARIANT 1: VIDEO TESTIMONIAL GRID
+============================================================ -->
+
+<section id="stories" class="py-24" style="background:#fff;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="eyebrow mb-4">From the Tribe</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-0.02em;color:#1a1a18;">
+        In their own words.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Duplicate this block per video testimonial -->
+      <div style="background:#f9f8f5;border:1px solid #d3cdb3;overflow:hidden;box-shadow:0 2px 12px rgba(53,77,76,0.06);">
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1a18;">
+          <video controls preload="metadata"
+                 style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="[VIDEO_URL]" type="video/mp4" />
+          </video>
+        </div>
+        <div style="padding:16px 20px;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">[GRADUATE_NAME]</p>
+          <p style="font-size:12px;color:#c5c3c2;">[GRADUATE_ROLE e.g. "BreathCamp Graduate"]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 2: WRITTEN QUOTE CARD GRID
+============================================================ -->
+
+<section class="py-24" style="background:#354d4c;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="eyebrow mb-4">From Those Who Have Walked It</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-0.02em;color:#fff;">
+        In their own words.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Duplicate per quote -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(211,205,179,0.15);padding:36px 32px;">
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#fff;line-height:1.6;margin-bottom:20px;">
+          "[QUOTE_TEXT]"
+        </p>
+        <p style="font-size:12px;color:rgba(204,153,36,0.9);letter-spacing:0.08em;font-weight:500;">[ATTRIBUTION]</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:2px;">[CONTEXT e.g. "Inner Journey Graduate"]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 3: FOUNDER VIDEO FEATURE
+============================================================ -->
+
+<style>
+  .device-frame {
+    background: #1a1a18;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.15);
+  }
+  .device-frame-screen {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .big-quote { position: relative; }
+  .big-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -32px; left: -12px;
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 120px;
+    line-height: 1;
+    color: rgba(204,153,36,0.15);
+    pointer-events: none;
+  }
+</style>
+
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(ellipse at 30% 50%, rgba(204,153,36,0.08) 0%, transparent 55%),
+                         radial-gradient(ellipse at 80% 80%, rgba(82,187,144,0.04) 0%, transparent 50%);"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Video -->
+      <div class="fade-up">
+        <div class="device-frame">
+          <div class="device-frame-screen">
+            <div style="width:100%;aspect-ratio:16/9;background:#000;">
+              <video controls preload="metadata"
+                     poster="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69cf78154cde4bbc2a713424.png"
+                     style="width:100%;height:100%;object-fit:cover;display:block;">
+                <source src="[FOUNDER_VIDEO_URL]" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote + context -->
+      <div class="fade-up" style="position:relative;">
+        <p class="eyebrow mb-4">From the Founder</p>
+        <div class="gold-rule"></div>
+        <div class="big-quote" style="padding-left:8px;">
+          <blockquote style="font-family:'Marcellus',Georgia,serif;font-size:clamp(24px,2.8vw,32px);color:#fff;line-height:1.35;margin-bottom:28px;letter-spacing:-0.01em;">
+            [ANTHONY_QUOTE]
+          </blockquote>
+        </div>
+        <p style="font-size:16px;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:20px;">
+          [CONTEXT_PARAGRAPH]
+        </p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);">
+          <div style="width:32px;height:1px;background:#cc9924;"></div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;letter-spacing:0.04em;">
+            Author of <em>Outer Chaos, Inner Calm</em> &nbsp;&middot;&nbsp; Founder of ASHA Retreat Centre
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

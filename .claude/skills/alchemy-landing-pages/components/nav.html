@@ -1,0 +1,75 @@
+<!--
+  nav.html: Sticky top navigation.
+
+  VARIANTS: one. Same treatment across all archetypes.
+
+  SLOTS:
+  - Nav links: max 4, anchor links to same-page sections
+  - Primary CTA label: varies by archetype (see cta-hierarchy.md)
+
+  DEPENDENCIES: base.html (for #main-nav styles and scroll JS)
+
+  USAGE: Place at the top of <body>, before the hero. Offset the hero
+         top padding by ~h-16 (64px) to account for the fixed nav.
+-->
+
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" aria-label="Alchemy of Breath home">
+      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
+           alt="Alchemy of Breath"
+           class="h-7 w-auto" />
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <!-- Replace these with the 3-4 most relevant sections of this page -->
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#guides" class="nav-link">Your Guides</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+
+    <!-- Mobile menu button (shows below md breakpoint) -->
+    <button id="mobile-menu-toggle"
+            class="md:hidden text-white p-2"
+            aria-label="Open menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="3" y1="7" x2="21" y2="7"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="17" x2="21" y2="17"/>
+      </svg>
+    </button>
+
+    <!-- Primary CTA (desktop) -->
+    <a href="#apply" class="hidden md:inline-block btn-gold text-xs">[PRIMARY_CTA_LABEL]</a>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu"
+       class="md:hidden hidden"
+       style="background:#354d4c;border-top:1px solid rgba(255,255,255,0.08);">
+    <div class="px-6 py-6 flex flex-col gap-5">
+      <a href="#program" class="nav-link" onclick="closeMobileMenu()">Program</a>
+      <a href="#guides" class="nav-link" onclick="closeMobileMenu()">Your Guides</a>
+      <a href="#pricing" class="nav-link" onclick="closeMobileMenu()">Pricing</a>
+      <a href="#faq" class="nav-link" onclick="closeMobileMenu()">FAQ</a>
+      <a href="#apply" class="btn-gold text-xs text-center" onclick="closeMobileMenu()">[PRIMARY_CTA_LABEL]</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-toggle');
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.add('hidden');
+    document.getElementById('mobile-menu-toggle').setAttribute('aria-expanded', 'false');
+  }
+</script>

@@ -1,0 +1,87 @@
+<!--
+  instructor-card.html: Team member card. Two layouts.
+
+  VARIANT 1: Anthony feature (large portrait + bio column)
+  VARIANT 2: Team grid (smaller, 3-4 per row)
+
+  DEPENDENCIES: base.html
+
+  IMAGE URLS: See assets.md for canonical instructor portrait URLs.
+-->
+
+
+<!-- ============================================================
+     VARIANT 1: ANTHONY FEATURE (large bio feature)
+============================================================ -->
+
+<section class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-2 reveal">
+        <div class="img-overlay">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69a159bd753f159f94bc1ed5.png"
+               alt="Anthony Abbagnano"
+               style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;filter:grayscale(10%);" />
+        </div>
+      </div>
+      <div class="md:col-span-3 reveal">
+        <p class="eyebrow mb-4">Your Guide</p>
+        <div class="gold-rule"></div>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#1a1a18;margin-bottom:16px;letter-spacing:-0.01em;line-height:1.2;">
+          Anthony Abbagnano
+        </h3>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:16px;">
+          Founder of Alchemy of Breath and ASHA Retreat Centre. Author of <em>Outer Chaos, Inner Calm</em>. Anthony has guided over 2,000 practitioners across 40+ countries and spent the last two decades studying the places where breath, psychology, and quiet self-inquiry meet.
+        </p>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;">
+          [PROGRAM-SPECIFIC_BIO_PARAGRAPH]
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     VARIANT 2: TEAM GRID
+============================================================ -->
+
+<style>
+  .instructor-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(10%);
+  }
+</style>
+
+<section id="guides" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="eyebrow mb-4">Your Team</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-0.02em;color:#1a1a18;">
+        [TEAM_HEADLINE]
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Duplicate per instructor -->
+      <div class="text-center">
+        <div class="img-overlay mb-6">
+          <img src="[INSTRUCTOR_IMAGE_URL]"
+               alt="[INSTRUCTOR_NAME]"
+               class="instructor-img" />
+        </div>
+        <p class="eyebrow mb-1">[INSTRUCTOR_ROLE e.g. "Senior Trainer"]</p>
+        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">
+          [INSTRUCTOR_NAME]
+        </h4>
+        <p style="font-size:13px;line-height:1.7;color:#4a4a46;">
+          [INSTRUCTOR_BIO_SHORT]
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

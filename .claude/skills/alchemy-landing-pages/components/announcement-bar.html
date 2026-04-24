@@ -1,0 +1,62 @@
+<!--
+  announcement-bar.html: Top-of-page dismissible strip.
+
+  USE FOR: Real, time-bound announcements only. Cohort enrollment open,
+           early bird deadline, next session dates.
+
+  DO NOT USE FOR: Generic "Welcome!" or fake urgency.
+
+  DEPENDENCIES: base.html
+
+  USAGE: Place as the very first element inside <body>, above the sticky nav.
+         The nav's top position adjusts automatically when the bar is dismissed
+         (via JS). If the bar is permanently present, add offset to #main-nav.
+-->
+
+<div id="announcement-bar"
+     style="background:#cc9924;color:#fff;position:relative;z-index:60;">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-center gap-6">
+    <p style="font-family:'Roboto',sans-serif;font-size:13px;font-weight:400;letter-spacing:0.02em;text-align:center;flex:1;">
+      <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#fff;margin-right:10px;vertical-align:middle;animation:pulse-dot 1.6s ease-in-out infinite;"></span>
+      <strong style="font-weight:500;">[ANNOUNCEMENT_HEADLINE]</strong>
+      <span style="opacity:0.85;margin-left:8px;">[ANNOUNCEMENT_DETAIL]</span>
+      <a href="[ANNOUNCEMENT_HREF]"
+         style="color:#fff;margin-left:12px;text-decoration:underline;font-weight:500;">
+        [ANNOUNCEMENT_CTA]
+      </a>
+    </p>
+    <button onclick="dismissAnnouncement()"
+            aria-label="Dismiss announcement"
+            style="background:none;border:none;color:#fff;opacity:0.7;cursor:pointer;padding:4px 6px;font-size:20px;line-height:1;">
+      ×
+    </button>
+  </div>
+</div>
+
+<script>
+  function dismissAnnouncement() {
+    const bar = document.getElementById('announcement-bar');
+    if (bar) {
+      bar.style.display = 'none';
+      try { localStorage.setItem('announcement-dismissed', '[ANNOUNCEMENT_ID]'); } catch (e) {}
+    }
+  }
+  // Respect prior dismissal
+  try {
+    if (localStorage.getItem('announcement-dismissed') === '[ANNOUNCEMENT_ID]') {
+      const bar = document.getElementById('announcement-bar');
+      if (bar) bar.style.display = 'none';
+    }
+  } catch (e) {}
+</script>
+
+<!--
+  EXAMPLE USAGE:
+
+  [ANNOUNCEMENT_HEADLINE] = "September 2026 cohort"
+  [ANNOUNCEMENT_DETAIL]   = "Enrollment closes October 15"
+  [ANNOUNCEMENT_CTA]      = "Apply now →"
+  [ANNOUNCEMENT_HREF]     = "#apply"
+  [ANNOUNCEMENT_ID]       = "sep-2026-cohort" (unique per announcement, so
+                             dismissing one doesn't dismiss future ones)
+-->

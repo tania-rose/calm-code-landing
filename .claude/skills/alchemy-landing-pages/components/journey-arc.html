@@ -1,0 +1,185 @@
+<!--
+  journey-arc.html: Click-to-reveal stepper.
+
+  USE FOR: any sequenced content like chapters, days, modules, weeks.
+
+  DEPENDENCIES: base.html
+
+  USAGE: Duplicate .journey-step blocks to match the number of steps (max 7-9).
+         Each step corresponds to a .chapter-detail block below.
+-->
+
+<style>
+  .journey-arc {
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    gap: 0; position: relative;
+    margin: 20px 0 50px;
+    padding: 0 4%;
+  }
+  .journey-arc::before {
+    content: ''; position: absolute;
+    top: 24px; left: 12%; right: 12%; height: 1px;
+    background: linear-gradient(to right,
+      rgba(204,153,36,0.15),
+      rgba(204,153,36,0.7) 20%,
+      rgba(204,153,36,0.7) 80%,
+      rgba(204,153,36,0.15));
+    z-index: 0;
+  }
+  .journey-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 6px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .journey-step-dot {
+    width: 50px; height: 50px; border-radius: 50%;
+    background: #f9f8f5;
+    border: 1.5px solid #d3cdb3;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 17px; color: #cc9924;
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
+                border-color 0.25s, background 0.25s, color 0.25s, box-shadow 0.25s;
+  }
+  .journey-step:hover .journey-step-dot {
+    border-color: #cc9924; background: #cc9924; color: #fff;
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(204,153,36,0.3);
+  }
+  .journey-step.active .journey-step-dot {
+    border-color: #cc9924; background: #cc9924; color: #fff;
+    box-shadow: 0 6px 20px rgba(204,153,36,0.35);
+  }
+  .journey-step.active .journey-step-title { color: #cc9924; }
+  .journey-step-week {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; font-size: 9px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #cc9924;
+    margin-bottom: 4px;
+  }
+  .journey-step-title {
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 13px; color: #1a1a18;
+    line-height: 1.3; letter-spacing: -0.01em;
+  }
+
+  .chapter-details { max-width: 900px; margin: 0 auto; min-height: 360px; position: relative; }
+  .chapter-detail { display: none; animation: chFadeIn 0.5s cubic-bezier(0.4,0,0.2,1); }
+  .chapter-detail.active { display: block; }
+  @keyframes chFadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .chapter-placeholder {
+    text-align: center; padding: 60px 24px;
+    border: 1.5px dashed rgba(211,205,179,0.8);
+    background: rgba(255,255,255,0.4);
+    transition: opacity 0.4s;
+  }
+  .chapter-placeholder.hidden { display: none; }
+
+  .module-card {
+    background: #fff;
+    border: 1px solid #d3cdb3;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+  }
+  .module-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(53,77,76,0.12);
+    border-color: #cc9924;
+  }
+  .module-num {
+    position: absolute; top: 14px; right: 18px; z-index: 3;
+    font-family: 'Marcellus', Georgia, serif;
+    font-size: 48px; line-height: 1;
+    color: rgba(255,255,255,0.92);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  @media (max-width: 768px) {
+    .journey-arc { grid-template-columns: 1fr; padding: 0; margin: 20px 0 40px; gap: 0; }
+    .journey-arc::before {
+      left: 24px; right: auto; top: 24px; bottom: 24px;
+      width: 1px; height: auto;
+      background: linear-gradient(to bottom, rgba(204,153,36,0.15), rgba(204,153,36,0.7) 20%, rgba(204,153,36,0.7) 80%, rgba(204,153,36,0.15));
+    }
+    .journey-step { display: flex; align-items: center; gap: 18px; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(211,205,179,0.4); }
+    .journey-step:last-child { border-bottom: none; }
+    .journey-step-dot { margin: 0; flex-shrink: 0; }
+    .journey-step-text { flex: 1; }
+  }
+</style>
+
+<div class="journey-arc reveal">
+  <!-- Duplicate this block for each step. Update [N] and labels. -->
+  <a href="#ch-1" class="journey-step">
+    <div class="journey-step-dot">1</div>
+    <div class="journey-step-text">
+      <p class="journey-step-week">[WEEK_OR_DAY] 1</p>
+      <p class="journey-step-title">[STEP_TITLE]</p>
+    </div>
+  </a>
+  <a href="#ch-2" class="journey-step">
+    <div class="journey-step-dot">2</div>
+    <div class="journey-step-text">
+      <p class="journey-step-week">[WEEK_OR_DAY] 2</p>
+      <p class="journey-step-title">[STEP_TITLE]</p>
+    </div>
+  </a>
+  <!-- ... repeat for remaining steps ... -->
+</div>
+
+<!-- Detail reveal panel -->
+<div class="chapter-details">
+  <div class="chapter-placeholder" id="chapter-placeholder">
+    <p class="eyebrow mb-3">Start Exploring</p>
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(18px,2vw,24px);color:#1a1a18;line-height:1.4;margin-bottom:8px;">
+      Click any step above to open that [chapter / day / module].
+    </p>
+    <p style="font-size:14px;color:#4a4a46;line-height:1.7;max-width:420px;margin:0 auto;">
+      Each [chapter / day / module] is a [video teaching / day of practice] with reflection prompts and a guided breathwork session.
+    </p>
+  </div>
+
+  <!-- Duplicate this block for each step. id must match the href above. -->
+  <div class="module-card chapter-detail" id="ch-1">
+    <div class="grid md:grid-cols-2 gap-0">
+      <div style="aspect-ratio:16/9;overflow:hidden;position:relative;">
+        <span class="module-num">01</span>
+        <img src="[STEP_IMAGE_URL]" alt="[STEP_TITLE]" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+      <div style="padding:36px 40px;display:flex;flex-direction:column;justify-content:center;">
+        <p class="eyebrow mb-2">[LABEL] One &nbsp;&middot;&nbsp; [WEEK_OR_DAY] 1</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:26px;color:#1a1a18;margin-bottom:12px;line-height:1.3;">
+          [STEP_TITLE]
+        </h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.8;">
+          [STEP_DESCRIPTION]
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- ... repeat for remaining steps ... -->
+</div>
+
+<script>
+  document.querySelectorAll('.journey-step').forEach(step => {
+    step.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = step.getAttribute('href').slice(1);
+      document.querySelectorAll('.journey-step').forEach(s => s.classList.remove('active'));
+      step.classList.add('active');
+      document.querySelectorAll('.chapter-detail').forEach(c => c.classList.remove('active'));
+      const placeholder = document.getElementById('chapter-placeholder');
+      if (placeholder) placeholder.classList.add('hidden');
+      const detail = document.getElementById(targetId);
+      if (detail) detail.classList.add('active');
+    });
+  });
+</script>

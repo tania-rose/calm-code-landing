@@ -1,0 +1,50 @@
+<!--
+  base.html: Minimal page skeleton. Any archetype extends this.
+
+  SECTIONS: nav, (optional) announcement bar, hero, ... content ..., cta-final, footer.
+
+  Replace [slots] with real content from the offer. Pull sections from
+  `components/` rather than rewriting HTML. When you copy a component, also
+  copy its associated <style> and <script> blocks.
+
+  NOTE: This is the "outer" skeleton. The archetype-specific templates
+        (residential.html, online-course.html, etc.) fill in the middle.
+-->
+
+<!-- HEAD from components/base.html -->
+{{INCLUDE: components/base.html (head block)}}
+
+<body>
+
+  <!-- OPTIONAL: Announcement bar -->
+  {{INCLUDE: components/announcement-bar.html}}
+
+  <!-- NAV -->
+  {{INCLUDE: components/nav.html}}
+
+  <!-- HERO (pick one variant from components/hero.html) -->
+  {{INCLUDE: components/hero.html - VARIANT 1, 2, or 3}}
+
+  <!-- CONTENT (archetype-specific sections) -->
+  {{INSERT: archetype body content}}
+
+  <!-- EMAIL CAPTURE (unless page has embedded form) -->
+  {{INCLUDE: components/email-capture.html}}
+
+  <!-- CROSS-SELL (route to adjacent tier) -->
+  {{INCLUDE: components/cross-sell.html}}
+
+  <!-- FINAL CTA -->
+  {{INCLUDE: components/cta-final.html - pick variant}}
+
+  <!-- FOOTER -->
+  {{INCLUDE: components/footer.html}}
+
+  <!-- OPTIONAL: Sticky mobile CTA -->
+  {{INCLUDE: components/sticky-mobile-cta.html}}
+
+  <!-- SCRIPTS from components/base.html (script block) -->
+  {{INCLUDE: components/base.html (script block)}}
+
+</body>
+</html>
