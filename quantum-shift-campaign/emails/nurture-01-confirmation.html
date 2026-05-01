@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>You are in. Welcome to Quantum Shift.</title>
+<style>.preheader { display:none !important; visibility:hidden; opacity:0; color:transparent; height:0; width:0; mso-hide:all; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0;background:#f9f8f5;font-family:'Roboto',Arial,sans-serif;font-weight:300;color:#1a1a18;-webkit-font-smoothing:antialiased;">
+  <span class="preheader">Your access link, calendar invite, and a short note on what to expect on Sunday.</span>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f9f8f5;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;">
+
+          <tr><td style="height:6px;background:#cc9924;line-height:6px;font-size:0;">&nbsp;</td></tr>
+
+          <tr>
+            <td align="center" style="padding:32px 32px 8px;">
+              <div style="font-family:'Marcellus',Georgia,serif;font-size:14px;letter-spacing:4px;color:#cc9924;text-transform:uppercase;font-weight:500;">You are in</div>
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center" style="padding:24px 32px 8px;">
+              <h1 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:34px;line-height:1.25;color:#1a1a18;">Welcome to Quantum Shift.</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:24px 40px 0;">
+              <p style="margin:0;font-size:17px;line-height:1.7;color:#3a3a36;">Hi {{contact.first_name|default:"friend"}},</p>
+              <p style="margin:16px 0 0;font-size:17px;line-height:1.7;color:#3a3a36;">You are registered for Sunday 17 May. Both sessions are open to you. The same link works for both.</p>
+            </td>
+          </tr>
+
+          <!-- Access link -->
+          <tr>
+            <td style="padding:24px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#1a1a18;">
+                <tr>
+                  <td style="padding:24px 28px;">
+                    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#cc9924;font-weight:500;">Your live link &middot; save this email</div>
+                    <a href="{{custom_values.qs_live_link|default:'https://zoom.us/j/000000000'}}" style="display:block;margin-top:10px;font-family:'Roboto',Arial,sans-serif;font-weight:500;color:#f9f8f5;font-size:18px;text-decoration:underline;word-break:break-all;">{{custom_values.qs_live_link|default:"zoom.us/j/quantum-shift"}}</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Sessions -->
+          <tr>
+            <td style="padding:0 40px 8px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="50%" valign="top" style="padding:18px;background:#f9f8f5;border-left:3px solid #cc9924;">
+                    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#354d4c;font-weight:500;">Morning</div>
+                    <div style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-top:6px;">{{custom_values.qs_morning_session_time|default:"10:00 BST"}}</div>
+                  </td>
+                  <td width="16">&nbsp;</td>
+                  <td width="50%" valign="top" style="padding:18px;background:#f9f8f5;border-left:3px solid #354d4c;">
+                    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#354d4c;font-weight:500;">Evening</div>
+                    <div style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-top:6px;">{{custom_values.qs_evening_session_time|default:"19:00 BST"}}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Calendar CTA -->
+          <tr>
+            <td align="center" style="padding:24px 40px;">
+              <a href="{{custom_values.qs_ics_url|default:'#'}}" style="background:#354d4c;color:#ffffff;text-decoration:none;padding:14px 28px;display:inline-block;font-family:'Roboto',Arial,sans-serif;font-weight:500;letter-spacing:1px;font-size:13px;text-transform:uppercase;">Add to calendar</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:0 40px 8px;">
+              <h2 style="margin:0;font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:22px;color:#1a1a18;">What to expect</h2>
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.7;color:#3a3a36;">Each session is about 90 minutes. You will be lying down. Anthony or Amy guides every breath. The room is held by trained facilitators.</p>
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.7;color:#3a3a36;">There is nothing to learn before Sunday. Just turn up.</p>
+              <p style="margin:14px 0 0;font-size:16px;line-height:1.7;color:#3a3a36;">In the next few days, you will get two short notes from us about <em>why</em> the breath does what it does, so the experience makes sense afterwards. Look out for those.</p>
+            </td>
+          </tr>
+
+          <!-- Setup checklist -->
+          <tr>
+            <td style="padding:24px 40px 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f9f8f5;">
+                <tr>
+                  <td style="padding:20px 24px;">
+                    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#354d4c;font-weight:500;">Quick setup list</div>
+                    <p style="margin:10px 0 6px;font-size:15px;line-height:1.6;color:#3a3a36;">Quiet room. Mat or sofa. Water. Headphones. Eat lightly an hour before.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:24px 40px 32px;">
+              <p style="margin:0;font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">See you Sunday,</p>
+              <p style="margin:4px 0 0;font-size:14px;color:#5a5a55;">Anthony &amp; Amy</p>
+            </td>
+          </tr>
+
+          <tr><td style="height:1px;background:#e6e2d8;line-height:1px;font-size:0;">&nbsp;</td></tr>
+          <tr>
+            <td align="center" style="padding:24px 32px;font-size:12px;color:#8a8a82;line-height:1.6;">
+              Alchemy of Breath &middot; <a href="https://alchemyofbreath.com" style="color:#8a8a82;text-decoration:underline;">alchemyofbreath.com</a><br>
+              <a href="{{unsubscribe_url}}" style="color:#8a8a82;text-decoration:underline;">Unsubscribe</a>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
