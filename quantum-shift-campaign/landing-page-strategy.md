@@ -23,9 +23,10 @@ Visitor lands and within three seconds knows:
 Eyebrow:    QUANTUM SHIFT  ·  SUNDAY 17 MAY 2026
 Headline:   One day. Two sessions. One breath at a time.
 Sub-head:   A free, live one-day breathwork event with Anthony Abbagnano and Amy Rachelle. Drop your nervous system into the gear it has been trying to find for years.
-Primary:    REGISTER FOR FREE  (anchors to #reserve)
-Secondary:  Get the recording  ·  $49.99  (external Stripe link)
+Primary:    RESERVE MY FREE SEAT  (anchors to #reserve)
+Trust strip: 2,000+ Alchemy of Breath graduates &middot; 40+ countries &middot; 14+ years
 Session pills: Morning · 10:00 BST   |   Evening · 19:00 BST
+Countdown:  Doors close in 03d 14h 22m  (live counter to first session)
 ```
 
 ### Hero design
@@ -46,12 +47,14 @@ Session pills: Morning · 10:00 BST   |   Evening · 19:00 BST
 | 4 | What Quantum Shift is | Format clarity + founder portraits | 200 |
 | 5 | Outcome cards (4) | Make the experience concrete | 4 x 30 |
 | 6 | Image break + pull quote | "Regulate, measurably, in real time" | 20 |
-| 7 | Two offer cards | Live free / recording $49.99 | 2 x 60 |
-| 8 | Inline registration form | Conversion | n/a |
+| 7 | Inline registration form | Conversion | n/a |
+| 8 | FAQ (objection handling next to CTA) | Reduce drop-off | 250 |
 | 9 | What happens next (ARM Coach L1 callout) | Funnel reveal | 100 |
 | 10 | Image break + closing quote | "One day. Two sessions. One breath at a time." | 15 |
 | 11 | Final CTA | Conversion | 40 |
 | 12 | Footer | Legal, navigation | n/a |
+
+Recording offer ($49.99) is removed from the main page flow and lives only on the thank-you page (see `thank-you-page.md`) and post-event nurture. This protects the free opt-in target by removing the price-decision friction point above the form.
 
 ---
 
@@ -63,22 +66,8 @@ Inline form at `#reserve`, embedded GHL form `JXFlOEgAhMoElAqLBG1L`.
 
 1. **First name** (required, text)
 2. **Email** (required, email)
-3. **Time zone** (required, dropdown)
-   - GMT / BST (UK)
-   - EST (US East)
-   - CST (US Central)
-   - PST (US West)
-   - CET (Europe)
-   - AEST (Australia East)
-   - JST (Asia East)
-   - Other
-4. **What pulled you here?** (optional, dropdown)
-   - I am exhausted and want to feel different
-   - I work with people and I want this for them
-   - A friend or colleague recommended it
-   - I am already exploring breathwork
-   - Just curious
-5. **Are you a practitioner?** (optional, Yes / No, with conditional follow-up "What kind of work?")
+
+Time zone, "what pulled you here?" and "are you a practitioner?" are collected post-registration via `nurture-01-confirmation` and a follow-up survey, not on the LP. Time zone is auto-detected from the browser (`Intl.DateTimeFormat().resolvedOptions().timeZone`) and stored as a hidden field for reminder timing.
 
 ### Hidden fields (auto-populated from URL)
 
@@ -89,32 +78,33 @@ Inline form at `#reserve`, embedded GHL form `JXFlOEgAhMoElAqLBG1L`.
 
 ### Submit copy
 
-- Button: "Reserve my spot"
-- Helper: "It takes 30 seconds. No card needed."
-- Post-submit redirect: `/quantum-shift/thank-you` (or modal with same content if GHL embed)
-
-### Thank you page / state
-
-- Confirmation message: "You are in. Check your inbox in the next 90 seconds."
-- Resend the calendar invite as a one-click link.
-- Soft secondary: "While you are here, here is what comes after Sunday." Link to ARM Online.
+- Button: "Reserve my free seat"
+- Helper line 1: "Takes 30 seconds. No card needed."
+- Helper line 2: "Pre-event reminders only. Unsubscribe anytime."
+- Post-submit redirect: `/quantum-shift/thank-you` (full GHL funnel page, not modal — the recording upsell needs the real estate). See `thank-you-page.md` for the full spec.
 
 ---
 
 ## Recording purchase flow
 
-- Live URL: `link.alchemyofbreath.com/payment-link/quantum-shift-recording` (placeholder, needs real link).
+The recording is no longer pitched on the opt-in page. It is offered:
+
+1. **On the thank-you page** as the primary upsell (see `thank-you-page.md`). Embedded GHL 1-step order form with Stripe-connected product, no redirect.
+2. **In `11-recording-delivery.html`** for no-shows.
+3. **In `13-final-call.html`** as part of the final-call bundle.
+
+- Product: GHL product `qs-recording-2026` (Stripe processor).
 - Price: $49.99 USD.
 - Includes: both sessions, full recording, lifetime access.
-- Triggers: `quantum-shift-recording-purchased` tag, drops contact into recording delivery sequence.
+- Triggers: `quantum-shift-recording-purchased` tag on payment success, drops contact into recording delivery sequence.
 
 ---
 
 ## Trust elements (above and below form)
 
-- 2,000+ practitioners trained
+- 2,000+ Alchemy of Breath graduates
 - 40+ countries
-- 12+ years
+- 14+ years
 - ICF / SHRM / CIPD recognised at L1 (mention only on ARM card)
 
 ---

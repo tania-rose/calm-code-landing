@@ -125,6 +125,7 @@ All emails use these GHL merge fields. Falls back to safe defaults if blank.
 quantum-shift-campaign/
 ├── README.md                       (this file)
 ├── landing-page-strategy.md        (LP copy spec, form fields, structured data)
+├── thank-you-page.md               (TY page spec + GHL checkout embed how-to)
 ├── segmentation.md                 (audience cuts, copy variants, tagging)
 ├── tracking-dashboard.md           (KPI tracker, UTM scheme, weekly review)
 ├── post-event-followup.md          (post-event funnel detail, ARM conversion)
