@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARC — Alchemy Residential Club at ASHA Tuscany</title>
+  <meta name="description" content="Live, breathe, and belong in Tuscany. The Alchemy Residential Club opens 10 May to 17 October 2026 at ASHA's 42-acre retreat campus. Private rooms from €110/night."/>
+  <meta property="og:title" content="ARC — Alchemy Residential Club"/>
+  <meta property="og:description" content="Co-living at ASHA Tuscany. Private rooms, plant-based meals, breathwork retreats, 42 acres of olive groves and forest."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet"/>
+
+  <style>
+  /* ────────────────────────────────────────────
+     ARC TOKENS — Tuscan earth + cypress + sun
+  ──────────────────────────────────────────── */
+  :root {
+    --bg:         #F5EFE6;
+    --bg-warm:    #ECE2CE;
+    --bg-deep:    #2A1F1A;
+    --cream:      #FAF6EE;
+    --terra:      #B85C38;
+    --terra-2:    #9E4A2B;
+    --olive:      #6B7F4B;
+    --olive-2:    #54653A;
+    --gold:       #D4A24C;
+    --gold-2:     #B8862E;
+    --stone:      #8C7861;
+    --ink:        #2A1F1A;
+    --ink-soft:   #4A3A30;
+    --muted:      #8A7B6C;
+    --white:      #ffffff;
+    --shadow-sm:  0 2px 20px rgba(42,31,26,0.06);
+    --shadow-md:  0 8px 40px rgba(42,31,26,0.10);
+    --shadow-lg:  0 20px 60px rgba(42,31,26,0.14);
+    --r-sm: 8px;
+    --r-md: 16px;
+    --r-lg: 28px;
+    --r-pill: 999px;
+  }
+
+  /* ────────────────────────────────────────────
+     RESET + BASE
+  ──────────────────────────────────────────── */
+  *,*::before,*::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Khula', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3,h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin: 0 0 0.4em;
+  }
+  h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+  h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+  h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+  p  { margin: 0 0 1em; color: var(--ink-soft); }
+  em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; color: var(--terra); }
+
+  .wrap { width: min(1180px, 92%); margin-inline: auto; }
+  .eyebrow {
+    font-family: 'Khula', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--olive);
+    margin-bottom: 1.1rem;
+    display: inline-block;
+  }
+
+  /* ────────────────────────────────────────────
+     NAV
+  ──────────────────────────────────────────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px);
+    background: rgba(245,239,230,0.78);
+    border-bottom: 1px solid rgba(42,31,26,0.06);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 0;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+  }
+  .logo .dot { color: var(--terra); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.92rem; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--terra); }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0.65rem 1.3rem;
+    border-radius: var(--r-pill);
+    font-size: 0.86rem;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--terra); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* ────────────────────────────────────────────
+     HERO
+  ──────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    padding: 5rem 0 6rem;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+  .hero h1 .accent { color: var(--terra); font-style: italic; }
+  .hero-lead {
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin-bottom: 2rem;
+  }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 1.6rem 2.4rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid rgba(42,31,26,0.12);
+    border-bottom: 1px solid rgba(42,31,26,0.12);
+    margin-bottom: 2rem;
+  }
+  .meta-item .k {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--stone);
+    margin-bottom: 0.2rem;
+  }
+  .meta-item .v {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+  }
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 1rem 1.8rem;
+    border-radius: var(--r-pill);
+    font-family: 'Khula', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  .btn-primary {
+    background: var(--terra);
+    color: var(--cream);
+    box-shadow: 0 8px 24px rgba(184,92,56,0.28);
+  }
+  .btn-primary:hover { background: var(--terra-2); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(184,92,56,0.36); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--cream); }
+
+  /* hero visual — sun-kissed cypress orb */
+  .hero-art {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    border-radius: 50% 46% 52% 48% / 48% 52% 46% 52%;
+    background:
+      radial-gradient(circle at 35% 30%, #F4D9A8 0%, #D4A24C 38%, #B85C38 78%, #6B3E22 100%);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .hero-art::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 110%, rgba(107,127,75,0.7) 0%, transparent 55%),
+      radial-gradient(ellipse at 30% 90%, rgba(84,101,58,0.55) 0%, transparent 50%);
+  }
+  .hero-art .silhouette {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 42%;
+    background:
+      linear-gradient(transparent, rgba(42,31,26,0.18)),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 250' preserveAspectRatio='none'><path d='M0,250 L0,180 Q40,140 75,165 Q105,120 135,155 Q165,90 195,140 Q220,100 245,150 Q280,80 310,145 Q345,110 375,160 Q410,120 445,150 Q480,100 510,155 Q545,130 580,160 L600,170 L600,250 Z' fill='%23304322'/><path d='M50,250 L50,200 Q90,180 120,195 Q150,165 180,190 Q210,155 240,200 Q275,170 305,205 Q340,175 375,210 Q410,185 445,205 Q480,180 515,210 L555,210 L555,250 Z' fill='%231e2c14'/></svg>") center/cover no-repeat;
+  }
+  .hero-art .sun {
+    position: absolute;
+    top: 22%; left: 50%; transform: translateX(-50%);
+    width: 38%; aspect-ratio: 1;
+    background: radial-gradient(circle, #FFE9B5 0%, #F4C56F 40%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: sunbreathe 8s ease-in-out infinite;
+  }
+  @keyframes sunbreathe {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+    50%      { transform: translateX(-50%) scale(1.08); opacity: 1; }
+  }
+  .hero-badge {
+    position: absolute;
+    bottom: -1.6rem; left: -1.6rem;
+    background: var(--cream);
+    padding: 1rem 1.4rem;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-md);
+    font-size: 0.86rem;
+  }
+  .hero-badge strong { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--terra); display: block; line-height: 1; }
+
+  /* ────────────────────────────────────────────
+     STRIP — soft tagline band
+  ──────────────────────────────────────────── */
+  .strip {
+    background: var(--bg-warm);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--olive-2);
+    border-top: 1px solid rgba(42,31,26,0.06);
+    border-bottom: 1px solid rgba(42,31,26,0.06);
+  }
+
+  /* ────────────────────────────────────────────
+     SECTIONS — generic
+  ──────────────────────────────────────────── */
+  section { padding: 6rem 0; }
+  .section-head { max-width: 720px; margin: 0 auto 3.5rem; text-align: center; }
+  .section-head p { font-size: 1.1rem; }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .about-card {
+    background: var(--cream);
+    border-radius: var(--r-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(42,31,26,0.06);
+  }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.5rem; }
+  @media (max-width: 500px) { .pillars { grid-template-columns: 1fr; } }
+  .pillar .icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--bg-warm);
+    display: grid; place-items: center;
+    color: var(--terra);
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+  }
+  .pillar h4 { font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .pillar p { font-size: 0.92rem; margin: 0; }
+
+  /* Included */
+  .included { background: var(--bg-warm); }
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  @media (max-width: 800px) { .included-grid { grid-template-columns: 1fr; } }
+  .feature {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: var(--r-md);
+    border: 1px solid rgba(42,31,26,0.06);
+  }
+  .feature .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--terra);
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .feature h3 { margin-bottom: 0.4rem; }
+  .feature p { font-size: 0.96rem; margin: 0; }
+
+  /* Rooms */
+  .rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+  @media (max-width: 720px) { .rooms-grid { grid-template-columns: 1fr; } }
+  .room {
+    background: var(--cream);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    border: 1px solid rgba(42,31,26,0.08);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .room:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .room-img {
+    background: linear-gradient(135deg, var(--olive) 0%, var(--olive-2) 100%);
+    position: relative;
+  }
+  .room:nth-child(2) .room-img { background: linear-gradient(135deg, var(--terra) 0%, var(--terra-2) 100%); }
+  .room:nth-child(3) .room-img { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%); }
+  .room:nth-child(4) .room-img { background: linear-gradient(135deg, var(--stone) 0%, #6B5B48 100%); }
+  .room-img::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 60%);
+  }
+  .room-body { padding: 1.5rem; }
+  .room-body h3 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+  .room-body .price { font-size: 0.86rem; color: var(--terra); font-weight: 600; margin-bottom: 0.6rem; }
+  .room-body p { font-size: 0.92rem; margin: 0; color: var(--muted); }
+
+  /* Day rhythm */
+  .rhythm { background: var(--bg-deep); color: var(--cream); }
+  .rhythm h2 { color: var(--cream); }
+  .rhythm p { color: rgba(250,246,238,0.78); }
+  .rhythm .section-head p { color: rgba(250,246,238,0.7); }
+  .timeline { display: grid; gap: 1.2rem; max-width: 720px; margin: 0 auto; }
+  .moment {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1.5rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid rgba(250,246,238,0.12);
+  }
+  .moment:last-child { border-bottom: none; }
+  .moment .time {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.4rem;
+  }
+  .moment h4 { color: var(--cream); margin-bottom: 0.2rem; font-size: 1.15rem; }
+  .moment p { margin: 0; font-size: 0.95rem; }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+  @media (max-width: 800px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  .quote {
+    background: var(--cream);
+    padding: 2rem;
+    border-radius: var(--r-md);
+    border: 1px solid rgba(42,31,26,0.06);
+    position: relative;
+  }
+  .quote::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.4rem; left: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: var(--terra);
+    opacity: 0.25;
+    line-height: 1;
+  }
+  .quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .quote .author { font-size: 0.86rem; color: var(--stone); }
+  .quote .author strong { color: var(--ink); font-weight: 600; }
+
+  /* Opt-in form */
+  .optin {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+  }
+  .optin-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--cream);
+    padding: 3rem;
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(42,31,26,0.06);
+  }
+  @media (max-width: 600px) { .optin-card { padding: 2rem 1.5rem; } }
+  .optin-card h2 { text-align: center; }
+  .optin-card .lead { text-align: center; margin-bottom: 2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+  .field { margin-bottom: 1.1rem; }
+  .field label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--stone);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid rgba(42,31,26,0.14);
+    background: var(--white);
+    border-radius: var(--r-sm);
+    font-family: 'Khula', sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--terra);
+    box-shadow: 0 0 0 4px rgba(184,92,56,0.12);
+  }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .consent {
+    display: flex; gap: 0.6rem; align-items: flex-start;
+    margin: 0.6rem 0 1.4rem;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  .consent input { width: auto; margin-top: 0.25rem; }
+  .form-submit { width: 100%; padding: 1.1rem; font-size: 1rem; }
+  .form-note {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 1rem;
+  }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .form-success.show { display: block; }
+  .form-success h3 { color: var(--olive); }
+
+  /* FAQ */
+  .faq-list { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid rgba(42,31,26,0.12);
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.4rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    color: var(--terra);
+    font-size: 1.6rem;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding: 0 0 1.4rem; font-size: 1rem; }
+
+  /* Footer */
+  footer {
+    background: var(--bg-deep);
+    color: rgba(250,246,238,0.7);
+    padding: 4rem 0 2rem;
+    font-size: 0.9rem;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
+  footer h4 { color: var(--cream); font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 0.6rem; }
+  footer a:hover { color: var(--gold); }
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(250,246,238,0.12);
+    text-align: center;
+    font-size: 0.82rem;
+  }
+
+  /* ────────────────────────────────────────────
+     UTIL
+  ──────────────────────────────────────────── */
+  .center { text-align: center; }
+  .max-prose { max-width: 60ch; margin-inline: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- ───── NAV ───── -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="#" class="logo">ARC<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#about">The Club</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#rhythm">A Day Here</a>
+        <a href="#faq">FAQ</a>
+        <a href="#optin" class="nav-cta">Reserve a space</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Alchemy Residential Club · ASHA Tuscany</span>
+        <h1>Live, breathe, and <span class="accent">belong</span> in Tuscany.</h1>
+        <p class="hero-lead">Forty-two acres of olive groves, cypress hills and quiet forest. Stay alongside breathwork retreats, drop into open sessions, and find your rhythm at ASHA's Italian retreat campus.</p>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="k">Season</div>
+            <div class="v">10 May — 17 Oct 2026</div>
+          </div>
+          <div class="meta-item">
+            <div class="k">From</div>
+            <div class="v">€110 / night</div>
+          </div>
+          <div class="meta-item">
+            <div class="k">Stay</div>
+            <div class="v">3 nights to 3 months</div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a href="#optin" class="btn btn-primary">Hold my space</a>
+          <a href="#about" class="btn btn-ghost">Read more</a>
+        </div>
+      </div>
+
+      <div style="position: relative;">
+        <div class="hero-art">
+          <div class="sun"></div>
+          <div class="silhouette"></div>
+        </div>
+        <div class="hero-badge">
+          <strong>20% off</strong>
+          early-resident rate, ends 18 May
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───── STRIP ───── -->
+  <div class="strip">
+    Slow mornings · plant-based meals · breath, body, belonging.
+  </div>
+
+  <!-- ───── ABOUT ───── -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What is ARC</span>
+        <h2>A residency for those drawn to <em>slowness</em>.</h2>
+        <p>ARC is co-living for people who want more than a one-week retreat. Stay a few nights or a few months. Write, recover, breathe, garden, walk the hills. You set the pace.</p>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <h3>Not a hotel. Not a retreat. Something quieter.</h3>
+          <p>ARC residents are working remotely, finishing manuscripts, healing, transitioning, or just remembering how to rest. You have your own private room and access to the full ASHA campus — meditation halls, breathing rooms, woodland trails, and a community kitchen serving locally-grown vegetarian food.</p>
+          <p>You can join breathwork sessions, sit out in the garden, or do absolutely nothing. The land tends to take over.</p>
+        </div>
+
+        <div class="about-card">
+          <h3 style="font-size: 1.4rem;">What the land offers</h3>
+          <div class="pillars">
+            <div class="pillar">
+              <div class="icon">i</div>
+              <h4>42 acres</h4>
+              <p>Olive groves, lavender, forest trails, and a shaded river bend.</p>
+            </div>
+            <div class="pillar">
+              <div class="icon">ii</div>
+              <h4>Plant-based kitchen</h4>
+              <p>Three home-cooked vegetarian meals a day, mostly from the garden.</p>
+            </div>
+            <div class="pillar">
+              <div class="icon">iii</div>
+              <h4>Daily practice</h4>
+              <p>Optional breathwork, yoga, and meditation woven into the rhythm.</p>
+            </div>
+            <div class="pillar">
+              <div class="icon">iv</div>
+              <h4>Real community</h4>
+              <p>Facilitators, residents, retreatants and staff sharing one long table.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── INCLUDED ───── -->
+  <section id="included" class="included">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Included in your stay</span>
+        <h2>Everything that makes a day here, <em>a day here</em>.</h2>
+      </div>
+
+      <div class="included-grid">
+        <div class="feature">
+          <span class="num">i</span>
+          <h3>Three home-cooked meals</h3>
+          <p>Vegan and vegetarian, mostly from our organic garden. Long lunches under the pergola. Soup pots simmering on the stove.</p>
+        </div>
+        <div class="feature">
+          <span class="num">ii</span>
+          <h3>Open practice access</h3>
+          <p>Drop into the morning breath circle, evening meditation, or yoga in the studio. Optional, never required.</p>
+        </div>
+        <div class="feature">
+          <span class="num">iii</span>
+          <h3>Workspaces &amp; quiet</h3>
+          <p>Wifi, shaded outdoor tables, and a library room. The land is unusually quiet for thinking.</p>
+        </div>
+        <div class="feature">
+          <span class="num">iv</span>
+          <h3>Forest trails &amp; river</h3>
+          <p>Walking paths, swimming spots, and a sauna for tired bodies after long days outside.</p>
+        </div>
+        <div class="feature">
+          <span class="num">v</span>
+          <h3>Community kitchen</h3>
+          <p>Tea, fruit, and snacks on the counter all day. Space to cook your own things if you want.</p>
+        </div>
+        <div class="feature">
+          <span class="num">vi</span>
+          <h3>Retreats happening alongside</h3>
+          <p>Witness or join the breathwork retreats running on the land. A unique window into ASHA's work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── ROOMS ───── -->
+  <section id="rooms">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where you'll sleep</span>
+        <h2>Four ways to <em>land</em>.</h2>
+        <p>From a private room in the main house to a bell tent under the pines, choose what fits the kind of stay you need.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <div class="room">
+          <div class="room-img"></div>
+          <div class="room-body">
+            <h3>Main House Private</h3>
+            <div class="price">From €180 / night</div>
+            <p>Single bed, desk, and your own bathroom inside the historic farmhouse. Made for solitude.</p>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img"></div>
+          <div class="room-body">
+            <h3>Cottage Twin</h3>
+            <div class="price">From €130 / night per bed</div>
+            <p>Newly renovated cottage, two single beds, shared with same gender. Living room and kitchen included.</p>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img"></div>
+          <div class="room-body">
+            <h3>Rustic Twin Suite</h3>
+            <div class="price">From €120 / night per bed</div>
+            <p>Two single beds, private bathroom shared with one other resident. Cozy, characterful, hand-finished.</p>
+          </div>
+        </div>
+        <div class="room">
+          <div class="room-img"></div>
+          <div class="room-body">
+            <h3>Bell Tent</h3>
+            <div class="price">From €110 / night</div>
+            <p>Furnished bell tent, solo or shared (1–3 mattresses). The closest you can sleep to the land.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── DAY RHYTHM ───── -->
+  <section id="rhythm" class="rhythm">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">A day at ARC</span>
+        <h2>The land sets the <em>tempo</em>.</h2>
+        <p>Nothing is mandatory. Everything is available. This is a sample, not a schedule.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="moment">
+          <div class="time">7:00</div>
+          <div>
+            <h4>First light over the hills</h4>
+            <p>Tea in the kitchen. Sit with the dogs. Walk to the breathing temple if you feel pulled.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">8:30</div>
+          <div>
+            <h4>Breath circle (optional)</h4>
+            <p>30-minute conscious breath practice with whoever is on the land that morning.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">10:00</div>
+          <div>
+            <h4>Breakfast under the pergola</h4>
+            <p>Fresh fruit, bread, eggs from the chickens. Long, unhurried, with the morning still cool.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">11:00 — 14:00</div>
+          <div>
+            <h4>Your own work</h4>
+            <p>Wifi in the library, sun on the stone bench, garden tasks, writing, or sleep. Yours.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">14:30</div>
+          <div>
+            <h4>Lunch at the long table</h4>
+            <p>The big meal of the day. Mostly garden, often with retreatants and staff.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">17:00</div>
+          <div>
+            <h4>River, sauna or walk</h4>
+            <p>Cool water, hot wood, or footpaths. The Tuscan summer is long and forgiving.</p>
+          </div>
+        </div>
+        <div class="moment">
+          <div class="time">21:00</div>
+          <div>
+            <h4>Night sky &amp; soft conversation</h4>
+            <p>Fire, stars, music, silence. Whichever the night calls for.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── TESTIMONIALS ───── -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">From past residents</span>
+        <h2>Some words from people who <em>stayed</em>.</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="quote">
+          <p>I came for ten days and stayed five weeks. My nervous system unwound on a timeline I couldn't have forced. I left writing again.</p>
+          <div class="author"><strong>Marcela R.</strong><br/>Writer, Lisbon</div>
+        </div>
+        <div class="quote">
+          <p>It's not curated wellness. It's a working farm with breathwork in it. That's what made it land for me.</p>
+          <div class="author"><strong>Jonas B.</strong><br/>Designer, Berlin</div>
+        </div>
+        <div class="quote">
+          <p>My laptop and my breath both did better here than they had in two years in the city. I'll be back next season.</p>
+          <div class="author"><strong>Priya M.</strong><br/>Founder, London</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── OPT-IN ───── -->
+  <section id="optin" class="optin">
+    <div class="wrap">
+      <div class="optin-card">
+        <div id="formView">
+          <span class="eyebrow center" style="display:block; text-align:center;">Hold a space</span>
+          <h2>Tell us when you'd like to come.</h2>
+          <p class="lead">We'll send you the full resident guide, room availability, and an invitation to book. No pressure, no automated funnels.</p>
+
+          <form id="arcOptin" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" type="text" required placeholder="Your name"/>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@email.com"/>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="arrival">Arrival window</label>
+                <select id="arrival" name="arrival" required>
+                  <option value="">Choose a month</option>
+                  <option>May 2026</option>
+                  <option>June 2026</option>
+                  <option>July 2026</option>
+                  <option>August 2026</option>
+                  <option>September 2026</option>
+                  <option>October 2026</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="length">Length of stay</label>
+                <select id="length" name="length" required>
+                  <option value="">How long</option>
+                  <option>3–7 nights</option>
+                  <option>1–2 weeks</option>
+                  <option>2–4 weeks</option>
+                  <option>1–3 months</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="room">Room preference</label>
+              <select id="room" name="room">
+                <option value="">No preference</option>
+                <option>Main House Private</option>
+                <option>Cottage Twin</option>
+                <option>Rustic Twin Suite</option>
+                <option>Bell Tent</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="why">What's drawing you here? (optional)</label>
+              <textarea id="why" name="why" placeholder="A line is enough."></textarea>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" id="consent" name="consent" required/>
+              <span>I'd like to receive the resident guide and occasional updates from ARC. I can unsubscribe any time.</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary form-submit">Send me the guide</button>
+            <p class="form-note">We reply personally within 48 hours. Replies come from a real human at ASHA.</p>
+          </form>
+        </div>
+
+        <div id="formSuccess" class="form-success">
+          <h2>You're on the list.</h2>
+          <p>The resident guide is on its way to your inbox. If you don't see it within an hour, check spam or write to <a href="mailto:hello@asha.global" style="color: var(--terra);">hello@asha.global</a>.</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--olive); font-size: 1.2rem;">We'll keep a space warm for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FAQ ───── -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Common questions</span>
+        <h2>Things people <em>ask</em> first.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do I have to join the breathwork sessions?</summary>
+          <p>No. ARC is co-living, not a programme. Sessions are open to residents who feel called. Many residents come for the rhythm of the land and never set foot in the breathing temple. Both are welcomed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get there?</summary>
+          <p>Closest airports are Rome Fiumicino, Pisa, and Florence. We send a full transport guide once you've reserved, including shared shuttle days from Grosseto train station.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is there reliable wifi for remote work?</summary>
+          <p>Yes — fibre wifi in the main house, library, and most outdoor seating areas. Plenty of residents work full-time from here.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I bring my partner / friend / dog?</summary>
+          <p>Partners and friends are welcome — just let us know. We don't currently host pets, with rare exceptions for assistance animals.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's the food like?</summary>
+          <p>Three meals a day, mostly vegan and vegetarian, mostly grown on the land. We accommodate gluten-free and most allergies. The food is one of the things people remember most.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's the minimum stay?</summary>
+          <p>Three nights. Most residents stay one to four weeks. Long stays of one to three months are possible at reduced monthly rates — ask in the form.</p>
+        </details>
+      </div>
+
+      <div class="center" style="margin-top: 3rem;">
+        <a href="#optin" class="btn btn-primary">Hold my space</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer>
+    <div class="wrap">
+      <div>
+        <h4>ARC<span style="color: var(--terra);">.</span></h4>
+        <p>Alchemy Residential Club at ASHA<br/>Tuscany, Italy</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p><a href="#about">The Club</a><br/><a href="#rooms">Rooms</a><br/><a href="#faq">FAQ</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:hello@asha.global">hello@asha.global</a><br/><a href="https://www.asha.global">asha.global</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">© 2026 ASHA · Alchemy Residential Club. Made in Tuscany.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Opt-in form — gracefully handles submit, swaps to success state.
+    // Wire to a real endpoint (GHL, ConvertKit, etc.) by replacing the fetch block.
+    (function () {
+      const form = document.getElementById('arcOptin');
+      const formView = document.getElementById('formView');
+      const success = document.getElementById('formSuccess');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        // Replace this with a POST to your CRM / form endpoint.
+        try {
+          // await fetch('/your-endpoint', { method: 'POST', body: JSON.stringify(data) });
+          console.log('ARC opt-in:', data);
+        } catch (err) {
+          console.warn('Submit failed', err);
+        }
+
+        formView.style.display = 'none';
+        success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    })();
+  </script>
+</body>
+</html>
