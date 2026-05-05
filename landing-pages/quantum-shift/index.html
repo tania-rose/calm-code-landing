@@ -44,19 +44,6 @@
     .offer-card{position:relative;display:flex;flex-direction:column;padding:36px 32px;height:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(12px);transition:transform .3s,border-color .3s,box-shadow .3s;}
     .offer-card.featured{background:rgba(204,153,36,.08);border-color:rgba(204,153,36,.55);box-shadow:0 0 80px -20px rgba(204,153,36,.35);}
     .offer-card:hover{transform:translateY(-3px);border-color:rgba(204,153,36,.55);box-shadow:0 16px 48px rgba(0,0,0,.35),0 0 60px -16px rgba(204,153,36,.25);}
-    .offer-card-price{font-family:'Marcellus',Georgia,serif;font-size:clamp(36px,4.4vw,48px);color:#cc9924;line-height:1;letter-spacing:-.02em;margin-bottom:6px;}
-    .offer-card-includes{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px;margin:20px 0 24px;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;}
-    .offer-card-includes li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.9);line-height:1.55;}
-    .offer-card-includes li::before{content:'';width:6px;height:6px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:7px;}
-    .coach-card{background:#fff;border:1px solid #d3cdb3;padding:0;display:grid;grid-template-columns:280px 1fr;gap:0;align-items:stretch;box-shadow:0 12px 40px rgba(53,77,76,.08);overflow:hidden;}
-    @media(max-width:768px){.coach-card{grid-template-columns:1fr;}}
-    .coach-card-img{position:relative;background:#1a1a18;min-height:240px;}
-    .coach-card-img img{width:100%;height:100%;object-fit:cover;display:block;}
-    .coach-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(255,255,255,.04) 100%);}
-    .coach-card-body{padding:36px 36px;}
-    .coach-meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:18px;}
-    .coach-meta-item{font-size:12px;color:#4a4a46;display:inline-flex;align-items:center;gap:8px;}
-    .coach-meta-item::before{content:'';width:5px;height:5px;border-radius:50%;background:#cc9924;}
     .image-break{position:relative;height:clamp(280px,38vw,440px);overflow:hidden;}
     .image-break img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
     .image-break::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,20,18,.25) 0%,rgba(20,20,18,.55) 100%);}
@@ -141,14 +128,14 @@
 <section class="py-24" style="background:#f9f8f5;">
   <div class="max-w-3xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="eyebrow mb-4">What this day is about</p>
+      <p class="eyebrow mb-4">Why this day</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">Pushing through is not the same as being well.</h2>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">You are not broken. Your nervous system just has not been trained.</h2>
     </div>
-    <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">Pushing through, thinking positive, staying busy. How does this feel in your body?</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:#cc9924;margin-bottom:24px;">Is it true nervous system regulation?</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">They can be nervous system <em>overrides</em> when we aren't connected to the impact they can have on our body. And overrides have a cost: chronic stress, emotional reactivity, exhaustion that sleep does not fix, the version of yourself you keep meaning to take care of.</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;">These are not character flaws. They are the predictable result of a nervous system that has never been trained to hold what life brings, without regular release. <strong style="color:#1a1a18;">In one day, that can change.</strong></p>
+    <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">Most people who find their way to this day are not in crisis. They are functioning. They show up, they get things done, they care deeply about the people around them.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">But underneath that, something feels chronically on. A low-level tension that never quite goes away. A tiredness that sleep does not fix. A version of yourself you keep meaning to get back to.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">That is not a motivation problem. It is not a lifestyle problem. It is a nervous system that has been holding everything and releasing nothing, for a very long time.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;"><strong style="color:#1a1a18;">Sunday is one day to change what your body knows how to do.</strong></p>
   </div>
 </section>
 
@@ -167,12 +154,13 @@
     <div class="text-center mb-16">
       <p class="eyebrow mb-4">What Quantum Shift is</p>
       <div class="section-divider mb-6"><span></span></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:780px;margin:0 auto 22px;">A full day of nervous system regulation.<br/>Two live sessions. One Sunday.</h2>
-      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.88);max-width:640px;margin:0 auto;">A morning session and an evening session, both led by Anthony Abbagnano and Amy Rachelle. Attend one or both. In each session you will regulate fully, measurably, in real time. Not as a concept. As a felt experience in your own body.</p>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:780px;margin:0 auto 22px;">One full day. Two live sessions.<br/>Anthony and Amy in the room with you.</h2>
+      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.88);max-width:640px;margin:0 auto 14px;">This is not a workshop about breathwork. It is two live, immersive experiences where you actually do the work. In your own body. In real time.</p>
+      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.75);max-width:620px;margin:0 auto;">Part 1 is the morning: the context you have been missing, followed by your first full live breathwork experience. Part 2 is the evening: a second session that goes deeper, training your body to hold this state, not just visit it. Come to one. Come to both. Either way, something shifts.</p>
     </div>
 
     <!-- Founders pair -->
-    <div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
+    <div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto">
       <div class="text-center fade-up">
         <div class="img-overlay mx-auto mb-5" style="max-width:240px;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/anthony-abbagnano-2-1.jpg" alt="Anthony Abbagnano" class="instructor-img" />
@@ -190,7 +178,6 @@
         <p style="font-size:13px;color:rgba(255,255,255,.82);line-height:1.6;max-width:280px;margin:0 auto;">Naturopathic Coach and Medical Medium. Co-founder of Alchemy of Breath &amp; ASHA, Tuscany. Two decades integrating breathwork, somatics, fasting, nutrition, and intuitive medicine.</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -200,25 +187,25 @@
     <div class="text-center mb-14">
       <p class="eyebrow mb-4">After Sunday</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:720px;margin:8px auto 16px;">What changes in your body, your relationships, your day.</h2>
-      <p style="font-size:17px;line-height:1.7;color:#4a4a46;max-width:560px;margin:0 auto;">Not promises. Shifts you can feel by Sunday evening, and that compound in the weeks after.</p>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:680px;margin:8px auto 16px;">What you will notice first.</h2>
+      <p style="font-size:17px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">People describe it differently. Here is what comes up most.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">You stop reacting from survival</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">You start responding from ground. The people closest to you will feel the difference before you can name it.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">You stop reacting from the edge</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Things that used to spike you, a sharp comment, a full inbox, a long day, they still happen. They just do not land the same way.</p>
       </div>
       <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">Get grounded</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Not because the world got quieter. Because you stop being at war with it. A steadiness that holds even when life does not.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">A quieter baseline</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Not numb. Not suppressed. A body that is not bracing for the next thing. There is a steadiness there that was not before.</p>
       </div>
       <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">A baseline that holds</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Measurable shifts in HRV, cortisol, and vagal tone. The biology of resilience, trained directly through the breath.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">Sleep that actually lands</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The kind of tired that leads to rest, not the kind that leads to lying awake running the same thoughts. Your system finally gets to come down.</p>
       </div>
       <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">No more mean talk</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The patterns you blamed yourself for were never personality. They were a body doing its best with the tools it had. After Sunday, you have better tools.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">More room between thought and reaction</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The self-critical spiral. The snap. The saying yes when you mean no. There is more space now. Enough to choose.</p>
       </div>
     </div>
   </div>
@@ -236,19 +223,18 @@
   <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
     <p class="eyebrow mb-4">What you get</p>
     <div class="section-divider mb-6"><span></span></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">A full day. Two live sessions. Free.</h2>
-    <p style="font-family:'Marcellus',Georgia,serif;font-style:italic;font-size:clamp(17px,1.9vw,20px);line-height:1.55;color:#cc9924;max-width:520px;margin:0 auto 18px;">Come to one session, though we recommend both Part 1 and Part 2.</p>
-    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 36px;">Register once and we will send you everything you need. The live access link, the calendar invite, and a 24-hour reminder.</p>
+    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Everything you need. Sent to your inbox.</h2>
+    <p style="font-family:'Marcellus',Georgia,serif;font-style:italic;font-size:clamp(17px,1.9vw,20px);line-height:1.55;color:#cc9924;max-width:520px;margin:0 auto 18px;">Register once. We handle the rest.</p>
+    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 36px;">One registration. Two sessions. We send the live link the day before, a calendar invite, and a 24-hour reminder. No app, no platform, no admin.</p>
 
     <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:14px;max-width:520px;margin:0 auto 36px;text-align:left;">
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Both live sessions with Anthony &amp; Amy.</strong> Part 1: the why and how. Part 2: train your body for regulation. Both sessions include a live breathwork experience. Attend either or both. Cannot attend? No worries. Get the recordings.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">A guided breathwork practice and live Q&amp;A.</strong> The felt experience of regulation, in real time, in your own body.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">A calendar invite and live access link by email.</strong> No app, no platform to download.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">A path forward, if you want one.</strong> If Sunday lands the way we hope, we will share the next step with you afterwards by email.</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Both live sessions with Anthony and Amy.</strong> Part 1: morning, 9:30 to 11:30am UK. Part 2: evening, 5 to 7pm UK. Both include a full live breathwork experience and an open Q&amp;A.</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">The actual practice, not a demo.</strong> You breathe. You regulate. In your body, on the day.</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Your live link and calendar invite by email.</strong> Nothing to download. No platform to sign up for.</span></li>
+      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Can't make it live?</strong> Register anyway. After the event, everyone receives the option to purchase the recording.</span></li>
     </ul>
 
     <a href="#reserve" class="btn-gold" style="padding:18px 44px;font-size:13px;">Register for free</a>
-    <p style="font-size:12px;color:rgba(255,255,255,.88);margin-top:20px;letter-spacing:.04em;">Cannot make it live? <strong style="color:rgba(255,255,255,.88);font-weight:400;">Register anyway.</strong> After the event we will email everyone the option to purchase the recording.</p>
   </div>
 </section>
 
@@ -258,8 +244,8 @@
   <div class="relative z-10 max-w-2xl mx-auto px-6">
     <div class="text-center mb-10">
       <div class="date-pill mb-6" style="background:rgba(204,153,36,.16);">Sunday 17 May &middot; Live &middot; Free</div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Reserve your place.</h2>
-      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);max-width:480px;margin:0 auto 16px;">Register once. You are in for both live sessions. We send the live link the day before.</p>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Come on Sunday.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);max-width:480px;margin:0 auto 16px;">Register once and you are in for both sessions. Everything you need arrives by email the day before.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px;">
         <span class="session-pill"><span class="dot"></span>Part 1 &middot; 9:30 to 11:30am UK</span>
         <span class="session-pill"><span class="dot"></span>Part 2 &middot; 5 to 7pm UK</span>
@@ -285,7 +271,7 @@
   </div>
   <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
     <div class="ornament" style="margin-bottom:20px;justify-content:center;"></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:32px;">Coping has been your job long enough.<br/>Sunday, you can let your body do something else.</h2>
+    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:32px;">You have been running on reserve long enough.<br/>Sunday, let your body do something different.</h2>
     <div class="flex flex-wrap gap-4 justify-center">
       <a href="#reserve" class="btn-gold">Save my seat</a>
     </div>
