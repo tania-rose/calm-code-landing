@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Shift Recording — Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .card {
+      width: 1200px;
+      height: 675px;
+      background: #1a1a18;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* Background gradients */
+    .bg-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 50%, rgba(53,77,76,.55) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 20%, rgba(204,153,36,.12) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, rgba(53,77,76,.3) 0%, transparent 55%);
+    }
+
+    /* Geometric circles */
+    .circles {
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 700px;
+      height: 700px;
+      opacity: .055;
+    }
+
+    /* Grain overlay */
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Left teal accent bar */
+    .accent-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: linear-gradient(to bottom, transparent, #354d4c, #cc9924, #354d4c, transparent);
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 0;
+    }
+
+    /* Left panel */
+    .left {
+      padding: 64px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .top-section {}
+
+    .eyebrow {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #cc9924;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: #cc9924;
+      opacity: .6;
+    }
+
+    .event-name {
+      font-family: 'Marcellus', Georgia, serif;
+      font-size: 80px;
+      line-height: .95;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .event-name span {
+      color: #cc9924;
+    }
+
+    .subtitle {
+      font-family: 'Marcellus', Georgia, serif;
+      font-size: 22px;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .02em;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(to right, #cc9924, transparent);
+      margin-bottom: 28px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,.72);
+      max-width: 460px;
+      font-weight: 300;
+    }
+
+    /* Bottom of left */
+    .bottom-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hosts {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .host-avatars {
+      display: flex;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #1a1a18;
+      box-shadow: 0 0 0 1px rgba(204,153,36,.5);
+      background: #354d4c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Marcellus', serif;
+      font-size: 16px;
+      color: #cc9924;
+      overflow: hidden;
+    }
+    .avatar:nth-child(2) { margin-left: -12px; }
+
+    .host-names {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .host-label {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(204,153,36,.8);
+      font-weight: 500;
+    }
+    .host-name {
+      font-family: 'Marcellus', serif;
+      font-size: 15px;
+      color: #fff;
+      letter-spacing: .01em;
+    }
+
+    .meta-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.6);
+    }
+    .meta-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #cc9924;
+      box-shadow: 0 0 6px rgba(204,153,36,.6);
+    }
+
+    /* Right panel */
+    .right {
+      background: rgba(53,77,76,.18);
+      border-left: 1px solid rgba(204,153,36,.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 40px;
+      gap: 32px;
+      position: relative;
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(204,153,36,.3), transparent);
+    }
+
+    .price-block {
+      text-align: center;
+    }
+
+    .price-label {
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-family: 'Marcellus', serif;
+      font-size: 64px;
+      line-height: 1;
+      color: #cc9924;
+      letter-spacing: -.03em;
+    }
+
+    .price-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,.45);
+      margin-top: 8px;
+      letter-spacing: .06em;
+    }
+
+    .includes {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .include-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,.8);
+      line-height: 1.5;
+    }
+    .include-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #cc9924;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(204,153,36,.12);
+      border: 1px solid rgba(204,153,36,.4);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #cc9924;
+      font-weight: 500;
+    }
+
+    /* AoB wordmark bottom left */
+    .wordmark {
+      position: absolute;
+      bottom: 28px;
+      left: 56px;
+      z-index: 2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg-glow"></div>
+    <div class="grain"></div>
+    <div class="accent-bar"></div>
+
+    <!-- Geometric SVG circles -->
+    <svg class="circles" viewBox="0 0 700 700" aria-hidden="true">
+      <circle cx="350" cy="350" r="320" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="290" cy="350" r="240" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="410" cy="350" r="240" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="350" cy="350" r="160" fill="none" stroke="#cc9924" stroke-width="1" stroke-dasharray="3 9"/>
+      <circle cx="350" cy="350" r="80" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="350" cy="350" r="4" fill="#cc9924" opacity=".6"/>
+    </svg>
+
+    <div class="content">
+
+      <!-- LEFT -->
+      <div class="left">
+        <div class="top-section">
+          <div class="eyebrow">Alchemy of Breath &middot; Event Recording</div>
+          <h1 class="event-name">Quantum<br/><span>Shift</span></h1>
+          <p class="subtitle">The Full Day Recording</p>
+          <div class="divider"></div>
+          <p class="description">Both sessions recorded in full. Watch at your own pace, return to the breathwork practice as many times as you need. The felt experience of regulation, available on demand.</p>
+        </div>
+
+        <div class="bottom-section">
+          <div class="hosts">
+            <div class="host-avatars">
+              <div class="avatar">A</div>
+              <div class="avatar">A</div>
+            </div>
+            <div class="host-names">
+              <span class="host-label">Led live by</span>
+              <span class="host-name">Anthony Abbagnano &middot; Amy Rachelle</span>
+            </div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-item"><span class="meta-dot"></span>Sunday 17 May 2026</div>
+            <div class="meta-item"><span class="meta-dot"></span>Part 1 &middot; 9:30 to 11:30am UK</div>
+            <div class="meta-item"><span class="meta-dot"></span>Part 2 &middot; 5 to 7pm UK</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="badge">Recording access</div>
+
+        <div class="price-block">
+          <p class="price-label">One-time purchase</p>
+          <p class="price">$49.99</p>
+          <p class="price-sub">Lifetime access</p>
+        </div>
+
+        <div class="includes">
+          <div class="include-item">
+            <span class="include-dot"></span>
+            <span>Full recording of both Part 1 and Part 2</span>
+          </div>
+          <div class="include-item">
+            <span class="include-dot"></span>
+            <span>The complete live breathwork practice</span>
+          </div>
+          <div class="include-item">
+            <span class="include-dot"></span>
+            <span>Live Q&amp;A with Anthony and Amy included</span>
+          </div>
+          <div class="include-item">
+            <span class="include-dot"></span>
+            <span>Watch as many times as you need</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="wordmark">alchemyofbreath.com</div>
+  </div>
+</body>
+</html>
