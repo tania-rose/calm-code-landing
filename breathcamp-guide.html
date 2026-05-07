@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BreathCamp Guide | Everything You Need to Know — Alchemy of Breath</title>
+  <meta name="description" content="The complete guide to BreathCamp Tuscany. Travel, what to bring, daily rhythm, food, the land, and the small details that make the week easy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--teal:#354d4c;--gold:#cc9924;--beige:#d3cdb3;--offwhite:#f9f8f5;--ink:#1a1a18;--ink-soft:#4a4a46;--gray:#c5c3c2;}
+    *{box-sizing:border-box}
+    body{font-family:'Roboto',sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.7;-webkit-font-smoothing:antialiased;margin:0}
+    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;letter-spacing:-.01em;font-weight:400}
+    a{color:var(--gold)}a:hover{color:var(--teal)}
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+    .gold-rule{width:40px;height:2px;background:var(--gold);margin:14px 0 24px}
+
+    /* Header */
+    header.guide-header{background:var(--teal);color:#fff;padding:18px 0;position:sticky;top:0;z-index:50;box-shadow:0 2px 16px rgba(0,0,0,.15)}
+    header .row{max-width:880px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    header img{height:24px;width:auto;opacity:.9}
+    header a.back{color:rgba(255,255,255,.78);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:500}
+    header a.back:hover{color:#fff}
+
+    /* Page hero */
+    .page-hero{background:var(--teal);color:#fff;padding:60px 24px 80px;text-align:center;position:relative}
+    .page-hero::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:40px;background:linear-gradient(to bottom,transparent,var(--offwhite))}
+    .page-hero h1{font-size:clamp(32px,4.5vw,48px);line-height:1.15;color:#fff;margin:14px 0 12px}
+    .page-hero p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto;font-weight:300}
+    .page-hero .badge{display:inline-block;background:rgba(204,153,36,.15);border:1px solid rgba(204,153,36,.4);color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:6px;font-weight:500}
+
+    /* Layout */
+    main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
+    section.guide-section{margin-bottom:56px;scroll-margin-top:80px}
+    section.guide-section h2{font-size:clamp(26px,3vw,34px);color:var(--ink);margin:0 0 8px}
+    section.guide-section p{font-size:15.5px;color:var(--ink-soft);margin:0 0 14px}
+    section.guide-section ul{font-size:15.5px;color:var(--ink-soft);padding-left:0;list-style:none;margin:0 0 14px}
+    section.guide-section ul li{padding-left:22px;position:relative;margin-bottom:10px;line-height:1.7}
+    section.guide-section ul li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+    section.guide-section h3{font-size:19px;color:var(--teal);margin:28px 0 8px;font-family:'Marcellus',Georgia,serif}
+    section.guide-section .callout{background:#fff;border:1px solid var(--beige);border-left:3px solid var(--gold);padding:18px 22px;margin:18px 0;font-size:14.5px;color:var(--ink-soft);line-height:1.7}
+    section.guide-section .callout strong{color:var(--ink);display:block;margin-bottom:4px;font-weight:500}
+
+    /* TOC */
+    .toc{background:#fff;border:1px solid var(--beige);padding:28px 32px;margin-bottom:56px;box-shadow:0 1px 8px rgba(53,77,76,.04)}
+    .toc h2{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;font-weight:500;font-family:'Roboto',sans-serif}
+    .toc ol{list-style:none;padding-left:0;counter-reset:tocitem;margin:0;column-count:2;column-gap:32px}
+    .toc ol li{counter-increment:tocitem;break-inside:avoid;margin-bottom:8px}
+    .toc ol li a{font-size:14px;color:var(--ink);text-decoration:none;font-weight:400;display:flex;gap:10px;align-items:baseline}
+    .toc ol li a::before{content:counter(tocitem,decimal-leading-zero);font-family:'Marcellus',Georgia,serif;color:var(--gold);font-size:14px;flex-shrink:0;font-weight:400}
+    .toc ol li a:hover{color:var(--teal)}
+    @media(max-width:600px){.toc ol{column-count:1}}
+
+    /* Table */
+    .info-table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14.5px}
+    .info-table td{padding:12px 0;border-bottom:1px solid var(--beige);vertical-align:top}
+    .info-table td:first-child{color:var(--gray);text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:500;width:40%;padding-right:18px;padding-top:14px}
+    .info-table td:last-child{color:var(--ink);}
+
+    /* Print styles */
+    @media print{
+      body{background:#fff}
+      header.guide-header{position:static;box-shadow:none;background:#fff;color:var(--ink);border-bottom:1px solid var(--beige);padding:8px 0}
+      header img{filter:brightness(0)}
+      header a.back{display:none}
+      .page-hero{background:#fff;color:var(--ink);padding:24px 24px 16px;border-bottom:2px solid var(--gold)}
+      .page-hero h1{color:var(--ink)}
+      .page-hero p{color:var(--ink-soft)}
+      .page-hero .badge{display:none}
+      .page-hero::after{display:none}
+      .toc{box-shadow:none;page-break-after:always}
+      section.guide-section{page-break-inside:avoid;margin-bottom:32px}
+      section.guide-section h2{page-break-after:avoid}
+      .callout{page-break-inside:avoid}
+      footer.guide-footer{page-break-inside:avoid}
+      .no-print{display:none!important}
+      a{color:var(--ink)!important;text-decoration:none}
+    }
+
+    /* Footer */
+    footer.guide-footer{background:var(--ink);color:rgba(255,255,255,.65);padding:40px 24px}
+    footer.guide-footer .row{max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+    footer.guide-footer p{font-size:12px;line-height:1.7;margin:0}
+    footer.guide-footer a{color:var(--gold);text-decoration:none;font-size:12px}
+
+    .print-btn{background:var(--gold);color:#fff;border:none;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 22px;cursor:pointer;text-decoration:none;display:inline-block;border-radius:2px;transition:background .2s}
+    .print-btn:hover{background:var(--teal);color:#fff}
+  </style>
+</head>
+<body>
+
+<header class="guide-header">
+  <div class="row">
+    <a href="index.html" aria-label="Back to BreathCamp"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" /></a>
+    <a href="index.html" class="back">&larr; BreathCamp</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <span class="badge">BreathCamp Tuscany &middot; The Guide</span>
+  <h1>Everything you need<br/>before you arrive.</h1>
+  <p>Travel, what to bring, the daily rhythm, the food, the land, and all the small details that make the week feel easy. Read it once now, and again the week before you fly.</p>
+</section>
+
+<main>
+
+  <!-- TOC -->
+  <nav class="toc no-print" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#quick-facts">Quick facts</a></li>
+      <li><a href="#getting-there">Getting there</a></li>
+      <li><a href="#what-to-bring">What to bring</a></li>
+      <li><a href="#daily-rhythm">Daily rhythm</a></li>
+      <li><a href="#food-dietary">Food &amp; dietary</a></li>
+      <li><a href="#the-land">The land &amp; nearby</a></li>
+      <li><a href="#health-safety">Health &amp; safety</a></li>
+      <li><a href="#code-of-conduct">Code of conduct</a></li>
+      <li><a href="#terms">Terms &amp; conditions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+    <div style="margin-top:18px;text-align:right;">
+      <button class="print-btn" onclick="window.print()">Print or save as PDF</button>
+    </div>
+  </nav>
+
+  <!-- 1. WELCOME -->
+  <section id="welcome" class="guide-section">
+    <p class="eyebrow">01 &middot; Welcome</p>
+    <h2>You are about to arrive somewhere quiet.</h2>
+    <div class="gold-rule"></div>
+    <p>BreathCamp is a 7-day, 6-night residential retreat at ASHA, on 15 hectares of untouched land in the Tuscan hills. The week is built around conscious breathing, but it is also built around food grown nearby, slow mornings, and the company of people who came looking for the same things you did.</p>
+    <p>This guide is meant to make the practical side easy, so the rest of you can arrive ready. Skim it now, and read it again the week before you travel.</p>
+  </section>
+
+  <!-- 2. QUICK FACTS -->
+  <section id="quick-facts" class="guide-section">
+    <p class="eyebrow">02 &middot; Quick facts</p>
+    <h2>The shape of the week.</h2>
+    <div class="gold-rule"></div>
+    <table class="info-table">
+      <tr><td>Length</td><td>7 days, 6 nights</td></tr>
+      <tr><td>Check-in</td><td>Sunday, 2:30&nbsp;PM &ndash; 5:00&nbsp;PM &middot; Orientation 4:30&nbsp;PM</td></tr>
+      <tr><td>Check-out</td><td>Saturday, 8:00&nbsp;AM &ndash; 9:30&nbsp;AM &middot; Closing lunch around 2:00&nbsp;PM</td></tr>
+      <tr><td>Location</td><td>ASHA Retreat Centre, Località Le Piane, Castell'Azzara, Tuscany</td></tr>
+      <tr><td>Nearest airport</td><td>Rome Fiumicino (FCO)</td></tr>
+      <tr><td>Nearest station</td><td>Chiusi-Chianciano Terme</td></tr>
+      <tr><td>Meals</td><td>3 plant-based, locally sourced meals daily</td></tr>
+      <tr><td>What's included</td><td>Full program, accommodation, all meals</td></tr>
+      <tr><td>What's not included</td><td>Travel to Tuscany, travel insurance, personal extras</td></tr>
+    </table>
+  </section>
+
+  <!-- 3. GETTING THERE -->
+  <section id="getting-there" class="guide-section">
+    <p class="eyebrow">03 &middot; Getting there</p>
+    <h2>Three good ways to arrive.</h2>
+    <div class="gold-rule"></div>
+
+    <h3>By air</h3>
+    <p>Rome Fiumicino (FCO) is the recommended airport. From FCO you have two onward options: rent a car (most flexible, about 2.5 hours by road) or take the train.</p>
+
+    <h3>By train</h3>
+    <p>From Rome Termini, take a train to <strong>Chiusi-Chianciano Terme</strong>. This is the closest station to ASHA. From Chiusi you can take a taxi or a pre-arranged transfer to ASHA, about 45 minutes by road through the hills.</p>
+    <div class="callout"><strong>Tip</strong>Book your Italian train tickets a few weeks ahead via Trenitalia or Italo for the best fares. Save the QR ticket to your phone offline before you travel.</div>
+
+    <h3>By car</h3>
+    <p>If you are renting from Rome, drive north on the A1 toward Florence, exit at <strong>Chiusi-Chianciano Terme</strong>, then follow the SR2 / local roads toward Castell'Azzara. The final stretch is winding country road; allow extra time and drive in daylight if you can.</p>
+    <p><strong>Address for GPS:</strong> Località Le Piane, Castell'Azzara, Tuscany, Italy</p>
+    <div class="callout"><strong>Coordinating rides</strong>A WhatsApp group is shared with all attendees a few weeks before camp. Most people coordinate trains, taxis, and shared transfers there. You will not be travelling alone unless you want to be.</div>
+
+    <p style="font-size:13px;color:var(--gray);font-style:italic;margin-top:18px;">Detailed driving directions, GPS coordinates, and current train timings — to be added from the live BreathCamp page.</p>
+  </section>
+
+  <!-- 4. WHAT TO BRING -->
+  <section id="what-to-bring" class="guide-section">
+    <p class="eyebrow">04 &middot; What to bring</p>
+    <h2>Pack light, pack soft.</h2>
+    <div class="gold-rule"></div>
+
+    <h3>Practice</h3>
+    <ul>
+      <li>Your own yoga mat (we recommend bringing one for safety)</li>
+      <li>Comfortable, layered clothes for movement and breathwork</li>
+      <li>A blanket or shawl you like to be wrapped in</li>
+      <li>An eye mask for indoor sessions</li>
+      <li>A journal and pen if you write</li>
+    </ul>
+
+    <h3>Land &amp; weather</h3>
+    <ul>
+      <li>Walking shoes for the hills and trails</li>
+      <li>Swimwear for the pool and the nearby hot springs</li>
+      <li>Layers — Tuscan evenings can be cool even in summer</li>
+      <li>A reusable water bottle</li>
+      <li>Sunscreen and a sun hat</li>
+      <li>An umbrella or light rain jacket, just in case</li>
+    </ul>
+
+    <h3>If you are camping or glamping</h3>
+    <ul>
+      <li>A warm sleeping bag (nights can be cool)</li>
+      <li>A torch or head-torch</li>
+      <li>Anything you'd usually bring to a campsite</li>
+    </ul>
+
+    <div class="callout"><strong>Weather note</strong>Weather in May and September is variable and difficult to predict. If you've chosen tent or glamping, please come prepared. Refunds are not available for weather-related changes.</div>
+  </section>
+
+  <!-- 5. DAILY RHYTHM -->
+  <section id="daily-rhythm" class="guide-section">
+    <p class="eyebrow">05 &middot; Daily rhythm</p>
+    <h2>Spacious, but with shape.</h2>
+    <div class="gold-rule"></div>
+    <p>A typical day is rhythmic, not packed. Mornings start gently. Practices are paced. Evenings are free or shared, depending on what the week wants.</p>
+    <ul>
+      <li>Morning movement</li>
+      <li>Breakfast</li>
+      <li>Breathwork or workshop</li>
+      <li>Group share</li>
+      <li>Lunch</li>
+      <li>Breathwork or workshop</li>
+      <li>Dinner</li>
+      <li>Free time, or whatever the evening calls for</li>
+    </ul>
+    <p>The full 7-day arc — arrival, foundations, intuition, the Bridge, water and sound, mandala and feast, and integration — is laid out on the main BreathCamp page.</p>
+  </section>
+
+  <!-- 6. FOOD -->
+  <section id="food-dietary" class="guide-section">
+    <p class="eyebrow">06 &middot; Food &amp; dietary</p>
+    <h2>Plant-based, local, generous.</h2>
+    <div class="gold-rule"></div>
+    <p>Three plant-based meals a day, prepared on site with ingredients sourced locally where possible. The kitchen team can accommodate dietary needs — gluten-free, allergies, sensitivities — if you let us know in advance.</p>
+    <p>Coffee, tea, and water are available throughout the day. Snacks are kept simple and seasonal.</p>
+    <div class="callout"><strong>Let us know early</strong>Please share dietary requirements at the time of booking, or as soon as you can after, so the kitchen has time to plan well.</div>
+  </section>
+
+  <!-- 7. THE LAND -->
+  <section id="the-land" class="guide-section">
+    <p class="eyebrow">07 &middot; The land &amp; nearby</p>
+    <h2>15 hectares, and the world around it.</h2>
+    <div class="gold-rule"></div>
+    <p>ASHA sits on 15 hectares of Tuscan land — stone buildings, olive groves, vineyards, walking paths. On site you'll find the swimming pool, meditation spaces, dining room, and group practice rooms including the open-air Prana Shala.</p>
+    <p>If you have a free afternoon and want to wander, nearby you'll find:</p>
+    <ul>
+      <li>Natural hot springs (a short drive)</li>
+      <li>Etruscan historical sites in the surrounding hills</li>
+      <li>Pitigliano, a striking medieval town carved into volcanic rock</li>
+      <li>Small villages with shops, cafés, and the slower pace of rural Italy</li>
+    </ul>
+  </section>
+
+  <!-- 8. HEALTH & SAFETY -->
+  <section id="health-safety" class="guide-section">
+    <p class="eyebrow">08 &middot; Health &amp; safety</p>
+    <h2>A few things to think about.</h2>
+    <div class="gold-rule"></div>
+    <p>BreathCamp is a residential breathwork retreat, not a substitute for medical treatment, therapy, or clinical care. If you have a medical condition, please consult your doctor before attending and let us know in advance.</p>
+    <p>We strongly recommend <strong>travel insurance</strong> that covers medical care, trip interruption, and any variable circumstances that may arise.</p>
+    <p>Any updates to testing or health requirements will be communicated closer to the date as needed.</p>
+    <div class="callout"><strong>If you are pregnant, recovering from surgery, or managing a serious condition</strong>Please contact us before booking so we can talk through whether this week is right for you, or what adjustments may be helpful.</div>
+  </section>
+
+  <!-- 9. CODE OF CONDUCT -->
+  <section id="code-of-conduct" class="guide-section">
+    <p class="eyebrow">09 &middot; Code of conduct</p>
+    <h2>How we hold the space.</h2>
+    <div class="gold-rule"></div>
+    <p>BreathCamp is a shared container. We ask everyone to bring their full selves and to look after one another's experience. The basics:</p>
+    <ul>
+      <li>Confidentiality — what is shared in the circle stays in the circle</li>
+      <li>Respect for the land, the team, and each other's pace</li>
+      <li>No recreational drugs on site; no alcohol during practice times</li>
+      <li>Phones away during sessions and shared meals</li>
+      <li>Arrive on time for sessions; let us know if you need to step out</li>
+    </ul>
+    <p>All students are required to stay on-site at ASHA during the retreat. The only exception is for resident students who live around ASHA for at least 6 months out of the year.</p>
+  </section>
+
+  <!-- 10. TERMS -->
+  <section id="terms" class="guide-section">
+    <p class="eyebrow">10 &middot; Terms &amp; conditions</p>
+    <h2>The agreement.</h2>
+    <div class="gold-rule"></div>
+    <ul>
+      <li>We recommend securing travel insurance to cover different regulations, changes, etc., as applicable, depending on variable circumstances that may or may not arise when you come to ASHA.</li>
+      <li>Because the situation is still current, we will update any requirements for testing, etc., closer to the date.</li>
+      <li>We recommend bringing your own yoga mat for safety.</li>
+      <li>We do not offer refunds.</li>
+      <li>BreathCamp locations are non-transferable.</li>
+      <li>All students are required to stay on-site at ASHA. No exceptions except for resident students who live around ASHA for at least 6 months out of the year.</li>
+      <li>Please note that the weather can be variable and it is difficult to predict in May and September. For the tent and glamping options use at your own risk; refunds are not possible.</li>
+      <li>Depending on the circumstances and availability, it may be possible to attend a BreathCamp on a different date.</li>
+      <li>Should we cancel BreathCamp, we will refund the full amount, minus currency exchange and bank platform fees we may be charged.</li>
+    </ul>
+    <p style="font-style:italic;font-size:14px;color:var(--ink-soft);margin-top:18px;">By making payment, you agree to the full terms and conditions. Please read them carefully for full details.</p>
+  </section>
+
+  <!-- 11. CONTACT -->
+  <section id="contact" class="guide-section">
+    <p class="eyebrow">11 &middot; Contact</p>
+    <h2>If something is unclear.</h2>
+    <div class="gold-rule"></div>
+    <p>Anything not covered here, or anything that needs a real conversation:</p>
+    <ul>
+      <li>Email <a href="mailto:info@alchemyofbreath.com">info@alchemyofbreath.com</a></li>
+      <li>Book a free <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page">15-minute discovery call</a></li>
+      <li>Or come back to the <a href="index.html">main BreathCamp page</a></li>
+    </ul>
+    <p style="margin-top:24px;">We're glad you're coming. See you in the hills.</p>
+  </section>
+
+  <div class="no-print" style="text-align:center;margin-top:48px;">
+    <button class="print-btn" onclick="window.print()">Print or save as PDF</button>
+  </div>
+
+</main>
+
+<footer class="guide-footer">
+  <div class="row">
+    <p>&copy; 2026 Alchemy of Breath &middot; BreathCamp Tuscany Guide</p>
+    <p><a href="index.html">Back to BreathCamp &rarr;</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
