@@ -87,6 +87,24 @@
 
     .print-btn{background:var(--gold);color:#fff;border:none;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 22px;cursor:pointer;text-decoration:none;display:inline-block;border-radius:2px;transition:background .2s}
     .print-btn:hover{background:var(--teal);color:#fff}
+
+    /* Imagery */
+    figure.guide-image{margin:24px 0;border:1px solid var(--beige);overflow:hidden;background:#fff;box-shadow:0 2px 12px rgba(53,77,76,.06)}
+    figure.guide-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+    figure.guide-image figcaption{padding:10px 18px;font-size:12px;color:var(--ink-soft);background:#fff;font-style:italic;border-top:1px solid var(--beige)}
+    .image-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}
+    .image-strip img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border:1px solid var(--beige)}
+    @media(max-width:600px){.image-strip{grid-template-columns:repeat(2,1fr)}.image-strip img:last-child{display:none}}
+
+    /* Hero with image */
+    .page-hero{background:linear-gradient(rgba(53,77,76,.85),rgba(53,77,76,.92)),url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg') center/cover no-repeat var(--teal)}
+
+    @media print{
+      figure.guide-image{break-inside:avoid;margin:14px 0;box-shadow:none}
+      figure.guide-image img{aspect-ratio:auto;max-height:240px;object-fit:cover}
+      .image-strip{break-inside:avoid}
+      .image-strip img{max-height:140px}
+    }
   </style>
 </head>
 <body>
@@ -133,6 +151,7 @@
     <h2>You are about to arrive somewhere quiet.</h2>
     <div class="gold-rule"></div>
     <p>BreathCamp is a 7-day, 6-night residential retreat at ASHA, on 15 hectares of untouched land in the Tuscan hills. The week is built around conscious breathing, but it is also built around food grown nearby, slow mornings, and the company of people who came looking for the same things you did.</p>
+    <figure class="guide-image"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg" alt="Group breathwork session at ASHA" loading="lazy" /><figcaption>A morning circle at ASHA.</figcaption></figure>
     <p>This guide is meant to make the practical side easy, so the rest of you can arrive ready. Skim it now, and read it again the week before you travel.</p>
   </section>
 
@@ -159,6 +178,7 @@
     <p class="eyebrow">03 &middot; Getting there</p>
     <h2>Three good ways to arrive.</h2>
     <div class="gold-rule"></div>
+    <figure class="guide-image"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /><figcaption>The road in winds through Tuscan hills.</figcaption></figure>
 
     <h3>By air</h3>
     <p>Rome Fiumicino (FCO) is the recommended airport. From FCO you have two onward options: rent a car (most flexible, about 2.5 hours by road) or take the train.</p>
@@ -216,6 +236,7 @@
     <h2>Spacious, but with shape.</h2>
     <div class="gold-rule"></div>
     <p>A typical day is rhythmic, not packed. Mornings start gently. Practices are paced. Evenings are free or shared, depending on what the week wants.</p>
+    <figure class="guide-image"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="Practice space at ASHA" loading="lazy" /><figcaption>The Prana Shala — open-air practice space.</figcaption></figure>
     <ul>
       <li>Morning movement</li>
       <li>Breakfast</li>
@@ -245,6 +266,11 @@
     <h2>15 hectares, and the world around it.</h2>
     <div class="gold-rule"></div>
     <p>ASHA sits on 15 hectares of Tuscan land — stone buildings, olive groves, vineyards, walking paths. On site you'll find the swimming pool, meditation spaces, dining room, and group practice rooms including the open-air Prana Shala.</p>
+    <div class="image-strip">
+      <img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA grounds" loading="lazy" />
+      <img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" />
+      <img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_600,h_600,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" />
+    </div>
     <p>If you have a free afternoon and want to wander, nearby you'll find:</p>
     <ul>
       <li>Natural hot springs (a short drive)</li>
