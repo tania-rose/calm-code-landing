@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quantum Shift — Affiliate Email Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #2a2a2a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 32px;
+      padding: 40px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .label {
+      color: rgba(255,255,255,.4);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    /* BANNER */
+    .banner {
+      width: 600px;
+      height: 200px;
+      background: #1a1a18;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .bg-glow {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 0% 50%, rgba(53,77,76,.7) 0%, transparent 45%),
+        radial-gradient(ellipse at 100% 50%, rgba(204,153,36,.1) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 100%, rgba(53,77,76,.3) 0%, transparent 55%);
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Geometric circles — right side */
+    .circles {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 340px;
+      height: 340px;
+      opacity: .06;
+    }
+
+    /* Gold top rule */
+    .top-rule {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(to right, #354d4c, #cc9924 40%, #cc9924 60%, #354d4c);
+    }
+
+    /* Bottom rule */
+    .bottom-rule {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(204,153,36,.3), transparent);
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    /* Left */
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .eyebrow {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 9px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #cc9924;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: #cc9924;
+      opacity: .7;
+    }
+
+    .event-name {
+      font-family: 'Marcellus', Georgia, serif;
+      font-size: 48px;
+      line-height: .95;
+      letter-spacing: -.03em;
+      color: #fff;
+    }
+    .event-name span { color: #cc9924; }
+
+    .tagline {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,.65);
+      line-height: 1.5;
+      max-width: 220px;
+    }
+
+    /* Divider */
+    .vdivider {
+      width: 1px;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, rgba(204,153,36,.25), transparent);
+      flex-shrink: 0;
+      margin: 0 32px;
+    }
+
+    /* Right */
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .session {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .session-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,.8);
+      font-weight: 300;
+    }
+    .session-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #cc9924;
+      box-shadow: 0 0 6px rgba(204,153,36,.7);
+      flex-shrink: 0;
+    }
+
+    .free-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(204,153,36,.12);
+      border: 1px solid rgba(204,153,36,.4);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #cc9924;
+      font-weight: 500;
+    }
+
+    .hosts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .avatars {
+      display: flex;
+    }
+    .av {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #354d4c;
+      border: 1.5px solid #1a1a18;
+      box-shadow: 0 0 0 1px rgba(204,153,36,.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Marcellus', serif;
+      font-size: 11px;
+      color: #cc9924;
+    }
+    .av:nth-child(2) { margin-left: -8px; }
+    .host-text {
+      font-size: 11px;
+      color: rgba(255,255,255,.7);
+      font-weight: 300;
+      line-height: 1.4;
+    }
+    .host-text strong {
+      color: rgba(255,255,255,.9);
+      font-weight: 400;
+      display: block;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="label">Email banner &middot; 600 &times; 200px &middot; screenshot to export PNG</p>
+
+  <div class="banner">
+    <div class="bg-glow"></div>
+    <div class="grain"></div>
+    <div class="top-rule"></div>
+    <div class="bottom-rule"></div>
+
+    <svg class="circles" viewBox="0 0 340 340" aria-hidden="true">
+      <circle cx="170" cy="170" r="155" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="140" cy="170" r="115" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="200" cy="170" r="115" fill="none" stroke="#cc9924" stroke-width="1"/>
+      <circle cx="170" cy="170" r="75" fill="none" stroke="#cc9924" stroke-width="1" stroke-dasharray="3 8"/>
+      <circle cx="170" cy="170" r="35" fill="none" stroke="#cc9924" stroke-width="1"/>
+    </svg>
+
+    <div class="content">
+      <div class="left">
+        <div class="eyebrow">Free Live Breathwork Day</div>
+        <div class="event-name">Quantum<br/><span>Shift</span></div>
+        <div class="tagline">Two live sessions. One Sunday. A nervous system you can finally rely on.</div>
+      </div>
+
+      <div class="vdivider"></div>
+
+      <div class="right">
+        <div class="free-pill">Free to attend</div>
+        <div class="session">
+          <div class="session-item"><span class="session-dot"></span>Part 1 &middot; 9:30 to 11:30am UK</div>
+          <div class="session-item"><span class="session-dot"></span>Part 2 &middot; 5 to 7pm UK</div>
+          <div class="session-item" style="color:rgba(255,255,255,.5);font-size:11px;padding-left:13px;">Sunday 17 May 2026</div>
+        </div>
+        <div class="hosts">
+          <div class="avatars">
+            <div class="av">A</div>
+            <div class="av">A</div>
+          </div>
+          <div class="host-text">
+            <strong>Anthony Abbagnano &middot; Amy Rachelle</strong>
+            Alchemy of Breath
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
