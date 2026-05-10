@@ -3,29 +3,169 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Calm Code — Alchemy of Breath</title>
-  <meta name="description" content="Read the pattern. Apply the breath. Regulate the nervous system. Professional certification by Alchemy of Breath."/>
+  <title>Tania Glavey</title>
+  <meta name="description" content="Tania Glavey — writer, builder, and quiet observer. Selected work, words, and a way to get in touch."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
-  /* ────────────────────────────────────────────
-     TOKENS
-  ──────────────────────────────────────────── */
-  :root {
-    --bg:         #F7F4EF;
-    --bg-warm:    #F0EBE1;
-    --bg-teal:    #EBF5F6;
-    --gold:       #E1B668;
-    --gold-2:     #D6A652;
-    --teal:       #00a5b2;
-    --teal-mid:   #5b7889;
-    --teal-pale:  #d0ebee;
-    --ink:        #221F20;
-    --ink-soft:   #3d3a3b;
-    --muted:      #7a8a8e;
-    --white:      #ffffff;
-    --shadow-sm:  0 2px 20px rgba(34,31,32,0.06);
-    --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
-    --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
-  }
+    :root {
+      --paper:    #FBF8F3;
+      --paper-2:  #F2EDE3;
+      --ink:      #1F1B16;
+      --ink-soft: #4A433B;
+      --muted:    #8E867A;
+      --accent:   #B8552E;
+      --line:     #E5DDCE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--paper); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+    a:hover { border-bottom-color: var(--accent); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
+
+    header {
+      padding: 48px 0 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .mark {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--ink);
+    }
+    .nav ul { display: flex; gap: 24px; list-style: none; }
+    .nav ul a { color: var(--muted); border: 0; }
+    .nav ul a:hover { color: var(--ink); }
+
+    .hero { padding: 96px 0 72px; }
+    .eyebrow {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin-bottom: 28px;
+    }
+    h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+    .lead {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin-bottom: 32px;
+    }
+
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .work-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .work-list li { display: flex; justify-content: space-between; gap: 24px; align-items: baseline; }
+    .work-list .title { font-family: 'Fraunces', serif; font-size: 19px; color: var(--ink); }
+    .work-list .meta { color: var(--muted); font-size: 13px; flex-shrink: 0; }
+    .work-list .desc { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
+
+    .contact-row { display: flex; flex-wrap: wrap; gap: 20px 36px; font-size: 16px; }
+    .contact-row span { color: var(--muted); margin-right: 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    footer {
+      padding: 48px 0 64px;
+      color: var(--muted);
+      font-size: 13px;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="mark">Tania Glavey</div>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#words">Words</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="border: 0;">
+    <div class="wrap">
+      <p class="eyebrow">A small corner of the internet —</p>
+      <h1>Things I'm <em>making</em>, things I'm <em>thinking</em>.</h1>
+      <p class="lead">I build calm, useful things and write about the spaces in between — breath, code, lead generation, and the quiet craft of doing one thing well.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected Work</h2>
+      <ul class="work-list">
+        <li>
+          <div>
+            <div class="title">The Calm Code</div>
+            <div class="desc">A landing page for Alchemy of Breath's certification program.</div>
+          </div>
+          <div class="meta">2025</div>
+        </li>
+        <li>
+          <div>
+            <div class="title">GoLeadSpark</div>
+            <div class="desc">Lead-gen brand bringing intent-based outbound to growth teams.</div>
+          </div>
+          <div class="meta">2025</div>
+        </li>
+        <li>
+          <div>
+            <div class="title">Field Notes</div>
+            <div class="desc">Long-form writing on craft, attention, and building slowly.</div>
+          </div>
+          <div class="meta">Ongoing</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <div class="contact-row">
+        <div><span>Email</span><a href="mailto:hello@taniaglavey.com">hello@taniaglavey.com</a></div>
+        <div><span>Writing</span><a href="#">Substack</a></div>
+        <div><span>Elsewhere</span><a href="#">LinkedIn</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">Made slowly, with care. &copy; <span id="year"></span></div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
