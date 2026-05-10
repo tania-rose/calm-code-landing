@@ -3,29 +3,162 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Calm Code — Alchemy of Breath</title>
-  <meta name="description" content="Read the pattern. Apply the breath. Regulate the nervous system. Professional certification by Alchemy of Breath."/>
+  <title>GoLeadSpark — Ignite Lead Generation</title>
+  <meta name="description" content="GoLeadSpark helps growth teams turn cold prospects into warm pipeline with high-intent outbound, sharp messaging, and AI-assisted research."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet"/>
   <style>
-  /* ────────────────────────────────────────────
-     TOKENS
-  ──────────────────────────────────────────── */
-  :root {
-    --bg:         #F7F4EF;
-    --bg-warm:    #F0EBE1;
-    --bg-teal:    #EBF5F6;
-    --gold:       #E1B668;
-    --gold-2:     #D6A652;
-    --teal:       #00a5b2;
-    --teal-mid:   #5b7889;
-    --teal-pale:  #d0ebee;
-    --ink:        #221F20;
-    --ink-soft:   #3d3a3b;
-    --muted:      #7a8a8e;
-    --white:      #ffffff;
-    --shadow-sm:  0 2px 20px rgba(34,31,32,0.06);
-    --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
-    --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
-  }
+    :root {
+      --bg:        #0B0F1A;
+      --surface:   #121828;
+      --ink:       #F4F6FB;
+      --muted:     #8A93A6;
+      --spark:     #FF7A1A;
+      --spark-2:   #FFB347;
+      --electric:  #4F8CFF;
+      --line:      rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0;
+      background: rgba(11,15,26,0.8);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+    .logo span { background: linear-gradient(90deg, var(--spark), var(--spark-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav ul { display: flex; gap: 32px; list-style: none; font-size: 14px; color: var(--muted); }
+    .nav ul a:hover { color: var(--ink); }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      background: linear-gradient(90deg, var(--spark), var(--spark-2));
+      color: #150900;
+      transition: transform 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .hero {
+      padding: 96px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto -10%;
+      height: 480px;
+      background: radial-gradient(50% 50% at 50% 30%, rgba(255,122,26,0.18), transparent 70%);
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--spark-2);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      max-width: 880px;
+      margin: 0 auto 24px;
+    }
+    h1 em { font-style: normal; background: linear-gradient(90deg, var(--spark), var(--electric)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 640px; margin: 0 auto 36px; }
+    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-ghost {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    .features { padding: 80px 0; border-top: 1px solid var(--line); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .card h3 { font-family: 'Sora', sans-serif; font-size: 18px; margin-bottom: 10px; }
+    .card p { color: var(--muted); font-size: 15px; line-height: 1.6; }
+    .icon { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--spark), var(--electric)); margin-bottom: 16px; }
+
+    footer { padding: 48px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Go<span>Lead</span>Spark</div>
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn">Book a call</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Outbound that actually books meetings</span>
+      <h1>Ignite a pipeline of <em>high-intent leads</em>.</h1>
+      <p class="lead">GoLeadSpark blends sharp ICP research, AI-assisted personalization, and disciplined outbound to deliver qualified meetings — not noise.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn">Get a pipeline plan</a>
+        <a href="#how" class="btn-ghost">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="how">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Precision targeting</h3>
+          <p>We map your ICP signal-by-signal — funding, hiring, tech stack, timing — so every touch lands on a buyer who's ready.</p>
+        </div>
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Messaging that converts</h3>
+          <p>Hooks tested against real reply data. No spammy templates, no AI slop — just lines that earn a response.</p>
+        </div>
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Booked, not blasted</h3>
+          <p>We run the sequences, handle replies, and hand over warm meetings on your calendar. You show up and close.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      &copy; <span id="year"></span> GoLeadSpark. Let's build your pipeline.
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
