@@ -78,6 +78,52 @@
     .journey-name{font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.4vw,30px);color:#1a1a18;letter-spacing:-.01em;margin-bottom:8px;}
     .journey-body{font-size:15px;line-height:1.75;color:#4a4a46;}
     @media(max-width:640px){.journey-row{grid-template-columns:48px 1fr;gap:18px;}.journey-num{font-size:36px;}}
+    /* Hero ambient photo layer */
+    .hero-bg-photo{position:absolute;inset:0;background-image:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg');background-size:cover;background-position:center;opacity:.22;filter:brightness(.45) saturate(.7) contrast(1.05);animation:kenburns 28s ease-in-out infinite alternate;z-index:0;}
+    @keyframes kenburns{from{transform:scale(1) translate(0,0);}to{transform:scale(1.08) translate(-1.5%,1%);}}
+    @media(prefers-reduced-motion:reduce){.hero-bg-photo{animation:none;}}
+    /* Photo marquee */
+    .photo-marquee{overflow:hidden;position:relative;padding:32px 0;background:#1a1a18;border-top:1px solid rgba(204,153,36,.18);border-bottom:1px solid rgba(204,153,36,.18);}
+    .photo-marquee::before,.photo-marquee::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none;}
+    .photo-marquee::before{left:0;background:linear-gradient(to right,#1a1a18 0%,transparent 100%);}
+    .photo-marquee::after{right:0;background:linear-gradient(to left,#1a1a18 0%,transparent 100%);}
+    .photo-marquee-track{display:flex;gap:18px;width:max-content;animation:marquee 90s linear infinite;}
+    .photo-marquee-track:hover{animation-play-state:paused;}
+    .photo-marquee-item{flex-shrink:0;width:300px;height:210px;overflow:hidden;position:relative;}
+    .photo-marquee-item img{width:100%;height:100%;object-fit:cover;filter:saturate(.88) brightness(.78);transition:filter .5s,transform .8s cubic-bezier(.2,.8,.2,1);}
+    .photo-marquee-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 55%);pointer-events:none;}
+    .photo-marquee-item:hover img{filter:saturate(1) brightness(1);transform:scale(1.04);}
+    @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(calc(-50% - 9px));}}
+    @media(prefers-reduced-motion:reduce){.photo-marquee-track{animation:none;}}
+    @media(max-width:640px){.photo-marquee-item{width:220px;height:155px;}}
+    /* Journey 6 R's - photo zig-zag */
+    .r-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:56px 0;border-bottom:1px solid rgba(211,205,179,.4);}
+    .r-row:last-child{border-bottom:none;}
+    .r-row:nth-child(even) .r-photo{order:2;}
+    .r-photo{position:relative;aspect-ratio:5/4;overflow:hidden;background:#1a1a18;}
+    .r-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s cubic-bezier(.2,.8,.2,1),filter .6s;filter:saturate(.92);}
+    .r-row:hover .r-photo img{transform:scale(1.05);filter:saturate(1.02);}
+    .r-photo::before{content:'';position:absolute;top:14px;left:14px;width:36px;height:36px;border-top:1.5px solid rgba(204,153,36,.85);border-left:1.5px solid rgba(204,153,36,.85);z-index:2;transition:transform .5s,opacity .5s;}
+    .r-photo::after{content:'';position:absolute;bottom:14px;right:14px;width:36px;height:36px;border-bottom:1.5px solid rgba(204,153,36,.85);border-right:1.5px solid rgba(204,153,36,.85);z-index:2;transition:transform .5s,opacity .5s;}
+    .r-row:hover .r-photo::before{transform:translate(-4px,-4px);}
+    .r-row:hover .r-photo::after{transform:translate(4px,4px);}
+    .r-num{font-family:'Marcellus',Georgia,serif;font-size:clamp(64px,9vw,128px);line-height:.85;color:#cc9924;letter-spacing:-.04em;margin-bottom:14px;display:block;opacity:.22;}
+    .r-eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;color:#cc9924;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:14px;}
+    .r-eyebrow::before{content:'';width:32px;height:1px;background:#cc9924;}
+    .r-name{font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,3.8vw,46px);color:#1a1a18;letter-spacing:-.02em;margin-bottom:16px;line-height:1.1;}
+    .r-body{font-size:16px;line-height:1.8;color:#4a4a46;max-width:480px;}
+    @media(max-width:768px){.r-row{grid-template-columns:1fr;gap:28px;padding:40px 0;}.r-row:nth-child(even) .r-photo{order:0;}}
+    /* Section photo bg variants */
+    .photo-bg-section{position:relative;overflow:hidden;}
+    .photo-bg-section .photo-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.4) saturate(.85);z-index:0;animation:kenburns 32s ease-in-out infinite alternate;}
+    .photo-bg-section .photo-bg-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.14) 0%,transparent 60%),linear-gradient(to bottom,rgba(20,20,18,.55) 0%,rgba(20,20,18,.85) 100%);z-index:1;}
+    .photo-bg-section .photo-bg-content{position:relative;z-index:2;}
+    /* Who it's for sidebar photo */
+    .who-photo{position:relative;aspect-ratio:3/4;overflow:hidden;}
+    .who-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.8,.2,1);filter:saturate(.9);}
+    .who-photo:hover img{transform:scale(1.04);}
+    .who-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(53,77,76,.55) 0%,rgba(53,77,76,.1) 40%,transparent 70%);pointer-events:none;}
+    .who-photo-caption{position:absolute;bottom:24px;left:24px;right:24px;z-index:2;}
     /* Format / Pricing card */
     .format-card{background:#1a1a18;border:1px solid rgba(204,153,36,.5);padding:48px 40px;display:flex;flex-direction:column;color:#fff;box-shadow:0 24px 64px rgba(0,0,0,.25),0 0 80px -20px rgba(204,153,36,.25);position:relative;overflow:hidden;}
     .format-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,#cc9924,transparent);}
@@ -110,7 +156,8 @@
 
 <!-- HERO -->
 <section class="relative min-h-screen flex items-center justify-center grain overflow-hidden" style="background:#141412;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 40%,rgba(53,77,76,.4) 0%,transparent 55%),radial-gradient(ellipse at 50% 35%,rgba(204,153,36,.1) 0%,transparent 40%),radial-gradient(ellipse at 20% 90%,rgba(53,77,76,.2) 0%,transparent 50%),radial-gradient(ellipse at 80% 90%,rgba(26,26,24,.8) 0%,transparent 60%);"></div>
+  <div class="hero-bg-photo" aria-hidden="true"></div>
+  <div class="absolute inset-0 pointer-events-none" style="z-index:1;background:radial-gradient(ellipse at 50% 40%,rgba(53,77,76,.55) 0%,transparent 55%),radial-gradient(ellipse at 50% 35%,rgba(204,153,36,.12) 0%,transparent 40%),radial-gradient(ellipse at 20% 90%,rgba(53,77,76,.35) 0%,transparent 50%),radial-gradient(ellipse at 80% 90%,rgba(26,26,24,.85) 0%,transparent 60%),linear-gradient(to bottom,rgba(20,20,18,.4) 0%,transparent 30%,transparent 70%,rgba(20,20,18,.7) 100%);"></div>
   <svg class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%);width:min(110vmin,1100px);height:min(110vmin,1100px);opacity:.05;" viewBox="0 0 800 800" aria-hidden="true">
     <circle cx="340" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
     <circle cx="460" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
@@ -272,63 +319,103 @@
   </div>
 </section>
 
-<!-- THE JOURNEY (6 R's) -->
-<section id="journey" class="py-24" style="background:#fff;border-top:1px solid #d3cdb3;border-bottom:1px solid #d3cdb3;">
-  <div class="max-w-4xl mx-auto px-6">
+<!-- PHOTO MARQUEE - dynamic strip between sections -->
+<section class="photo-marquee" aria-hidden="true">
+  <div class="photo-marquee-track">
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0e8487c93b642d9b0.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0277ba0a4ab9c57e1.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba487150def7c1e.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c1277ba0f5589c57e2.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0277ba03b359c57e0.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0e8487c46d442d9af.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba4873833ef7c1f.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg" alt="" loading="lazy" /></div>
+    <!-- duplicate set for seamless loop -->
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0e8487c93b642d9b0.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0277ba0a4ab9c57e1.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba487150def7c1e.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c1277ba0f5589c57e2.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0277ba03b359c57e0.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0e8487c46d442d9af.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba4873833ef7c1f.jpg" alt="" loading="lazy" /></div>
+    <div class="photo-marquee-item"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg" alt="" loading="lazy" /></div>
+  </div>
+</section>
 
-    <div class="text-center mb-14">
+<!-- THE JOURNEY (6 R's) - photo zig-zag -->
+<section id="journey" class="py-24" style="background:#fff;">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-16">
       <p class="eyebrow mb-4">The Journey</p>
       <div class="section-divider mb-6"><span></span></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:620px;margin:0 auto 16px;">Six movements. One transformation.</h2>
-      <p style="font-size:16px;line-height:1.75;color:#4a4a46;max-width:560px;margin:0 auto;">Over seven days, something specific shifts inside you each day. Not a curriculum to memorise. A path the body walks.</p>
+      <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.15;letter-spacing:-.02em;color:#1a1a18;max-width:680px;margin:0 auto 16px;">Six movements. One transformation.</h2>
+      <p style="font-size:16px;line-height:1.75;color:#4a4a46;max-width:560px;margin:0 auto;">Over seven days at ASHA, something specific shifts inside you each day. Not a curriculum to memorise. A path the body walks.</p>
     </div>
 
-    <div class="fade-up">
-      <div class="journey-row">
-        <div class="journey-num">01</div>
-        <div>
-          <h3 class="journey-name">Remember</h3>
-          <p class="journey-body">You come back to your own breath. Before any technique, you sit with what has always been there. The training begins by remembering, not by learning.</p>
-        </div>
-      </div>
-      <div class="journey-row">
-        <div class="journey-num">02</div>
-        <div>
-          <h3 class="journey-name">Reframe</h3>
-          <p class="journey-body">You stop thinking of breath as relaxation. You start understanding it as something that changes your state, your body, and the room you walk into.</p>
-        </div>
-      </div>
-      <div class="journey-row">
-        <div class="journey-num">03</div>
-        <div>
-          <h3 class="journey-name">Resource</h3>
-          <p class="journey-body">The felt sense becomes a tool you can draw on. You stop being lost when things get charged. You have something to come back to, every time.</p>
-        </div>
-      </div>
-      <div class="journey-row">
-        <div class="journey-num">04</div>
-        <div>
-          <h3 class="journey-name">Regulate</h3>
-          <p class="journey-body">You learn the 90-second protocol. You can settle yourself on demand. A tool that wasn&rsquo;t yours before this week, and will be yours for every week after.</p>
-        </div>
-      </div>
-      <div class="journey-row">
-        <div class="journey-num">05</div>
-        <div>
-          <h3 class="journey-name">Realign</h3>
-          <p class="journey-body">The three-dimensional breath. The 12-minute protocol. You start using breath for the room, not just for yourself. Your nervous system becomes useful to others.</p>
-        </div>
-      </div>
-      <div class="journey-row">
-        <div class="journey-num">06</div>
-        <div>
-          <h3 class="journey-name">Rise</h3>
-          <p class="journey-body">You deliver your own session in your own voice. You walk out as the person who can do this when it matters. The certificate is just the paper. The real graduation is the body you leave with.</p>
-        </div>
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/c81e9989-a14b-4862-9572-a9e44c226611.jpeg" alt="Returning to the breath" loading="lazy" /></div>
+      <div>
+        <span class="r-num">01</span>
+        <p class="r-eyebrow">Day one</p>
+        <h3 class="r-name">Remember</h3>
+        <p class="r-body">You come back to your own breath. Before any technique, you sit with what has always been there. The training begins by remembering, not by learning.</p>
       </div>
     </div>
 
-    <div class="text-center mt-16">
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/45b2d2fa-2fdd-4c01-b941-8a979a4fef4a.jpeg" alt="Reframing breath as state" loading="lazy" /></div>
+      <div>
+        <span class="r-num">02</span>
+        <p class="r-eyebrow">Day two</p>
+        <h3 class="r-name">Reframe</h3>
+        <p class="r-body">You stop thinking of breath as relaxation. You start understanding it as something that changes your state, your body, and the room you walk into.</p>
+      </div>
+    </div>
+
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/cbdad6b6-5b41-40ab-986a-e91948becd22.jpeg" alt="Resourcing the felt sense" loading="lazy" /></div>
+      <div>
+        <span class="r-num">03</span>
+        <p class="r-eyebrow">Day three</p>
+        <h3 class="r-name">Resource</h3>
+        <p class="r-body">The felt sense becomes a tool you can draw on. You stop being lost when things get charged. You have something to come back to, every time.</p>
+      </div>
+    </div>
+
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/46988688-7031-4f59-aac0-faacb01cae3c.jpeg" alt="Regulating in 90 seconds" loading="lazy" /></div>
+      <div>
+        <span class="r-num">04</span>
+        <p class="r-eyebrow">Day four</p>
+        <h3 class="r-name">Regulate</h3>
+        <p class="r-body">You learn the 90-second protocol. You can settle yourself on demand. A tool that wasn&rsquo;t yours before this week, and will be yours for every week after.</p>
+      </div>
+    </div>
+
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/a6b18bb3-7123-4c18-a1a7-a35c1335d3c5.jpeg" alt="Realigning with the three-dimensional breath" loading="lazy" /></div>
+      <div>
+        <span class="r-num">05</span>
+        <p class="r-eyebrow">Day five</p>
+        <h3 class="r-name">Realign</h3>
+        <p class="r-body">The three-dimensional breath. The 12-minute protocol. You start using breath for the room, not just for yourself. Your nervous system becomes useful to others.</p>
+      </div>
+    </div>
+
+    <div class="r-row fade-up">
+      <div class="r-photo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/9de44010-47f5-4a3c-bf77-53fc908f7fce.jpeg" alt="Rising as the regulated body in the room" loading="lazy" /></div>
+      <div>
+        <span class="r-num">06</span>
+        <p class="r-eyebrow">Days six and seven</p>
+        <h3 class="r-name">Rise</h3>
+        <p class="r-body">You deliver your own session in your own voice. You walk out as the person who can do this when it matters. The certificate is just the paper. The real graduation is the body you leave with.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-20">
       <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-3/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book your spot &rarr;</a>
     </div>
 
@@ -376,10 +463,18 @@
         </div>
       </div>
 
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:32px 28px;">
-        <p class="eyebrow mb-3">A note on scope</p>
-        <p style="font-size:14px;color:#4a4a46;line-height:1.7;margin-bottom:14px;">ARM is a regulation tool. It isn&rsquo;t therapy, and it doesn&rsquo;t teach clinical diagnosis or treatment. The training stays inside that line and gives you a clear sense of when to slow down, when to ground, and when to refer.</p>
-        <p style="font-size:14px;color:#4a4a46;line-height:1.7;">For practitioners who want to go deeper into facilitation, ARM is the foundation of the wider Alchemy of Breath pathway. Graduates can continue from there.</p>
+      <div>
+        <div class="who-photo mb-6">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba48775a4ef7c20.jpg" alt="ARM practitioner training in session" loading="lazy" />
+          <div class="who-photo-caption">
+            <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);color:#fff;line-height:1.25;letter-spacing:-.01em;text-shadow:0 2px 16px rgba(0,0,0,.5);">The training stays inside the line it draws.</p>
+          </div>
+        </div>
+        <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px 26px;">
+          <p class="eyebrow mb-3">A note on scope</p>
+          <p style="font-size:14px;color:#4a4a46;line-height:1.7;margin-bottom:14px;">ARM is a regulation tool. It isn&rsquo;t therapy, and it doesn&rsquo;t teach clinical diagnosis or treatment. The training stays inside that line and gives you a clear sense of when to slow down, when to ground, and when to refer.</p>
+          <p style="font-size:14px;color:#4a4a46;line-height:1.7;">For practitioners who want to go deeper into facilitation, ARM is the foundation of the wider Alchemy of Breath pathway. Graduates can continue from there.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -480,18 +575,26 @@
 </section>
 
 <!-- GET STARTED -->
-<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.08) 0%,transparent 55%);"></div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+<section class="py-24 grain photo-bg-section" style="background:#1a1a18;">
+  <img class="photo-bg-img" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/5f079a98-743b-4ae9-a49a-2306d51c3b6d.jpeg" alt="" aria-hidden="true" />
+  <div class="photo-bg-overlay" aria-hidden="true"></div>
+  <div class="spark-field" aria-hidden="true" style="z-index:1;">
+    <span class="spark lg" style="top:18%;left:14%;animation-duration:6s;animation-delay:0s;--peak:.8;"></span>
+    <span class="spark" style="top:28%;left:78%;animation-duration:5.5s;animation-delay:1.4s;--peak:.65;"></span>
+    <span class="spark sm" style="top:62%;left:22%;animation-duration:5s;animation-delay:2.5s;--peak:.55;"></span>
+    <span class="spark" style="top:72%;left:68%;animation-duration:6.5s;animation-delay:.8s;--peak:.7;"></span>
+    <span class="spark sm" style="top:42%;left:52%;animation-duration:4.5s;animation-delay:3.2s;--peak:.5;"></span>
+  </div>
+  <div class="photo-bg-content max-w-3xl mx-auto px-6 text-center">
     <p class="eyebrow mb-4">Take the seat</p>
     <div class="section-divider mb-6"><span></span></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin-bottom:18px;">The founding cohort is small.<br/>Twenty percent off makes it smaller.</h2>
-    <p style="font-size:16px;line-height:1.75;color:rgba(255,255,255,.65);max-width:540px;margin:0 auto 32px;">Book your spot for July 2026, or book a call first if you want to talk through whether ARM is right for you.</p>
+    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin-bottom:18px;text-shadow:0 2px 24px rgba(0,0,0,.5);">The founding cohort is small.<br/>Twenty percent off makes it smaller.</h2>
+    <p style="font-size:16px;line-height:1.75;color:rgba(255,255,255,.78);max-width:540px;margin:0 auto 32px;text-shadow:0 1px 12px rgba(0,0,0,.4);">Book your spot for July 2026, or book a call first if you want to talk through whether ARM is right for you.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
       <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-3/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-gold">Book your spot</a>
       <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page" target="_blank" rel="noopener" class="btn-outline">Book a call</a>
     </div>
-    <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:22px;letter-spacing:.06em;">Free 45-minute call &middot; No commitment</p>
+    <p style="font-size:12px;color:rgba(255,255,255,.55);margin-top:22px;letter-spacing:.06em;">Free 45-minute call &middot; No commitment</p>
   </div>
 </section>
 
