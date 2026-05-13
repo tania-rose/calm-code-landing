@@ -124,6 +124,32 @@
     .who-photo:hover img{transform:scale(1.04);}
     .who-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(53,77,76,.55) 0%,rgba(53,77,76,.1) 40%,transparent 70%);pointer-events:none;}
     .who-photo-caption{position:absolute;bottom:24px;left:24px;right:24px;z-index:2;}
+    /* Why section side photo */
+    .why-photo{position:relative;aspect-ratio:3/4;overflow:hidden;}
+    .why-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s cubic-bezier(.2,.8,.2,1);filter:saturate(.92);}
+    .why-photo:hover img{transform:scale(1.04);}
+    .why-photo::before{content:'';position:absolute;top:14px;left:14px;width:32px;height:32px;border-top:1.5px solid rgba(204,153,36,.85);border-left:1.5px solid rgba(204,153,36,.85);z-index:2;}
+    .why-photo::after{content:'';position:absolute;bottom:14px;right:14px;width:32px;height:32px;border-bottom:1.5px solid rgba(204,153,36,.85);border-right:1.5px solid rgba(204,153,36,.85);z-index:2;}
+    /* Stats band */
+    .stats-band{background:#1a1a18;padding:56px 24px;border-top:1px solid rgba(204,153,36,.18);border-bottom:1px solid rgba(204,153,36,.18);position:relative;overflow:hidden;}
+    .stats-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.08) 0%,transparent 60%);pointer-events:none;}
+    .stats-grid{position:relative;z-index:1;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+    .stat-item{text-align:center;padding:8px 12px;position:relative;}
+    .stat-item:not(:last-child)::after{content:'';position:absolute;right:-12px;top:18%;bottom:18%;width:1px;background:linear-gradient(to bottom,transparent,rgba(204,153,36,.25),transparent);}
+    .stat-num{font-family:'Marcellus',Georgia,serif;font-size:clamp(56px,7.5vw,108px);line-height:.95;color:#cc9924;letter-spacing:-.04em;margin-bottom:10px;display:block;text-shadow:0 0 32px rgba(204,153,36,.18);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s;}
+    .stat-label{font-family:'Roboto',sans-serif;font-weight:400;font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.62);text-transform:uppercase;line-height:1.5;}
+    .fade-up .stat-num{opacity:0;transform:translateY(20px);}
+    .fade-up.visible .stat-num{opacity:1;transform:translateY(0);}
+    .fade-up.visible .stat-num{transition-delay:var(--d,0s);}
+    @media(max-width:640px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 12px;}.stat-item:not(:last-child)::after{display:none;}}
+    /* ASHA pricing hero photo */
+    .asha-hero{position:relative;aspect-ratio:21/9;overflow:hidden;margin-bottom:32px;}
+    .asha-hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(.9);transition:transform 1.6s cubic-bezier(.2,.8,.2,1);}
+    .asha-hero:hover img{transform:scale(1.03);}
+    .asha-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(249,248,245,.7) 0%,transparent 35%);pointer-events:none;}
+    .asha-hero-tag{position:absolute;bottom:22px;left:24px;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:7px 14px;background:rgba(26,26,24,.78);border:1px solid rgba(204,153,36,.4);font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;color:#cc9924;text-transform:uppercase;backdrop-filter:blur(4px);}
+    .asha-hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#cc9924;box-shadow:0 0 10px rgba(204,153,36,.8);}
+    @media(max-width:640px){.asha-hero{aspect-ratio:4/3;}}
     /* Format / Pricing card */
     .format-card{background:#1a1a18;border:1px solid rgba(204,153,36,.5);padding:48px 40px;display:flex;flex-direction:column;color:#fff;box-shadow:0 24px 64px rgba(0,0,0,.25),0 0 80px -20px rgba(204,153,36,.25);position:relative;overflow:hidden;}
     .format-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,#cc9924,transparent);}
@@ -254,12 +280,21 @@
 
 <!-- THE WHY -->
 <section class="py-20" style="background:#fff;border-bottom:1px solid #d3cdb3;">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">The Why</p>
-    <div class="gold-rule centered"></div>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.6vw,32px);line-height:1.45;letter-spacing:-.01em;color:#1a1a18;font-style:italic;margin-bottom:0;">Have you ever been in a room where someone said, <em>let&rsquo;s all slow down and take a breath?</em></p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,28px);line-height:1.55;letter-spacing:-.01em;color:#4a4a46;font-style:italic;margin-top:18px;">Isn&rsquo;t it curious how they are always right? It always helps.</p>
-    <p style="font-family:'Roboto',sans-serif;font-weight:400;font-size:clamp(16px,1.8vw,18px);line-height:1.6;color:#cc9924;margin-top:28px;">ARM is the training that makes you that person.</p>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7">
+        <p class="eyebrow mb-4">The Why</p>
+        <div class="gold-rule"></div>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.6vw,34px);line-height:1.4;letter-spacing:-.01em;color:#1a1a18;font-style:italic;margin-bottom:0;">Have you ever been in a room where someone said, <em>let&rsquo;s all slow down and take a breath?</em></p>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,28px);line-height:1.55;letter-spacing:-.01em;color:#4a4a46;font-style:italic;margin-top:18px;">Isn&rsquo;t it curious how they are always right? It always helps.</p>
+        <p style="font-family:'Roboto',sans-serif;font-weight:400;font-size:clamp(16px,1.8vw,18px);line-height:1.6;color:#cc9924;margin-top:28px;">ARM is the training that makes you that person.</p>
+      </div>
+      <div class="md:col-span-5 fade-up">
+        <div class="why-photo">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4db1c05c4eee.jpg" alt="A breathwork session in practice" loading="lazy" />
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -316,6 +351,28 @@
       </ul>
     </div>
 
+  </div>
+</section>
+
+<!-- STATS BAND - the shape of the training -->
+<section class="stats-band fade-up" aria-label="Training at a glance">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-num" style="--d:0s;">7</span>
+      <p class="stat-label">Days at ASHA</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" style="--d:.12s;">6</span>
+      <p class="stat-label">Movements of transformation</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" style="--d:.24s;">2</span>
+      <p class="stat-label">Protocols you keep for life</p>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" style="--d:.36s;">1</span>
+      <p class="stat-label">Breath. The one capability.</p>
+    </div>
   </div>
 </section>
 
@@ -502,6 +559,11 @@
 <!-- FORMAT & PRICING -->
 <section id="asha" class="py-24" style="background:#f9f8f5;">
   <div class="max-w-3xl mx-auto px-6">
+
+    <div class="asha-hero fade-up">
+      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4dddf15c4eec.jpg" alt="ASHA Retreat Centre, Tuscany" loading="lazy" />
+      <span class="asha-hero-tag">Castell&rsquo;Azzara &middot; Tuscany</span>
+    </div>
 
     <div class="text-center mb-12">
       <p class="eyebrow mb-4">The Residential</p>
