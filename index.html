@@ -87,6 +87,17 @@
     .stat-item { text-align:center; padding:24px 16px; }
     .stat-number { font-family:'Marcellus',Georgia,serif; font-size:36px; color:#cc9924; line-height:1; display:block; margin-bottom:6px; }
     .stat-label { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.6); font-weight:400; }
+    .featured-name { font-family:'Roboto',sans-serif; font-weight:500; font-size:15px; letter-spacing:.08em; text-transform:uppercase; color:rgba(74,74,70,.55); transition:color .25s, transform .25s; }
+    .featured-name:hover { color:#1a1a18; transform:translateY(-1px); }
+    .testimonial-card { position:relative; background:#f9f8f5; border:1px solid #d3cdb3; padding:36px 32px 28px; display:flex; flex-direction:column; justify-content:space-between; transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s; }
+    .testimonial-card:hover { transform:translateY(-3px); border-color:rgba(204,153,36,.4); box-shadow:0 12px 36px rgba(53,77,76,.08), 0 0 60px -20px rgba(204,153,36,.18); }
+    .testimonial-card::before { content:'\201C'; position:absolute; top:-18px; left:24px; font-family:'Marcellus',Georgia,serif; font-size:88px; line-height:1; color:rgba(204,153,36,.35); pointer-events:none; }
+    .testimonial-card-light { background:#fff; }
+    .testimonial-quote { font-family:'Marcellus',Georgia,serif; font-size:clamp(17px,1.6vw,19px); line-height:1.55; color:#1a1a18; letter-spacing:-.005em; margin-bottom:20px; font-style:italic; }
+    .testimonial-meta { display:flex; align-items:center; gap:10px; border-top:1px solid #d3cdb3; padding-top:14px; }
+    .testimonial-name { font-family:'Roboto',sans-serif; font-weight:500; font-size:13px; color:#1a1a18; letter-spacing:.02em; }
+    .testimonial-loc { font-family:'Roboto',sans-serif; font-weight:400; font-size:12px; color:#cc9924; letter-spacing:.08em; text-transform:uppercase; }
+    .testimonial-loc::before { content:'\2022'; margin-right:10px; color:#d3cdb3; }
 
     /* Location carousel */
     @keyframes carouselSlide {
@@ -188,12 +199,18 @@
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 pt-40 w-full">
     <div class="max-w-2xl">
+      <div style="margin-bottom:28px;">
+        <p style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3.4vw,44px); letter-spacing:-0.01em; color:#cc9924; line-height:1.1; margin-bottom:14px; text-shadow:0 2px 24px rgba(0,0,0,.4);">
+          The Alchemy Regulation Method
+        </p>
+        <div style="width:64px; height:2px; background:#cc9924;"></div>
+      </div>
       <p class="eyebrow mb-5">7-Day Residential Training &nbsp;&middot;&nbsp; ASHA Retreat Centre, Tuscany &nbsp;&middot;&nbsp; 19&ndash;25 July 2026</p>
       <h1 class="text-white mb-6 leading-tight" style="font-family:'Marcellus',Georgia,serif; font-size:clamp(36px,5vw,60px); letter-spacing:-0.02em;">
         Most of us don&rsquo;t know what regulation feels like<br/>until we experience it.
       </h1>
       <p class="text-white mb-10 max-w-xl" style="font-size:18px; line-height:1.7; font-weight:300; opacity:0.85;">
-        The Alchemy Regulation Method is a structured, step-by-step training for building a robust nervous system. For yourself first, and if you choose, to share with others. Seven days in Tuscany with Anthony and Amy. This isn&rsquo;t a lecture. It&rsquo;s a transmission.
+        A structured, step-by-step training for building a robust nervous system. For yourself first, and if you choose, to share with others. Seven days in Tuscany with Anthony and Amy. This isn&rsquo;t a lecture. It&rsquo;s a transmission.
       </p>
       <div class="flex flex-wrap gap-4">
         <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-3/?form=1&lang=en"
@@ -216,13 +233,13 @@
 <!-- ===================== STATS STRIP ===================== -->
 <section style="background:#354d4c;">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-5 divide-x divide-y md:divide-y-0" style="border-color:rgba(211,205,179,0.15);">
+    <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0" style="border-color:rgba(211,205,179,0.15);">
       <div class="stat-item">
         <span class="stat-number">7</span>
         <span class="stat-label">Days residential</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">50</span>
+        <span class="stat-number">60</span>
         <span class="stat-label">Total hours</span>
       </div>
       <div class="stat-item">
@@ -230,13 +247,25 @@
         <span class="stat-label">Stages of regulation</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">2,000+</span>
-        <span class="stat-label">AoB graduates</span>
+        <span class="stat-number">14</span>
+        <span class="stat-label">Years of lineage</span>
       </div>
-      <div class="stat-item col-span-2 md:col-span-1">
-        <span class="stat-number" style="font-size:22px;">GPBA</span>
-        <span class="stat-label">Aligned training</span>
-      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AS FEATURED IN ===================== -->
+<section style="background:#f9f8f5; border-bottom:1px solid #d3cdb3; padding:36px 24px;">
+  <div class="max-w-6xl mx-auto">
+    <p style="text-align:center; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#c5c3c2; margin-bottom:26px;">Anthony has been featured in &amp; worked with</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:24px 48px;">
+      <span class="featured-name">YOGA WORLD</span>
+      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">mindvalley</span>
+      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">Shift</span>
+      <span class="featured-name">The Healing Company</span>
+      <span class="featured-name">USA Today</span>
+      <span class="featured-name">NBC</span>
+      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">yogabarn</span>
     </div>
   </div>
 </section>
@@ -301,6 +330,52 @@
             </div>
             <p style="font-size:15px; color:#1a1a18; line-height:1.6;">Spacious. Designed for real integration, not information overload.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOCIAL PROOF / VOICES ===================== -->
+<section style="background:#fff; border-top:1px solid #d3cdb3; padding:96px 24px;">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">From the community</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,40px); line-height:1.2; letter-spacing:-0.02em; color:#1a1a18; max-width:680px; margin:0 auto 14px;">
+        You&rsquo;ll recognise yourself in at least one of these.
+      </h2>
+      <p style="font-size:15px; line-height:1.7; color:#4a4a46; max-width:560px; margin:0 auto;">
+        What students have written to us, in their own words.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">&ldquo;Dysregulation is so familiar, but it has a way of cutting me off from the people around me whom I love. It&rsquo;s like the negative pole of a magnet that pushes away the people I want to draw close.&rdquo;</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Jeremy</span>
+          <span class="testimonial-loc">USA</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">&ldquo;My reactionary attitude causes my nervous system to dysregulate, which accounts for my quickly climbing blood pressure. And that&rsquo;s just the physical symptom. Imagine the emotional and spiritual ramifications.&rdquo;</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">A student</span>
+          <span class="testimonial-loc">Istanbul</span>
+        </div>
+      </div>
+      <div class="testimonial-card testimonial-card-light">
+        <p class="testimonial-quote">&ldquo;Keeping things simple, being in nature, breathwork is my go-to for the spikes.&rdquo;</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">Tony</span>
+          <span class="testimonial-loc">United Kingdom</span>
+        </div>
+      </div>
+      <div class="testimonial-card testimonial-card-light">
+        <p class="testimonial-quote">&ldquo;Whenever a difficult emotion arises I take a few deep breaths, look at it, respect it, and try to direct it inwards to its original source. Whatever happens in the world around me, a new deep calmness remains inside.&rdquo;</p>
+        <div class="testimonial-meta">
+          <span class="testimonial-name">An Alchemy of Breath graduate</span>
+          <span class="testimonial-loc">Sweden</span>
         </div>
       </div>
     </div>
@@ -411,8 +486,8 @@
           <p class="eyebrow" style="color:#cc9924;">Stage One</p>
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Remember</h3>
           <div class="gold-rule"></div>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">You come back to your own breath. Before any technique, you sit with what has always been there.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">This is what Anthony calls marrying your breath.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">You come back to your own breath. Before any technique, before any protocol, you sit with what has always been there.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">This is what Anthony calls marrying your breath. A return to what the body already knew. Quieter than you remembered. More available than you knew.</p>
           <div class="level-panel-nav">
             <span></span>
             <button type="button" class="level-panel-next" data-next="2"><span>Continue to Stage Two</span><strong>Reframe <span aria-hidden="true">&rarr;</span></strong></button>
@@ -427,7 +502,7 @@
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Reframe</h3>
           <div class="gold-rule"></div>
           <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">You stop thinking of breath as relaxation or deep breathing. You start understanding it as a three-dimensional, nervous-system intervention.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">The body work and the history land here.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">The body work lands here, and so does the history. What you&rsquo;ve been carrying becomes visible, and there&rsquo;s room to set some of it down.</p>
           <div class="level-panel-nav">
             <button type="button" class="level-panel-prev" data-prev="1"><span aria-hidden="true">&larr;</span> Stage One &middot; Remember</button>
             <button type="button" class="level-panel-next" data-next="3"><span>Continue to Stage Three</span><strong>Resource <span aria-hidden="true">&rarr;</span></strong></button>
@@ -441,8 +516,8 @@
           <p class="eyebrow" style="color:#cc9924;">Stage Three</p>
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Resource</h3>
           <div class="gold-rule"></div>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The felt sense becomes something you can draw on. Window of tolerance, pendulation, titration, co-regulation become your working vocabulary.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You stop being lost when things get charged.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The felt sense becomes something you can draw on. Window of tolerance, pendulation, titration, co-regulation. They stop being terminology and start being how you read what&rsquo;s happening inside you.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You stop being lost when things get charged. You always have somewhere to come back to.</p>
           <div class="level-panel-nav">
             <button type="button" class="level-panel-prev" data-prev="2"><span aria-hidden="true">&larr;</span> Stage Two &middot; Reframe</button>
             <button type="button" class="level-panel-next" data-next="4"><span>Continue to Stage Four</span><strong>Regulate <span aria-hidden="true">&rarr;</span></strong></button>
@@ -456,8 +531,8 @@
           <p class="eyebrow" style="color:#cc9924;">Stage Four</p>
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Regulate</h3>
           <div class="gold-rule"></div>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The 90-second protocol arrives. You can settle yourself on demand.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You have a tool you didn&rsquo;t have seven days ago.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The 90-second protocol arrives. You can settle yourself on demand. In a meeting, in traffic, in the middle of the thing you used to lose yourself inside of.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">A tool you didn&rsquo;t have seven days ago. One that will be yours for every week after.</p>
           <div class="level-panel-nav">
             <button type="button" class="level-panel-prev" data-prev="3"><span aria-hidden="true">&larr;</span> Stage Three &middot; Resource</button>
             <button type="button" class="level-panel-next" data-next="5"><span>Continue to Stage Five</span><strong>Realign <span aria-hidden="true">&rarr;</span></strong></button>
@@ -471,8 +546,8 @@
           <p class="eyebrow" style="color:#cc9924;">Stage Five</p>
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Realign</h3>
           <div class="gold-rule"></div>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The three-dimensional breath and the 12-minute protocol.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You stop using breath only for yourself. You start using it for the room.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The three-dimensional breath and the 12-minute protocol arrive together. Two practices that meet the nervous system where it actually lives.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You stop using breath only for yourself. You start using it for the room. Your settled body becomes somewhere other bodies can settle next to.</p>
           <div class="level-panel-nav">
             <button type="button" class="level-panel-prev" data-prev="4"><span aria-hidden="true">&larr;</span> Stage Four &middot; Regulate</button>
             <button type="button" class="level-panel-next" data-next="6"><span>Continue to Stage Six</span><strong>Rise <span aria-hidden="true">&rarr;</span></strong></button>
@@ -486,8 +561,8 @@
           <p class="eyebrow" style="color:#cc9924;">Stage Six &middot; The summit</p>
           <h3 style="font-family:'Marcellus',Georgia,serif; font-size:clamp(26px,3vw,36px); color:#1a1a18; margin:8px 0 18px; letter-spacing:-.01em;">Rise</h3>
           <div class="gold-rule"></div>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The practicum. You deliver your own session, in your own voice.</p>
-          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You graduate as the person who can do this when it matters.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:14px;">The practicum. You deliver your own session, in your own voice, with your own hands.</p>
+          <p style="font-size:16px; line-height:1.8; color:#4a4a46;">You graduate as the person who can do this when it matters. For yourself first. And if you choose, for the people you serve.</p>
           <div class="level-panel-nav">
             <button type="button" class="level-panel-prev" data-prev="5"><span aria-hidden="true">&larr;</span> Stage Five &middot; Realign</button>
             <button type="button" class="level-panel-next" data-restart="1"><span>Review the full method</span><strong>Back to the start <span aria-hidden="true">&#8634;</span></strong></button>
@@ -565,7 +640,7 @@
             </div>
             <div>
               <p style="font-size:16px; color:#fff; font-weight:400; margin-bottom:4px;">A certificate of completion from Alchemy of Breath</p>
-              <p style="font-size:13px; color:rgba(255,255,255,0.55);">GPBA-aligned. And if you choose to continue, a direct pathway into the full facilitator training.</p>
+              <p style="font-size:13px; color:rgba(255,255,255,0.55);">And if you choose to continue, a direct pathway into the full facilitator training.</p>
             </div>
           </div>
         </div>
@@ -590,7 +665,7 @@
       ASHA Retreat Centre. Tuscany, Italy.
     </h2>
     <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.55); max-width:560px;">
-      A hidden sanctuary nestled in the wild, rugged beauty of the Tuscan hills. 15 hectares of untouched land. Complete privacy. Total immersion.
+      A hidden sanctuary nestled in the wild, rugged beauty of the Tuscan hills. Acres of untouched land. Complete privacy. Total immersion.
     </p>
   </div>
   <div class="location-carousel-wrap">
@@ -625,7 +700,7 @@
         <div class="gold-rule"></div>
         <h3 style="font-family:'Marcellus',Georgia,serif; font-size:28px; color:#fff; margin-bottom:16px; letter-spacing:-0.01em;">Welcome Home.</h3>
         <p style="font-size:15px; line-height:1.8; color:rgba(255,255,255,0.6); margin-bottom:16px;">
-          ASHA Retreat Centre sits on 15 hectares of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community. A place where all of you is welcome.
+          ASHA Retreat Centre sits on acres of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community. A place where all of you is welcome.
         </p>
         <p style="font-size:15px; line-height:1.8; color:rgba(255,255,255,0.6); margin-bottom:24px;">
           Stone buildings, olive groves, open-air practice spaces, and the kind of quiet that lets your nervous system hear itself again. Three meals a day prepared on site. Digital detox encouraged. Nature does a lot of the work.
@@ -644,8 +719,8 @@
             </div>
             <div style="width:100%; height:1px; background:rgba(211,205,179,0.1);"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
-              <span style="font-size:14px; color:rgba(255,255,255,0.55);">Total hours</span>
-              <span style="font-size:14px; color:#fff; font-weight:400;">50 (40 residential + 10 online)</span>
+              <span style="font-size:14px; color:rgba(255,255,255,0.55);">Total training</span>
+              <span style="font-size:14px; color:#fff; font-weight:400;">60 hours</span>
             </div>
             <div style="width:100%; height:1px; background:rgba(211,205,179,0.1);"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -655,17 +730,12 @@
             <div style="width:100%; height:1px; background:rgba(211,205,179,0.1);"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:14px; color:rgba(255,255,255,0.55);">Credential</span>
-              <span style="font-size:14px; color:#fff; font-weight:400;">Certificate of completion (GPBA-aligned)</span>
+              <span style="font-size:14px; color:#fff; font-weight:400;">Certificate of completion</span>
             </div>
             <div style="width:100%; height:1px; background:rgba(211,205,179,0.1);"></div>
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:14px; color:rgba(255,255,255,0.55);">Graduate community</span>
               <span style="font-size:14px; color:#fff; font-weight:400;">I Am Alchemy (1 year free)</span>
-            </div>
-            <div style="width:100%; height:1px; background:rgba(211,205,179,0.1);"></div>
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <span style="font-size:14px; color:rgba(255,255,255,0.55);">Required reading</span>
-              <span style="font-size:14px; color:#fff; font-weight:400; text-align:right; max-width:200px;">Outer Chaos, Inner Calm</span>
             </div>
           </div>
           <div style="margin-top:32px;">
@@ -700,7 +770,7 @@
         <p class="eyebrow mb-1">Lead Instructor</p>
         <h4 style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18; margin-bottom:6px;">Anthony Abbagnano</h4>
         <p style="font-size:13px; line-height:1.7; color:#4a4a46;">
-          Founder of Alchemy of Breath and ASHA. Author of <em>Outer Chaos, Inner Calm</em>. 2,000+ practitioners trained across 40+ countries.
+          Founder of Alchemy of Breath and ASHA. Author of <em>Outer Chaos, Inner Calm</em>. Architect of the Alchemy Regulation Method.
         </p>
       </div>
       <div class="text-center">
@@ -787,7 +857,7 @@
               The architecture beneath everything we do.
             </h3>
             <p style="font-size:15px; color:rgba(255,255,255,0.7); line-height:1.8; margin-bottom:20px;">
-              For 14 years we&rsquo;ve been teaching people to consciously breathe. To regulate. We&rsquo;ve graduated over 2,000 facilitators worldwide, and nervous system regulation has always been at the heart of it. Now we&rsquo;re giving it the architecture it deserves.
+              For 14 years we&rsquo;ve been teaching people to consciously breathe. To regulate. Nervous system regulation has always been at the heart of everything we do. Now we&rsquo;re giving it the architecture it deserves.
             </p>
             <p style="font-size:15px; color:rgba(255,255,255,0.7); line-height:1.8; margin-bottom:20px;">
               You cannot guide someone else to calm if you haven&rsquo;t found it in your own body first. That&rsquo;s why the week starts there.
@@ -795,7 +865,7 @@
             <div style="border-top:1px solid rgba(211,205,179,0.2); padding-top:20px; margin-top:8px;">
               <div style="display:flex; gap:12px; align-items:center;">
                 <div style="width:8px; height:8px; background:#52bb90; border-radius:50%; flex-shrink:0;"></div>
-                <p style="font-size:14px; color:rgba(255,255,255,0.6);">GPBA-aligned training from Alchemy of Breath</p>
+                <p style="font-size:14px; color:rgba(255,255,255,0.6);">From Anthony Abbagnano, Amy Rachelle, and the Alchemy of Breath lineage</p>
               </div>
             </div>
           </div>
@@ -815,13 +885,13 @@
         One price. Everything included.
       </h2>
       <p style="font-size:16px; line-height:1.7; color:#4a4a46; max-width:560px; margin:0 auto;">
-        Your investment covers the full 50-hour training, 7 nights accommodation at ASHA, and three meals a day. The only thing not included is your flight to Tuscany.
+        Your investment covers the full 60-hour training, 7 nights accommodation at ASHA, and three meals a day. The only thing not included is your flight to Tuscany.
       </p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
       <div style="background:#fff; border:1px solid #d3cdb3; padding:20px; text-align:center;">
-        <p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#354d4c; margin-bottom:4px;">50 Hours</p>
+        <p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#354d4c; margin-bottom:4px;">60 Hours</p>
         <p style="font-size:12px; color:#4a4a46; letter-spacing:0.06em; text-transform:uppercase;">Full training program</p>
       </div>
       <div style="background:#fff; border:1px solid #d3cdb3; padding:20px; text-align:center;">
@@ -834,7 +904,7 @@
       </div>
       <div style="background:#fff; border:1px solid #d3cdb3; padding:20px; text-align:center;">
         <p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#354d4c; margin-bottom:4px;">Certificate</p>
-        <p style="font-size:12px; color:#4a4a46; letter-spacing:0.06em; text-transform:uppercase;">GPBA-aligned</p>
+        <p style="font-size:12px; color:#4a4a46; letter-spacing:0.06em; text-transform:uppercase;">Of completion</p>
       </div>
     </div>
 
@@ -962,18 +1032,6 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-          <span>What does GPBA-aligned mean?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">
-            GPBA (Global Professional Breathwork Alliance) alignment means the training sits within a recognized framework of professional breathwork standards. It gives you and the people you work with a clear reference point for the scope and quality of what you have learned.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
           <span>What is included in the all-inclusive pricing?</span>
           <span class="faq-icon">+</span>
         </button>
@@ -1033,7 +1091,7 @@
       </a>
     </div>
     <p style="font-size:12px; color:rgba(255,255,255,0.35); letter-spacing:0.04em;">
-      20% deposit secures your place &nbsp;&middot;&nbsp; All-inclusive pricing &nbsp;&middot;&nbsp; GPBA-aligned training
+      20% deposit secures your place &nbsp;&middot;&nbsp; All-inclusive pricing &nbsp;&middot;&nbsp; Founding cohort
     </p>
   </div>
 </section>
@@ -1065,7 +1123,7 @@
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.07); padding-top:24px; display:flex; flex-direction:column; gap:8px;">
       <p style="font-size:11px; color:rgba(255,255,255,0.2); line-height:1.6;">
-        The Alchemy Regulation Method is a GPBA-aligned training that introduces functional breathing and nervous system regulation. It does not cover conscious connected breathwork delivery, trauma catharsis, altered-state practices, or clinical diagnosis. Participants are encouraged to integrate what they learn within their own existing scope of practice.
+        The Alchemy Regulation Method is an educational programme that introduces functional breathing and nervous system regulation. It does not cover conscious connected breathwork delivery, trauma catharsis, altered-state practices, or clinical diagnosis. Participants are encouraged to integrate what they learn within their own existing scope of practice.
       </p>
       <p style="font-size:11px; color:rgba(255,255,255,0.2);">
         &copy; 2026 Alchemy of Breath. All rights reserved.
