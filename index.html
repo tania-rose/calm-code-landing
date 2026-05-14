@@ -98,6 +98,9 @@
     .testimonial-name { font-family:'Roboto',sans-serif; font-weight:500; font-size:13px; color:#1a1a18; letter-spacing:.02em; }
     .testimonial-loc { font-family:'Roboto',sans-serif; font-weight:400; font-size:12px; color:#cc9924; letter-spacing:.08em; text-transform:uppercase; }
     .testimonial-loc::before { content:'\2022'; margin-right:10px; color:#d3cdb3; }
+    .pulse-dot { width:8px; height:8px; border-radius:50%; background:#cc9924; box-shadow:0 0 12px rgba(204,153,36,.7); animation:pulseDot 2s ease-in-out infinite; }
+    @keyframes pulseDot { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.15); box-shadow:0 0 18px rgba(204,153,36,1); } }
+    @media (prefers-reduced-motion:reduce) { .pulse-dot { animation:none; } }
 
     /* Location carousel */
     @keyframes carouselSlide {
@@ -878,6 +881,12 @@
 <!-- ===================== PRICING ===================== -->
 <section id="pricing" class="py-24" style="background:#f9f8f5;">
   <div class="max-w-6xl mx-auto px-6">
+    <div style="display:flex; justify-content:center; margin-bottom:32px;">
+      <div style="display:inline-flex; align-items:center; gap:14px; padding:12px 24px; background:#fff; border:1px solid rgba(204,153,36,.5); box-shadow:0 4px 24px rgba(204,153,36,.12);">
+        <span class="pulse-dot"></span>
+        <span style="font-family:'Roboto',sans-serif; font-weight:500; font-size:11px; letter-spacing:.18em; color:#1a1a18; text-transform:uppercase;">Founding cohort &middot; Limited places &middot; 19&ndash;25 July 2026</span>
+      </div>
+    </div>
     <div class="text-center mb-12">
       <p class="eyebrow mb-4">Investment</p>
       <div class="gold-rule centered"></div>
@@ -1001,7 +1010,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            No prior breathwork training is required. The Alchemy Regulation Method is designed for practitioners who work with the body and nervous system: coaches, therapists, physiotherapists, yoga teachers, healthcare professionals. What matters is that you work with people and want to add breath as a tool.
+            No. The Alchemy Regulation Method is built for practitioners who already work with the body and the nervous system &mdash; coaches, therapists, physiotherapists, yoga teachers, healthcare professionals &mdash; and for anyone who has spent too long running dysregulated. What matters is the intention to use breath as a tool, in your own life or in your work.
           </div>
         </div>
       </div>
@@ -1013,7 +1022,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            The online pre-study covers foundational respiratory anatomy, basic breath physiology, and an introduction to the six stages of regulation. It is self-paced and completed before arrival in Tuscany. Completing it ensures your residential time at ASHA is spent on hands-on practice rather than foundational theory.
+            A 10-hour self-paced module before you arrive. Foundational respiratory anatomy, basic breath physiology, and an introduction to the six stages. Doing it beforehand means your week at ASHA is spent on hands-on practice and direct mentorship, not on theory.
           </div>
         </div>
       </div>
@@ -1025,7 +1034,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes. The Alchemy Regulation Method is the first week of the 21-day residential facilitator training. Graduates who choose to continue into Weeks 2 and 3 can extend their stay at ASHA without re-enrolling. This makes the Alchemy Regulation Method both a standalone training and the entry point to the full AoB pathway.
+            Yes. The Alchemy Regulation Method is the first week of the 21-day residential facilitator training. If you choose to continue into Weeks 2 and 3, you extend your stay at ASHA without re-enrolling. It&rsquo;s both a complete standalone training and the entry point to everything else we teach.
           </div>
         </div>
       </div>
@@ -1037,7 +1046,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            The program fee, all meals at ASHA, and your chosen accommodation are bundled into a single price. Nothing is charged separately on arrival. The booking process is handled through Retreat Guru, where you select your accommodation and pay the 20% deposit to secure your place.
+            The full 60 hours of training, all meals at ASHA, and your chosen accommodation are bundled into a single price. Nothing is charged separately on arrival. Booking is through Retreat Guru, where you select your accommodation and pay the 20% deposit that secures your place.
           </div>
         </div>
       </div>
@@ -1049,7 +1058,19 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            Yes. Everything taught during the week is gentle, safe, and appropriate to use alongside existing professional practice. The Alchemy Regulation Method does not teach clinical diagnosis or treatment. It builds your personal understanding of breath and the nervous system, which you can then integrate into the work you already do, within your own scope of practice.
+            Yes. Everything taught is gentle, safe, and appropriate to integrate into existing professional practice. The Alchemy Regulation Method doesn&rsquo;t teach clinical diagnosis or treatment. It builds your felt understanding of breath and the nervous system, which you can then bring into the work you already do, within your own scope.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          <span>How is this different from conscious connected breathwork?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Conscious connected breathwork tends to lean into cathartic or expanded-state experiences. That work is real and we love it. The Alchemy Regulation Method is something complementary: the everyday physiology of breathing and regulation, taught simply enough that you can use it tomorrow morning. You&rsquo;ll experience one CCB session during the week. Learning to deliver it is the territory of Weeks 2 and 3 of the facilitator training.
           </div>
         </div>
       </div>
@@ -1061,7 +1082,19 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            The founding cohort is intentionally small. The residential format and hands-on practice require a participant-to-instructor ratio that supports genuine skill development, not a lecture-hall experience. Places are limited and will not be extended beyond capacity.
+            Intentionally small. The residential format and hands-on practice need a participant-to-instructor ratio that supports real skill development, not lecture-hall pacing. Places are limited and will not be extended beyond capacity.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          <span>What is the refund and transfer policy?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            A 20% deposit secures your place; the balance is due before arrival. Cancellation terms, transfer options between cohorts, and travel-related contingencies are handled through Retreat Guru during booking. If you&rsquo;d like to talk through your specific situation before committing, <a href="https://go.alchemyofbreath.com/book-your-discovery-call-page" target="_blank" rel="noopener" style="color:#cc9924;">book a discovery call</a> and we&rsquo;ll walk you through it.
           </div>
         </div>
       </div>
