@@ -90,15 +90,11 @@
     .stat-label { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.6); font-weight:400; }
     .featured-name { font-family:'Roboto',sans-serif; font-weight:500; font-size:15px; letter-spacing:.08em; text-transform:uppercase; color:rgba(74,74,70,.55); transition:color .25s, transform .25s; }
     .featured-name:hover { color:#1a1a18; transform:translateY(-1px); }
-    .testimonial-card { position:relative; background:#f9f8f5; border:1px solid #d3cdb3; padding:36px 32px 28px; display:flex; flex-direction:column; justify-content:space-between; transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .35s; }
-    .testimonial-card:hover { transform:translateY(-3px); border-color:rgba(204,153,36,.4); box-shadow:0 12px 36px rgba(53,77,76,.08), 0 0 60px -20px rgba(204,153,36,.18); }
-    .testimonial-card::before { content:'\201C'; position:absolute; top:-18px; left:24px; font-family:'Marcellus',Georgia,serif; font-size:88px; line-height:1; color:rgba(204,153,36,.35); pointer-events:none; }
-    .testimonial-card-light { background:#fff; }
-    .testimonial-quote { font-family:'Marcellus',Georgia,serif; font-size:clamp(17px,1.6vw,19px); line-height:1.55; color:#1a1a18; letter-spacing:-.005em; margin-bottom:20px; font-style:italic; }
-    .testimonial-meta { display:flex; align-items:center; gap:10px; border-top:1px solid #d3cdb3; padding-top:14px; }
-    .testimonial-name { font-family:'Roboto',sans-serif; font-weight:500; font-size:13px; color:#1a1a18; letter-spacing:.02em; }
-    .testimonial-loc { font-family:'Roboto',sans-serif; font-weight:400; font-size:12px; color:#cc9924; letter-spacing:.08em; text-transform:uppercase; }
-    .testimonial-loc::before { content:'\2022'; margin-right:10px; color:#d3cdb3; }
+    .reflections-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px 56px; }
+    @media (max-width:768px) { .reflections-grid { grid-template-columns:1fr; gap:36px; } }
+    .reflection { padding:0; }
+    .reflection-quote { font-family:'Roboto',sans-serif; font-weight:300; font-style:italic; font-size:15.5px; line-height:1.75; color:#4a4a46; margin-bottom:14px; letter-spacing:.005em; }
+    .reflection-attr { font-family:'Roboto',sans-serif; font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#cc9924; }
     .pulse-dot { width:8px; height:8px; border-radius:50%; background:#cc9924; box-shadow:0 0 12px rgba(204,153,36,.7); animation:pulseDot 2s ease-in-out infinite; }
     @keyframes pulseDot { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.15); box-shadow:0 0 18px rgba(204,153,36,1); } }
     @media (prefers-reduced-motion:reduce) { .pulse-dot { animation:none; } }
@@ -113,6 +109,7 @@
     .qb-sep { margin:0 12px; opacity:.4; }
     .qb-cta { font-family:'Roboto',sans-serif; font-weight:600; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; background:#1a1a18; padding:10px 22px; transition:transform .2s,box-shadow .2s; box-shadow:0 3px 10px rgba(0,0,0,.25); flex-shrink:0; }
     .qb-cta:hover { transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.35); }
+    .qb-countdown { display:inline-block; font-family:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:.04em; background:rgba(26,26,24,.18); padding:3px 9px; border-radius:3px; margin-left:4px; }
     @keyframes qbPulseReduce { 0%,100% { opacity:.8; } }
     @media (prefers-reduced-motion:reduce) { .qb-dot { animation:none; } }
     @media (max-width:768px) {
@@ -196,11 +193,11 @@
   <div class="max-w-6xl mx-auto px-5 quantum-inner">
     <span class="qb-dot"></span>
     <span class="qb-copy">
-      <strong class="qb-eyebrow">Quantum Shift Event</strong>
+      <strong class="qb-eyebrow">Quantum Shift Exclusive</strong>
       <span class="qb-sep">|</span>
-      <strong class="qb-discount">25% off</strong> the Alchemy Regulation Method
+      <strong class="qb-discount">25% off</strong>
       <span class="qb-sep">|</span>
-      <span class="qb-meta">Tuscany &middot; 19&ndash;25 July 2026</span>
+      <span class="qb-meta">Expires Sunday 24 May &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
     </span>
     <a href="#pricing" class="qb-cta">Reserve your place &rarr;</a>
   </div>
@@ -291,7 +288,7 @@
 <!-- ===================== AS FEATURED IN ===================== -->
 <section style="background:#f9f8f5; border-bottom:1px solid #d3cdb3; padding:36px 24px;">
   <div class="max-w-6xl mx-auto">
-    <p style="text-align:center; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#c5c3c2; margin-bottom:26px;">Anthony has been featured in &amp; worked with</p>
+    <p style="text-align:center; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#c5c3c2; margin-bottom:26px;">Featured in</p>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:24px 48px;">
       <span class="featured-name">YOGA WORLD</span>
       <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">mindvalley</span>
@@ -370,47 +367,42 @@
   </div>
 </section>
 
-<!-- ===================== SOCIAL PROOF / VOICES ===================== -->
+<!-- ===================== REFLECTIONS ===================== -->
 <section style="background:#fff; border-top:1px solid #d3cdb3; padding:96px 24px;">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-14">
-      <p class="eyebrow mb-4">From the community</p>
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">In their own words</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,40px); line-height:1.2; letter-spacing:-0.02em; color:#1a1a18; max-width:680px; margin:0 auto 14px;">
-        You&rsquo;ll recognize yourself in at least one of these.
-      </h2>
-      <p style="font-size:15px; line-height:1.7; color:#4a4a46; max-width:560px; margin:0 auto;">
-        What students have written to us, in their own words.
-      </p>
     </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="testimonial-card">
-        <p class="testimonial-quote">&ldquo;Dysregulation is so familiar, but it has a way of cutting me off from the people around me whom I love. It&rsquo;s like the negative pole of a magnet that pushes away the people I want to draw close.&rdquo;</p>
-        <div class="testimonial-meta">
-          <span class="testimonial-name">Jeremy</span>
-          <span class="testimonial-loc">USA</span>
-        </div>
+
+    <!-- Hero reflection: Ligia -->
+    <figure style="text-align:center; margin:0 auto 72px; max-width:780px;">
+      <p style="font-family:'Marcellus',Georgia,serif; font-style:italic; font-size:clamp(22px,2.8vw,32px); line-height:1.45; letter-spacing:-.005em; color:#1a1a18; margin-bottom:24px;">
+        &ldquo;These last 7 days were the most amazing experience of my life. They brought me to my purpose, to the clarity I&rsquo;d been looking for. If you get the chance to go to ASHA, it will awaken your soul.&rdquo;
+      </p>
+      <figcaption style="display:inline-flex; align-items:center; gap:14px;">
+        <span style="width:32px; height:1px; background:#cc9924;"></span>
+        <span style="font-family:'Roboto',sans-serif; font-size:13px; letter-spacing:.06em; color:#4a4a46;">Ligia</span>
+      </figcaption>
+    </figure>
+
+    <!-- Quieter reflections grid -->
+    <div class="reflections-grid">
+      <div class="reflection">
+        <p class="reflection-quote">&ldquo;Dysregulation is so familiar, but it has a way of cutting me off from the people around me whom I love. It&rsquo;s like the negative pole of a magnet that pushes away the people I want to draw close.&rdquo;</p>
+        <p class="reflection-attr">Jeremy &middot; USA</p>
       </div>
-      <div class="testimonial-card">
-        <p class="testimonial-quote">&ldquo;My reactionary attitude causes my nervous system to dysregulate, which accounts for my quickly climbing blood pressure. And that&rsquo;s just the physical symptom. Imagine the emotional and spiritual ramifications.&rdquo;</p>
-        <div class="testimonial-meta">
-          <span class="testimonial-name">A student</span>
-          <span class="testimonial-loc">Istanbul</span>
-        </div>
+      <div class="reflection">
+        <p class="reflection-quote">&ldquo;My reactionary attitude causes my nervous system to dysregulate, which accounts for my quickly climbing blood pressure. And that&rsquo;s just the physical symptom. Imagine the emotional and spiritual ramifications.&rdquo;</p>
+        <p class="reflection-attr">A student &middot; Istanbul</p>
       </div>
-      <div class="testimonial-card testimonial-card-light">
-        <p class="testimonial-quote">&ldquo;Keeping things simple, being in nature, breathwork is my go-to for the spikes.&rdquo;</p>
-        <div class="testimonial-meta">
-          <span class="testimonial-name">Tony</span>
-          <span class="testimonial-loc">United Kingdom</span>
-        </div>
+      <div class="reflection">
+        <p class="reflection-quote">&ldquo;Keeping things simple, being in nature, breathwork is my go-to for the spikes.&rdquo;</p>
+        <p class="reflection-attr">Tony &middot; United Kingdom</p>
       </div>
-      <div class="testimonial-card testimonial-card-light">
-        <p class="testimonial-quote">&ldquo;Whenever a difficult emotion arises I take a few deep breaths, look at it, respect it, and try to direct it inwards to its original source. Whatever happens in the world around me, a new deep calmness remains inside.&rdquo;</p>
-        <div class="testimonial-meta">
-          <span class="testimonial-name">An Alchemy of Breath graduate</span>
-          <span class="testimonial-loc">Sweden</span>
-        </div>
+      <div class="reflection">
+        <p class="reflection-quote">&ldquo;Whenever a difficult emotion arises I take a few deep breaths, look at it, respect it, and try to direct it inwards to its original source. Whatever happens in the world around me, a new deep calmness remains inside.&rdquo;</p>
+        <p class="reflection-attr">An AoB graduate &middot; Sweden</p>
       </div>
     </div>
   </div>
@@ -619,8 +611,8 @@
 <!-- ===================== OUTCOMES ===================== -->
 <section class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
   <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 80% 20%, rgba(204,153,36,0.08) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(82,187,144,0.05) 0%, transparent 50%);"></div>
-  <div class="relative z-10 max-w-4xl mx-auto px-6">
-    <div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
       <div>
         <p class="eyebrow mb-4">What You Leave With</p>
         <div class="gold-rule"></div>
@@ -680,6 +672,12 @@
         </div>
       </div>
 
+      <div class="img-overlay">
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg"
+             alt="Group breathing session at ASHA"
+             class="w-full"
+             style="aspect-ratio:4/5; object-fit:cover; display:block;" />
+      </div>
     </div>
   </div>
 </section>
@@ -951,12 +949,13 @@
     </div>
 
     <div style="background:#fff; border:1px solid #d3cdb3; overflow-x:auto; margin-bottom:24px;">
-      <table style="width:100%; border-collapse:collapse; font-size:15px; min-width:560px;">
+      <table style="width:100%; border-collapse:collapse; font-size:15px; min-width:680px;">
         <thead>
           <tr style="background:#354d4c;">
             <th style="text-align:left; padding:16px 20px; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">Accommodation</th>
             <th style="text-align:right; padding:16px 20px; color:rgba(255,255,255,.7); font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">Regular</th>
             <th style="text-align:right; padding:16px 20px; color:#cc9924; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap;">Quantum Shift &middot; 25% off</th>
+            <th style="text-align:right; padding:16px 20px; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap; background:rgba(204,153,36,.18);">Pay today &middot; 20% deposit</th>
           </tr>
         </thead>
         <tbody>
@@ -964,46 +963,55 @@
             <td style="padding:14px 20px; color:#1a1a18;">Private Cottage</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,738</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;2,054</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;411</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Private Single Room, Ensuite</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,416</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,812</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;362</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (2), Ensuite <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,063</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,547</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;309</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Glamping, Solo</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,003</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,502</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;300</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (2), Shared Bathroom <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,003</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,502</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;300</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (3), Private Bathroom <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,969</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,477</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;295</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Glamping, Shared (2) <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,909</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,432</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;286</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Camper Van</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,763</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,322</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;264</td>
           </tr>
           <tr>
             <td style="padding:14px 20px; color:#1a1a18;">Bring Your Own Tent</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,701</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,276</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;255</td>
           </tr>
         </tbody>
       </table>
@@ -1221,6 +1229,25 @@
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+  // Quantum Shift countdown timer (expires Sun 24 May 2026, end of day local)
+  (function() {
+    var el = document.getElementById('qb-countdown');
+    if (!el) return;
+    var deadline = new Date('2026-05-24T23:59:59');
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      var diff = deadline - new Date();
+      if (diff <= 0) { el.textContent = 'Expired'; return; }
+      var days = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+      el.textContent = days + 'd ' + pad(hours) + 'h ' + pad(mins) + 'm ' + pad(secs) + 's';
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
   // 6-stage interactive cards
   (function() {
