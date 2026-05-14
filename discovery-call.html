@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Discovery Call | Alchemy of Breath</title>
+  <meta name="description" content="Not sure if our training is right for you? Book a free 15-minute call with our team. No pressure, no pitch &mdash; just a conversation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal:    '#354d4c',
+            gold:    '#cc9924',
+            beige:   '#d3cdb3',
+            offwhite:'#f9f8f5',
+            green:   '#52bb90',
+            ink:     '#1a1a18',
+            inksoft: '#4a4a46',
+            gray:    '#c5c3c2',
+          },
+          fontFamily: {
+            display: ['Marcellus', 'Georgia', 'serif'],
+            body:    ['Roboto', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; font-weight: 300; color: #1a1a18; background: #f9f8f5; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4 { font-family: 'Marcellus', Georgia, serif; }
+
+    .eyebrow {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #cc9924;
+    }
+
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .nav-link {
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 100%;
+      height: 1px;
+      background: #cc9924;
+      transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    .nav-link:hover::after { right: 0; }
+    .nav-link:hover { color: rgba(255,255,255,1); }
+
+    .btn-gold {
+      display: inline-block;
+      background: #cc9924;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(204,153,36,0.25), 0 1px 4px rgba(204,153,36,0.15);
+      transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1);
+    }
+    .btn-gold::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.12);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { transform: translateY(-1px); box-shadow: 0 8px 32px rgba(204,153,36,0.35), 0 2px 8px rgba(204,153,36,0.2); }
+    .btn-gold:hover::before { opacity: 1; }
+    .btn-gold:active { transform: translateY(0); }
+    .btn-gold:focus-visible { outline: 2px solid #cc9924; outline-offset: 3px; }
+
+    .gold-rule { width: 40px; height: 2px; background: #cc9924; margin: 20px 0 28px; }
+    .gold-rule.centered { margin: 20px auto 28px; }
+
+    #main-nav { transition: background 0.3s, box-shadow 0.3s; }
+    #main-nav.scrolled {
+      background: rgba(31,48,47,0.97);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .expect-card {
+      padding: 32px 28px;
+      border-bottom: 1px solid #d3cdb3;
+    }
+    .expect-card:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-teal" style="background:#354d4c;">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="https://alchemyofbreath.com" aria-label="Alchemy of Breath home">
+      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
+           alt="Alchemy of Breath"
+           class="h-7 w-auto" />
+    </a>
+    <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-3/?form=1&lang=en"
+       class="btn-gold text-xs" target="_blank" rel="noopener">
+      Secure Your Place
+    </a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="relative grain overflow-hidden" style="background:#354d4c; padding-top:120px; padding-bottom:80px;">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 20%, rgba(204,153,36,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(82,187,144,0.04) 0%, transparent 50%);"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
+    <p class="eyebrow mb-5">Free 15-Minute Call</p>
+    <h1 class="text-white mb-6 leading-tight" style="font-family:'Marcellus',Georgia,serif; font-size:clamp(32px,4.5vw,48px); letter-spacing:-0.02em;">
+      Not sure if this is for you?<br/>Let&rsquo;s talk.
+    </h1>
+    <p class="text-white mx-auto" style="font-size:17px; line-height:1.8; font-weight:300; opacity:0.8; max-width:520px;">
+      Book a free 15-minute call with our team. No pressure, no pitch. Just a conversation about where you are and whether the week in Tuscany might be right for you.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== CALENDAR EMBED ===================== -->
+<section style="padding:64px 24px 80px; background:#f9f8f5;">
+  <div class="max-w-3xl mx-auto">
+    <div style="background:#fff; border:1px solid #d3cdb3; min-height:600px; box-shadow: 0 2px 16px rgba(53,77,76,0.06), 0 1px 3px rgba(53,77,76,0.04);">
+      <iframe src="https://link.alchemyofbreath.com/widget/booking/nqi9d8dd3lS6nCTgGIbU" style="width:100%;min-height:600px;border:none;overflow:hidden;" scrolling="no" id="nqi9d8dd3lS6nCTgGIbU_1775214070921"></iframe>
+      <script src="https://link.alchemyofbreath.com/js/form_embed.js" type="text/javascript"></script>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT TO EXPECT ===================== -->
+<section class="relative grain overflow-hidden" style="background:#354d4c; padding:72px 24px;">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, rgba(204,153,36,0.05) 0%, transparent 50%);"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">What to Expect</p>
+      <h2 class="text-white" style="font-size:clamp(26px,3.5vw,36px); letter-spacing:-0.01em;">
+        A simple, honest conversation
+      </h2>
+      <div class="gold-rule centered"></div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(211,205,179,0.12);">
+      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
+        <div class="flex items-start gap-4">
+          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
+          <div>
+            <h3 class="text-white mb-2" style="font-size:18px;">A relaxed conversation about where you are right now</h3>
+            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
+              Tell us about your background, your work, and what drew you to breathwork. We are here to listen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
+        <div class="flex items-start gap-4">
+          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
+          <div>
+            <h3 class="text-white mb-2" style="font-size:18px;">Honest answers about what the week does and does not cover</h3>
+            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
+              We will walk you through the methodology, the daily rhythm, and what you can realistically expect to take home.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
+        <div class="flex items-start gap-4">
+          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
+          <div>
+            <h3 class="text-white mb-2" style="font-size:18px;">Help choosing the right accommodation if you decide to book</h3>
+            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
+              From shared rooms to private suites, we can help you find the option that fits your needs and budget.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOFT CTA ===================== -->
+<section style="padding:64px 24px; background:#f9f8f5;">
+  <div class="max-w-xl mx-auto text-center">
+    <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:28px;">
+      Prefer email? Write to us at <a href="mailto:info@alchemyofbreath.com" style="color:#354d4c; text-decoration:underline; text-underline-offset:3px; font-weight:400;">info@alchemyofbreath.com</a> and we will get back to you within 24 hours.
+    </p>
+    <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-3/?form=1&lang=en"
+       class="btn-gold" target="_blank" rel="noopener">
+      Secure Your Place
+    </a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer style="background:#1a1a18; padding:48px 24px 32px;">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+      <div>
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
+             alt="Alchemy of Breath"
+             class="h-8 w-auto mb-6" style="opacity:0.7;" />
+        <p style="font-size:13px; color:rgba(255,255,255,0.35); line-height:1.7; max-width:280px;">
+          Alchemy of Breath. Breath as a tool for life, for yourself and the people you serve.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <p style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.3); font-weight:500; margin-bottom:4px;">Contact</p>
+        <a href="mailto:info@alchemyofbreath.com" style="font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;">info@alchemyofbreath.com</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.07); padding-top:24px;">
+      <p style="font-size:11px; color:rgba(255,255,255,0.2);">
+        &copy; 2026 Alchemy of Breath. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav scroll
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>
