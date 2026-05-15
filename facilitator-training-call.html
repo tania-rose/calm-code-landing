@@ -20,19 +20,20 @@
     .gold-rule{width:40px;height:2px;background:var(--gold);margin:18px auto 28px}
     .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
 
-    /* LOGO HEADER */
-    header.brand{padding:40px 0 8px;text-align:center;background:var(--offwhite)}
-    header.brand img{height:64px;width:auto;margin:0 auto}
-    @media(max-width:640px){header.brand{padding:32px 0 4px}header.brand img{height:52px}}
-
-    /* HERO */
-    .hero{padding:48px 0 36px;text-align:center}
-    .hero h1{font-size:clamp(30px,4vw,46px);line-height:1.18;color:var(--ink);margin:0 0 22px}
-    .hero p.lede{font-size:17px;line-height:1.75;color:var(--ink-soft);max-width:620px;margin:0 auto 18px;font-weight:300}
-    .hero p.lede + p.lede{margin-top:0}
+    /* DARK BANNER (logo + hero) */
+    .banner{background:var(--ink);color:#fff;padding:48px 0 64px;text-align:center;border-bottom:1px solid rgba(204,153,36,.2)}
+    .banner .brand{padding:0 0 32px}
+    .banner .brand img{height:64px;width:auto;margin:0 auto}
+    .banner .eyebrow{color:var(--gold)}
+    .banner .gold-rule{margin:18px auto 28px}
+    .banner h1{font-size:clamp(30px,4vw,46px);line-height:1.2;color:#fff;margin:0 0 22px}
+    .banner p.lede{font-size:17px;line-height:1.75;color:rgba(255,255,255,.78);max-width:620px;margin:0 auto 18px;font-weight:300}
+    .banner p.lede + p.lede{margin-top:0}
+    @media(max-width:640px){.banner{padding:36px 0 52px}.banner .brand{padding-bottom:24px}.banner .brand img{height:52px}}
 
     /* CALENDAR */
-    .calendar-wrap{background:#fff;border:1px solid var(--beige);box-shadow:0 12px 48px rgba(53,77,76,.08);padding:14px;margin:24px 0 36px}
+    .calendar-section{padding:56px 0 0}
+    .calendar-wrap{background:#fff;border:1px solid var(--beige);box-shadow:0 12px 48px rgba(53,77,76,.08);padding:14px;margin:0 0 36px}
     .calendar-wrap iframe{display:block;width:100%;border:0;min-height:720px}
 
     /* BELOW CALENDAR */
@@ -60,14 +61,13 @@
 </head>
 <body>
 
-<header class="brand">
-  <a href="https://alchemyofbreath.com/" aria-label="Alchemy of Breath">
-    <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69fa2fe0101c593bfc7dc55a.png" alt="Alchemy of Breath" />
-  </a>
-</header>
-
-<section class="hero">
+<section class="banner">
   <div class="container">
+    <div class="brand">
+      <a href="https://alchemyofbreath.com/" aria-label="Alchemy of Breath">
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69fa2fe0101c593bfc7dc55a.png" alt="Alchemy of Breath" />
+      </a>
+    </div>
     <p class="eyebrow">Your Next Step</p>
     <div class="gold-rule"></div>
     <h1>Thank you for sharing what's calling you.</h1>
@@ -76,7 +76,7 @@
   </div>
 </section>
 
-<section>
+<section class="calendar-section">
   <div class="container">
     <div class="calendar-wrap">
       <iframe src="https://link.alchemyofbreath.com/widget/booking/VJFTrru7wQr52aRbaAHF" scrolling="no" id="VJFTrru7wQr52aRbaAHF_1778837622272" title="Book a call"></iframe>
