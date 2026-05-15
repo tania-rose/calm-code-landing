@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome — The Breath That Changes Everything | Alchemy of Breath</title>
+  <meta name="description" content="Watch the free Conscious Connected Breathing masterclass with Anthony Abbagnano. Then apply for the next step in our work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--teal:#354d4c;--gold:#cc9924;--beige:#d3cdb3;--offwhite:#f9f8f5;--green:#52bb90;--ink:#1a1a18;--ink-soft:#4a4a46;--gray:#c5c3c2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Roboto',sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.7;-webkit-font-smoothing:antialiased;margin:0}
+    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;font-weight:400;letter-spacing:-.02em}
+    a{color:var(--gold);text-decoration:none}
+    img{max-width:100%;display:block}
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+    .gold-rule{width:40px;height:2px;background:var(--gold);margin:18px 0 26px}
+    .gold-rule.centered{margin:18px auto 26px}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+
+    .btn-gold{display:inline-block;background:var(--gold);color:#fff;font-weight:500;font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:16px 38px;text-decoration:none;border:none;cursor:pointer;box-shadow:0 4px 24px rgba(204,153,36,.25),0 1px 4px rgba(204,153,36,.15);transition:transform .2s,box-shadow .2s}
+    .btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(204,153,36,.35);color:#fff}
+    .btn-gold:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    .link-secondary{display:inline-block;font-size:13px;letter-spacing:.06em;color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--beige);text-underline-offset:4px;font-weight:400;transition:color .2s,text-decoration-color .2s}
+    .link-secondary:hover{color:var(--teal);text-decoration-color:var(--gold)}
+
+    /* NAV */
+    nav.top{position:sticky;top:0;z-index:50;background:rgba(53,77,76,.97);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(204,153,36,.18)}
+    nav.top .row{display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav.top img{height:26px;width:auto}
+    nav.top a.back{font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+    nav.top a.back:hover{color:#fff}
+
+    /* HERO */
+    .hero{background:var(--ink);color:#fff;padding:48px 0 24px;text-align:center}
+    .hero .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(82,187,144,.12);border:1px solid rgba(82,187,144,.4);color:var(--green);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:100px;font-weight:500}
+    .hero .badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(82,187,144,.18)}
+    .hero h1{font-size:clamp(28px,3.6vw,42px);line-height:1.18;color:#fff;margin:18px 0 12px}
+    .hero p.lede{font-size:16px;line-height:1.7;color:rgba(255,255,255,.78);max-width:560px;margin:0 auto;font-weight:300}
+
+    /* VIDEO */
+    .video-wrap{background:var(--ink);padding:24px 0 80px}
+    .video-wrap .container{max-width:980px}
+    .video-frame{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5),0 4px 12px rgba(0,0,0,.25);background:#000}
+    .video-frame .ratio{padding:56.25% 0 0 0;position:relative}
+    .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    .video-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-top:18px;font-size:12.5px;color:rgba(255,255,255,.55);letter-spacing:.04em}
+    .video-meta strong{color:rgba(255,255,255,.8);font-weight:500}
+
+    /* NEXT STEP */
+    .next{background:var(--offwhite);padding:88px 0;border-top:1px solid var(--beige)}
+    .next .head{text-align:center;max-width:640px;margin:0 auto 48px}
+    .next .head h2{font-size:clamp(28px,3.6vw,42px);line-height:1.2;margin:14px 0 14px}
+    .next .head p{font-size:16.5px;color:var(--ink-soft);line-height:1.7;margin:0}
+
+    /* APPLICATION */
+    .apply-wrap{max-width:760px;margin:0 auto}
+    .apply-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 24px}
+    .apply-meta .chip{background:#fff;border:1px solid var(--beige);padding:14px 16px;text-align:left;display:flex;gap:12px;align-items:flex-start}
+    .apply-meta .chip .ico{flex-shrink:0;width:28px;height:28px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Marcellus',Georgia,serif;font-size:14px}
+    .apply-meta .chip .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:2px}
+    .apply-meta .chip .val{font-size:13.5px;line-height:1.45;color:var(--ink);font-weight:400}
+    @media(max-width:680px){.apply-meta{grid-template-columns:1fr}}
+
+    .apply-card{background:#fff;border:1px solid var(--beige);box-shadow:0 16px 56px rgba(53,77,76,.10);overflow:hidden;position:relative}
+    .apply-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--green))}
+    .apply-card .header{padding:32px 36px 0;text-align:center}
+    .apply-card .header h3{font-size:clamp(22px,2.6vw,28px);margin:0 0 10px;color:var(--ink)}
+    .apply-card .header p{font-size:15px;line-height:1.7;color:var(--ink-soft);margin:0 0 6px;max-width:520px;margin-left:auto;margin-right:auto}
+    .apply-card iframe{display:block;width:100%;border:0;min-height:1200px}
+    .apply-card .reassure{padding:0 36px 26px;text-align:center;font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
+    .apply-card .reassure strong{color:var(--ink);font-weight:500}
+    @media(max-width:640px){.apply-card .header{padding:26px 22px 0}.apply-card .reassure{padding:0 22px 22px}}
+
+    /* What happens next */
+    .next-steps{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin-left:auto;margin-right:auto}
+    .step{background:#fff;border:1px solid var(--beige);padding:28px 26px;text-align:left;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative}
+    .step:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(53,77,76,.08);border-color:var(--gold)}
+    .step .num{font-family:'Marcellus',Georgia,serif;font-size:14px;color:var(--gold);letter-spacing:.04em;margin-bottom:10px}
+    .step h4{font-size:17px;color:var(--ink);margin:0 0 8px}
+    .step p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.6}
+    @media(max-width:780px){.next-steps{grid-template-columns:1fr}}
+
+    /* CALL section */
+    .call{background:var(--ink);color:#fff;padding:64px 0;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+    .call h3{font-size:22px;color:#fff;margin:0 0 10px}
+    .call p{font-size:15px;color:rgba(255,255,255,.7);margin:0 0 22px;max-width:560px;margin-left:auto;margin-right:auto}
+
+    /* FOOTER */
+    footer{background:var(--ink);color:rgba(255,255,255,.4);padding:30px 0;font-size:12px;border-top:1px solid rgba(255,255,255,.06)}
+    footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+    footer a{color:rgba(255,255,255,.6)}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="https://alchemyofbreath.com/" aria-label="Alchemy of Breath"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" /></a>
+    <a href="https://alchemyofbreath.com/" class="back">&larr; alchemyofbreath.com</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="badge">You're in</span>
+    <h1>Welcome. Press play when you're ready.</h1>
+    <p class="lede">Settle in. Take a slower breath than usual. Anthony will meet you on the other side of this video.</p>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-wrap">
+  <div class="container">
+    <div class="video-frame">
+      <div class="ratio">
+        <iframe src="https://player.vimeo.com/video/1069104961?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="The Breath That Changes Everything — Masterclass"></iframe>
+      </div>
+    </div>
+    <div class="video-meta">
+      <span><strong>Tip</strong> &middot; Headphones make a real difference. Find a quiet 30 minutes if you can.</span>
+      <span>Free to revisit anytime in your inbox</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="next" id="apply">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">After The Masterclass</p>
+      <div class="gold-rule centered"></div>
+      <h2>If something opened up,<br/>tell us where you are.</h2>
+      <p>A short application so we can understand what's calling you. If there's a fit, we'll invite you to a 30-minute conversation to walk you through the right next step &mdash; whether that's the facilitator training, a healing journey, or one of our shorter programs.</p>
+    </div>
+
+    <div class="apply-wrap reveal">
+      <div class="apply-meta">
+        <div class="chip"><span class="ico">&#8987;</span><span><span class="lbl">Time</span><span class="val">Around 3&ndash;4 minutes to complete</span></span></div>
+        <div class="chip"><span class="ico">&#10003;</span><span><span class="lbl">No pressure</span><span class="val">Honest match &mdash; we'll only invite you forward if it's right</span></span></div>
+        <div class="chip"><span class="ico">&rarr;</span><span><span class="lbl">If you qualify</span><span class="val">We'll send a link to book a 30-minute call</span></span></div>
+      </div>
+
+      <div class="apply-card">
+        <div class="header">
+          <p class="eyebrow">Short Application</p>
+          <h3>Tell us what's calling you.</h3>
+          <p>A few questions about you, your practice, and what you're hoping for. Your answers stay private to our small team.</p>
+        </div>
+        <iframe
+          src="https://link.alchemyofbreath.com/widget/survey/8EosGnlx0heXb1cGg1EW"
+          id="8EosGnlx0heXb1cGg1EW"
+          scrolling="no"
+          title="Application"></iframe>
+        <p class="reassure"><strong>What happens next:</strong> if there's alignment, you'll receive an email within 1&ndash;2 days inviting you to book a 30-minute call with our team.</p>
+      </div>
+    </div>
+
+    <div class="next-steps">
+      <div class="step reveal"><p class="num">Step 01</p><h4>Share where you are</h4><p>A few honest questions about your background with breath, what's drawing you in, and what you're hoping for.</p></div>
+      <div class="step reveal"><p class="num">Step 02</p><h4>We read every one</h4><p>Our team reviews each application personally. We'll be in touch within one to two days, either way.</p></div>
+      <div class="step reveal"><p class="num">Step 03</p><h4>A real conversation</h4><p>If there's a fit, we'll send a link to book a 30-minute call &mdash; to walk you through the path that meets you where you are.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL -->
+<section class="call">
+  <div class="container">
+    <h3>Not ready to apply yet?</h3>
+    <p>Sit with the masterclass for a day or two. When something settles, the application will still be here &mdash; and so will we.</p>
+    <a href="#apply" class="btn-gold" style="background:transparent;border:1px solid var(--gold);color:var(--gold)">Start the application</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <p>&copy; 2026 Alchemy of Breath &middot; <a href="https://alchemyofbreath.com/">Visit the main site</a></p>
+    <p><a href="mailto:info@alchemyofbreath.com">info@alchemyofbreath.com</a></p>
+  </div>
+</footer>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
+<script>
+  const obs=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
