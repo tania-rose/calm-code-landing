@@ -61,8 +61,9 @@
     .apply-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 24px}
     .apply-meta .chip{background:#fff;border:1px solid var(--beige);padding:14px 16px;text-align:left;display:flex;gap:12px;align-items:flex-start}
     .apply-meta .chip .ico{flex-shrink:0;width:28px;height:28px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Marcellus',Georgia,serif;font-size:14px}
-    .apply-meta .chip .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:2px}
-    .apply-meta .chip .val{font-size:13.5px;line-height:1.45;color:var(--ink);font-weight:400}
+    .apply-meta .chip .txt{display:flex;flex-direction:column;gap:4px;min-width:0}
+    .apply-meta .chip .lbl{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
+    .apply-meta .chip .val{display:block;font-size:13.5px;line-height:1.5;color:var(--ink);font-weight:400}
     @media(max-width:680px){.apply-meta{grid-template-columns:1fr}}
 
     .apply-card{background:#fff;border:1px solid var(--beige);box-shadow:0 16px 56px rgba(53,77,76,.10);overflow:hidden;position:relative}
@@ -70,7 +71,7 @@
     .apply-card .header{padding:32px 36px 0;text-align:center}
     .apply-card .header h3{font-size:clamp(22px,2.6vw,28px);margin:0 0 10px;color:var(--ink)}
     .apply-card .header p{font-size:15px;line-height:1.7;color:var(--ink-soft);margin:0 0 6px;max-width:520px;margin-left:auto;margin-right:auto}
-    .apply-card iframe{display:block;width:100%;border:0;min-height:1200px}
+    .apply-card iframe{display:block;width:100%;border:0;min-height:540px}
     .apply-card .reassure{padding:0 36px 26px;text-align:center;font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
     .apply-card .reassure strong{color:var(--ink);font-weight:500}
     @media(max-width:640px){.apply-card .header{padding:26px 22px 0}.apply-card .reassure{padding:0 22px 22px}}
@@ -143,9 +144,9 @@
 
     <div class="apply-wrap reveal">
       <div class="apply-meta">
-        <div class="chip"><span class="ico">&#8987;</span><span><span class="lbl">Time</span><span class="val">Around 3&ndash;4 minutes to complete</span></span></div>
-        <div class="chip"><span class="ico">&#10003;</span><span><span class="lbl">No pressure</span><span class="val">Honest match &mdash; we'll only invite you forward if it's right</span></span></div>
-        <div class="chip"><span class="ico">&rarr;</span><span><span class="lbl">If you qualify</span><span class="val">We'll send a link to book a 30-minute call</span></span></div>
+        <div class="chip"><span class="ico">&#8987;</span><span class="txt"><span class="lbl">Time</span><span class="val">Around 3&ndash;4 minutes to complete</span></span></div>
+        <div class="chip"><span class="ico">&#10003;</span><span class="txt"><span class="lbl">No pressure</span><span class="val">Honest match &mdash; we'll only invite you forward if it's right</span></span></div>
+        <div class="chip"><span class="ico">&rarr;</span><span class="txt"><span class="lbl">If you qualify</span><span class="val">You'll be invited to book a 30-minute call right after</span></span></div>
       </div>
 
       <div class="apply-card">
@@ -159,14 +160,14 @@
           id="8EosGnlx0heXb1cGg1EW"
           scrolling="no"
           title="Application"></iframe>
-        <p class="reassure"><strong>What happens next:</strong> if there's alignment, you'll receive an email within 1&ndash;2 days inviting you to book a 30-minute call with our team.</p>
+        <p class="reassure"><strong>What happens next:</strong> if there's alignment, you'll be invited to book a 30-minute call right after you submit.</p>
       </div>
     </div>
 
     <div class="next-steps">
       <div class="step reveal"><p class="num">Step 01</p><h4>Share where you are</h4><p>A few honest questions about your background with breath, what's drawing you in, and what you're hoping for.</p></div>
-      <div class="step reveal"><p class="num">Step 02</p><h4>We read every one</h4><p>Our team reviews each application personally. We'll be in touch within one to two days, either way.</p></div>
-      <div class="step reveal"><p class="num">Step 03</p><h4>A real conversation</h4><p>If there's a fit, we'll send a link to book a 30-minute call &mdash; to walk you through the path that meets you where you are.</p></div>
+      <div class="step reveal"><p class="num">Step 02</p><h4>Book your call</h4><p>If there's a fit, you'll see your booking link as soon as you submit &mdash; pick a time that works for you.</p></div>
+      <div class="step reveal"><p class="num">Step 03</p><h4>A real conversation</h4><p>A 30-minute call to walk you through the path that meets you where you are &mdash; training, healing journey, or a shorter program.</p></div>
     </div>
   </div>
 </section>
