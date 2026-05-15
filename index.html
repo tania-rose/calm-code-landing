@@ -195,13 +195,32 @@
     <span class="qb-copy">
       <strong class="qb-eyebrow">Quantum Shift Exclusive</strong>
       <span class="qb-sep">|</span>
-      <strong class="qb-discount">25% off</strong>
+      <strong class="qb-discount">20% off</strong>
       <span class="qb-sep">|</span>
       <span class="qb-meta">Expires Sunday 24 May &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
     </span>
     <a href="{{custom_values.arm__checkout_page__rg_qs__25_off}}" target="_blank" rel="noopener" class="qb-cta">Reserve your place &rarr;</a>
   </div>
 </div>
+<script>
+  (function(){
+    var el = document.getElementById('qb-countdown');
+    if (!el) return;
+    var deadline = new Date('2026-05-24T23:59:59').getTime();
+    function pad(n){ return n < 10 ? '0' + n : '' + n; }
+    function tick(){
+      var diff = deadline - Date.now();
+      if (diff <= 0) { el.textContent = 'Expired'; return; }
+      var days  = Math.floor(diff / 86400000);
+      var hours = Math.floor((diff % 86400000) / 3600000);
+      var mins  = Math.floor((diff % 3600000) / 60000);
+      var secs  = Math.floor((diff % 60000) / 1000);
+      el.textContent = days + 'd ' + pad(hours) + 'h ' + pad(mins) + 'm ' + pad(secs) + 's';
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
 
 <!-- ===================== TOP NAV (non-sticky, scrolls away) ===================== -->
 <nav id="main-nav" style="background:#354d4c; position:relative; z-index:50;">
@@ -938,10 +957,10 @@
     <div class="text-center mb-8">
       <div style="display:inline-flex; align-items:center; gap:14px; padding:10px 20px; background:rgba(204,153,36,.12); border:1px solid rgba(204,153,36,.45); margin-bottom:14px;">
         <span class="pulse-dot" style="width:7px; height:7px;"></span>
-        <span style="font-family:'Roboto',sans-serif; font-weight:600; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#1a1a18;">Quantum Shift Attendees &middot; 25% off applied below</span>
+        <span style="font-family:'Roboto',sans-serif; font-weight:600; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#1a1a18;">Quantum Shift Attendees &middot; 20% off applied below</span>
       </div>
       <p style="font-family:'Marcellus',Georgia,serif; font-size:clamp(22px,2.8vw,30px); color:#1a1a18; letter-spacing:-0.02em; margin-bottom:6px;">
-        Quantum Shift rate: from &euro;1,276 to &euro;2,054
+        Quantum Shift rate: from &euro;1,361 to &euro;2,190
       </p>
       <p style="font-size:14px; color:#4a4a46; line-height:1.6;">
         Regular price &euro;1,701 to &euro;2,738. The only difference between options is where you sleep.
@@ -954,7 +973,7 @@
           <tr style="background:#354d4c;">
             <th style="text-align:left; padding:16px 20px; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">Accommodation</th>
             <th style="text-align:right; padding:16px 20px; color:rgba(255,255,255,.7); font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">Regular</th>
-            <th style="text-align:right; padding:16px 20px; color:#cc9924; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap;">Quantum Shift &middot; 25% off</th>
+            <th style="text-align:right; padding:16px 20px; color:#cc9924; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap;">Quantum Shift &middot; 20% off</th>
             <th style="text-align:right; padding:16px 20px; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap; background:rgba(204,153,36,.18);">Pay today &middot; 20% deposit</th>
           </tr>
         </thead>
@@ -962,56 +981,56 @@
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Private Cottage</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,738</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;2,054</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;411</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;2,190</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;438</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Private Single Room, Ensuite</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,416</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,812</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;362</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,933</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;387</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (2), Ensuite <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,063</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,547</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;309</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,650</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;330</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Glamping, Solo</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,003</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,502</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;300</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,602</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;320</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (2), Shared Bathroom <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;2,003</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,502</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;300</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,602</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;320</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Shared Room (3), Private Bathroom <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,969</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,477</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;295</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,575</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;315</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Glamping, Shared (2) <span style="font-size:12px; color:#c5c3c2;">per person</span></td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,909</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,432</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;286</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,527</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;305</td>
           </tr>
           <tr style="border-bottom:1px solid #d3cdb3;">
             <td style="padding:14px 20px; color:#1a1a18;">Camper Van</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,763</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,322</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;264</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,410</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;282</td>
           </tr>
           <tr>
             <td style="padding:14px 20px; color:#1a1a18;">Bring Your Own Tent</td>
             <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:16px; color:#c5c3c2; text-decoration:line-through;">&euro;1,701</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,276</td>
-            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;255</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924; font-weight:500;">&euro;1,361</td>
+            <td style="padding:14px 20px; text-align:right; font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; font-weight:500; background:rgba(204,153,36,.06);">&euro;272</td>
           </tr>
         </tbody>
       </table>
@@ -1020,7 +1039,7 @@
     <div class="flex flex-col sm:flex-row gap-6 items-start">
       <div style="flex:1; background:#fff; border:1px solid #d3cdb3; padding:24px 28px;">
         <p class="eyebrow mb-2">Payment</p>
-        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your deposit to secure your spot. The balance is due before arrival. The 25% Quantum Shift discount is applied automatically at booking for attendees.</p>
+        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your deposit to secure your spot. The balance is due before arrival. The 20% Quantum Shift discount is applied automatically at booking for attendees.</p>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; gap:12px; justify-content:center;">
         <a href="{{custom_values.arm__checkout_page__rg_qs__25_off}}"
@@ -1229,25 +1248,6 @@
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-  // Quantum Shift countdown timer (expires Sun 24 May 2026, end of day local)
-  (function() {
-    var el = document.getElementById('qb-countdown');
-    if (!el) return;
-    var deadline = new Date('2026-05-24T23:59:59');
-    function pad(n) { return n < 10 ? '0' + n : '' + n; }
-    function tick() {
-      var diff = deadline - new Date();
-      if (diff <= 0) { el.textContent = 'Expired'; return; }
-      var days = Math.floor(diff / 86400000);
-      var hours = Math.floor((diff % 86400000) / 3600000);
-      var mins = Math.floor((diff % 3600000) / 60000);
-      var secs = Math.floor((diff % 60000) / 1000);
-      el.textContent = days + 'd ' + pad(hours) + 'h ' + pad(mins) + 'm ' + pad(secs) + 's';
-    }
-    tick();
-    setInterval(tick, 1000);
-  })();
 
   // 6-stage interactive cards
   (function() {
