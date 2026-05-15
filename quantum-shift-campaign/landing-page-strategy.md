@@ -25,7 +25,7 @@ Headline:   One day. Two sessions. One breath at a time.
 Sub-head:   A free, live one-day breathwork event with Anthony Abbagnano and Amy Rachelle. Drop your nervous system into the gear it has been trying to find for years.
 Primary:    REGISTER FOR FREE  (anchors to #reserve)
 Secondary:  Get the recording  ·  $49.99  (external Stripe link)
-Session pills: Morning · 10:00 BST   |   Evening · 19:00 BST
+Session pills: Morning · 09:00 BST   |   Evening · 17:00 BST
 ```
 
 ### Hero design
@@ -151,8 +151,8 @@ Inline form at `#reserve`, embedded GHL form `JXFlOEgAhMoElAqLBG1L`.
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "Quantum Shift",
-  "startDate": "2026-05-17T10:00:00+01:00",
-  "endDate": "2026-05-17T20:30:00+01:00",
+  "startDate": "2026-05-17T09:00:00+01:00",
+  "endDate": "2026-05-17T18:30:00+01:00",
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {

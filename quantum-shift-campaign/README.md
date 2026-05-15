@@ -110,8 +110,8 @@ All emails use these GHL merge fields. Falls back to safe defaults if blank.
 |---|---|---|
 | `{{contact.first_name}}` | "friend" | Greetings |
 | `{{custom_values.qs_event_date_pretty}}` | "Sunday 17 May 2026" | Body, footers |
-| `{{custom_values.qs_morning_session_time}}` | "10:00 BST" | Reminders |
-| `{{custom_values.qs_evening_session_time}}` | "19:00 BST" | Reminders |
+| `{{custom_values.qs_morning_session_time}}` | "09:00 BST" | Reminders |
+| `{{custom_values.qs_evening_session_time}}` | "17:00 BST" | Reminders |
 | `{{custom_values.qs_live_link}}` | (Zoom URL set day-of) | Reminders |
 | `{{custom_values.qs_recording_purchase_url}}` | placeholder Stripe | All emails |
 | `{{custom_values.arm_online_url}}` | `go.alchemyofbreath.com/alchemy-regulation-method-online` | Post-event, nurture |
