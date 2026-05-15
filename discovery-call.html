@@ -3,265 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Discovery Call | Alchemy of Breath</title>
-  <meta name="description" content="Not sure if our training is right for you? Book a free 30 to 45 minute call with our team. No pressure, no pitch &mdash; just a conversation." />
+
+  <!-- SEO -->
+  <title>Book a Free Discovery Call | Alchemy of Breath</title>
+  <meta name="description" content="A free 30 to 45 minute call with an Alchemy of Breath graduate. Honest guidance on the right program or ASHA retreat for where you are. No pitch." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Alchemy of Breath" />
+  <link rel="canonical" href="https://go.alchemyofbreath.com/book-your-discovery-call-page" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://go.alchemyofbreath.com/book-your-discovery-call-page" />
+  <meta property="og:title" content="Book a Free Discovery Call &middot; Alchemy of Breath" />
+  <meta property="og:description" content="Talk with a graduate before you choose. 30 to 45 minutes, honest guidance on the right path for you." />
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" />
+  <meta property="og:site_name" content="Alchemy of Breath" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book a Free Discovery Call &middot; Alchemy of Breath" />
+  <meta name="twitter:description" content="Talk with a graduate before you choose. 30 to 45 minutes, honest guidance on the right path for you." />
+  <meta name="twitter:image" content="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" />
+
+  <!-- Fonts + Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            teal:    '#354d4c',
-            gold:    '#cc9924',
-            beige:   '#d3cdb3',
-            offwhite:'#f9f8f5',
-            green:   '#52bb90',
-            ink:     '#1a1a18',
-            inksoft: '#4a4a46',
-            gray:    '#c5c3c2',
-          },
-          fontFamily: {
-            display: ['Marcellus', 'Georgia', 'serif'],
-            body:    ['Roboto', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{colors:{teal:'#354d4c',gold:'#cc9924',beige:'#d3cdb3',offwhite:'#f9f8f5',green:'#52bb90',ink:'#1a1a18',inksoft:'#4a4a46',gray:'#c5c3c2'},fontFamily:{display:['Marcellus','Georgia','serif'],body:['Roboto','sans-serif']}}}}</script>
+
   <style>
-    * { box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; font-weight: 300; color: #1a1a18; background: #f9f8f5; -webkit-font-smoothing: antialiased; }
-    h1, h2, h3, h4 { font-family: 'Marcellus', Georgia, serif; }
+    *{box-sizing:border-box}
+    body{font-family:'Roboto',sans-serif;font-weight:300;color:#1a1a18;background:#f9f8f5;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;text-wrap:balance}
+    p{text-wrap:pretty}
+    em{font-style:italic;color:#9b7d3a}
 
-    .eyebrow {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #cc9924;
-    }
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cc9924}
 
-    .grain::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 1;
-    }
+    .grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
 
-    .nav-link {
-      position: relative;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -2px; left: 0; right: 100%;
-      height: 1px;
-      background: #cc9924;
-      transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
-    }
-    .nav-link:hover::after { right: 0; }
-    .nav-link:hover { color: rgba(255,255,255,1); }
+    .nav-link{position:relative;font-family:'Roboto',sans-serif;font-weight:400;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.8);text-decoration:none}
+    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:100%;height:1px;background:#cc9924;transition:right .3s cubic-bezier(.4,0,.2,1)}
+    .nav-link:hover::after{right:0}
+    .nav-link:hover{color:#fff}
 
-    .btn-gold {
-      display: inline-block;
-      background: #cc9924;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 14px 32px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(204,153,36,0.25), 0 1px 4px rgba(204,153,36,0.15);
-      transition: transform 0.2s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s cubic-bezier(0.4,0,0.2,1);
-    }
-    .btn-gold::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(255,255,255,0.12);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .btn-gold:hover { transform: translateY(-1px); box-shadow: 0 8px 32px rgba(204,153,36,0.35), 0 2px 8px rgba(204,153,36,0.2); }
-    .btn-gold:hover::before { opacity: 1; }
-    .btn-gold:active { transform: translateY(0); }
-    .btn-gold:focus-visible { outline: 2px solid #cc9924; outline-offset: 3px; }
+    .btn-gold{display:inline-block;background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(204,153,36,.25),0 1px 4px rgba(204,153,36,.15);transition:transform .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,.2,1)}
+    .btn-gold::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);opacity:0;transition:opacity .2s}
+    .btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(204,153,36,.35),0 2px 8px rgba(204,153,36,.2)}
+    .btn-gold:hover::before{opacity:1}
+    .btn-gold:active{transform:translateY(0)}
 
-    .gold-rule { width: 40px; height: 2px; background: #cc9924; margin: 20px 0 28px; }
-    .gold-rule.centered { margin: 20px auto 28px; }
+    .gold-rule{width:40px;height:2px;background:#cc9924;margin:20px 0 28px}
+    .gold-rule.centered{margin:20px auto 28px}
 
-    #main-nav { transition: background 0.3s, box-shadow 0.3s; }
-    #main-nav.scrolled {
-      background: rgba(31,48,47,0.97);
-      box-shadow: 0 2px 24px rgba(0,0,0,0.18);
-      backdrop-filter: blur(8px);
-    }
+    .faq-item{border-bottom:1px solid #d3cdb3}
+    .faq-question{width:100%;text-align:left;padding:22px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto',sans-serif;font-weight:400;font-size:16px;color:#1a1a18;line-height:1.5;gap:16px}
+    .faq-question:hover{color:#354d4c}
+    .faq-icon{flex-shrink:0;width:20px;height:20px;border:1px solid #d3cdb3;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#cc9924;font-size:14px;transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .2s}
+    .faq-question[aria-expanded="true"] .faq-icon{transform:rotate(45deg);border-color:#cc9924}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+    .faq-answer.open{max-height:500px}
+    .faq-answer-inner{padding-bottom:22px;font-size:15px;line-height:1.7;color:#4a4a46}
 
-    .expect-card {
-      padding: 32px 28px;
-      border-bottom: 1px solid #d3cdb3;
-    }
-    .expect-card:last-child { border-bottom: none; }
+    #main-nav{transition:background .3s,box-shadow .3s}
+    #main-nav.scrolled{background:rgba(31,48,47,.97);box-shadow:0 2px 24px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+
+    .lift-card-dark{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);box-shadow:0 1px 3px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s,background .35s;backdrop-filter:blur(8px)}
+    .lift-card-dark:hover{transform:translateY(-4px);background:rgba(255,255,255,.05);border-color:rgba(204,153,36,.35)}
+
+    .section-divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto;width:fit-content}
+    .section-divider::before,.section-divider::after{content:'';width:48px;height:1px;background:linear-gradient(to right,transparent,rgba(204,153,36,.4),transparent)}
+    .section-divider span{width:6px;height:6px;border-radius:50%;background:#cc9924;box-shadow:0 0 12px rgba(204,153,36,.4)}
   </style>
 </head>
 <body>
 
-<!-- ===================== NAV ===================== -->
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-teal" style="background:#354d4c;">
+<!-- NAV -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="https://alchemyofbreath.com" aria-label="Alchemy of Breath home">
-      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
-           alt="Alchemy of Breath"
-           class="h-7 w-auto" />
+      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto" />
     </a>
-    <a href="#calendar"
-       class="btn-gold text-xs">
-      Book a free call
-    </a>
+    <a href="#book" class="btn-gold text-xs">Book a free call</a>
   </div>
 </nav>
 
-<!-- ===================== HERO ===================== -->
-<section class="relative grain overflow-hidden" style="background:#354d4c; padding-top:120px; padding-bottom:80px;">
-  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 20%, rgba(204,153,36,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(82,187,144,0.04) 0%, transparent 50%);"></div>
+<!-- HERO -->
+<section class="relative grain overflow-hidden flex items-center justify-center" style="background:#141412; min-height:80vh;">
+  <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb8254f42ae50232e46800.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover object-center" style="filter:brightness(.42) saturate(.85);" />
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 40%,rgba(53,77,76,.5) 0%,transparent 55%),linear-gradient(to bottom,rgba(20,20,18,.55) 0%,rgba(20,20,18,.35) 40%,rgba(20,20,18,.85) 100%);"></div>
 
-  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-5">Free 30&ndash;45 Minute Call</p>
-    <h1 class="text-white mb-6 leading-tight" style="font-family:'Marcellus',Georgia,serif; font-size:clamp(32px,4.5vw,48px); letter-spacing:-0.02em;">
-      Not sure if this is for you?<br/>Let&rsquo;s talk.
+  <div class="relative z-10 max-w-3xl mx-auto px-6 pt-32 pb-20 w-full flex flex-col items-center text-center">
+    <p class="eyebrow mb-5">Free 30 to 45 minute call &nbsp;&middot;&nbsp; No pitch</p>
+    <h1 class="text-white mb-6 leading-tight" style="font-size:clamp(32px,4.5vw,52px);letter-spacing:-.02em;max-width:720px;">
+      Not sure which path is right?<br/>Let&rsquo;s have a conversation.
     </h1>
-    <p class="text-white mx-auto" style="font-size:17px; line-height:1.8; font-weight:300; opacity:0.8; max-width:520px;">
-      Book a free 30&ndash;45 minute call with our team. No pressure, no pitch. Just a conversation about where you are and whether the week in Tuscany might be right for you.
+    <p class="mb-10" style="font-size:17px;line-height:1.75;font-weight:300;color:rgba(255,255,255,.85);max-width:560px;">
+      Talk with an Alchemy of Breath graduate about which program or ASHA retreat fits where you are. No pressure, no script. Honest guidance.
     </p>
+    <a href="#book" class="btn-gold">Book a free call</a>
   </div>
 </section>
 
-<!-- ===================== CALENDAR EMBED ===================== -->
-<section id="calendar" style="padding:64px 24px 80px; background:#f9f8f5;">
-  <div class="max-w-3xl mx-auto">
-    <div style="background:#fff; border:1px solid #d3cdb3; min-height:600px; box-shadow: 0 2px 16px rgba(53,77,76,0.06), 0 1px 3px rgba(53,77,76,0.04);">
-      <iframe src="https://link.alchemyofbreath.com/widget/booking/nqi9d8dd3lS6nCTgGIbU" style="width:100%;min-height:600px;border:none;overflow:hidden;" scrolling="no" id="nqi9d8dd3lS6nCTgGIbU_1775214070921"></iframe>
-      <script src="https://link.alchemyofbreath.com/js/form_embed.js" type="text/javascript"></script>
+<!-- CALENDAR EMBED -->
+<section id="book" class="py-20" style="background:#f9f8f5;">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <p class="eyebrow mb-4">Choose a time</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Pick what works for you.</h2>
+    </div>
+    <div style="background:#fff;border:1px solid #d3cdb3;box-shadow:0 2px 16px rgba(53,77,76,.06),0 1px 3px rgba(53,77,76,.04);">
+      <iframe src="https://link.alchemyofbreath.com/widget/booking/nqi9d8dd3lS6nCTgGIbU" style="width:100%;min-height:680px;border:none;display:block;background:#fff;overflow:hidden;" scrolling="no" id="booking-iframe"></iframe>
     </div>
   </div>
 </section>
 
-<!-- ===================== WHAT TO EXPECT ===================== -->
-<section class="relative grain overflow-hidden" style="background:#354d4c; padding:72px 24px;">
-  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, rgba(204,153,36,0.05) 0%, transparent 50%);"></div>
-
-  <div class="relative z-10 max-w-2xl mx-auto">
+<!-- WHO YOU SPEAK WITH -->
+<section class="py-20 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 40%,rgba(204,153,36,.08) 0%,transparent 55%);"></div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="eyebrow mb-4">What to Expect</p>
-      <h2 class="text-white" style="font-size:clamp(26px,3.5vw,36px); letter-spacing:-0.01em;">
-        A simple, honest conversation
-      </h2>
+      <p class="eyebrow mb-4">Who you&rsquo;ll speak with</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(26px,3.2vw,38px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:640px;margin:0 auto;">An Alchemy of Breath graduate. Not a salesperson.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="lift-card-dark" style="padding:28px 24px;">
+        <p class="eyebrow mb-3" style="color:#cc9924;">Real experience</p>
+        <p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7;">They&rsquo;ve sat where you&rsquo;re sitting. They enrolled, practiced, went through it. When they speak about the work, it&rsquo;s from the inside.</p>
+      </div>
+      <div class="lift-card-dark" style="padding:28px 24px;">
+        <p class="eyebrow mb-3" style="color:#cc9924;">Honest guidance</p>
+        <p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7;">If what you&rsquo;re considering isn&rsquo;t the right fit, they&rsquo;ll say so. If the timing is off, they&rsquo;ll say so. We&rsquo;d rather be honest than persuasive.</p>
+      </div>
+      <div class="lift-card-dark" style="padding:28px 24px;">
+        <p class="eyebrow mb-3" style="color:#cc9924;">30 to 45 minutes</p>
+        <p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.7;">Long enough to get past surface answers and into what you&rsquo;re really asking. You leave with a clear sense of what&rsquo;s right for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20" style="background:#f9f8f5;">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <p class="eyebrow mb-4">Common questions</p>
       <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Before you book.</h2>
     </div>
 
-    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(211,205,179,0.12);">
-      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
-        <div class="flex items-start gap-4">
-          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
-          <div>
-            <h3 class="text-white mb-2" style="font-size:18px;">A relaxed conversation about where you are right now</h3>
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
-              Tell us about your background, your work, and what drew you to breathwork. We are here to listen.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">How long is the call?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Between 30 and 45 minutes. Long enough to get past surface answers, short enough to respect your time.</div></div>
+    </div>
 
-      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
-        <div class="flex items-start gap-4">
-          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
-          <div>
-            <h3 class="text-white mb-2" style="font-size:18px;">Honest answers about what the week does and does not cover</h3>
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
-              We will walk you through the methodology, the daily rhythm, and what you can realistically expect to take home.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Who will I speak to?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">A Success Advisor &mdash; an Alchemy of Breath graduate who has walked this path. They know the programs from the inside and can give you honest answers about what fits.</div></div>
+    </div>
 
-      <div class="expect-card" style="border-color:rgba(211,205,179,0.12);">
-        <div class="flex items-start gap-4">
-          <span style="color:#cc9924; font-size:20px; line-height:1; margin-top:2px;">&#10041;</span>
-          <div>
-            <h3 class="text-white mb-2" style="font-size:18px;">Help choosing the right accommodation if you decide to book</h3>
-            <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,0.6); font-weight:300;">
-              From shared rooms to private suites, we can help you find the option that fits your needs and budget.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Is this really free?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. No cost, no obligation. We&rsquo;d rather spend the time helping you choose well than have you book something that isn&rsquo;t right.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">Will I be pitched something?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">No. If what you&rsquo;re considering isn&rsquo;t the right fit, your advisor will say so. If a different path suits you better, they&rsquo;ll point you to it.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">What should I prepare?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Nothing formal. Bring whatever&rsquo;s on your mind. A rough sense of which programs you&rsquo;re curious about helps, but it isn&rsquo;t required.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">What if I need to reschedule?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Use the link in your confirmation email. No penalty.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== SOFT CTA ===================== -->
-<section style="padding:64px 24px; background:#f9f8f5;">
-  <div class="max-w-xl mx-auto text-center">
-    <p style="font-size:16px; line-height:1.8; color:#4a4a46; margin-bottom:28px;">
-      Prefer email? Write to us at <a href="mailto:info@alchemyofbreath.com" style="color:#354d4c; text-decoration:underline; text-underline-offset:3px; font-weight:400;">info@alchemyofbreath.com</a> and we will get back to you within 24 hours.
+<!-- SOFT EMAIL CTA -->
+<section class="py-16" style="background:#fff;border-top:1px solid #d3cdb3;">
+  <div class="max-w-2xl mx-auto px-6 text-center">
+    <p style="font-size:15px;line-height:1.7;color:#4a4a46;margin-bottom:20px;">
+      Prefer email? Write to <a href="mailto:info@alchemyofbreath.com" style="color:#cc9924;text-decoration:underline;text-underline-offset:3px;">info@alchemyofbreath.com</a> and we&rsquo;ll respond within 24 hours.
     </p>
-    <a href="#calendar" class="btn-gold">
-      Book a free call
-    </a>
+    <a href="#book" class="btn-gold">Book a free call</a>
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
-<footer style="background:#1a1a18; padding:48px 24px 32px;">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
-      <div>
-        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png"
-             alt="Alchemy of Breath"
-             class="h-8 w-auto mb-6" style="opacity:0.7;" />
-        <p style="font-size:13px; color:rgba(255,255,255,0.35); line-height:1.7; max-width:280px;">
-          Alchemy of Breath. Breath as a tool for life, for yourself and the people you serve.
-        </p>
-      </div>
-      <div class="flex flex-col gap-3">
-        <p style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.3); font-weight:500; margin-bottom:4px;">Contact</p>
-        <a href="mailto:info@alchemyofbreath.com" style="font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;">info@alchemyofbreath.com</a>
-      </div>
+<!-- FOOTER -->
+<footer style="background:#141412;padding:40px 24px 28px;border-top:1px solid rgba(255,255,255,.04);">
+  <div class="max-w-6xl mx-auto text-center">
+    <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" style="height:24px;margin:0 auto 18px;opacity:.7;" />
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-bottom:18px;">
+      <a href="mailto:info@alchemyofbreath.com" style="font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;">info@alchemyofbreath.com</a>
+      <a href="https://alchemyofbreath.com" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;">alchemyofbreath.com</a>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,0.07); padding-top:24px;">
-      <p style="font-size:11px; color:rgba(255,255,255,0.2);">
-        &copy; 2026 Alchemy of Breath. All rights reserved.
-      </p>
-    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,.22);max-width:560px;margin:0 auto;line-height:1.6;">&copy; 2026 Alchemy of Breath. Breathwork is not a substitute for medical or psychological treatment.</p>
   </div>
 </footer>
 
 <script>
-  // Sticky nav scroll
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
+  // Sticky nav
+  window.addEventListener('scroll',()=>{const nav=document.getElementById('main-nav');if(window.scrollY>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+
+  // FAQ
+  function toggleFaq(btn){
+    const answer=btn.nextElementSibling;
+    const isOpen=answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));
+    document.querySelectorAll('.faq-question').forEach(q=>q.setAttribute('aria-expanded','false'));
+    if(!isOpen){answer.classList.add('open');btn.setAttribute('aria-expanded','true');}
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const target=document.querySelector(a.getAttribute('href'));
+      if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
   });
 </script>
+<script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 
 </body>
 </html>
