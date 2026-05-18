@@ -98,6 +98,11 @@
     .pulse-dot { width:8px; height:8px; border-radius:50%; background:#cc9924; box-shadow:0 0 12px rgba(204,153,36,.7); animation:pulseDot 2s ease-in-out infinite; }
     @keyframes pulseDot { 0%,100% { opacity:.7; transform:scale(1); } 50% { opacity:1; transform:scale(1.15); box-shadow:0 0 18px rgba(204,153,36,1); } }
     @media (prefers-reduced-motion:reduce) { .pulse-dot { animation:none; } }
+    /* Accommodation cards */
+    .accom-card { background:#fff; border:1px solid #d3cdb3; overflow:hidden; transition:transform .25s cubic-bezier(.4,0,.2,1), box-shadow .25s, border-color .25s; }
+    .accom-card:hover { transform:translateY(-3px); border-color:rgba(204,153,36,.45); box-shadow:0 12px 32px rgba(53,77,76,.08), 0 0 60px -20px rgba(204,153,36,.22); }
+    .eb-badge { background:#cc9924; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; box-shadow:0 2px 8px rgba(0,0,0,.15); }
+    .price-strike { color:#c5c3c2; text-decoration:line-through; font-size:13px; margin-right:8px; font-weight:400; }
     /* Quantum Shift banner */
     .quantum-inner { display:flex; align-items:center; justify-content:center; gap:18px; padding:14px 12px; flex-wrap:wrap; text-align:center; }
     .qb-dot { width:9px; height:9px; border-radius:50%; background:#1a1a18; box-shadow:0 0 10px rgba(0,0,0,.4); animation:qbPulse 2s ease-in-out infinite; flex-shrink:0; }
@@ -961,43 +966,189 @@
 <!-- ===================== PRICING ===================== -->
 <section id="pricing" class="py-24" style="background:#f9f8f5;">
   <div class="max-w-6xl mx-auto px-6">
-    <div style="display:flex; justify-content:center; margin-bottom:32px;">
+
+    <div style="display:flex; justify-content:center; margin-bottom:28px;">
       <div style="display:inline-flex; align-items:center; gap:14px; padding:12px 24px; background:#fff; border:1px solid rgba(204,153,36,.5); box-shadow:0 4px 24px rgba(204,153,36,.12);">
         <span class="pulse-dot"></span>
         <span style="font-family:'Roboto',sans-serif; font-weight:500; font-size:11px; letter-spacing:.18em; color:#1a1a18; text-transform:uppercase;">Founding cohort &middot; Limited places &middot; 19&ndash;25 July 2026</span>
       </div>
     </div>
-    <div class="text-center mb-10">
-      <div style="display:inline-flex; align-items:center; gap:14px; padding:10px 20px; background:rgba(204,153,36,.12); border:1px solid rgba(204,153,36,.45); margin-bottom:18px;">
-        <span class="pulse-dot" style="width:7px; height:7px;"></span>
-        <span style="font-family:'Roboto',sans-serif; font-weight:600; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#1a1a18;">Quantum Shift Attendees</span>
-      </div>
-      <p style="font-family:'Marcellus',Georgia,serif; font-size:clamp(30px,3.6vw,44px); color:#1a1a18; letter-spacing:-0.02em; line-height:1.15; margin-bottom:18px;">
-        Reserve your place for &euro;249.
-      </p>
-      <p style="font-size:16px; color:#4a4a46; line-height:1.7; max-width:620px; margin:0 auto 14px;">
-        This leaves a tuition balance of &euro;639. You&rsquo;ll then choose your accommodation and food package, priced from <strong style="color:#1a1a18;">&euro;79/night</strong> (bring your own tent) up to <strong style="color:#1a1a18;">&euro;174/night</strong> (private ensuite) &mdash; all meals and facilities included.
-      </p>
-      <p style="font-size:15px; color:#4a4a46; line-height:1.65; max-width:620px; margin:0 auto;">
-        A private cottage option is also available &mdash; <a href="mailto:info@alchemyofbreath.com" style="color:#cc9924; text-decoration:underline; text-underline-offset:3px;">contact us for pricing</a>.
+
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">Investment</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px); line-height:1.2; letter-spacing:-.02em; color:#1a1a18; margin-bottom:14px;">Reserve your place for &euro;249.</h2>
+      <p style="font-size:16px; color:#4a4a46; line-height:1.7; max-width:600px; margin:0 auto;">
+        Pay your &euro;249 deposit today to secure your spot. After that, choose the accommodation that fits you. The Quantum Shift 20% discount is already applied to the totals below.
       </p>
     </div>
 
+    <!-- Quantum Shift discount banner -->
+    <div style="background:#354d4c; border:1px solid rgba(204,153,36,.35); padding:20px 28px; margin-bottom:32px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
+      <div>
+        <p class="eyebrow mb-1" style="color:#cc9924;">Quantum Shift Exclusive</p>
+        <p style="font-size:16px; color:#fff; font-family:'Marcellus',Georgia,serif; line-height:1.3;">20% off every accommodation tier</p>
+      </div>
+      <p style="font-size:13px; color:rgba(255,255,255,.78); line-height:1.5;">Already applied to the totals below. &euro;249 deposit holds your place across any tier.</p>
+    </div>
+
+    <!-- PRIVATE -->
+    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Private</p></div>
+    <div class="grid md:grid-cols-2 gap-5 mb-10">
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/Private-Cottage-1-1-1-768x512.jpg" alt="Private Cottage" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:20px 22px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Private Cottage</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Premium private accommodation</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,738</span>&euro;2,190</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/single-ensuite-1-1-1-768x512.jpg" alt="Private Single Room, Ensuite" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:20px 22px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Private Single Room, Ensuite</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Your own room and bathroom</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,416</span>&euro;1,933</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHARED -->
+    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Shared <span style="color:#c5c3c2; font-weight:400; text-transform:none; letter-spacing:0; font-size:13px;">(per person)</span></p></div>
+    <div class="grid md:grid-cols-3 gap-5 mb-10">
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/twin-ensuite-1-1-1-768x512.jpg" alt="Shared Room (2), Ensuite" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:20px 22px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (2), Ensuite</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with one other</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,063</span>&euro;1,650</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/twin-non-ensuite-1-1-1-768x512.jpg" alt="Shared Room (2), Shared Bathroom" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:20px 22px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (2), Shared Bath</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared bathroom</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,003</span>&euro;1,602</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/triple-ensuite-1-1-1-1-768x512.jpg" alt="Shared Room (3), Private Bathroom" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:20px 22px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (3), Private Bath</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with two others</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;1,969</span>&euro;1,575</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GLAMPING & CAMPING -->
+    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Glamping &amp; Camping</p></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-1-1-1-768x512.jpg" alt="Glamping, Solo" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:18px 20px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Glamping, Solo</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Solo tent</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;2,003</span>&euro;1,602</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-5-1-1-768x512.jpg" alt="Glamping, Shared" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:18px 20px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Glamping, Shared</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Shared tent, per person</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,909</span>&euro;1,527</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-camper-1-1-1-1-1-768x492.jpg" alt="Camper Van" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:18px 20px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Camper Van</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Bring your own</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,763</span>&euro;1,410</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="accom-card">
+        <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-tent-1-1-1-1-1-768x453.jpg" alt="Bring Your Own Tent" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">QS 20% off</span>
+        </div>
+        <div style="padding:18px 20px;">
+          <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Bring Your Own Tent</h4>
+          <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Personal tent</p>
+          <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,701</span>&euro;1,361</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT + CTA -->
     <div class="flex flex-col sm:flex-row gap-6 items-start">
       <div style="flex:1; background:#fff; border:1px solid #d3cdb3; padding:24px 28px;">
         <p class="eyebrow mb-2">Payment</p>
-        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your &euro;249 deposit to secure your spot. This covers your reservation. The tuition balance of &euro;639 plus your chosen accommodation is due before arrival &mdash; we&rsquo;ll send you a code to complete your booking.</p>
+        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your &euro;249 deposit to secure your spot. The remaining balance for your chosen accommodation (tuition included) is due before arrival &mdash; we&rsquo;ll send you a code to complete your booking.</p>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; gap:12px; justify-content:center;">
         <a href="https://link.alchemyofbreath.com/payment-link/6a0971b0c58f48c13d666b93"
            class="btn-gold text-center" target="_blank" rel="noopener" style="display:block;">
           Reserve Your Place &middot; &euro;249
         </a>
-        <p style="font-size:13px; color:#1a1a18; text-align:center; line-height:1.65; font-weight:500;">Your next step is to choose the accommodation you want. <em style="color:#4a4a46; font-weight:300;">(Prices shown include your full tuition.)</em></p>
         <p style="font-size:13px; color:#4a4a46; text-align:center; line-height:1.6;">Not sure yet? <a href="https://go.alchemyofbreath.com/book-a-conversation" target="_blank" rel="noopener" style="color:#cc9924; text-decoration:underline; text-underline-offset:3px;">Book a discovery call &rarr;</a></p>
-        <p style="font-size:12px; color:#c5c3c2; text-align:center; line-height:1.5;">Flights not included.</p>
+        <p style="font-size:12px; color:#c5c3c2; text-align:center; line-height:1.5;">Flights not included. A private cottage option is also available &mdash; <a href="mailto:info@alchemyofbreath.com" style="color:#cc9924; text-decoration:underline;">contact us</a>.</p>
       </div>
     </div>
+
   </div>
 </section>
 
