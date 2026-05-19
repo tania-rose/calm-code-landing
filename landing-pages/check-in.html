@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A check-in from Amy and Anthony &middot; Alchemy of Breath</title>
+  <meta name="description" content="A short note from Amy and Anthony, and a way to book a 45-minute conversation about becoming an Alchemy Regulation Method Coach.">
+  <link rel="canonical" href="https://go.alchemyofbreath.com/check-in">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="A check-in from Amy and Anthony">
+  <meta property="og:description" content="A short note from Amy and Anthony, with a way to book a conversation about becoming an Alchemy Regulation Method Coach.">
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a0c79f27f724863151ec09a.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:     #f9f8f5;
+      --paper:  #ffffff;
+      --gold:   #cc9924;
+      --teal:   #354d4c;
+      --ink:    #1a1a18;
+      --soft:   #3a3a36;
+      --muted:  #7a7a72;
+      --line:   #e6e2d8;
+    }
+
+    *,*::before,*::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .marcellus { font-family: 'Marcellus', Georgia, serif; font-weight: 400; }
+
+    .gold-bar { height: 4px; background: var(--gold); }
+
+    header.site {
+      padding: 28px 0 0;
+      text-align: center;
+      font-family: 'Marcellus', Georgia, serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    section.hero {
+      padding: 48px 0 16px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      font-family: 'Marcellus', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.2;
+      color: var(--ink);
+      margin: 0 0 20px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .lede {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--soft);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Video block */
+    .video-wrap {
+      margin: 40px auto 0;
+      max-width: 720px;
+      background: var(--paper);
+      padding: 16px;
+      box-shadow: 0 20px 60px rgba(26,26,24,0.08);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: var(--ink);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-frame img.poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: rgba(204, 153, 36, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+      transition: transform 0.25s ease, background 0.25s ease;
+      pointer-events: none;
+    }
+
+    .video-frame:hover .play-btn {
+      transform: translate(-50%, -50%) scale(1.08);
+      background: var(--gold);
+    }
+
+    .play-btn::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 0 16px 24px;
+      border-color: transparent transparent transparent #ffffff;
+      margin-left: 6px;
+    }
+
+    .video-caption {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Bridge to ARM Coach */
+    section.bridge {
+      padding: 64px 0 16px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Marcellus', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(26px, 4vw, 32px);
+      line-height: 1.25;
+      color: var(--ink);
+      margin: 0 0 20px;
+    }
+
+    .bridge p {
+      max-width: 560px;
+      margin: 0 auto 16px;
+      color: var(--soft);
+    }
+
+    /* CTA */
+    .cta-wrap {
+      padding: 32px 0 16px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: var(--gold);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover { background: #b88517; transform: translateY(-1px); }
+
+    .cta-meta {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Trust strip */
+    .trust {
+      margin: 56px auto 0;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .trust .stat {
+      min-width: 90px;
+    }
+
+    .trust .num {
+      font-family: 'Marcellus', Georgia, serif;
+      font-size: 26px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .trust .lbl {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0 32px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer a { color: var(--muted); text-decoration: underline; }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      section.hero { padding: 32px 0 8px; }
+      .video-wrap { margin-top: 28px; padding: 8px; }
+      .play-btn { width: 64px; height: 64px; }
+      .play-btn::before {
+        border-width: 12px 0 12px 18px;
+      }
+      .btn { padding: 16px 28px; font-size: 13px; }
+      .trust { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gold-bar"></div>
+
+  <header class="site">Alchemy of Breath</header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">A short note for you</p>
+        <h1>A check-in from <em>Amy and Anthony</em>.</h1>
+        <p class="lede">Press play. Eight minutes, more or less. We thought it was time to say hello, and to point you to what we are quietly building behind the scenes.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="video-wrap">
+        <!--
+          To swap in the live video:
+          1. Get the YouTube or Vimeo embed URL (the one that ends in /embed/VIDEO_ID).
+          2. Replace the entire .video-frame block below with:
+             <div class="video-frame">
+               <iframe src="EMBED_URL_HERE" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+             </div>
+          The simple click-to-play behaviour below also works if you set data-embed on the .video-frame.
+        -->
+        <div class="video-frame" id="video" data-embed="" role="button" tabindex="0" aria-label="Play the check-in video from Amy and Anthony">
+          <img class="poster" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a0c79f27f724863151ec09a.png" alt="Amy and Anthony, a check-in video from Alchemy of Breath" loading="eager">
+          <div class="play-btn" aria-hidden="true"></div>
+        </div>
+        <div class="video-caption">Amy &amp; Anthony &middot; A check-in</div>
+      </div>
+    </div>
+
+    <section class="bridge">
+      <div class="container">
+        <h2>If something in this is calling you forward.</h2>
+        <p>We are opening a small group of people to become Alchemy Regulation Method Coaches. The work that quietly underlies everything you have seen us teach.</p>
+        <p>It is not for everyone. It is for the people who already do this work in some form, or who know they are going to. The best way to find out if it is for you is a real conversation, with one of us.</p>
+      </div>
+    </section>
+
+    <div class="cta-wrap">
+      <div class="container">
+        <a class="btn" href="https://go.alchemyofbreath.com/book-a-conversation?utm_source=lp&utm_medium=organic&utm_campaign=check-in&utm_content=book-a-conversation">Book a conversation</a>
+        <div class="cta-meta">45 minutes. Free. No pitch. Just a real conversation.</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="trust">
+        <div class="stat"><div class="num">2,000+</div><div class="lbl">Practitioners</div></div>
+        <div class="stat"><div class="num">40+</div><div class="lbl">Countries</div></div>
+        <div class="stat"><div class="num">12+</div><div class="lbl">Years</div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Alchemy of Breath &middot; ASHA, Tuscany &middot; <a href="https://alchemyofbreath.com">alchemyofbreath.com</a>
+  </footer>
+
+  <script>
+    // Click-to-play: when an embed URL is set on data-embed, swap the poster for the iframe.
+    // Leave data-embed empty and the page acts as a thumbnail (e.g. for previewing before the video is ready).
+    (function () {
+      var frame = document.getElementById('video');
+      if (!frame) return;
+      function play() {
+        var url = frame.getAttribute('data-embed');
+        if (!url) return;
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', url + (url.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1');
+        iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        frame.innerHTML = '';
+        frame.appendChild(iframe);
+        frame.style.cursor = 'default';
+      }
+      frame.addEventListener('click', play);
+      frame.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+      });
+    })();
+  </script>
+
+</body>
+</html>
