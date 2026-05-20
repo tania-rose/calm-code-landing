@@ -29,3 +29,92 @@
     --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
     --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
   }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Khula', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .video-section {
+    padding: clamp(48px, 8vw, 96px) 24px;
+    background: var(--bg);
+  }
+  .video-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .video-eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 0 0 12px;
+    text-align: center;
+  }
+  .video-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0 0 8px;
+    text-align: center;
+  }
+  .video-title em {
+    font-style: italic;
+    color: var(--teal);
+  }
+  .video-sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 auto 32px;
+    max-width: 580px;
+    text-align: center;
+  }
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--ink);
+  }
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  </style>
+</head>
+<body>
+
+  <section class="video-section" aria-labelledby="video-title">
+    <div class="video-wrap">
+      <p class="video-eyebrow">Feel the work first</p>
+      <h2 id="video-title" class="video-title">A moment to <em>breathe</em> with us</h2>
+      <p class="video-sub">Press play. Let your shoulders drop. This is the work, in miniature.</p>
+
+      <div class="video-frame">
+        <iframe
+          src="https://player.vimeo.com/video/924517936?h=e0b9b735e9&title=0&byline=0&portrait=0"
+          title="Alchemy of Breath"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
