@@ -69,13 +69,30 @@
     @keyframes slow-zoom{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
     .hero-img{animation:slow-zoom 30s ease-in-out infinite}
 
-    /* Trusted By — vertical marquee */
-    @keyframes verticalScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
-    .trusted-wrap{height:420px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 14%,#000 86%,transparent 100%)}
-    .trusted-track{display:flex;flex-direction:column;gap:40px;animation:verticalScroll 34s linear infinite;will-change:transform}
-    .trusted-logo{display:flex;align-items:center;justify-content:center;height:64px;padding:0 12px}
-    .trusted-logo img{max-height:64px;max-width:200px;width:auto;height:auto;object-fit:contain;opacity:1}
-    @media(max-width:768px){.trusted-wrap{height:320px}}
+    /* Trusted By — horizontal marquee */
+    @keyframes trustedScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .trusted-wrap{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%)}
+    .trusted-track{display:flex;align-items:center;gap:80px;animation:trustedScroll 45s linear infinite;width:max-content;will-change:transform;padding:12px 0}
+    .trusted-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:64px}
+    .trusted-logo img{max-height:64px;max-width:180px;width:auto;object-fit:contain;opacity:1}
+    @media(max-width:768px){.trusted-track{gap:48px;animation-duration:35s}.trusted-logo img{max-height:50px;max-width:140px}}
+
+    /* Golden orbs — hero atmosphere */
+    @keyframes orbDrift{0%{transform:translate(0,0) scale(1);opacity:.35}50%{opacity:.7}100%{transform:translate(50px,-80px) scale(1.08);opacity:.25}}
+    .gold-orb{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(204,153,36,.65) 0%,rgba(204,153,36,.18) 45%,transparent 75%);pointer-events:none;animation:orbDrift 11s ease-in-out infinite alternate;will-change:transform,opacity;filter:blur(8px);z-index:2}
+
+    /* Atmosphere photo sections */
+    .atmos{position:relative;min-height:60vh;overflow:hidden;background:#1a1a18}
+    .atmos-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+    .atmos-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,26,24,.4) 0%,rgba(26,26,24,.78) 100%)}
+    .atmos-inner{position:relative;z-index:3;padding:140px 24px;text-align:center;max-width:780px;margin:0 auto}
+    .atmos-watermark{position:absolute;top:32px;right:32px;width:60px;height:auto;opacity:.25;z-index:3}
+
+    /* Breath modal */
+    .breath-modal{position:fixed;inset:0;background:rgba(13,13,12,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .breath-modal.open{display:flex}
+    .breath-modal-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s;z-index:3}
+    .breath-modal-close:hover{background:rgba(204,153,36,.15);color:#cc9924;border-color:rgba(204,153,36,.4)}
     @media(max-width:768px){.breath-orb{width:110px;height:110px}.day-tab{font-size:18px;padding:12px 6px}.day-panel{padding:28px 22px}}
   </style>
 </head>
@@ -102,6 +119,14 @@
     <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="ASHA Retreat Centre, Tuscany" class="w-full h-full object-cover object-center hero-img" style="filter:brightness(.5) saturate(.9);" />
     <div class="absolute inset-0" style="background:radial-gradient(ellipse at 60% 40%,rgba(53,77,76,.4) 0%,transparent 65%),linear-gradient(to top,rgba(26,26,24,.95) 0%,rgba(26,26,24,.3) 45%,transparent 70%);"></div>
   </div>
+
+  <!-- Floating golden orbs -->
+  <div class="gold-orb" style="width:140px;height:140px;top:18%;left:6%;animation-duration:12s;"></div>
+  <div class="gold-orb" style="width:70px;height:70px;top:55%;left:22%;animation-duration:9s;animation-delay:-3s;"></div>
+  <div class="gold-orb" style="width:100px;height:100px;top:30%;right:12%;animation-duration:14s;animation-delay:-2s;"></div>
+  <div class="gold-orb" style="width:50px;height:50px;top:70%;right:28%;animation-duration:10s;animation-delay:-6s;"></div>
+  <div class="gold-orb" style="width:80px;height:80px;top:12%;right:34%;animation-duration:13s;animation-delay:-4s;"></div>
+
   <div class="relative z-10 max-w-6xl mx-auto px-6 pb-16 pt-36 w-full">
     <div class="max-w-2xl">
       <p class="eyebrow mb-5">BreathCamp Tuscany &nbsp;&middot;&nbsp; ASHA Retreat Centre &nbsp;&middot;&nbsp; 5 Sessions in 2026</p>
@@ -109,7 +134,7 @@
       <p class="text-white mb-10 max-w-xl" style="font-size:18px;line-height:1.7;font-weight:300;opacity:.85;">A residential retreat that brings together conscious breathing, movement, sound, and the people you did not know you were looking for. Held on 37 acres of untouched land in the Tuscan hills.</p>
       <div class="flex flex-wrap gap-4">
         <a href="#dates" class="btn-gold">Choose Your Dates</a>
-        <a href="#week" class="btn-outline">See the Journey</a>
+        <button onclick="openBreathModal()" class="btn-outline" style="background:transparent;cursor:pointer;">Try One Breath</button>
       </div>
     </div>
   </div>
@@ -132,59 +157,48 @@
   </div>
 </section>
 
-<!-- TRUSTED BY -->
-<section class="py-20" style="background:#fff;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <p class="eyebrow mb-4">Trusted By</p>
-        <div class="gold-rule"></div>
-        <h2 style="font-size:clamp(26px,3.2vw,38px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:18px;">In good company.</h2>
-        <p style="font-size:16px;line-height:1.7;color:#4a4a46;">Alchemy of Breath and the work of Anthony Abbagnano have been featured by global publications, conferences, and organisations working at the intersection of breath, science, and wellbeing.</p>
-      </div>
-      <div class="trusted-wrap">
-        <div class="trusted-track">
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
-          <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
-        </div>
-      </div>
+<!-- TRUSTED BY (horizontal) -->
+<section class="py-14" style="background:#fff;">
+  <div class="max-w-6xl mx-auto px-6 text-center mb-8">
+    <p class="eyebrow mb-3">Trusted By</p>
+    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,28px);color:#1a1a18;letter-spacing:-.01em;">In good company.</h2>
+  </div>
+  <div class="trusted-wrap">
+    <div class="trusted-track">
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
+      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
 
-<!-- BREATHING PROBE -->
-<section class="grain relative overflow-hidden" style="background:#1a1a18;padding:80px 24px;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.06) 0%,transparent 60%);"></div>
-  <div class="relative z-10 max-w-xl mx-auto text-center">
-    <p class="eyebrow mb-3">Start Here</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;letter-spacing:-.02em;margin-bottom:8px;">One breath to begin.</p>
-    <p style="font-size:15px;color:rgba(255,255,255,.68);line-height:1.7;margin-bottom:40px;max-width:400px;margin-left:auto;margin-right:auto;">Match your breath to the circle. Five seconds in, five seconds out. This is coherence breathing, one of the many practices you will learn at camp.</p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:24px;padding-bottom:40px;">
-      <div style="padding:40px 0;"><div id="breathOrb" class="breath-orb exhale"></div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-        <span id="breathLabel" class="breath-label">Tap to begin</span>
-        <span id="breathCounter" class="breath-counter" style="opacity:0;">&nbsp;</span>
-      </div>
-      <button id="breathToggle" onclick="toggleBreathing()" style="background:none;border:1px solid rgba(204,153,36,.4);color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;cursor:pointer;transition:border-color .2s,background .2s;">Start Breathing</button>
-    </div>
+<!-- ATMOSPHERE — The Land -->
+<section class="atmos">
+  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills at ASHA" loading="lazy" />
+  <div class="atmos-overlay"></div>
+  <img class="atmos-watermark" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="" aria-hidden="true" />
+  <div class="atmos-inner">
+    <p class="eyebrow mb-4" style="color:#cc9924;">The Land</p>
+    <div class="gold-rule centered"></div>
+    <h2 style="font-family:'Marcellus',Georgia,serif;color:#fff;font-size:clamp(32px,4.5vw,54px);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px;">A pool, the hills,<br/>and the sound of bees.</h2>
+    <p style="font-size:17px;line-height:1.8;color:rgba(255,255,255,.85);max-width:540px;margin:0 auto;">Olive groves and vineyards. A swimming pool with the Tuscan hills behind it. Natural hot springs ten minutes down the road. A different kind of quiet than the one you arrived with.</p>
   </div>
 </section>
 
@@ -216,6 +230,20 @@
     <h2 style="font-size:clamp(26px,3.5vw,38px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin-bottom:28px;">When the world feels loud,<br/>stillness becomes a form of care.</h2>
     <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,.8);margin-bottom:20px;">The last few years have asked a lot of us. Wars that do not end, headlines that do not soften, a climate that keeps reminding us it is listening, and a pace of life that treats rest like a luxury instead of a requirement. If your nervous system feels tired, it is not a personal failing. It is a reasonable response to the moment we are living in.</p>
     <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,.8);">A week in Tuscany will not fix what is happening in the world, and we will not pretend otherwise. What it can offer is a quiet room to set things down for a while. Slow mornings, honest breath, food grown nearby, and the company of people who also came looking for ground beneath their feet. Not an escape from your life, but a place to remember how to meet it.</p>
+  </div>
+</section>
+
+<!-- ATMOSPHERE — Mornings -->
+<section class="atmos" style="min-height:50vh;">
+  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="Morning at ASHA" loading="lazy" />
+  <div class="atmos-overlay" style="background:linear-gradient(to right,rgba(26,26,24,.85) 0%,rgba(26,26,24,.45) 60%,rgba(26,26,24,.3) 100%);"></div>
+  <div class="atmos-inner" style="text-align:left;padding:120px 24px;max-width:980px;">
+    <div style="max-width:480px;">
+      <p class="eyebrow mb-4" style="color:#cc9924;">Mornings</p>
+      <div class="gold-rule"></div>
+      <h2 style="font-family:'Marcellus',Georgia,serif;color:#fff;font-size:clamp(28px,4vw,46px);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px;">The kind of quiet you forgot existed.</h2>
+      <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.82);">Wake to the light over the hills. Move slow. Breathe. Eat something grown nearby. Then begin.</p>
+    </div>
   </div>
 </section>
 
@@ -833,9 +861,42 @@
   </div>
 </footer>
 
+<!-- BREATH MODAL -->
+<div id="breathModal" class="breath-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="One breath together">
+  <button class="breath-modal-close" onclick="closeBreathModal()" aria-label="Close">&#10005;</button>
+  <div style="text-align:center;max-width:480px;">
+    <p class="eyebrow mb-3" style="color:#cc9924;">One Breath Together</p>
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;letter-spacing:-.02em;margin-bottom:8px;">One breath to begin.</p>
+    <p style="font-size:15px;color:rgba(255,255,255,.68);line-height:1.7;margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto;">Match your breath to the circle. Five seconds in, five seconds out. This is coherence breathing, one of the many practices you will learn at camp.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:24px;">
+      <div style="padding:24px 0;"><div id="breathOrb" class="breath-orb exhale"></div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <span id="breathLabel" class="breath-label">Tap to begin</span>
+        <span id="breathCounter" class="breath-counter" style="opacity:0;">&nbsp;</span>
+      </div>
+      <button id="breathToggle" onclick="toggleBreathing()" style="background:none;border:1px solid rgba(204,153,36,.5);color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;cursor:pointer;transition:border-color .2s,background .2s;">Start Breathing</button>
+    </div>
+  </div>
+</div>
+
 <script>
   const nav=document.getElementById('main-nav');
   window.addEventListener('scroll',()=>{if(window.scrollY>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+
+  // Breath modal
+  function openBreathModal(){
+    const m=document.getElementById('breathModal');
+    m.classList.add('open');m.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeBreathModal(){
+    const m=document.getElementById('breathModal');
+    m.classList.remove('open');m.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(breathingActive){toggleBreathing();}
+  }
+  document.getElementById('breathModal').addEventListener('click',e=>{if(e.target.id==='breathModal')closeBreathModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('breathModal').classList.contains('open'))closeBreathModal();});
 
   const revealObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
