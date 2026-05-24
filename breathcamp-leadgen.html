@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BreathCamp Tuscany — The Complete Guide | Alchemy of Breath</title>
+  <meta name="description" content="A 7-day breathwork retreat in the Tuscan hills. Download the complete BreathCamp guide — pricing, accommodation, travel, daily rhythm, and stories from those who came." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *{box-sizing:border-box}body{font-family:'Roboto',sans-serif;font-weight:300;color:#1a1a18;background:#f9f8f5;-webkit-font-smoothing:antialiased;margin:0}
+    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;letter-spacing:-.01em;font-weight:400}
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cc9924;margin:0}
+    .gold-rule{width:56px;height:3px;background:linear-gradient(90deg,#cc9924 0%,#e6b94d 100%);margin:20px 0 28px;border-radius:2px;box-shadow:0 0 12px rgba(204,153,36,.35)}.gold-rule.centered{margin:20px auto 28px}
+    .gold-text{background:linear-gradient(120deg,#e6b94d 0%,#cc9924 50%,#a87a14 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+
+    .btn-gold{display:inline-block;background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;box-shadow:0 4px 24px rgba(204,153,36,.3);transition:transform .2s,box-shadow .2s}.btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(204,153,36,.4)}
+    .btn-outline-light{display:inline-block;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}.btn-outline-light:hover{border-color:#cc9924;background:rgba(204,153,36,.08)}
+
+    /* Nav */
+    #main-nav{transition:background .3s,box-shadow .3s;background:transparent}#main-nav.scrolled{background:rgba(31,48,47,.97);box-shadow:0 2px 24px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+
+    /* Hero (split) */
+    .hero{position:relative;min-height:100vh;background:#1a1a18;overflow:hidden;display:flex;align-items:center;padding:120px 0 60px}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(26,26,24,.92) 0%,rgba(26,26,24,.75) 55%,rgba(26,26,24,.55) 100%)}
+    .hero-inner{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:0 24px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .hero-copy h1{color:#fff;font-size:clamp(34px,4.8vw,58px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 20px}
+    .hero-copy p.lede{color:rgba(255,255,255,.85);font-size:17px;line-height:1.7;margin:0 0 24px;font-weight:300;max-width:520px}
+    .hero-copy ul{list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:10px}
+    .hero-copy ul li{color:rgba(255,255,255,.88);font-size:14.5px;padding-left:22px;position:relative;line-height:1.6}
+    .hero-copy ul li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%}
+    .hero-copy .fine{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:.06em}
+    .hero-form{background:#fff;padding:8px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:32px}.hero{min-height:auto;padding:140px 0 60px}}
+
+    /* Golden orbs */
+    @keyframes orbDrift{0%{transform:translate(0,0) scale(1);opacity:.35}50%{opacity:.7}100%{transform:translate(50px,-80px) scale(1.08);opacity:.25}}
+    .gold-orb{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(204,153,36,.65) 0%,rgba(204,153,36,.18) 45%,transparent 75%);pointer-events:none;animation:orbDrift 12s ease-in-out infinite alternate;will-change:transform,opacity;filter:blur(8px);z-index:2}
+
+    /* Trust strip */
+    .trust-strip{background:#fff;border-top:1px solid #d3cdb3;border-bottom:1px solid #d3cdb3;padding:28px 0 22px;text-align:center}
+    .trust-strip .eyebrow{margin-bottom:8px}
+    @keyframes logoScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .logo-strip{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,#000 6%,#000 94%,transparent 100%);margin-top:14px}
+    .logo-track{display:flex;align-items:center;gap:64px;animation:logoScroll 45s linear infinite;width:max-content;padding:6px 0}
+    .logo-track .l{flex:0 0 auto;height:44px;display:flex;align-items:center}
+    .logo-track .l img{max-height:44px;max-width:140px;object-fit:contain}
+
+    /* Atmosphere */
+    .atmos{position:relative;min-height:62vh;overflow:hidden;background:#1a1a18}
+    .atmos-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+    .atmos-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,26,24,.35) 0%,rgba(26,26,24,.78) 100%)}
+    .atmos-overlay.side{background:linear-gradient(to right,rgba(26,26,24,.85) 0%,rgba(26,26,24,.45) 60%,rgba(26,26,24,.25) 100%)}
+    .atmos-inner{position:relative;z-index:3;padding:140px 24px;text-align:center;max-width:780px;margin:0 auto}
+    .atmos-inner.left{text-align:left;max-width:1080px;padding:120px 24px}
+    .atmos-inner h2{color:#fff;font-size:clamp(32px,4.5vw,54px);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px}
+    .atmos-inner p{font-size:17px;line-height:1.8;color:rgba(255,255,255,.85);max-width:540px;margin:0 auto}
+    .atmos-inner.left p{margin:0;max-width:480px}
+    .atmos-watermark{position:absolute;top:32px;right:32px;width:60px;height:auto;opacity:.25;z-index:3}
+
+    /* Section */
+    .section{padding:96px 24px;background:#f9f8f5}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .section h2{font-size:clamp(28px,3.5vw,42px);line-height:1.2;color:#1a1a18;margin:0 0 14px}
+    .section p.lede{font-size:16px;line-height:1.75;color:#4a4a46;max-width:600px;margin:0 auto}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:36px}
+    .gallery .tall{grid-row:span 2}
+    .gallery img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:1/1;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+    .gallery .tall img{aspect-ratio:1/2.05}
+    .gallery .cell{overflow:hidden;border-radius:2px;position:relative}
+    .gallery .cell:hover img{transform:scale(1.05)}
+    @media(max-width:768px){.gallery{grid-template-columns:repeat(2,1fr)}.gallery .tall{grid-row:auto}.gallery .tall img{aspect-ratio:1/1}}
+
+    /* Benefits cards */
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+    .benefit{background:#fff;border:1px solid #d3cdb3;padding:32px 28px;text-align:left;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .benefit:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(53,77,76,.1);border-color:#cc9924}
+    .benefit .icon{width:44px;height:44px;border-radius:50%;background:rgba(204,153,36,.12);border:1px solid rgba(204,153,36,.3);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#cc9924;font-family:'Marcellus',Georgia,serif;font-size:18px}
+    .benefit h3{font-size:20px;color:#1a1a18;margin:0 0 10px}
+    .benefit p{font-size:14.5px;line-height:1.7;color:#4a4a46;margin:0}
+    @media(max-width:768px){.benefits{grid-template-columns:1fr}}
+
+    /* Brochure CTA section */
+    .brochure-section{background:#1a1a18;padding:96px 24px}
+    .brochure-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .brochure-copy h2{color:#fff;font-size:clamp(28px,3.5vw,40px);margin-bottom:16px}
+    .brochure-copy p{color:rgba(255,255,255,.78);font-size:16px;line-height:1.8;margin:0 0 18px}
+    .brochure-copy ul{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:10px}
+    .brochure-copy ul li{color:rgba(255,255,255,.85);font-size:14.5px;padding-left:22px;position:relative;line-height:1.6}
+    .brochure-copy ul li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%}
+    .brochure-form{background:#fff;padding:8px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+    @media(max-width:900px){.brochure-grid{grid-template-columns:1fr;gap:40px}}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px;max-width:900px;margin-left:auto;margin-right:auto}
+    .testimonial{background:#fff;border:1px solid #d3cdb3;border-left:3px solid #cc9924;padding:26px 30px}
+    .testimonial p.quote{font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;line-height:1.55;margin:0 0 14px}
+    .testimonial p.cite{font-size:11px;color:#4a4a46;letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin:0}
+    @media(max-width:768px){.testimonials{grid-template-columns:1fr}}
+
+    /* FAQ mini */
+    .faq-item{border-bottom:1px solid #d3cdb3}
+    .faq-q{width:100%;text-align:left;padding:22px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto',sans-serif;font-weight:400;font-size:16px;color:#1a1a18;line-height:1.5;gap:16px}
+    .faq-q:hover{color:#354d4c}
+    .faq-icon{flex-shrink:0;width:20px;height:20px;border:1px solid #d3cdb3;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#cc9924;font-size:14px;transition:transform .3s,border-color .2s}
+    .faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg);border-color:#cc9924}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+    .faq-a.open{max-height:300px}
+    .faq-a-inner{padding-bottom:22px;font-size:15px;line-height:1.7;color:#4a4a46}
+
+    /* Footer */
+    footer{background:#1a1a18;color:rgba(255,255,255,.55);padding:48px 24px 28px}
+    footer .row{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:24px}
+    footer a{color:#cc9924;text-decoration:none}
+    footer img{height:30px;opacity:.7;margin-bottom:12px}
+    footer p{font-size:12px;line-height:1.7;margin:0}
+    footer .legal{border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:20px;font-size:11px;color:rgba(255,255,255,.3)}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" aria-label="Alchemy of Breath home"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto" /></a>
+    <a href="#brochure" class="btn-gold" style="font-size:11px;padding:10px 22px;">Get the Guide</a>
+  </div>
+</nav>
+
+<!-- HERO (split) -->
+<section class="hero">
+  <img class="hero-bg" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="ASHA Retreat Centre, Tuscany" />
+  <div class="hero-overlay"></div>
+
+  <!-- Floating orbs -->
+  <div class="gold-orb" style="width:140px;height:140px;top:18%;left:6%;animation-duration:13s;"></div>
+  <div class="gold-orb" style="width:70px;height:70px;top:60%;left:18%;animation-duration:10s;animation-delay:-3s;"></div>
+  <div class="gold-orb" style="width:100px;height:100px;top:25%;right:42%;animation-duration:14s;animation-delay:-5s;"></div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">BreathCamp Tuscany &middot; 2026</p>
+      <h1>Seven days of breath<br/>in the <span class="gold-text">Tuscan hills.</span></h1>
+      <p class="lede">A residential breathwork retreat at ASHA &mdash; 37 acres of untouched land, three plant-based meals a day, and the people you did not know you were looking for. Five sessions in 2026, August through October.</p>
+      <ul>
+        <li>Daily rhythm, the food, where you'll sleep</li>
+        <li>Full pricing across every accommodation type</li>
+        <li>Travel, transport, and what to pack</li>
+        <li>Stories from past BreathCampers</li>
+      </ul>
+      <p class="fine">Free. No spam. Sent straight to your inbox.</p>
+    </div>
+    <div class="hero-form">
+      <iframe
+        src="https://link.alchemyofbreath.com/widget/form/oYN0IKN1fcNsjCXk0y5V"
+        style="width:100%;min-height:540px;border:none;border-radius:3px;display:block;"
+        id="inline-hero-brochure"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-activation-type="alwaysActivated"
+        data-deactivation-type="neverDeactivate"
+        data-form-name="BreathCamp: Brochure Opt in"
+        data-height="540"
+        data-layout-iframe-id="inline-hero-brochure"
+        data-form-id="oYN0IKN1fcNsjCXk0y5V"
+        title="BreathCamp Brochure"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <p class="eyebrow">As featured in</p>
+  <div class="logo-strip">
+    <div class="logo-track">
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATMOSPHERE 1 -->
+<section class="atmos">
+  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" />
+  <div class="atmos-overlay"></div>
+  <img class="atmos-watermark" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="" aria-hidden="true" />
+  <div class="atmos-inner">
+    <p class="eyebrow" style="color:#cc9924;">The Land</p>
+    <div class="gold-rule centered"></div>
+    <h2>A pool, the hills,<br/>and the sound of bees.</h2>
+    <p>Olive groves and vineyards. A swimming pool with the Tuscan hills behind it. Natural hot springs ten minutes down the road. A different kind of quiet than the one you arrived with.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL FIND -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner" style="text-align:center;">
+    <p class="eyebrow">What You'll Find Here</p>
+    <div class="gold-rule centered"></div>
+    <h2>Seven days to come back to yourself.</h2>
+    <p class="lede">BreathCamp is a 7-day, 6-night retreat that combines conscious breathing with movement, sound, and the kind of deep connection that only happens when you live and practice alongside others for a full week.</p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="icon">01</div>
+        <h3>Reset your nervous system</h3>
+        <p>Daily breath practice, time in nature, and the kind of rest that doesn't come from a weekend off. You leave with a body that feels different.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">02</div>
+        <h3>Find your people</h3>
+        <p>A small international group, held by experienced trainers. People who came looking for the same things you did.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon">03</div>
+        <h3>Learn a real practice</h3>
+        <p>Beginner to advanced breathwork techniques you can take home. A sustainable practice, not something you forget by next week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY — the land -->
+<section class="section" style="background:#f9f8f5;padding-top:60px;">
+  <div class="section-inner" style="text-align:center;">
+    <p class="eyebrow">A Closer Look</p>
+    <div class="gold-rule centered"></div>
+    <h2>37 acres of untouched land.</h2>
+    <p class="lede">Stone buildings, olive groves, vineyards, walking paths. A swimming pool. The open-air Prana Shala. And the quiet that does its own work.</p>
+
+    <div class="gallery">
+      <div class="cell tall"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_1600,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="Practice space" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
+      <div class="cell tall"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_1600,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
+      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATMOSPHERE 2 -->
+<section class="atmos" style="min-height:55vh;">
+  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="Morning at ASHA" loading="lazy" />
+  <div class="atmos-overlay side"></div>
+  <div class="atmos-inner left">
+    <div style="max-width:480px;">
+      <p class="eyebrow" style="color:#cc9924;">Mornings</p>
+      <div class="gold-rule"></div>
+      <h2>The kind of quiet you forgot existed.</h2>
+      <p>Wake to the light over the hills. Move slow. Breathe. Eat something grown nearby. Then begin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:#fff;">
+  <div class="section-inner" style="text-align:center;">
+    <p class="eyebrow">From the Tribe</p>
+    <div class="gold-rule centered"></div>
+    <h2>In their own words.</h2>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="quote">"I have attended many retreats, but nothing opened my heart like this."</p>
+        <p class="cite">Livia &middot; Copenhagen</p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"As a first-timer, I'm blown away. What a relief to just be who I am. I felt held throughout the entire experience."</p>
+        <p class="cite">BreathCamp Graduate</p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"I came to heal. I left ready to serve."</p>
+        <p class="cite">Catalina &middot; Spain</p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"BreathCamp in one word: WOW. The learning and growth were beyond. A deep dive into the breath."</p>
+        <p class="cite">BreathCamp Graduate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATMOSPHERE 3 -->
+<section class="atmos" style="min-height:55vh;">
+  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA at dusk" loading="lazy" />
+  <div class="atmos-overlay"></div>
+  <div class="atmos-inner">
+    <p class="eyebrow" style="color:#cc9924;">A Needed Pause</p>
+    <div class="gold-rule centered"></div>
+    <h2>If your nervous system feels tired,<br/>it is not a personal failing.</h2>
+    <p>The world has been loud. A week in Tuscany will not fix that, and we will not pretend otherwise. What it can offer is a quiet room to set things down for a while.</p>
+  </div>
+</section>
+
+<!-- BROCHURE CTA (main) -->
+<section id="brochure" class="brochure-section">
+  <div class="brochure-grid">
+    <div class="brochure-copy">
+      <p class="eyebrow" style="color:#cc9924;">The Guide</p>
+      <div class="gold-rule"></div>
+      <h2>Feel BreathCamp,<br/>before you arrive.</h2>
+      <p>A closer look at the week. The people you will meet. The rhythm of the days. The land, the long shared table, and the stories from those who came home different. The practical bits are in there too &mdash; pricing, travel, and what to bring.</p>
+      <ul>
+        <li>A walk through the seven days</li>
+        <li>Stories from BreathCamp graduates</li>
+        <li>The food, the land, where you will sleep</li>
+        <li>Pricing across every accommodation</li>
+        <li>Travel, transport &amp; what to pack</li>
+      </ul>
+      <p style="color:rgba(255,255,255,.5);font-size:13px;line-height:1.7;margin:0;">Free. No spam. Unsubscribe anytime.</p>
+    </div>
+    <div class="brochure-form">
+      <iframe
+        src="https://link.alchemyofbreath.com/widget/form/oYN0IKN1fcNsjCXk0y5V"
+        style="width:100%;min-height:520px;border:none;border-radius:3px;display:block;"
+        id="inline-bottom-brochure"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-activation-type="alwaysActivated"
+        data-deactivation-type="neverDeactivate"
+        data-form-name="BreathCamp: Brochure Opt in"
+        data-height="520"
+        data-layout-iframe-id="inline-bottom-brochure"
+        data-form-id="oYN0IKN1fcNsjCXk0y5V"
+        title="BreathCamp Brochure"></iframe>
+    </div>
+  </div>
+
+  <!-- Talk to a human -->
+  <div style="max-width:540px;margin:56px auto 0;text-align:center;padding-top:36px;border-top:1px solid rgba(211,205,179,.1);">
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);color:#fff;line-height:1.4;margin:0 0 14px;letter-spacing:-.01em;">Rather talk it through with a human?</p>
+    <p style="font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin:0 0 22px;">Book a free conversation with our team. No pressure to book the camp.</p>
+    <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener" class="btn-outline-light">Book a Conversation</a>
+  </div>
+</section>
+<script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
+
+<!-- MINI FAQ -->
+<section class="section" style="background:#f9f8f5;padding:80px 24px;">
+  <div class="section-inner" style="max-width:700px;text-align:center;">
+    <p class="eyebrow">Quick Answers</p>
+    <div class="gold-rule centered"></div>
+    <h2 style="margin-bottom:36px;">Questions.</h2>
+  </div>
+  <div style="max-width:700px;margin:0 auto;text-align:left;">
+    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Do I need breathwork experience?</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">None at all. BreathCamp is designed for people who have never done breathwork and people who have practiced for years. The teaching starts where you are.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>When does it run?</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Five sessions in 2026, from August through October. Full dates and pricing are in the guide.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>How much does it cost?</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">From &euro;1,319 with early bird (personal tent) up to &euro;6,895 (private cottage for two). Full breakdown of all 10 accommodation options &mdash; per-night and total &mdash; is in the guide.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Is there a payment plan?</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. 20% deposit today, then monthly installments, with the final balance due two weeks before arrival.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>What's included?</span><span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">The full 7-day program, 6 nights of accommodation at ASHA, and three plant-based meals a day. Travel to Tuscany is not included.</div></div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="row">
+    <div>
+      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" />
+      <p style="max-width:280px;">Alchemy of Breath. Breath as a tool for life.</p>
+    </div>
+    <div>
+      <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;">Contact</p>
+      <p><a href="mailto:info@alchemyofbreath.com" style="color:rgba(255,255,255,.7);">info@alchemyofbreath.com</a></p>
+    </div>
+    <div>
+      <p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;">More</p>
+      <p><a href="#brochure" style="color:rgba(255,255,255,.7);">Get the Guide</a></p>
+      <p><a href="https://go.alchemyofbreath.com/book-your-discovery-call-" style="color:rgba(255,255,255,.7);">Book a Conversation</a></p>
+    </div>
+  </div>
+  <div class="legal">
+    <p>BreathCamp is a residential breathwork retreat. It is not a substitute for medical treatment, therapy, or clinical care. If you have a medical condition, please consult your doctor before attending.</p>
+    <p style="margin-top:8px;">&copy; 2026 Alchemy of Breath. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>{if(window.scrollY>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+
+  function toggleFaq(btn){
+    const expanded=btn.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.faq-q').forEach(q=>{q.setAttribute('aria-expanded','false');q.nextElementSibling.classList.remove('open');});
+    if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');}
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+</script>
+</body>
+</html>
