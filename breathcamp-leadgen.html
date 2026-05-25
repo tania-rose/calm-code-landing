@@ -202,9 +202,11 @@
   </div>
 </section>
 
-<!-- ATMOSPHERE 1 -->
-<section class="atmos">
-  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" />
+<!-- ATMOSPHERE 1 — Pool video -->
+<section class="atmos" style="min-height:65vh;">
+  <video class="atmos-bg" autoplay muted loop playsinline style="object-fit:cover;">
+    <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb81009a82ea51cf6347ca.mp4" type="video/mp4" />
+  </video>
   <div class="atmos-overlay"></div>
   <img class="atmos-watermark" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="" aria-hidden="true" />
   <div class="atmos-inner">
@@ -243,25 +245,64 @@
   </div>
 </section>
 
-<!-- GALLERY — the land -->
-<section class="section" style="background:#f9f8f5;padding-top:60px;">
-  <div class="section-inner" style="text-align:center;">
-    <p class="eyebrow">A Closer Look</p>
-    <div class="gold-rule centered"></div>
-    <h2>37 acres of untouched land.</h2>
-    <p class="lede">Stone buildings, olive groves, vineyards, walking paths. A swimming pool. The open-air Prana Shala. And the quiet that does its own work.</p>
-
-    <div class="gallery">
-      <div class="cell tall"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_1600,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="Practice space" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
-      <div class="cell tall"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_1600,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
-      <div class="cell"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
+<!-- ASHA CAROUSEL (from main page) -->
+<section style="background:#1a1a18;padding:64px 0 0;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px 40px;">
+    <p class="eyebrow" style="margin-bottom:12px;">The Setting</p>
+    <div class="gold-rule"></div>
+    <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin:0 0 8px;">ASHA Retreat Centre. Tuscany, Italy.</h2>
+    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.72);max-width:560px;margin:0;">37 acres of untouched land in the Tuscan hills. Stone buildings, olive groves, vineyards, and a natural quiet that does its own work.</p>
+  </div>
+  <div style="overflow:hidden;position:relative;">
+    <div style="position:absolute;top:0;bottom:0;left:0;width:60px;z-index:2;background:linear-gradient(to right,#1a1a18,transparent);pointer-events:none;"></div>
+    <div style="position:absolute;top:0;bottom:0;right:0;width:60px;z-index:2;background:linear-gradient(to left,#1a1a18,transparent);pointer-events:none;"></div>
+    <div style="display:flex;gap:16px;animation:logoScroll 40s linear infinite;width:max-content;">
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA retreat spaces" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA retreat spaces" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
+      <div style="flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px;"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" style="width:100%;height:100%;object-fit:cover;" /></div>
     </div>
   </div>
+</section>
+
+<!-- ABOUT ASHA -->
+<section style="background:#1a1a18;padding:96px 24px;">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div>
+      <p class="eyebrow" style="margin-bottom:12px;">About ASHA</p>
+      <div class="gold-rule"></div>
+      <h3 style="font-family:'Marcellus',Georgia,serif;font-size:28px;color:#fff;margin:0 0 16px;">Welcome Home.</h3>
+      <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,.78);margin:0 0 16px;">ASHA Retreat Centre sits on 37 acres of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community. A place where all of you is welcome.</p>
+      <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,.78);margin:0 0 24px;">Swimming pool, meditation spaces, dining room, group practice rooms including the open-air Prana Shala. Nearby natural hot springs, Etruscan historical sites, and Pitigliano if you want to wander.</p>
+      <a href="https://www.asha.global/" target="_blank" rel="noopener" style="font-size:13px;color:#cc9924;text-decoration:none;letter-spacing:.06em;font-weight:500;">Explore ASHA &rarr;</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Address</span><span style="font-size:14px;color:#fff;text-align:right;max-width:240px;">Località Le Piane, Castell'Azzara, Tuscany</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Meals</span><span style="font-size:14px;color:#52bb90;">Plant-based, locally sourced</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Amenities</span><span style="font-size:14px;color:#fff;">Pool, practice spaces, gardens</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Nearest station</span><span style="font-size:14px;color:#fff;">Chiusi-Chianciano Terme</span></div>
+      <div style="display:flex;justify-content:space-between;padding:14px 0;"><span style="font-size:14px;color:rgba(255,255,255,.72);">Nearest airport</span><span style="font-size:14px;color:#fff;">Rome Fiumicino (FCO)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOMMODATION PRICING CTA -->
+<section style="background:#354d4c;padding:56px 24px;text-align:center;">
+  <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3.5vw,40px);color:#fff;letter-spacing:-.02em;margin:0 0 8px;">Accommodation starts at <span class="gold-text" style="-webkit-text-fill-color:#e6b94d;color:#e6b94d;">&euro;220/night</span></p>
+  <p style="font-size:15px;color:rgba(255,255,255,.72);line-height:1.7;margin:0 0 28px;max-width:520px;margin-left:auto;margin-right:auto;">10 room types from personal tent to private cottage. Full pricing, photos, and early-bird discounts are in the guide.</p>
+  <a href="#brochure" class="btn-gold" style="font-size:14px;padding:16px 40px;">Download the BreathCamp Guide</a>
 </section>
 
 <!-- ATMOSPHERE 2 -->
@@ -302,6 +343,21 @@
         <p class="quote">"BreathCamp in one word: WOW. The learning and growth were beyond. A deep dive into the breath."</p>
         <p class="cite">BreathCamp Graduate</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FROM ANTHONY — hero video -->
+<section class="section" style="background:#fff;border-top:1px solid #d3cdb3;">
+  <div class="section-inner" style="text-align:center;">
+    <p class="eyebrow">From Anthony</p>
+    <div class="gold-rule centered"></div>
+    <h2>Why we do this every summer</h2>
+    <p class="lede" style="margin-bottom:40px;">People come from all over the world to create a container we could not have designed on our own. A perfect blend of experience, culture, and stories, all aiming for the same thing: connection, breath, and healing.</p>
+    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#1a1a18;border-radius:2px;overflow:hidden;box-shadow:0 12px 48px rgba(53,77,76,.2),0 2px 8px rgba(53,77,76,.1);">
+      <video controls preload="metadata" poster="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69cf78154cde4bbc2a713424.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995732e5c2265a1151ddfc6.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 </section>
