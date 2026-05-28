@@ -60,6 +60,30 @@
     .closing{padding:56px 0 64px;text-align:center}
     .closing p{font-family:'Marcellus',Georgia,serif;font-style:italic;font-size:16px;color:var(--ink-soft);margin:0;line-height:1.7}
 
+    /* TESTIMONIALS */
+    .testimonials{background:var(--offwhite);padding:72px 0 80px;border-top:1px solid var(--beige)}
+    .testimonials .container{max-width:1080px}
+    .t-head{text-align:center;margin:0 auto 44px;max-width:620px}
+    .t-head h2{font-size:clamp(26px,3vw,36px);line-height:1.25;color:var(--ink);margin:0}
+    .t-head p.kicker{font-size:15.5px;line-height:1.75;color:var(--ink-soft);margin:14px auto 0}
+    .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin:0 0 56px}
+    @media(max-width:720px){.video-grid{grid-template-columns:1fr;gap:18px;margin-bottom:40px}}
+    .video-tile{background:#fff;border:1px solid var(--beige);box-shadow:0 8px 28px rgba(53,77,76,.07),0 1px 4px rgba(53,77,76,.04);overflow:hidden;display:flex;flex-direction:column}
+    .video-tile .v-ratio{padding:56.25% 0 0 0;position:relative;background:#000}
+    .video-tile .v-ratio iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    .video-tile .v-meta{padding:16px 20px 18px}
+    .video-tile .v-meta .name{font-family:'Marcellus',Georgia,serif;font-size:18px;color:var(--ink);line-height:1.3;margin:0 0 3px}
+    .video-tile .v-meta .role{font-size:11px;color:var(--gray);letter-spacing:.08em;text-transform:uppercase;margin:0}
+    .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media(max-width:900px){.quote-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.quote-grid{grid-template-columns:1fr}}
+    .quote-card{background:#fff;border:1px solid var(--beige);padding:32px 26px 26px;position:relative;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(53,77,76,.05)}
+    .quote-card::before{content:'\201C';font-family:'Marcellus',Georgia,serif;font-size:64px;line-height:1;color:rgba(204,153,36,.18);position:absolute;top:10px;left:18px;pointer-events:none}
+    .quote-card blockquote{font-size:14.5px;line-height:1.75;color:var(--ink-soft);margin:0 0 18px;position:relative;z-index:1;font-style:normal}
+    .quote-card .attribution{margin-top:auto;padding-top:14px;border-top:1px solid rgba(211,205,179,.7)}
+    .quote-card .attribution .who{font-family:'Marcellus',Georgia,serif;font-size:15.5px;color:var(--ink);line-height:1.3;margin:0}
+    .quote-card .attribution .role{font-size:11px;color:var(--gray);letter-spacing:.08em;text-transform:uppercase;margin:3px 0 0}
+
     /* FOOTER */
     footer{background:var(--ink);color:rgba(255,255,255,.5);padding:32px 0;font-size:12.5px}
     footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
@@ -106,6 +130,101 @@
 <section class="below">
   <div class="container">
     <p>The conversation runs for 30 minutes. Bring any questions about the training, the pace, what holding this work could look like for you, and anything still moving in you after the masterclass. Together we will look at where you are and what could be the right next step. If facilitator training is not the right fit right now, we will be honest, and point you toward what might be.</p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="t-head">
+      <p class="eyebrow">Stories from the Path</p>
+      <div class="gold-rule"></div>
+      <h2>From graduates who walked this before you.</h2>
+      <p class="kicker">The same questions that brought you here brought them, once. Here is what they say now.</p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-tile">
+        <div class="v-ratio">
+          <iframe src="https://player.vimeo.com/video/863628798?h=8cd489c855&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Simona about the training"></iframe>
+        </div>
+        <div class="v-meta">
+          <p class="name">Simona</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+      <article class="video-tile">
+        <div class="v-ratio">
+          <iframe src="https://player.vimeo.com/video/863632375?h=778e293b3c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Pablo about the training"></iframe>
+        </div>
+        <div class="v-meta">
+          <p class="name">Pablo</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+      <article class="video-tile">
+        <div class="v-ratio">
+          <iframe src="https://player.vimeo.com/video/864433211?h=e7d2178a03&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Tom about the training"></iframe>
+        </div>
+        <div class="v-meta">
+          <p class="name">Tom</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+      <article class="video-tile">
+        <div class="v-ratio">
+          <iframe src="https://player.vimeo.com/video/863631943?h=052ef0308f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Lindsay about the training"></iframe>
+        </div>
+        <div class="v-meta">
+          <p class="name">Lindsay</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="quote-grid">
+      <article class="quote-card">
+        <blockquote>Inspiring and illuminating on every level. The recordings meant that if for some reason I was unable to make a session I still had the opportunity to watch, practice and learn. The course exceeded my expectations and has been brilliantly put together. I loved the mix of the structured syllabus, the free-flowing conversation of the group, the music and the actual breathwork. I believe it to be the only of its kind out there.</blockquote>
+        <div class="attribution">
+          <p class="who">Hannah</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+      <article class="quote-card">
+        <blockquote>I have done many trainings over the years in my quest to heal and help others, but the AoB teacher training was by far the best thing I have ever done for myself and for advancing my life path. The safe space and deep inner exploration allowed me to work through much of my conditioning from childhood and let go of beliefs that no longer served me. I emerged a much stronger, happier, more confident version of myself.</blockquote>
+        <div class="attribution">
+          <p class="who">Megan</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+      <article class="quote-card">
+        <blockquote>My most profound experience from the AoB Facilitators Training with Anthony was the amazing commitment, presence and genuine support he had for the training and each of us. Balanced in this rare precious container which he masterfully creates, I was able to go to the depths of myself and find liberating strength in my vulnerability.</blockquote>
+        <div class="attribution">
+          <p class="who">Senaja</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+      <article class="quote-card">
+        <blockquote>My breathwork experience with Anthony and Alchemy of Breath through festival workshops, Seeds of Alchemy and now the Facilitators Training has been a profound and powerful life tool in my personal journey. It creates the space for deep insight, connection and transformation in a safe and loving container. The work is not only powerful during a session but one that is easily available to integrate into everyday life.</blockquote>
+        <div class="attribution">
+          <p class="who">Tanya Lopez</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+      <article class="quote-card">
+        <blockquote>When I walked into my first breathwork with Anthony at the Yogabarn, I thought it would be a lecture on breathing techniques. An hour later, I knew this had just turned my life around. It changed my life so much that I decided to take the year long training. The training kept me committed to the journey of self-healing that I had started and has transformed my life in many aspects. I feel like my heart has opened up again for the first time in decades.</blockquote>
+        <div class="attribution">
+          <p class="who">Nick</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+      <article class="quote-card">
+        <blockquote>The training is definitely something I felt called to do after Seeds of Alchemy 2-day immersion. Breathwork continues to open doors and the training allows me to fully investigate and be supported in my experiences. I feel like I am growing and opening towards life's untapped potential, and becoming part of an inspiring like-minded community on a global scale.</blockquote>
+        <div class="attribution">
+          <p class="who">Hannah Goodman</p>
+          <p class="role">Facilitator Training Graduate</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
