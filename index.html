@@ -98,9 +98,261 @@
     .logo-track .l { height: 40px; }
     .logo-track .l img { max-width: 120px; }
   }
+
+  /* ────────────────────────────────────────────
+     BASE
+  ──────────────────────────────────────────── */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body { font-family: 'Khula', sans-serif; -webkit-font-smoothing: antialiased; }
+
+  /* ────────────────────────────────────────────
+     HERO
+  ──────────────────────────────────────────── */
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    padding: 120px 24px 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 20% 10%, var(--bg-teal) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 90%, rgba(225,182,104,0.18) 0%, transparent 55%),
+      var(--bg);
+    overflow: hidden;
+  }
+  .hero-inner { max-width: 760px; margin: 0 auto; }
+  .hero .eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 0 0 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--teal);
+  }
+  .hero .sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+  .hero-cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    font-family: 'Khula', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--teal);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-primary:hover {
+    background: #008a96;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-primary .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 0 rgba(225,182,104,0.7);
+    animation: pulse-dot 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(225,182,104,0.7); }
+    50%      { box-shadow: 0 0 0 8px rgba(225,182,104,0); }
+  }
+
+  /* ────────────────────────────────────────────
+     BREATH PANE (hidden by default)
+  ──────────────────────────────────────────── */
+  .breath-pane {
+    position: fixed;
+    inset: 0;
+    background: rgba(34,31,32,0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  .breath-pane[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+  }
+  .breath-pane-inner {
+    position: relative;
+    background: var(--bg);
+    border-radius: 32px;
+    padding: 64px 40px;
+    max-width: 520px;
+    width: calc(100% - 32px);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(20px) scale(0.98);
+    transition: transform 0.4s ease;
+  }
+  .breath-pane[aria-hidden="false"] .breath-pane-inner {
+    transform: translateY(0) scale(1);
+  }
+  .breath-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--ink-soft);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .breath-close:hover { background: rgba(34,31,32,0.06); }
+  .breath-pane h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 32px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .breath-pane .lead {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 32px;
+    letter-spacing: 0.02em;
+  }
+  .orb-wrap {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .orb-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--teal);
+    opacity: 0.5;
+  }
+  .breath-pane[aria-hidden="false"] .orb-ring {
+    animation: breathe 7s ease-in-out infinite;
+  }
+  .orb-ring:nth-child(1) { animation-delay: 0s; border-color: var(--teal); }
+  .orb-ring:nth-child(2) { animation-delay: 0.4s; border-color: var(--teal-mid); }
+  .orb-ring:nth-child(3) { animation-delay: 0.8s; border-color: var(--gold); }
+  .orb-ring:nth-child(4) { animation-delay: 1.2s; border-color: var(--gold-2); }
+  .orb-core {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--teal-pale), var(--teal));
+    box-shadow: 0 0 40px rgba(0,165,178,0.35);
+  }
+  .breath-pane[aria-hidden="false"] .orb-core {
+    animation: breathe-core 7s ease-in-out infinite;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(0.7); opacity: 0.25; }
+    50%      { transform: scale(1.0); opacity: 0.7; }
+  }
+  @keyframes breathe-core {
+    0%, 100% { transform: scale(0.85); }
+    50%      { transform: scale(1.15); }
+  }
+  .breath-cue {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--teal);
+    min-height: 32px;
+    margin: 8px 0 0;
+    letter-spacing: 0.04em;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .breath-pane[aria-hidden="false"] .orb-ring,
+    .breath-pane[aria-hidden="false"] .orb-core { animation: none; }
+  }
+  @media (max-width: 640px) {
+    .breath-pane-inner { padding: 56px 24px 40px; border-radius: 24px; }
+    .orb-wrap { width: 200px; height: 200px; }
+  }
   </style>
 </head>
 <body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Facilitator Training</p>
+    <h1>Read the pattern. <em>Apply the breath.</em></h1>
+    <p class="sub">Professional certification in nervous-system regulation through the Calm Code method by Alchemy of Breath.</p>
+    <div class="hero-cta-row">
+      <button type="button" class="btn btn-primary" id="breath-open" aria-controls="breath-pane" aria-expanded="false">
+        <span class="dot" aria-hidden="true"></span>
+        Try one breath
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="breath-pane" id="breath-pane" role="dialog" aria-modal="true" aria-labelledby="breath-title" aria-hidden="true">
+  <div class="breath-pane-inner">
+    <button type="button" class="breath-close" id="breath-close" aria-label="Close">&times;</button>
+    <h2 id="breath-title">One breath</h2>
+    <p class="lead">Follow the orb. Inhale as it expands, exhale as it softens.</p>
+    <div class="orb-wrap" aria-hidden="true">
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-ring"></div>
+      <div class="orb-core"></div>
+    </div>
+    <p class="breath-cue" id="breath-cue" aria-live="polite">Inhale</p>
+  </div>
+</div>
 
 <section class="trust-strip">
   <p class="eyebrow">As featured in</p>
@@ -129,6 +381,54 @@
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  const openBtn = document.getElementById('breath-open');
+  const closeBtn = document.getElementById('breath-close');
+  const pane = document.getElementById('breath-pane');
+  const cue = document.getElementById('breath-cue');
+  let cueTimer = null;
+
+  function startCue() {
+    const phases = ['Inhale', 'Hold', 'Exhale', 'Rest'];
+    const durations = [3000, 500, 3000, 500];
+    let i = 0;
+    const tick = () => {
+      cue.textContent = phases[i];
+      cueTimer = setTimeout(() => {
+        i = (i + 1) % phases.length;
+        tick();
+      }, durations[i]);
+    };
+    tick();
+  }
+  function stopCue() {
+    clearTimeout(cueTimer);
+    cueTimer = null;
+    cue.textContent = 'Inhale';
+  }
+  function open() {
+    pane.setAttribute('aria-hidden', 'false');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    startCue();
+  }
+  function close() {
+    pane.setAttribute('aria-hidden', 'true');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    stopCue();
+  }
+
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  pane.addEventListener('click', (e) => { if (e.target === pane) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && pane.getAttribute('aria-hidden') === 'false') close();
+  });
+})();
+</script>
 
 </body>
 </html>
