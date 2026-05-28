@@ -29,3 +29,106 @@
     --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
     --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
   }
+
+  /* ────────────────────────────────────────────
+     TRUST STRIP — "As featured in"
+  ──────────────────────────────────────────── */
+  .trust-strip {
+    background: var(--bg);
+    padding: 56px 24px 64px;
+    border-top: 1px solid rgba(34,31,32,0.06);
+    border-bottom: 1px solid rgba(34,31,32,0.06);
+    text-align: center;
+    overflow: hidden;
+  }
+  .trust-strip .eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  .logo-strip {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+  .logo-track {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    width: max-content;
+    animation: logo-scroll 48s linear infinite;
+  }
+  .logo-strip:hover .logo-track { animation-play-state: paused; }
+  .logo-track .l {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+  }
+  .logo-track .l img {
+    max-height: 100%;
+    max-width: 160px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.55;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .logo-track .l img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-track { animation: none; }
+  }
+  @media (max-width: 640px) {
+    .trust-strip { padding: 40px 16px 48px; }
+    .logo-track { gap: 40px; }
+    .logo-track .l { height: 40px; }
+    .logo-track .l img { max-width: 120px; }
+  }
+  </style>
+</head>
+<body>
+
+<section class="trust-strip">
+  <p class="eyebrow">As featured in</p>
+  <div class="logo-strip">
+    <div class="logo-track">
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
+      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
