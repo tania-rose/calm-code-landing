@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Discovery Call — Alchemy of Breath</title>
+  <meta name="description" content="A free, no-pressure conversation about whether the Calm Code Facilitator Training is right for you."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
+
+  <style>
+  :root {
+    --bg:         #F7F4EF;
+    --bg-warm:    #F0EBE1;
+    --bg-teal:    #EBF5F6;
+    --gold:       #E1B668;
+    --gold-2:     #D6A652;
+    --teal:       #00a5b2;
+    --teal-mid:   #5b7889;
+    --teal-pale:  #d0ebee;
+    --ink:        #221F20;
+    --ink-soft:   #3d3a3b;
+    --muted:      #7a8a8e;
+    --white:      #ffffff;
+    --shadow-sm:  0 2px 20px rgba(34,31,32,0.06);
+    --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
+    --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body { font-family: 'Khula', sans-serif; -webkit-font-smoothing: antialiased; }
+
+  .hero {
+    padding: 120px 24px 64px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 20% 10%, var(--bg-teal) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 90%, rgba(225,182,104,0.18) 0%, transparent 55%),
+      var(--bg);
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; }
+  .hero .eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--teal); margin: 0 0 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(36px, 5.5vw, 60px);
+    line-height: 1.08;
+    margin: 0 0 20px;
+  }
+  .hero h1 em { font-style: italic; color: var(--teal); }
+  .hero .sub {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 36px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 18px 32px;
+    font-family: 'Khula', sans-serif;
+    font-weight: 600; font-size: 14px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-primary {
+    background: var(--teal);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-primary:hover {
+    background: #008a96;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .testimonials {
+    padding: 80px 24px 112px;
+  }
+  .testimonials-inner { max-width: 1120px; margin: 0 auto; }
+  .testimonials .eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--teal); margin: 0 0 16px;
+    text-align: center;
+  }
+  .testimonials h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.15;
+    text-align: center;
+    margin: 0 0 48px;
+  }
+  .testimonials h2 em { font-style: italic; color: var(--teal); }
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .quote-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px 32px 32px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .quote-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 8px; left: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px; line-height: 1;
+    color: var(--gold);
+    opacity: 0.35;
+  }
+  .quote-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    white-space: pre-line;
+    position: relative;
+  }
+  .quote-card .attrib {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(34,31,32,0.08);
+  }
+  .quote-card .attrib .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin: 0;
+  }
+  .quote-card .attrib .role {
+    font-family: 'Khula', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 4px 0 0;
+  }
+  @media (max-width: 960px) {
+    .quote-grid { grid-template-columns: 1fr; }
+    .testimonials { padding: 64px 16px 88px; }
+  }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Discovery Call</p>
+    <h1>Let's see if this is <em>your path</em>.</h1>
+    <p class="sub">A free, no-pressure conversation about the Calm Code Facilitator Training — your questions, your timing, your fit.</p>
+    <a href="#book" class="btn btn-primary">Book your call</a>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <p class="eyebrow">In their words</p>
+    <h2>Why others said <em>yes</em>.</h2>
+    <div class="quote-grid">
+      <article class="quote-card">
+        <p>My breathwork experience with Anthony and Alchemy of Breath through festival workshops, Seeds of Alchemy and now the Facilitators Training has been a profound and powerful life tool in my personal journey.
+
+It creates the space for deep insight, connection and transformation in a safe and loving container.
+
+The work is not only powerful during a session but one that is easily available to integrate into everyday life. I deeply recommend Alchemy of Breath as an incredible experience to harness the power of true presence and connection.</p>
+        <div class="attrib">
+          <p class="name">Tanya Lopez</p>
+          <p class="role">Facilitator Trainee</p>
+        </div>
+      </article>
+
+      <article class="quote-card">
+        <p>When I walked into my first breathwork with Anthony at the Yogabarn, I thought it would be a lecture on breathing techniques. An hour later, I knew this had just turned my life around. It actually changed my life so much, that I decided to take the year long training with Anthony. The training kept me committed to the journey of self-healing that I had started and has transformed my life in many aspects. I feel like my heart has opened up again for the first time in decades and the training group has become a new little community for all of us. I am truly grateful.</p>
+        <div class="attrib">
+          <p class="name">Nick</p>
+          <p class="role">Facilitator Trainee</p>
+        </div>
+      </article>
+
+      <article class="quote-card">
+        <p>The training is definitely something I felt called to do after Seeds of Alchemy 2-day immersion.
+
+Breathwork continues to open doors and the training allows me to fully investigate and be supported in my experiences. I feel like I am growing and opening towards life's untapped potential. Also, becoming part of an inspiring like-minded community on a global scale is a great gift.</p>
+        <div class="attrib">
+          <p class="name">Hannah Goodman</p>
+          <p class="role">Facilitator Trainee</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -31,72 +31,41 @@
   }
 
   /* ────────────────────────────────────────────
-     TRUST STRIP — "As featured in"
+     ACCREDITED BY
   ──────────────────────────────────────────── */
-  .trust-strip {
-    background: var(--bg);
-    padding: 56px 24px 64px;
-    border-top: 1px solid rgba(34,31,32,0.06);
-    border-bottom: 1px solid rgba(34,31,32,0.06);
+  .accredited {
+    background: transparent;
+    padding: 64px 24px 72px;
     text-align: center;
-    overflow: hidden;
   }
-  .trust-strip .eyebrow {
+  .accredited-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .accredited .eyebrow {
     font-family: 'Khula', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--muted);
-    margin: 0 0 32px;
+    margin: 0 0 28px;
   }
-  .logo-strip {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-  }
-  .logo-track {
+  .accredited-logos {
     display: flex;
-    align-items: center;
-    gap: 64px;
-    width: max-content;
-    animation: logo-scroll 48s linear infinite;
-  }
-  .logo-strip:hover .logo-track { animation-play-state: paused; }
-  .logo-track .l {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    height: 56px;
+    align-items: center;
   }
-  .logo-track .l img {
-    max-height: 100%;
-    max-width: 160px;
-    width: auto;
+  .accredited-logos img {
+    max-width: 100%;
+    height: auto;
+    max-height: 110px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.55;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-  }
-  .logo-track .l img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-  }
-  @keyframes logo-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .logo-track { animation: none; }
+    mix-blend-mode: multiply;
   }
   @media (max-width: 640px) {
-    .trust-strip { padding: 40px 16px 48px; }
-    .logo-track { gap: 40px; }
-    .logo-track .l { height: 40px; }
-    .logo-track .l img { max-width: 120px; }
+    .accredited { padding: 48px 16px 56px; }
+    .accredited-logos img { max-height: 80px; }
   }
 
   /* ────────────────────────────────────────────
@@ -320,6 +289,153 @@
     .breath-pane-inner { padding: 56px 24px 40px; border-radius: 24px; }
     .orb-wrap { width: 200px; height: 200px; }
   }
+
+  /* ────────────────────────────────────────────
+     TESTIMONIALS
+  ──────────────────────────────────────────── */
+  .testimonials {
+    background: var(--bg);
+    padding: 96px 24px 112px;
+    position: relative;
+  }
+  .testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(0,165,178,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 10% 90%, rgba(225,182,104,0.08) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .testimonials-inner {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .testimonials .eyebrow {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 0 0 16px;
+    text-align: center;
+  }
+  .testimonials h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 56px;
+    color: var(--ink);
+  }
+  .testimonials h2 em { font-style: italic; color: var(--teal); }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+  .video-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+  .video-frame {
+    padding: 56.25% 0 0 0;
+    position: relative;
+    background: var(--bg-warm);
+  }
+  .video-frame iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .video-meta {
+    padding: 18px 22px 22px;
+  }
+  .video-meta .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin: 0;
+    font-weight: 400;
+  }
+  .video-meta .role {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 4px 0 0;
+  }
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .quote-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px 32px 32px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .quote-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 8px;
+    left: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--gold);
+    opacity: 0.35;
+  }
+  .quote-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    white-space: pre-line;
+    position: relative;
+  }
+  .quote-card .attrib {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(34,31,32,0.08);
+  }
+  .quote-card .attrib .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--ink);
+    margin: 0;
+  }
+  .quote-card .attrib .role {
+    font-family: 'Khula', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 4px 0 0;
+  }
+  @media (max-width: 860px) {
+    .video-grid, .quote-grid { grid-template-columns: 1fr; }
+    .testimonials { padding: 72px 16px 88px; }
+  }
   </style>
 </head>
 <body>
@@ -354,30 +470,98 @@
   </div>
 </div>
 
-<section class="trust-strip">
-  <p class="eyebrow">As featured in</p>
-  <div class="logo-strip">
-    <div class="logo-track">
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
-      <div class="l" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <p class="eyebrow">Graduate Voices</p>
+    <h2>Words from those who <em>walked the path</em>.</h2>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/863628798?h=8cd489c855&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Simona about training" loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <p class="name">Simona</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/863632375?h=778e293b3c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Pablo about the Training" loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <p class="name">Pablo</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/864433211?h=e7d2178a03&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Tom - About the training" loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <p class="name">Tom</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe src="https://player.vimeo.com/video/863631943?h=052ef0308f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Lindsay about the Training" loading="lazy"></iframe>
+        </div>
+        <div class="video-meta">
+          <p class="name">Lindsay</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="quote-grid">
+      <article class="quote-card">
+        <p>Inspiring and illuminating on every level and the recordings meant that if for some reason I was unable to make a session I still had the opportunity to watch, practice and learn. A heartfelt thanks for creating this course and making it accessible to everyone everywhere whatever their geographical location and whatever their other commitments may be. The course exceeded my expectations and has been brilliantly put together.
+
+I loved the mix of the structured syllabus, the free-flowing conversation of the group, the music and of course the actual Breathwork. I believe it to be the only of its kind out there and I highly recommend it!</p>
+        <div class="attrib">
+          <p class="name">Hannah</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="quote-card">
+        <p>I have done many trainings over the years in my quest to heal and help others, but the AoB teacher training was by far the best thing I've ever done for myself and for advancing my life path. I felt so held and supported the entire time and the safe space and deep inner exploration which was encouraged as a part of the curriculum allowed me to work through and overcome much of my conditioning from childhood and let go of behaviors and beliefs that no longer served me. I emerged a much stronger, happier, more confident and optimistic version of myself.</p>
+        <div class="attrib">
+          <p class="name">Megan</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="quote-card">
+        <p>Inspiring and illuminating on every level and the recordings meant that if for some reason I was unable to make a session I still had the opportunity to watch, practice and learn. A heartfelt thanks for creating this course and making it accessible to everyone everywhere whatever their geographical location and whatever their other commitments may be. The course exceeded my expectations and has been brilliantly put together.
+
+I loved the mix of the structured syllabus, the free-flowing conversation of the group, the music and of course the actual Breathwork. I believe it to be the only of its kind out there and I highly recommend it!</p>
+        <div class="attrib">
+          <p class="name">Sapphire</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+
+      <article class="quote-card">
+        <p>My most profound experience from the AoB Facilitators Training with Anthony was the amazing commitment, presence and genuine gentlemanly support he had for the training and each of us. Balanced in this rare precious container which he masterfully creates, I was able to go to the depths of myself and find liberating strength in my vulnerability — among other expansive enlightening awarenesses.</p>
+        <div class="attrib">
+          <p class="name">Senaja</p>
+          <p class="role">Alchemy Graduate</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="accredited">
+  <div class="accredited-inner">
+    <p class="eyebrow">Accredited by</p>
+    <div class="accredited-logos">
+      <img src="assets/accredited-by.png" alt="FHT Accredited Course Provider, Global Professional Breathwork Alliance Certified Professional Breathwork School, AADP American Association of Drugless Practitioners Board Certified, International Breathwork Foundation" loading="lazy" />
     </div>
   </div>
 </section>
