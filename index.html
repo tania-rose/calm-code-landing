@@ -1,618 +1,1490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Calm Code — Alchemy of Breath</title>
-  <meta name="description" content="Read the pattern. Apply the breath. Regulate the nervous system. Professional certification by Alchemy of Breath."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathwork Facilitator Training | Alchemy of Breath</title>
+  <meta name="description" content="Become a certified breathwork facilitator. 400-hour online training with live mentorship. Graduate at BreathCamp in Tuscany. 12+ years, 1,000+ facilitators trained." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{teal:'#354d4c',gold:'#cc9924',beige:'#d3cdb3',offwhite:'#f9f8f5',green:'#52bb90',ink:'#1a1a18',inksoft:'#4a4a46',gray:'#c5c3c2'},fontFamily:{display:['Marcellus','Georgia','serif'],body:['Roboto','sans-serif']}}}}</script>
   <style>
-  /* ────────────────────────────────────────────
-     TOKENS
-  ──────────────────────────────────────────── */
-  :root {
-    --bg:         #F7F4EF;
-    --bg-warm:    #F0EBE1;
-    --bg-teal:    #EBF5F6;
-    --gold:       #E1B668;
-    --gold-2:     #D6A652;
-    --teal:       #00a5b2;
-    --teal-mid:   #5b7889;
-    --teal-pale:  #d0ebee;
-    --ink:        #221F20;
-    --ink-soft:   #3d3a3b;
-    --muted:      #7a8a8e;
-    --white:      #ffffff;
-    --shadow-sm:  0 2px 20px rgba(34,31,32,0.06);
-    --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
-    --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
-  }
-
-  /* ────────────────────────────────────────────
-     ACCREDITED BY
-  ──────────────────────────────────────────── */
-  .accredited {
-    background: transparent;
-    padding: 64px 24px 72px;
-    text-align: center;
-  }
-  .accredited-inner {
-    max-width: 1040px;
-    margin: 0 auto;
-  }
-  .accredited .eyebrow {
-    font-family: 'Khula', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 0 0 28px;
-  }
-  .accredited-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .accredited-logos img {
-    max-width: 100%;
-    height: auto;
-    max-height: 110px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-  }
-  @media (max-width: 640px) {
-    .accredited { padding: 48px 16px 56px; }
-    .accredited-logos img { max-height: 80px; }
-  }
-
-  /* ────────────────────────────────────────────
-     BASE
-  ──────────────────────────────────────────── */
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
-  body { font-family: 'Khula', sans-serif; -webkit-font-smoothing: antialiased; }
-
-  /* ────────────────────────────────────────────
-     HERO
-  ──────────────────────────────────────────── */
-  .hero {
-    position: relative;
-    min-height: 88vh;
-    padding: 120px 24px 96px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background:
-      radial-gradient(ellipse at 20% 10%, var(--bg-teal) 0%, transparent 55%),
-      radial-gradient(ellipse at 80% 90%, rgba(225,182,104,0.18) 0%, transparent 55%),
-      var(--bg);
-    overflow: hidden;
-  }
-  .hero-inner { max-width: 760px; margin: 0 auto; }
-  .hero .eyebrow {
-    font-family: 'Khula', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin: 0 0 24px;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin: 0 0 24px;
-    color: var(--ink);
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--teal);
-  }
-  .hero .sub {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--ink-soft);
-    max-width: 560px;
-    margin: 0 auto 40px;
-  }
-  .hero-cta-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 32px;
-    font-family: 'Khula', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    text-decoration: none;
-  }
-  .btn-primary {
-    background: var(--teal);
-    color: var(--white);
-    box-shadow: var(--shadow-sm);
-  }
-  .btn-primary:hover {
-    background: #008a96;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
-  .btn-primary .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--gold);
-    box-shadow: 0 0 0 0 rgba(225,182,104,0.7);
-    animation: pulse-dot 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(225,182,104,0.7); }
-    50%      { box-shadow: 0 0 0 8px rgba(225,182,104,0); }
-  }
-
-  /* ────────────────────────────────────────────
-     BREATH PANE (hidden by default)
-  ──────────────────────────────────────────── */
-  .breath-pane {
-    position: fixed;
-    inset: 0;
-    background: rgba(34,31,32,0.72);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
-  }
-  .breath-pane[aria-hidden="false"] {
-    opacity: 1;
-    visibility: visible;
-  }
-  .breath-pane-inner {
-    position: relative;
-    background: var(--bg);
-    border-radius: 32px;
-    padding: 64px 40px;
-    max-width: 520px;
-    width: calc(100% - 32px);
-    text-align: center;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(20px) scale(0.98);
-    transition: transform 0.4s ease;
-  }
-  .breath-pane[aria-hidden="false"] .breath-pane-inner {
-    transform: translateY(0) scale(1);
-  }
-  .breath-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background: transparent;
-    color: var(--ink-soft);
-    font-size: 24px;
-    line-height: 1;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  .breath-close:hover { background: rgba(34,31,32,0.06); }
-  .breath-pane h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: 32px;
-    margin: 0 0 8px;
-    color: var(--ink);
-  }
-  .breath-pane .lead {
-    font-size: 14px;
-    color: var(--muted);
-    margin: 0 0 32px;
-    letter-spacing: 0.02em;
-  }
-  .orb-wrap {
-    position: relative;
-    width: 240px;
-    height: 240px;
-    margin: 0 auto 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .orb-ring {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    border: 1px solid var(--teal);
-    opacity: 0.5;
-  }
-  .breath-pane[aria-hidden="false"] .orb-ring {
-    animation: breathe 7s ease-in-out infinite;
-  }
-  .orb-ring:nth-child(1) { animation-delay: 0s; border-color: var(--teal); }
-  .orb-ring:nth-child(2) { animation-delay: 0.4s; border-color: var(--teal-mid); }
-  .orb-ring:nth-child(3) { animation-delay: 0.8s; border-color: var(--gold); }
-  .orb-ring:nth-child(4) { animation-delay: 1.2s; border-color: var(--gold-2); }
-  .orb-core {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, var(--teal-pale), var(--teal));
-    box-shadow: 0 0 40px rgba(0,165,178,0.35);
-  }
-  .breath-pane[aria-hidden="false"] .orb-core {
-    animation: breathe-core 7s ease-in-out infinite;
-  }
-  @keyframes breathe {
-    0%, 100% { transform: scale(0.7); opacity: 0.25; }
-    50%      { transform: scale(1.0); opacity: 0.7; }
-  }
-  @keyframes breathe-core {
-    0%, 100% { transform: scale(0.85); }
-    50%      { transform: scale(1.15); }
-  }
-  .breath-cue {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 22px;
-    color: var(--teal);
-    min-height: 32px;
-    margin: 8px 0 0;
-    letter-spacing: 0.04em;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .breath-pane[aria-hidden="false"] .orb-ring,
-    .breath-pane[aria-hidden="false"] .orb-core { animation: none; }
-  }
-  @media (max-width: 640px) {
-    .breath-pane-inner { padding: 56px 24px 40px; border-radius: 24px; }
-    .orb-wrap { width: 200px; height: 200px; }
-  }
-
-  /* ────────────────────────────────────────────
-     TESTIMONIALS
-  ──────────────────────────────────────────── */
-  .testimonials {
-    background: var(--bg);
-    padding: 96px 24px 112px;
-    position: relative;
-  }
-  .testimonials::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 85% 15%, rgba(0,165,178,0.06) 0%, transparent 40%),
-      radial-gradient(circle at 10% 90%, rgba(225,182,104,0.08) 0%, transparent 40%);
-    pointer-events: none;
-  }
-  .testimonials-inner {
-    position: relative;
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-  .testimonials .eyebrow {
-    font-family: 'Khula', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin: 0 0 16px;
-    text-align: center;
-  }
-  .testimonials h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(32px, 4.5vw, 52px);
-    line-height: 1.1;
-    text-align: center;
-    margin: 0 0 56px;
-    color: var(--ink);
-  }
-  .testimonials h2 em { font-style: italic; color: var(--teal); }
-  .video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 72px;
-  }
-  .video-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .video-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-  }
-  .video-frame {
-    padding: 56.25% 0 0 0;
-    position: relative;
-    background: var(--bg-warm);
-  }
-  .video-frame iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: 0;
-  }
-  .video-meta {
-    padding: 18px 22px 22px;
-  }
-  .video-meta .name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    color: var(--ink);
-    margin: 0;
-    font-weight: 400;
-  }
-  .video-meta .role {
-    font-family: 'Khula', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 4px 0 0;
-  }
-  .quote-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  .quote-card {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 36px 32px 32px;
-    box-shadow: var(--shadow-sm);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  .quote-card::before {
-    content: "\201C";
-    position: absolute;
-    top: 8px;
-    left: 24px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px;
-    line-height: 1;
-    color: var(--gold);
-    opacity: 0.35;
-  }
-  .quote-card p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.55;
-    color: var(--ink-soft);
-    margin: 0 0 24px;
-    white-space: pre-line;
-    position: relative;
-  }
-  .quote-card .attrib {
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px solid rgba(34,31,32,0.08);
-  }
-  .quote-card .attrib .name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    color: var(--ink);
-    margin: 0;
-  }
-  .quote-card .attrib .role {
-    font-family: 'Khula', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin: 4px 0 0;
-  }
-  @media (max-width: 860px) {
-    .video-grid, .quote-grid { grid-template-columns: 1fr; }
-    .testimonials { padding: 72px 16px 88px; }
-  }
+    *{box-sizing:border-box}body{font-family:'Roboto',sans-serif;font-weight:300;color:#1a1a18;background:#f9f8f5;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif}
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cc9924}
+    .grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+    .nav-link{position:relative;font-family:'Roboto',sans-serif;font-weight:400;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.75);text-decoration:none}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:100%;height:1px;background:#cc9924;transition:right .3s cubic-bezier(.4,0,.2,1)}.nav-link:hover::after{right:0}.nav-link:hover{color:#fff}
+    .btn-gold{display:inline-block;background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(204,153,36,.25),0 1px 4px rgba(204,153,36,.15);transition:transform .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,.2,1)}.btn-gold::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);opacity:0;transition:opacity .2s}.btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(204,153,36,.35),0 2px 8px rgba(204,153,36,.2)}.btn-gold:hover::before{opacity:1}.btn-gold:active{transform:translateY(0)}.btn-gold:focus-visible{outline:2px solid #cc9924;outline-offset:3px}
+    .btn-outline{display:inline-block;background:transparent;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;border:1px solid rgba(255,255,255,.4);cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,transform .2s cubic-bezier(.4,0,.2,1)}.btn-outline:hover{border-color:#cc9924;background:rgba(204,153,36,.08);transform:translateY(-1px)}.btn-outline:active{transform:translateY(0)}.btn-outline:focus-visible{outline:2px solid #cc9924;outline-offset:3px}
+    .btn-outline-dark{display:inline-block;background:transparent;color:#1a1a18;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;border:1px solid rgba(26,26,24,.25);cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,transform .2s cubic-bezier(.4,0,.2,1)}.btn-outline-dark:hover{border-color:#cc9924;color:#cc9924;transform:translateY(-1px)}.btn-outline-dark:active{transform:translateY(0)}.btn-outline-dark:focus-visible{outline:2px solid #cc9924;outline-offset:3px}
+    .gold-rule{width:40px;height:2px;background:#cc9924;margin:20px 0 28px}.gold-rule.centered{margin:20px auto 28px}
+    .img-overlay{position:relative;overflow:hidden}.img-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(53,77,76,.5) 0%,transparent 50%)}
+    .instructor-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;filter:grayscale(10%)}
+    .faq-item{border-bottom:1px solid #d3cdb3}.faq-question{width:100%;text-align:left;padding:22px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto',sans-serif;font-weight:400;font-size:16px;color:#1a1a18;line-height:1.5;gap:16px}.faq-question:hover{color:#354d4c}.faq-question:focus-visible{outline:2px solid #cc9924;outline-offset:2px}.faq-icon{flex-shrink:0;width:20px;height:20px;border:1px solid #d3cdb3;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#cc9924;font-size:14px;transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .2s}.faq-question[aria-expanded="true"] .faq-icon{transform:rotate(45deg);border-color:#cc9924}.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}.faq-answer.open{max-height:500px}.faq-answer-inner{padding-bottom:22px;font-size:15px;line-height:1.7;color:#4a4a46}
+    #main-nav{transition:background .3s,box-shadow .3s}#main-nav.scrolled{background:rgba(31,48,47,.97);box-shadow:0 2px 24px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
+    @keyframes carouselSlide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}.location-carousel-track{display:flex;gap:16px;animation:carouselSlide 40s linear infinite;width:max-content}.location-carousel-track:hover{animation-play-state:paused}.location-carousel-wrap{overflow:hidden;position:relative}.location-carousel-wrap::before,.location-carousel-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}.location-carousel-wrap::before{left:0;background:linear-gradient(to right,#1a1a18,transparent)}.location-carousel-wrap::after{right:0;background:linear-gradient(to left,#1a1a18,transparent)}.location-carousel-item{flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px}.location-carousel-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s cubic-bezier(.4,0,.2,1)}.location-carousel-item:hover img{transform:scale(1.03)}
+    .pathway-card{position:relative;padding:40px 32px;border:1px solid rgba(204,153,36,.2);background:rgba(255,255,255,.03);transition:border-color .3s,background .3s}.pathway-card:hover{border-color:rgba(204,153,36,.5);background:rgba(255,255,255,.06)}
+    .pathway-number{font-family:'Marcellus',Georgia,serif;font-size:48px;color:rgba(204,153,36,.2);line-height:1;margin-bottom:16px}
+    .form-input{width:100%;padding:14px 16px;border:1px solid #d3cdb3;background:#fff;font-family:'Roboto',sans-serif;font-weight:300;font-size:15px;color:#1a1a18;transition:border-color .2s}.form-input:focus{outline:none;border-color:#cc9924}.form-input::placeholder{color:#c5c3c2}
+    .form-textarea{resize:vertical;min-height:100px}
+    /* Breathing Mandala */
+    .breath-stage{position:relative;width:360px;height:360px;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;}
+    /* Ambient mode — orb sits behind hero content as breathing background texture */
+    .breath-stage-ambient{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(85vmin,720px);height:min(85vmin,720px);z-index:1;pointer-events:none;cursor:default;opacity:.5;mix-blend-mode:screen;}
+    .breath-stage-ambient .breath-orb-wrap{width:380px;height:380px;}
+    .breath-stage-ambient .breath-mote{transform:rotate(var(--angle,0deg)) translate(280px) rotate(calc(-1 * var(--angle,0deg)));}
+    .breath-stage-ambient.is-inhale .breath-mote,.breath-stage-ambient.is-hold-in .breath-mote{transform:rotate(var(--angle,0deg)) translate(85px) rotate(calc(-1 * var(--angle,0deg)));}
+    @media(max-width:768px){.breath-stage-ambient{opacity:.42;width:min(95vmin,520px);height:min(95vmin,520px);}.breath-stage-ambient .breath-orb-wrap{width:260px;height:260px;}.breath-stage-ambient .breath-mote{transform:rotate(var(--angle,0deg)) translate(200px) rotate(calc(-1 * var(--angle,0deg)));}.breath-stage-ambient.is-inhale .breath-mote,.breath-stage-ambient.is-hold-in .breath-mote{transform:rotate(var(--angle,0deg)) translate(60px) rotate(calc(-1 * var(--angle,0deg)));}}
+    .breath-stage>*{pointer-events:none;}
+    .breath-orb-wrap{position:relative;width:200px;height:200px;display:flex;align-items:center;justify-content:center;transition:transform 4s linear;}
+    .breath-aura{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(204,153,36,.32);background:radial-gradient(circle,rgba(204,153,36,.1) 0%,rgba(204,153,36,.02) 55%,transparent 75%);box-shadow:0 0 24px rgba(204,153,36,.06),0 0 60px rgba(204,153,36,.04),0 0 120px rgba(204,153,36,.02),inset 0 0 30px rgba(204,153,36,.04);transition:box-shadow 4s linear,border-color 4s linear,background 4s linear;}
+    .breath-ring{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);}
+    .breath-ring circle{fill:none;stroke:rgba(204,153,36,.35);stroke-width:1;transition:stroke 4s linear;}
+    .breath-ring line{stroke:rgba(204,153,36,.55);stroke-width:1;stroke-linecap:round;}
+    .breath-vesica{position:absolute;width:105px;height:70px;opacity:.22;transition:opacity 2s ease;}
+    .breath-vesica circle{fill:none;stroke:#cc9924;stroke-width:1;}
+    .breath-core{position:absolute;width:10px;height:10px;border-radius:50%;background:#cc9924;box-shadow:0 0 14px rgba(204,153,36,.6),0 0 28px rgba(204,153,36,.3);transition:box-shadow 4s linear,transform 4s linear;}
+    /* Gold sparks - ambient twinkling background */
+    .spark-field{position:absolute;inset:0;pointer-events:none;z-index:1;}
+    .spark{position:absolute;width:3px;height:3px;border-radius:50%;background:#cc9924;box-shadow:0 0 6px rgba(204,153,36,.9),0 0 12px rgba(204,153,36,.4);opacity:0;animation:sparkTwinkle linear infinite;}
+    .spark.lg{width:5px;height:5px;box-shadow:0 0 10px rgba(204,153,36,1),0 0 22px rgba(204,153,36,.5);}
+    .spark.sm{width:2px;height:2px;box-shadow:0 0 4px rgba(204,153,36,.8);}
+    @keyframes sparkTwinkle{0%,100%{opacity:0;transform:scale(.4);}50%{opacity:var(--peak,.85);transform:scale(1);}}
+    @media(prefers-reduced-motion:reduce){.spark{animation:none;opacity:.4;}}
+    .breath-mote{position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:rgba(204,153,36,.75);box-shadow:0 0 8px rgba(204,153,36,.5);transform:rotate(var(--angle,0deg)) translate(135px) rotate(calc(-1 * var(--angle,0deg)));opacity:.55;transition:transform 4s cubic-bezier(.4,0,.2,1),opacity 4s linear;}
+    /* Phase states */
+    .breath-stage.is-inhale .breath-orb-wrap,.breath-stage.is-hold-in .breath-orb-wrap{transform:scale(1.55);}
+    .breath-stage.is-exhale .breath-orb-wrap,.breath-stage.is-hold-out .breath-orb-wrap{transform:scale(1);}
+    .breath-stage.is-inhale .breath-aura,.breath-stage.is-hold-in .breath-aura{border-color:rgba(204,153,36,.75);background:radial-gradient(circle,rgba(204,153,36,.2) 0%,rgba(204,153,36,.06) 55%,transparent 75%);box-shadow:0 0 50px rgba(204,153,36,.2),0 0 110px rgba(204,153,36,.1),0 0 200px rgba(204,153,36,.05),inset 0 0 40px rgba(204,153,36,.08);}
+    .breath-stage.is-inhale .breath-ring circle,.breath-stage.is-hold-in .breath-ring circle{stroke:rgba(204,153,36,.7);}
+    .breath-stage.is-inhale .breath-vesica,.breath-stage.is-hold-in .breath-vesica{opacity:.75;}
+    .breath-stage.is-hold-in .breath-core{box-shadow:0 0 24px rgba(204,153,36,.9),0 0 48px rgba(204,153,36,.5),0 0 72px rgba(204,153,36,.25);}
+    .breath-stage.is-inhale .breath-mote,.breath-stage.is-hold-in .breath-mote{transform:rotate(var(--angle,0deg)) translate(35px) rotate(calc(-1 * var(--angle,0deg)));opacity:.95;}
+    .breath-stage.is-hold-out .breath-mote{opacity:.4;}
+    /* Labels */
+    .breath-phase-label{font-family:'Marcellus',Georgia,serif;font-size:16px;letter-spacing:.14em;color:rgba(255,255,255,.92);text-transform:uppercase;text-align:center;min-height:22px;transition:opacity .5s ease;}
+    .breath-cycle-counter{font-family:'Roboto',sans-serif;font-weight:400;font-size:10px;letter-spacing:.22em;color:rgba(204,153,36,.65);text-transform:uppercase;text-align:center;min-height:14px;}
+    .breath-instruction{font-family:'Roboto',sans-serif;font-weight:300;font-size:12px;line-height:1.7;color:rgba(255,255,255,.45);max-width:280px;text-align:center;letter-spacing:.02em;}
+    .breath-reveal{font-family:'Marcellus',Georgia,serif;font-size:15px;line-height:1.5;color:#cc9924;text-align:center;max-width:280px;opacity:0;transform:translateY(8px);transition:opacity 1.2s ease,transform 1.2s ease;min-height:0;}
+    .breath-reveal.visible{opacity:1;transform:translateY(0);}
+    @media(prefers-reduced-motion:reduce){.breath-orb-wrap,.breath-aura,.breath-core,.breath-mote,.breath-vesica,.breath-ring circle{transition:none!important;}.breath-stage{cursor:default;}}
+    @media(max-width:768px){.breath-stage{width:280px;height:280px;}.breath-orb-wrap{width:150px;height:150px;}.breath-mote{transform:rotate(var(--angle,0deg)) translate(105px) rotate(calc(-1 * var(--angle,0deg)));}.breath-stage.is-inhale .breath-mote,.breath-stage.is-hold-in .breath-mote{transform:rotate(var(--angle,0deg)) translate(26px) rotate(calc(-1 * var(--angle,0deg)));}}
+    /* Counter animation */
+    @keyframes countUp{0%{opacity:0;transform:translateY(8px)}20%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-8px)}}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 6px rgba(204,153,36,.5);opacity:.7;}50%{box-shadow:0 0 14px rgba(204,153,36,.9);opacity:1;}}
+    .stat-number{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}.stat-number.visible{opacity:1;transform:translateY(0)}
+    /* Fade in on scroll */
+    .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}.fade-up.visible{opacity:1;transform:translateY(0)}
+    /* Mockup device frame */
+    .device-frame{background:#1a1a18;border-radius:12px;padding:8px;box-shadow:0 20px 60px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.15)}.device-frame-screen{border-radius:6px;overflow:hidden;background:#fff}
+    /* Logo / Badge carousels */
+    .logo-carousel-wrap{overflow:hidden;position:relative}.logo-carousel-wrap::before,.logo-carousel-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}.logo-carousel-wrap::before{left:0;background:linear-gradient(to right,#f9f8f5,transparent)}.logo-carousel-wrap::after{right:0;background:linear-gradient(to left,#f9f8f5,transparent)}
+    .logo-carousel-track{display:flex;gap:0;animation:carouselSlide 20s linear infinite;width:max-content;align-items:center}.logo-carousel-track:hover{animation-play-state:paused}
+    .badge-carousel-track{display:flex;gap:0;animation:carouselSlide 24s linear infinite;width:max-content;align-items:center}.badge-carousel-track:hover{animation-play-state:paused}
+    /* Pricing tabs */
+    .price-tab{padding:12px 24px;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);background:transparent;border:1px solid rgba(255,255,255,.15);cursor:pointer;transition:color .2s,border-color .2s,background .2s}.price-tab:hover{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.3)}.price-tab.active{color:#cc9924;border-color:#cc9924;background:rgba(204,153,36,.08)}.price-tab:focus-visible{outline:2px solid #cc9924;outline-offset:2px}
+    /* Depth — layered shadow system */
+    .lift-card{position:relative;background:#fff;border:1px solid rgba(211,205,179,.4);box-shadow:0 1px 3px rgba(53,77,76,.04),0 8px 24px rgba(53,77,76,.06),0 24px 48px -16px rgba(53,77,76,.08);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s cubic-bezier(.2,.8,.2,1),border-color .35s}.lift-card:hover{transform:translateY(-4px);box-shadow:0 2px 6px rgba(53,77,76,.05),0 16px 32px rgba(53,77,76,.08),0 40px 64px -16px rgba(204,153,36,.12);border-color:rgba(204,153,36,.4)}
+    .lift-card-dark{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);box-shadow:0 1px 3px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s cubic-bezier(.2,.8,.2,1),border-color .35s,background .35s;backdrop-filter:blur(8px)}.lift-card-dark:hover{transform:translateY(-4px);background:rgba(255,255,255,.05);border-color:rgba(204,153,36,.35);box-shadow:0 2px 8px rgba(0,0,0,.3),0 24px 48px rgba(0,0,0,.35),0 0 64px -16px rgba(204,153,36,.18),inset 0 1px 0 rgba(255,255,255,.06)}
+    /* Glass card */
+    .glass-card{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);box-shadow:0 12px 40px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.06)}
+    /* Card top accent line */
+    .accent-top{position:relative}.accent-top::before{content:'';position:absolute;top:0;left:50%;width:0;height:2px;background:linear-gradient(to right,transparent,#cc9924,transparent);transition:width .5s cubic-bezier(.2,.8,.2,1),left .5s cubic-bezier(.2,.8,.2,1)}.accent-top:hover::before{width:80%;left:10%}
+    /* Decorative ornament */
+    .ornament{display:inline-flex;align-items:center;gap:12px;color:#cc9924}.ornament::before,.ornament::after{content:'';width:24px;height:1px;background:linear-gradient(to right,transparent,rgba(204,153,36,.5))}.ornament::after{background:linear-gradient(to left,transparent,rgba(204,153,36,.5))}
+    /* Section divider with gold dot */
+    .section-divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto;width:fit-content}.section-divider::before,.section-divider::after{content:'';width:48px;height:1px;background:linear-gradient(to right,transparent,rgba(204,153,36,.4),transparent)}.section-divider span{width:6px;height:6px;border-radius:50%;background:#cc9924;box-shadow:0 0 12px rgba(204,153,36,.4)}
+    /* Stat card with depth */
+    .stat-card{position:relative;padding:32px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s}.stat-card:hover{transform:translateY(-2px);background:rgba(204,153,36,.05);border-color:rgba(204,153,36,.3)}
+    /* Big quote mark */
+    .big-quote{position:relative}.big-quote::before{content:'\201C';position:absolute;top:-32px;left:-12px;font-family:'Marcellus',Georgia,serif;font-size:120px;line-height:1;color:rgba(204,153,36,.15);pointer-events:none}
+    /* Floating mandala */
+    .mandala-bg{position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(204,153,36,.06);pointer-events:none}.mandala-bg::before{content:'';position:absolute;inset:40px;border-radius:50%;border:1px solid rgba(204,153,36,.04)}.mandala-bg::after{content:'';position:absolute;inset:80px;border-radius:50%;border:1px solid rgba(204,153,36,.03)}
+    /* Logo placeholder pill */
+    .logo-pill{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-family:'Marcellus',Georgia,serif;font-size:18px;color:rgba(255,255,255,.55);letter-spacing:.04em;backdrop-filter:blur(8px);transition:background .25s,border-color .25s,color .25s}.logo-pill:hover{background:rgba(204,153,36,.06);border-color:rgba(204,153,36,.25);color:rgba(255,255,255,.85)}
+    .badge-pill{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;background:rgba(255,255,255,.03);border:1px solid rgba(204,153,36,.2);font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:background .25s,border-color .25s}.badge-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:#cc9924;box-shadow:0 0 8px rgba(204,153,36,.5)}.badge-pill:hover{background:rgba(204,153,36,.06);border-color:rgba(204,153,36,.4)}
+    /* Logo Marquee — horizontal infinite scroll */
+    @keyframes logoScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .logo-marquee{position:relative;overflow:hidden;mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);}
+    .logo-marquee-track{display:flex;align-items:center;gap:80px;width:max-content;animation:logoScroll 40s linear infinite;}
+    .logo-marquee:hover .logo-marquee-track{animation-play-state:paused;}
+    .logo-mark{flex-shrink:0;font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2vw,26px);color:rgba(255,255,255,.55);letter-spacing:.06em;white-space:nowrap;transition:color .35s,transform .35s;line-height:1;display:flex;align-items:center;}
+    .logo-mark:hover{color:#cc9924;transform:translateY(-2px);}
+    .logo-mark img{height:34px;width:auto;opacity:.6;filter:brightness(0) invert(1);transition:opacity .35s,filter .35s;display:block;}
+    .logo-mark:hover img{opacity:.95;filter:brightness(0) saturate(100%) invert(70%) sepia(60%) saturate(420%) hue-rotate(2deg) brightness(95%) contrast(85%);}
+    @media(max-width:768px){.logo-marquee-track{gap:48px;}.logo-mark img{height:26px;}}
   </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">Facilitator Training</p>
-    <h1>Read the pattern. <em>Apply the breath.</em></h1>
-    <p class="sub">Professional certification in nervous-system regulation through the Calm Code method by Alchemy of Breath.</p>
-    <div class="hero-cta-row">
-      <button type="button" class="btn btn-primary" id="breath-open" aria-controls="breath-pane" aria-expanded="false">
-        <span class="dot" aria-hidden="true"></span>
-        Try one breath
+<!-- NAV -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" aria-label="Alchemy of Breath home"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto" /></a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#program" class="nav-link">Program</a>
+      <a href="#guides" class="nav-link">Your Guides</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <a href="#apply" class="btn-gold text-xs">Apply Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center grain overflow-hidden" style="background:#141412;">
+  <!-- Depth layers -->
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 40%,rgba(53,77,76,.4) 0%,transparent 55%),radial-gradient(ellipse at 50% 35%,rgba(204,153,36,.1) 0%,transparent 40%),radial-gradient(ellipse at 20% 90%,rgba(53,77,76,.2) 0%,transparent 50%),radial-gradient(ellipse at 80% 90%,rgba(26,26,24,.8) 0%,transparent 60%);"></div>
+  <!-- Ghost mandala — the vesica piscis behind everything -->
+  <svg class="absolute left-1/2 top-1/2 pointer-events-none" style="transform:translate(-50%,-50%);width:min(110vmin,1100px);height:min(110vmin,1100px);opacity:.05;" viewBox="0 0 800 800" aria-hidden="true">
+    <circle cx="340" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
+    <circle cx="460" cy="400" r="280" fill="none" stroke="#cc9924" stroke-width="1"/>
+    <circle cx="400" cy="400" r="360" fill="none" stroke="#cc9924" stroke-width="1" stroke-dasharray="2 8"/>
+    <circle cx="400" cy="400" r="220" fill="none" stroke="#cc9924" stroke-width="1"/>
+  </svg>
+  <!-- Gold sparks — ambient twinkling -->
+  <div class="spark-field" aria-hidden="true">
+    <span class="spark lg" style="top:12%;left:18%;animation-duration:5s;animation-delay:0s;--peak:.9;"></span>
+    <span class="spark" style="top:22%;left:72%;animation-duration:6.5s;animation-delay:.8s;--peak:.75;"></span>
+    <span class="spark sm" style="top:8%;left:58%;animation-duration:4s;animation-delay:1.4s;--peak:.7;"></span>
+    <span class="spark" style="top:34%;left:10%;animation-duration:7s;animation-delay:.3s;--peak:.8;"></span>
+    <span class="spark lg" style="top:48%;left:88%;animation-duration:6s;animation-delay:2s;--peak:.85;"></span>
+    <span class="spark sm" style="top:15%;left:42%;animation-duration:5.5s;animation-delay:2.7s;--peak:.6;"></span>
+    <span class="spark" style="top:58%;left:28%;animation-duration:6.5s;animation-delay:1.1s;--peak:.75;"></span>
+    <span class="spark sm" style="top:68%;left:78%;animation-duration:4.5s;animation-delay:.6s;--peak:.65;"></span>
+    <span class="spark" style="top:76%;left:14%;animation-duration:7.5s;animation-delay:3.2s;--peak:.8;"></span>
+    <span class="spark lg" style="top:82%;left:52%;animation-duration:6s;animation-delay:1.8s;--peak:.9;"></span>
+    <span class="spark sm" style="top:88%;left:82%;animation-duration:5s;animation-delay:2.3s;--peak:.55;"></span>
+    <span class="spark" style="top:5%;left:88%;animation-duration:6.5s;animation-delay:3.8s;--peak:.7;"></span>
+    <span class="spark sm" style="top:42%;left:62%;animation-duration:4s;animation-delay:3s;--peak:.6;"></span>
+    <span class="spark" style="top:92%;left:34%;animation-duration:5.5s;animation-delay:1.5s;--peak:.75;"></span>
+    <span class="spark sm" style="top:28%;left:35%;animation-duration:5s;animation-delay:4s;--peak:.5;"></span>
+    <span class="spark lg" style="top:62%;left:48%;animation-duration:7s;animation-delay:4.5s;--peak:.85;"></span>
+  </div>
+  <!-- Ambient Breathing Mandala — sits behind content, breathing as ambient texture -->
+  <div id="breathStage" class="breath-stage breath-stage-ambient is-hold-out" aria-hidden="true">
+    <div class="breath-mote" style="--angle:0deg;"></div>
+    <div class="breath-mote" style="--angle:60deg;"></div>
+    <div class="breath-mote" style="--angle:120deg;"></div>
+    <div class="breath-mote" style="--angle:180deg;"></div>
+    <div class="breath-mote" style="--angle:240deg;"></div>
+    <div class="breath-mote" style="--angle:300deg;"></div>
+    <div class="breath-orb-wrap">
+      <div class="breath-aura"></div>
+      <svg class="breath-ring" viewBox="0 0 200 200" aria-hidden="true">
+        <circle cx="100" cy="100" r="98"/>
+        <line x1="100" y1="0" x2="100" y2="8"/>
+        <line x1="200" y1="100" x2="192" y2="100"/>
+        <line x1="100" y1="200" x2="100" y2="192"/>
+        <line x1="0" y1="100" x2="8" y2="100"/>
+      </svg>
+      <svg class="breath-vesica" viewBox="0 0 100 60" aria-hidden="true">
+        <circle cx="38" cy="30" r="22"/>
+        <circle cx="62" cy="30" r="22"/>
+      </svg>
+      <div class="breath-core"></div>
+    </div>
+  </div>
+  <!-- Content stack -->
+  <div class="relative z-10 max-w-3xl mx-auto px-6 pt-32 pb-20 w-full flex flex-col items-center text-center">
+    <p class="eyebrow mb-5">Facilitator Training &nbsp;&middot;&nbsp; 8-Month Online Certification</p>
+    <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:760px;">You already know breath changes everything.<br/>Now learn to share it.</h1>
+    <p class="mb-10" style="font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.78);max-width:540px;">A 400-hour certification. Train online with weekly live mentorship. Graduate at BreathCamp in Tuscany.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#apply" class="btn-gold">Apply Now</a>
+      <a href="#program" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
+    <span style="font-size:10px;letter-spacing:.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
+    <div style="width:1px;height:40px;background:rgba(255,255,255,.4);"></div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section style="background:#354d4c;">
+  <div class="max-w-4xl mx-auto px-6 py-6">
+    <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
+      <div>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:24px;color:#cc9924;">12+</p>
+        <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px;">Years</p>
+      </div>
+      <div>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:24px;color:#cc9924;">1,000+</p>
+        <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px;">Graduates</p>
+      </div>
+      <div>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:24px;color:#cc9924;">40+</p>
+        <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px;">Countries</p>
+      </div>
+      <div>
+        <p style="font-family:'Marcellus',Georgia,serif;font-size:24px;color:#cc9924;">3x</p>
+        <p style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:2px;">Accredited</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED IN / TRUSTED BY — Logo Marquee -->
+<section class="grain relative overflow-hidden" style="background:#1a1a18;padding:56px 0;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.04) 0%,transparent 60%);"></div>
+  <div class="relative z-10">
+    <p class="eyebrow text-center mb-8" style="opacity:.8;">As Featured In &nbsp;&middot;&nbsp; Trusted By</p>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track">
+        <!-- Set 1: replace text spans with <img src="..." alt="Brand"/> when transparent PNGs are available -->
+        <div class="logo-mark">Mindvalley</div>
+        <div class="logo-mark">Wim Hof Method</div>
+        <div class="logo-mark">Goop</div>
+        <div class="logo-mark">Mind Body Green</div>
+        <div class="logo-mark">Insight Timer</div>
+        <div class="logo-mark">Forbes</div>
+        <div class="logo-mark">Yoga Journal</div>
+        <div class="logo-mark">Wellness Mama</div>
+        <!-- Set 2: duplicated for seamless loop -->
+        <div class="logo-mark" aria-hidden="true">Mindvalley</div>
+        <div class="logo-mark" aria-hidden="true">Wim Hof Method</div>
+        <div class="logo-mark" aria-hidden="true">Goop</div>
+        <div class="logo-mark" aria-hidden="true">Mind Body Green</div>
+        <div class="logo-mark" aria-hidden="true">Insight Timer</div>
+        <div class="logo-mark" aria-hidden="true">Forbes</div>
+        <div class="logo-mark" aria-hidden="true">Yoga Journal</div>
+        <div class="logo-mark" aria-hidden="true">Wellness Mama</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE TENSION -->
+<section class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="img-overlay order-2 md:order-1">
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/5f079a98-743b-4ae9-a49a-2306d51c3b6d.jpeg" alt="Breathwork participant in moment of release" class="w-full" style="aspect-ratio:3/4;object-fit:cover;display:block;max-height:500px;" />
+      </div>
+      <div class="order-1 md:order-2">
+        <p class="eyebrow mb-4">The Honest Truth</p>
+        <div class="gold-rule"></div>
+        <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.25;letter-spacing:-.02em;margin-bottom:24px;color:#1a1a18;">You felt that, didn't you?</h2>
+        <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">That subtle shift while your breath followed the orb above. The small softening. The quiet that arrived without you reaching for it. <em>That</em> is what facilitators learn to create in others. Smaller, and more powerful, than most people think.</p>
+        <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">You have probably felt it before. In a session that cracked something open. In a moment when your own breath surprised you. Something in you knows you are meant to hold space for others.</p>
+        <p style="font-size:17px;line-height:1.8;color:#4a4a46;">But the questions are real. <em>Am I experienced enough? Can I actually build a practice from this? What if I invest and it does not work out?</em></p>
+        <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-top:20px;">Those questions are not obstacles. They are the sign that you are taking this seriously. And every facilitator we have trained started exactly where you are now. With one breath, and a quiet pull they could not explain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE INVITATION (Transformation Outcomes) -->
+<section class="py-24 relative overflow-hidden" style="background:#fff;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 80% 20%,rgba(204,153,36,.04) 0%,transparent 50%),radial-gradient(ellipse at 10% 80%,rgba(53,77,76,.03) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">The Training</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#1a1a18;max-width:560px;margin:0 auto 18px;">This is where your practice begins.</h2>
+      <p style="font-size:16px;line-height:1.75;color:#4a4a46;max-width:580px;margin:0 auto;">A box breath is the first thing we teach. The simple pattern you just experienced is the doorway. From there, the work goes much deeper.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="lift-card accent-top fade-up" style="padding:40px 36px;">
+        <p class="eyebrow mb-3">Confidence</p>
+        <h3 style="font-size:24px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;line-height:1.25;">Lead sessions that genuinely help people</h3>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Develop the skill and presence to guide individuals and groups through breathwork experiences with real impact. Not performative facilitation. The kind that people feel.</p>
+      </div>
+      <div class="lift-card accent-top fade-up" style="padding:40px 36px;">
+        <p class="eyebrow mb-3">Depth</p>
+        <h3 style="font-size:24px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;line-height:1.25;">Build a practice rooted in your own experience</h3>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The training starts with your own inner work. Seven chapters of guided self-discovery before you ever hold space for someone else. Because you cannot take someone somewhere you have not been.</p>
+      </div>
+      <div class="lift-card accent-top fade-up" style="padding:40px 36px;">
+        <p class="eyebrow mb-3">Community</p>
+        <h3 style="font-size:24px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;line-height:1.25;">Join 1,000+ facilitators who support each other</h3>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">Access the I Am Alchemy community platform. Weekly live calls with your cohort. A global network of practitioners who have walked the same path. This work does not have to be lonely.</p>
+      </div>
+      <div class="lift-card accent-top fade-up" style="padding:40px 36px;">
+        <p class="eyebrow mb-3">Graduation</p>
+        <h3 style="font-size:24px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;line-height:1.25;">Graduate at BreathCamp in Tuscany</h3>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">After eight months of online training, fly to ASHA Retreat Centre in Tuscany for a 7-day immersion. Lead real sessions. Practice with your cohort. Graduate surrounded by the people who walked this path with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ALCHEMY (Differentiator + Trust Signals) -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 30%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(82,187,144,.04) 0%,transparent 50%);"></div>
+  <div class="mandala-bg" style="top:-100px;right:-150px;"></div>
+  <div class="mandala-bg" style="bottom:-150px;left:-200px;width:500px;height:500px;"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">Why Alchemy of Breath</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(30px,4vw,46px);line-height:1.15;letter-spacing:-.02em;color:#fff;max-width:680px;margin:0 auto 20px;">A school built on twelve years of practice,<br/>not a weekend workshop.</h2>
+      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.55);max-width:600px;margin:0 auto;">There are many breathwork certifications. Few are built by people who have spent over a decade refining the work, training thousands of practitioners, and creating the infrastructure for graduates to actually build careers.</p>
+    </div>
+
+    <!-- Differentiator Grid -->
+    <div class="grid md:grid-cols-3 gap-6 mb-20">
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#cc9924;">12+</span>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">A decade of refinement</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">Twelve years of teaching, iterating, and refining. Over 1,000 facilitators trained across 40+ countries. This is not a curriculum someone wrote last year.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#cc9924;">3x</span>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Triple accredited</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">Recognized by the Federation of Holistic Therapists, the American Association of Drugless Practitioners, and the Global Professional Breathwork Alliance.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cc9924" stroke-width="1.5"><path d="M12 2L4 7v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V7l-8-5z"/></svg>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Built for real careers</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">No other breathwork school offers a business toolkit, the option to host retreats at a world-class venue, or a pathway to launch your own school under our brand.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cc9924" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z"/></svg>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Graduate at ASHA</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">A 7-day immersion at our 15-hectare Tuscan sanctuary. The home of Alchemy. The place where the online journey becomes embodied. No other school offers this.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cc9924" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">Founded by an author</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">Anthony Abbagnano, author of <em>Outer Chaos, Inner Calm</em>, has spent his life studying the intersection of breath, psychology, and presence. He teaches every cohort personally.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:36px 28px;">
+        <div style="width:48px;height:48px;border:1px solid rgba(204,153,36,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:rgba(204,153,36,.05);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#cc9924" stroke-width="1.5"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M16 3.13a4 4 0 010 7.75"/><path d="M22 21v-2a4 4 0 00-3-3.87"/></svg>
+        </div>
+        <h3 style="font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:-.01em;">A community for life</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.55);line-height:1.7;">Graduates do not disappear after certification. The I Am Alchemy community, the alumni network, and continued mentorship are all part of the path forward.</p>
+      </div>
+    </div>
+
+    <!-- Accreditations -->
+    <div class="text-center mb-8">
+      <p class="eyebrow" style="opacity:.7;">Accredited By</p>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+      <div class="badge-pill">FHT Accredited</div>
+      <div class="badge-pill">AADP Approved</div>
+      <div class="badge-pill">GPBA Member</div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL-WIDTH IMAGE BREAK -->
+<section class="relative" style="height:clamp(250px,35vw,450px);overflow:hidden;">
+  <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg" alt="Breathcamp group at ASHA" class="w-full h-full object-cover" style="filter:brightness(.7) saturate(.9);" />
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(255,255,255,.15) 0%,transparent 30%,transparent 70%,rgba(53,77,76,.3) 100%);"></div>
+</section>
+
+<!-- GRADUATE STORIES -->
+<section id="stories" class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 80% 20%,rgba(204,153,36,.08) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(82,187,144,.05) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">Graduate Stories</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#fff;">They were where you are now.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Melissa -->
+      <div style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;box-shadow:0 2px 12px rgba(53,77,76,.06);">
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1a18;">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a420b3d5f8859c41fe69.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div style="padding:16px 20px;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Melissa</p>
+          <p style="font-size:12px;color:#c5c3c2;">Training Graduate</p>
+        </div>
+      </div>
+      <!-- Amira -->
+      <div style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;box-shadow:0 2px 12px rgba(53,77,76,.06);">
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1a18;">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a431b3d5f87a764204d4.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div style="padding:16px 20px;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Amira</p>
+          <p style="font-size:12px;color:#c5c3c2;">Training Graduate</p>
+        </div>
+      </div>
+      <!-- Matt -->
+      <div style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;box-shadow:0 2px 12px rgba(53,77,76,.06);">
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1a18;">
+          <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a439d614c97d7d439a20.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div style="padding:16px 20px;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Matt</p>
+          <p style="font-size:12px;color:#c5c3c2;">Training Graduate</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR PATH — Student to Facilitator (Levels 1-4, Interactive) -->
+<section id="program" class="py-24 relative overflow-hidden" style="background:#fff;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 10% 20%,rgba(204,153,36,.04) 0%,transparent 55%),radial-gradient(ellipse at 90% 80%,rgba(53,77,76,.04) 0%,transparent 55%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">The Path</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#1a1a18;">Your path from student to facilitator</h2>
+      <p style="font-size:16px;line-height:1.75;color:#4a4a46;max-width:560px;margin:20px auto 0;">Four levels of training. Tap any level to see what it contains, where it takes place, and how long it lasts.</p>
+    </div>
+
+    <!-- Level cards grid -->
+    <div class="level-grid">
+      <!-- Level 1 -->
+      <button type="button" class="level-card fade-up" data-level="1" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f74dd5790aaf.jpg" alt="Alchemy Regulation Method" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">01</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level One &middot; Foundation</p>
+          <h3 class="level-card-title">Alchemy Regulation Method</h3>
+          <p class="level-card-where">Online &amp; in-person</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+
+      <!-- Level 2 -->
+      <button type="button" class="level-card fade-up" data-level="2" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f74dd5790aaf.jpg" alt="iJourney — deep personal transformation" loading="lazy" style="filter:brightness(.85) saturate(.9);object-position:center 30%;" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">02</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Two &middot; Deepening</p>
+          <h3 class="level-card-title">iJourney</h3>
+          <p class="level-card-where">Online with mentored sessions</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+
+      <!-- Level 3 (highlighted) -->
+      <button type="button" class="level-card level-card-featured fade-up" data-level="3" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba4870752ef7c19.jpg" alt="Facilitator Training" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">03</span>
+          <span class="level-card-badge">You are here</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Three &middot; Certification</p>
+          <h3 class="level-card-title">Facilitator Training</h3>
+          <p class="level-card-where">Online or live in-person</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+
+      <!-- Level 4 -->
+      <button type="button" class="level-card fade-up" data-level="4" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg" alt="BreathCamp at ASHA, Tuscany" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">04</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Four &middot; Immersion</p>
+          <h3 class="level-card-title">BreathCamp</h3>
+          <p class="level-card-where">In-person only &middot; ASHA, Tuscany</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
       </button>
     </div>
-  </div>
-</section>
 
-<div class="breath-pane" id="breath-pane" role="dialog" aria-modal="true" aria-labelledby="breath-title" aria-hidden="true">
-  <div class="breath-pane-inner">
-    <button type="button" class="breath-close" id="breath-close" aria-label="Close">&times;</button>
-    <h2 id="breath-title">One breath</h2>
-    <p class="lead">Follow the orb. Inhale as it expands, exhale as it softens.</p>
-    <div class="orb-wrap" aria-hidden="true">
-      <div class="orb-ring"></div>
-      <div class="orb-ring"></div>
-      <div class="orb-ring"></div>
-      <div class="orb-ring"></div>
-      <div class="orb-core"></div>
-    </div>
-    <p class="breath-cue" id="breath-cue" aria-live="polite">Inhale</p>
-  </div>
-</div>
-
-<section class="testimonials">
-  <div class="testimonials-inner">
-    <p class="eyebrow">Graduate Voices</p>
-    <h2>Words from those who <em>walked the path</em>.</h2>
-
-    <div class="video-grid">
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/863628798?h=8cd489c855&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Simona about training" loading="lazy"></iframe>
+    <!-- Expand panels -->
+    <div class="level-panel" data-panel="1" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level One &middot; Foundation</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#1a1a18;margin:8px 0 18px;letter-spacing:-.01em;">Alchemy Regulation Method</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:14px;">The first step toward becoming a facilitator. Learn the core tools to regulate the nervous system using the ARM framework — the same foundation every AoB student begins with.</p>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">You will come out of ARM with a daily practice, a framework for your own regulation, and the groundwork that Practitioner Advanced and Facilitator Training build on.</p>
+        <div class="level-panel-meta">
+          <div><span>Format</span><strong>Available online &amp; in-person</strong></div>
+          <div><span>Duration</span><strong>Self-paced</strong></div>
+          <div><span>Includes</span><strong>Daily practice &amp; framework</strong></div>
         </div>
-        <div class="video-meta">
-          <p class="name">Simona</p>
-          <p class="role">Alchemy Graduate</p>
-        </div>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/863632375?h=778e293b3c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Pablo about the Training" loading="lazy"></iframe>
-        </div>
-        <div class="video-meta">
-          <p class="name">Pablo</p>
-          <p class="role">Alchemy Graduate</p>
-        </div>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/864433211?h=e7d2178a03&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Tom - About the training" loading="lazy"></iframe>
-        </div>
-        <div class="video-meta">
-          <p class="name">Tom</p>
-          <p class="role">Alchemy Graduate</p>
-        </div>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe src="https://player.vimeo.com/video/863631943?h=052ef0308f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Lindsay about the Training" loading="lazy"></iframe>
-        </div>
-        <div class="video-meta">
-          <p class="name">Lindsay</p>
-          <p class="role">Alchemy Graduate</p>
-        </div>
-      </article>
+        <button type="button" class="level-panel-next" data-next="2">
+          <span>Continue to Level Two</span>
+          <strong>iJourney <span aria-hidden="true">&rarr;</span></strong>
+        </button>
+      </div>
     </div>
 
-    <div class="quote-grid">
-      <article class="quote-card">
-        <p>Inspiring and illuminating on every level and the recordings meant that if for some reason I was unable to make a session I still had the opportunity to watch, practice and learn. A heartfelt thanks for creating this course and making it accessible to everyone everywhere whatever their geographical location and whatever their other commitments may be. The course exceeded my expectations and has been brilliantly put together.
-
-I loved the mix of the structured syllabus, the free-flowing conversation of the group, the music and of course the actual Breathwork. I believe it to be the only of its kind out there and I highly recommend it!</p>
-        <div class="attrib">
-          <p class="name">Hannah</p>
-          <p class="role">Alchemy Graduate</p>
+    <div class="level-panel" data-panel="2" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Two &middot; Deepening</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#1a1a18;margin:8px 0 18px;letter-spacing:-.01em;">iJourney</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:14px;">A deep personal transformation journey. Fourteen weeks of recorded teachings paired with one-to-one mentor sessions. You do the inner work before you hold space for anyone else.</p>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">Covers the seven chapters of inner journey: the Call, the Inner Child, Shadow Work, Finding the Treasure, Atonement, the Return, and Opening the Book of Your Life.</p>
+        <div class="level-panel-meta">
+          <div><span>Format</span><strong>Online with mentored sessions</strong></div>
+          <div><span>Duration</span><strong>14 weeks</strong></div>
+          <div><span>ARM graduates</span><strong>Your ARM tuition is credited toward iJourney</strong></div>
         </div>
-      </article>
-
-      <article class="quote-card">
-        <p>I have done many trainings over the years in my quest to heal and help others, but the AoB teacher training was by far the best thing I've ever done for myself and for advancing my life path. I felt so held and supported the entire time and the safe space and deep inner exploration which was encouraged as a part of the curriculum allowed me to work through and overcome much of my conditioning from childhood and let go of behaviors and beliefs that no longer served me. I emerged a much stronger, happier, more confident and optimistic version of myself.</p>
-        <div class="attrib">
-          <p class="name">Megan</p>
-          <p class="role">Alchemy Graduate</p>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev" data-prev="1"><span aria-hidden="true">&larr;</span> Level One &middot; Alchemy Regulation Method</button>
+          <button type="button" class="level-panel-next" data-next="3">
+            <span>Continue to Level Three</span>
+            <strong>Facilitator Training <span aria-hidden="true">&rarr;</span></strong>
+          </button>
         </div>
-      </article>
+      </div>
+    </div>
 
-      <article class="quote-card">
-        <p>Inspiring and illuminating on every level and the recordings meant that if for some reason I was unable to make a session I still had the opportunity to watch, practice and learn. A heartfelt thanks for creating this course and making it accessible to everyone everywhere whatever their geographical location and whatever their other commitments may be. The course exceeded my expectations and has been brilliantly put together.
-
-I loved the mix of the structured syllabus, the free-flowing conversation of the group, the music and of course the actual Breathwork. I believe it to be the only of its kind out there and I highly recommend it!</p>
-        <div class="attrib">
-          <p class="name">Sapphire</p>
-          <p class="role">Alchemy Graduate</p>
+    <div class="level-panel" data-panel="3" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Three &middot; Certification</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#1a1a18;margin:8px 0 18px;letter-spacing:-.01em;">Facilitator Training</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:14px;">Full certification as an AoB facilitator. Nine modules of professional skills: facilitation technique, guiding breathwork sessions, trauma awareness, Mandala Breath, integration, and the business of breathwork.</p>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">Weekly live calls with your trainers, real-time Q&amp;A, expert feedback on your case studies and practice sessions. Graduate at BreathCamp in Tuscany.</p>
+        <div class="level-panel-meta">
+          <div><span>Format</span><strong>Online or live in-person</strong></div>
+          <div><span>Duration</span><strong>8 months &middot; 400 hours</strong></div>
+          <div><span>Accreditation</span><strong>Triple accredited</strong></div>
         </div>
-      </article>
-
-      <article class="quote-card">
-        <p>My most profound experience from the AoB Facilitators Training with Anthony was the amazing commitment, presence and genuine gentlemanly support he had for the training and each of us. Balanced in this rare precious container which he masterfully creates, I was able to go to the depths of myself and find liberating strength in my vulnerability — among other expansive enlightening awarenesses.</p>
-        <div class="attrib">
-          <p class="name">Senaja</p>
-          <p class="role">Alchemy Graduate</p>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev" data-prev="2"><span aria-hidden="true">&larr;</span> Level Two &middot; iJourney</button>
+          <button type="button" class="level-panel-next" data-next="4">
+            <span>Continue to Level Four</span>
+            <strong>BreathCamp <span aria-hidden="true">&rarr;</span></strong>
+          </button>
         </div>
-      </article>
+      </div>
+    </div>
+
+    <div class="level-panel" data-panel="4" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Four &middot; Immersion</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#1a1a18;margin:8px 0 18px;letter-spacing:-.01em;">BreathCamp</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:14px;">An immersive week at ASHA, weaving traditional healing with contemporary neuroscience. Consolidate everything you have learned. Lead real sessions. Practice hands-on with your cohort.</p>
+        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">Walk away certified, with the confidence that comes from having done the work in your own body, with real people, in a place built for this.</p>
+        <div class="level-panel-meta">
+          <div><span>Format</span><strong>In-person only</strong></div>
+          <div><span>Duration</span><strong>7 days</strong></div>
+          <div><span>Location</span><strong>ASHA, Tuscany</strong></div>
+        </div>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev" data-prev="3"><span aria-hidden="true">&larr;</span> Level Three &middot; Facilitator Training</button>
+          <button type="button" class="level-panel-next level-panel-next-jump" data-next="5">
+            <span>Continue to Level Five</span>
+            <strong>Business in a Box <span aria-hidden="true">&rarr;</span></strong>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="accredited">
-  <div class="accredited-inner">
-    <p class="eyebrow">Accredited by</p>
-    <div class="accredited-logos">
-      <img src="assets/accredited-by.png" alt="FHT Accredited Course Provider, Global Professional Breathwork Alliance Certified Professional Breathwork School, AADP American Association of Drugless Practitioners Board Certified, International Breathwork Foundation" loading="lazy" />
+<!-- BRIDGE — Bold claim over background -->
+<section class="bridge-section relative overflow-hidden">
+  <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0005051f0672b3bb0.jpg" alt="" class="bridge-bg" aria-hidden="true" />
+  <div class="bridge-overlay" aria-hidden="true"></div>
+  <div class="bridge-sparks" aria-hidden="true">
+    <span class="spark lg" style="top:22%;left:18%;animation-duration:6s;animation-delay:0s;--peak:.85;"></span>
+    <span class="spark" style="top:32%;left:82%;animation-duration:5.5s;animation-delay:1.2s;--peak:.7;"></span>
+    <span class="spark sm" style="top:58%;left:26%;animation-duration:4.5s;animation-delay:2s;--peak:.6;"></span>
+    <span class="spark lg" style="top:68%;left:72%;animation-duration:7s;animation-delay:.6s;--peak:.8;"></span>
+    <span class="spark sm" style="top:42%;left:52%;animation-duration:5s;animation-delay:3s;--peak:.55;"></span>
+    <span class="spark" style="top:78%;left:44%;animation-duration:6.5s;animation-delay:1.8s;--peak:.75;"></span>
+  </div>
+  <div class="bridge-content">
+    <p class="eyebrow mb-6" style="color:#cc9924;opacity:.9;">Beyond Certification</p>
+    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,5vw,60px);line-height:1.1;letter-spacing:-.02em;color:#fff;max-width:920px;margin:0 auto;text-shadow:0 2px 40px rgba(0,0,0,.5);">Most schools stop at certification.<br/>We built a path that goes the whole way.</h2>
+    <div class="ornament" style="margin:32px auto 0;justify-content:center;"></div>
+  </div>
+</section>
+
+<!-- BUILD YOUR BREATHWORK BUSINESS (Levels 5-7, Interactive) -->
+<section id="business" class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 20%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 80%,rgba(53,77,76,.1) 0%,transparent 55%);"></div>
+  <div class="mandala-bg" style="top:-100px;right:-150px;"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">What Comes Next</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.15;letter-spacing:-.02em;color:#fff;max-width:720px;margin:0 auto 20px;">Build your breathwork business.</h2>
+      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.6);max-width:620px;margin:0 auto;">Complete marketing system, website, AI infrastructure, and paid-ads support. Three more levels beyond certification, designed to turn your practice into a career.</p>
+    </div>
+
+    <div class="level-grid level-grid-dark">
+      <!-- Level 5 -->
+      <button type="button" class="level-card level-card-dark fade-up" data-level="5" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg" alt="Business in a Box" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">05</span>
+          <span class="level-card-badge" style="background:rgba(204,153,36,.14);border-color:rgba(204,153,36,.45);color:#cc9924;">Waitlist open</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Five &middot; Practice</p>
+          <h3 class="level-card-title">Business in a Box</h3>
+          <p class="level-card-where">Marketing, website, AI &amp; ads</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+
+      <!-- Level 6 -->
+      <button type="button" class="level-card level-card-dark fade-up" data-level="6" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c074ad4b92061c905a.jpg" alt="Junior Trainer apprenticeship" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">06</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Six &middot; Apprenticeship</p>
+          <h3 class="level-card-title">Become a Junior Trainer</h3>
+          <p class="level-card-where">Shadow &middot; assist &middot; certify</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+
+      <!-- Level 7 -->
+      <button type="button" class="level-card level-card-dark fade-up" data-level="7" aria-expanded="false">
+        <div class="level-card-img">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb82499fe87a9994a74141.jpg" alt="Open your own breathwork school" loading="lazy" />
+          <div class="level-card-overlay"></div>
+          <span class="level-card-num">07</span>
+        </div>
+        <div class="level-card-meta">
+          <p class="level-card-kicker">Level Seven &middot; The Summit</p>
+          <h3 class="level-card-title">Open your own breathwork school</h3>
+          <p class="level-card-where">Full AoB brand license</p>
+          <span class="level-card-more">Tap to explore <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Expand panels for Levels 5-7 -->
+    <div class="level-panel level-panel-dark" data-panel="5" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Five &middot; Practice</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#fff;margin:8px 0 18px;letter-spacing:-.01em;">Business in a Box</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:14px;">The bridge from certified to full-time facilitator. A complete marketing and business system designed to help you fill your first rooms and build a sustainable practice.</p>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:20px;">Done-with-you website, AI infrastructure for client intake and nurture, paid-ads playbook, and ongoing support from our team. Launching 2026.</p>
+        <div class="level-panel-meta level-panel-meta-dark">
+          <div><span>Includes</span><strong>Website &middot; AI &middot; Ads</strong></div>
+          <div><span>When</span><strong>Post-graduation</strong></div>
+          <div><span>Status</span><strong>Pilot &middot; 2026</strong></div>
+        </div>
+        <a href="#apply" class="btn-gold" style="margin-top:24px;display:inline-block;">Join the waitlist</a>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev level-panel-prev-jump" data-prev="4"><span aria-hidden="true">&larr;</span> Level Four &middot; BreathCamp</button>
+          <button type="button" class="level-panel-next" data-next="6">
+            <span>Continue to Level Six</span>
+            <strong>Junior Trainer <span aria-hidden="true">&rarr;</span></strong>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-panel level-panel-dark" data-panel="6" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Six &middot; Apprenticeship</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#fff;margin:8px 0 18px;letter-spacing:-.01em;">Become a Junior Trainer</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:14px;">Shadow a senior facilitator, assist at events, and step into the role of Junior Trainer. This is the bridge between independent practice and leading your own school.</p>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:20px;">Ongoing mentorship from Anthony, Amy, and the senior teaching team. You learn to hold a cohort, not just a session.</p>
+        <div class="level-panel-meta level-panel-meta-dark">
+          <div><span>Role</span><strong>Shadow &middot; Assist &middot; Certify</strong></div>
+          <div><span>Commitment</span><strong>Ongoing</strong></div>
+          <div><span>Mentorship</span><strong>Senior teaching team</strong></div>
+        </div>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev" data-prev="5"><span aria-hidden="true">&larr;</span> Level Five &middot; Business in a Box</button>
+          <button type="button" class="level-panel-next" data-next="7">
+            <span>Continue to Level Seven</span>
+            <strong>Your own school <span aria-hidden="true">&rarr;</span></strong>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-panel level-panel-dark" data-panel="7" hidden>
+      <div class="level-panel-inner">
+        <button type="button" class="level-panel-close" aria-label="Close">&times;</button>
+        <p class="eyebrow" style="color:#cc9924;">Level Seven &middot; The Summit</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,36px);color:#fff;margin:8px 0 18px;letter-spacing:-.01em;">Open your own breathwork school</h3>
+        <div class="gold-rule"></div>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:14px;">Launch your own AoB-licensed breathwork school. Full brand license, full curriculum access, and ongoing support from Anthony and Amy.</p>
+        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.7);margin-bottom:20px;">The first program of its kind. Launching for graduates in 2027.</p>
+        <div class="level-panel-meta level-panel-meta-dark">
+          <div><span>License</span><strong>Full AoB brand</strong></div>
+          <div><span>Includes</span><strong>Curriculum access</strong></div>
+          <div><span>Launching</span><strong>2027</strong></div>
+        </div>
+        <div class="level-panel-nav">
+          <button type="button" class="level-panel-prev" data-prev="6"><span aria-hidden="true">&larr;</span> Level Six &middot; Junior Trainer</button>
+          <button type="button" class="level-panel-next" data-restart="1">
+            <span>Review the full path</span>
+            <strong>Back to the start <span aria-hidden="true">&#8634;</span></strong>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA: Submit interest + Schedule call -->
+    <div class="get-started fade-up">
+      <div class="get-started-inner">
+        <p class="eyebrow mb-3" style="color:#cc9924;">How to get started</p>
+        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(26px,3vw,40px);line-height:1.2;letter-spacing:-.01em;color:#fff;margin-bottom:14px;">Not sure where you fit yet?</h3>
+        <p style="font-size:16px;line-height:1.75;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 28px;">Submit your interest and schedule a call with one of our Success Advisors. They will help you map the path that makes sense for where you are today.</p>
+        <div class="get-started-ctas">
+          <a href="#apply" class="btn-gold">Submit your interest</a>
+          <a href="#apply" class="btn-outline">Schedule a call</a>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:22px;letter-spacing:.06em;">Free 20-minute call &middot; No commitment</p>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Level card + panel styles -->
+<style>
+  .level-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .level-grid-dark{grid-template-columns:repeat(3,1fr);max-width:960px;margin:0 auto;}
+  @media(max-width:1024px){.level-grid{grid-template-columns:repeat(2,1fr);}.level-grid-dark{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:640px){.level-grid,.level-grid-dark{grid-template-columns:1fr;}}
+  .level-card{position:relative;display:block;width:100%;padding:0;border:1px solid rgba(211,205,179,.5);background:#fff;text-align:left;cursor:pointer;overflow:hidden;box-shadow:0 1px 3px rgba(53,77,76,.04),0 8px 24px rgba(53,77,76,.06);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;font:inherit;color:inherit;}
+  .level-card:hover,.level-card:focus-visible{transform:translateY(-6px);border-color:rgba(204,153,36,.45);box-shadow:0 2px 8px rgba(53,77,76,.05),0 24px 48px rgba(53,77,76,.1),0 0 80px -20px rgba(204,153,36,.3);outline:none;}
+  .level-card:focus-visible{outline:2px solid #cc9924;outline-offset:2px;}
+  .level-card-dark{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.04);}
+  .level-card-dark:hover,.level-card-dark:focus-visible{background:rgba(255,255,255,.05);border-color:rgba(204,153,36,.4);box-shadow:0 2px 8px rgba(0,0,0,.3),0 24px 48px rgba(0,0,0,.35),0 0 64px -16px rgba(204,153,36,.25),inset 0 1px 0 rgba(255,255,255,.06);}
+  .level-card-featured{border-color:rgba(204,153,36,.5);box-shadow:0 1px 3px rgba(53,77,76,.04),0 8px 24px rgba(53,77,76,.06),0 0 60px -16px rgba(204,153,36,.3);}
+  .level-card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#1a1a18;}
+  .level-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1);}
+  .level-card:hover .level-card-img img{transform:scale(1.06);}
+  .level-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,rgba(0,0,0,.15) 50%,transparent 100%);pointer-events:none;}
+  .level-card-num{position:absolute;top:14px;left:18px;font-family:'Marcellus',Georgia,serif;font-size:32px;line-height:1;color:rgba(255,255,255,.95);letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.45);}
+  .level-card-badge{position:absolute;top:14px;right:14px;display:inline-block;padding:5px 12px;background:rgba(204,153,36,.92);border:1px solid rgba(204,153,36,1);font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;color:#1a1a18;text-transform:uppercase;}
+  .level-card-meta{padding:22px 24px 24px;}
+  .level-card-kicker{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;color:rgba(204,153,36,.85);text-transform:uppercase;margin-bottom:8px;}
+  .level-card-dark .level-card-kicker{color:rgba(204,153,36,.95);}
+  .level-card-title{font-family:'Marcellus',Georgia,serif;font-size:clamp(18px,1.8vw,22px);line-height:1.25;letter-spacing:-.01em;color:#1a1a18;margin-bottom:10px;}
+  .level-card-dark .level-card-title{color:#fff;}
+  .level-card-where{font-size:13px;color:#4a4a46;line-height:1.6;margin-bottom:14px;}
+  .level-card-dark .level-card-where{color:rgba(255,255,255,.6);}
+  .level-card-more{font-family:'Roboto',sans-serif;font-size:11px;letter-spacing:.14em;color:#cc9924;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;transition:gap .3s;}
+  .level-card:hover .level-card-more{gap:12px;}
+
+  /* Expand panels */
+  .level-panel{grid-column:1/-1;overflow:hidden;max-height:0;opacity:0;margin-top:0;transition:max-height .5s cubic-bezier(.4,0,.2,1),opacity .4s,margin-top .5s;}
+  .level-panel:not([hidden]){max-height:900px;opacity:1;margin-top:28px;}
+  .level-panel-inner{position:relative;padding:48px 40px;border:1px solid rgba(204,153,36,.35);background:#fff;box-shadow:0 12px 40px rgba(53,77,76,.08),0 0 80px -20px rgba(204,153,36,.15);}
+  .level-panel-dark .level-panel-inner{background:rgba(20,20,18,.85);border-color:rgba(204,153,36,.4);backdrop-filter:blur(10px);box-shadow:0 12px 40px rgba(0,0,0,.3),0 0 80px -20px rgba(204,153,36,.2);}
+  .level-panel-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border:1px solid rgba(0,0,0,.1);background:transparent;cursor:pointer;font-size:22px;line-height:1;color:#4a4a46;transition:background .2s,border-color .2s,transform .2s;font-family:inherit;}
+  .level-panel-close:hover{background:rgba(204,153,36,.08);border-color:rgba(204,153,36,.4);color:#cc9924;transform:rotate(90deg);}
+  .level-panel-dark .level-panel-close{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);}
+  .level-panel-dark .level-panel-close:hover{background:rgba(204,153,36,.14);}
+  .level-panel-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(204,153,36,.18);}
+  .level-panel-meta-dark{border-top-color:rgba(255,255,255,.1);}
+  .level-panel-meta div{display:flex;flex-direction:column;gap:4px;}
+  .level-panel-meta span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#cc9924;font-weight:500;}
+  .level-panel-meta strong{font-size:14px;color:#1a1a18;font-weight:400;line-height:1.5;}
+  .level-panel-meta-dark strong{color:rgba(255,255,255,.9);}
+  @media(max-width:640px){.level-panel-meta{grid-template-columns:1fr;gap:14px;}.level-panel-inner{padding:32px 22px;}}
+
+  /* Panel navigation (prev / next) */
+  .level-panel-nav{display:flex;justify-content:space-between;gap:16px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(204,153,36,.14);align-items:stretch;flex-wrap:wrap;}
+  .level-panel-meta-dark ~ .level-panel-nav,.level-panel-dark .level-panel-nav{border-top-color:rgba(255,255,255,.08);}
+  .level-panel-prev,.level-panel-next{font-family:'Roboto',sans-serif;background:transparent;border:none;cursor:pointer;text-align:left;padding:12px 16px;display:inline-flex;align-items:center;gap:10px;color:#4a4a46;font-size:13px;letter-spacing:.02em;line-height:1.4;transition:color .25s,background .25s,transform .25s;border-radius:2px;}
+  .level-panel-prev:hover,.level-panel-prev:focus-visible{color:#cc9924;background:rgba(204,153,36,.06);outline:none;}
+  .level-panel-next{margin-left:auto;flex-direction:column;align-items:flex-end;text-align:right;padding:14px 22px;background:rgba(204,153,36,.06);border:1px solid rgba(204,153,36,.3);gap:2px;}
+  .level-panel-next span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#cc9924;}
+  .level-panel-next strong{font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:15px;color:#1a1a18;letter-spacing:-.01em;transition:gap .3s;display:inline-flex;gap:8px;align-items:baseline;}
+  .level-panel-next:hover,.level-panel-next:focus-visible{background:rgba(204,153,36,.12);border-color:rgba(204,153,36,.55);transform:translateX(2px);outline:none;}
+  .level-panel-next:hover strong{gap:14px;}
+  .level-panel-dark .level-panel-prev{color:rgba(255,255,255,.6);}
+  .level-panel-dark .level-panel-prev:hover{color:#cc9924;background:rgba(204,153,36,.1);}
+  .level-panel-dark .level-panel-next strong{color:#fff;}
+  .level-panel-dark .level-panel-next{background:rgba(204,153,36,.1);border-color:rgba(204,153,36,.35);}
+  .level-panel-dark .level-panel-next:hover{background:rgba(204,153,36,.18);border-color:rgba(204,153,36,.6);}
+  @media(max-width:640px){.level-panel-nav{flex-direction:column;gap:10px;}.level-panel-next{margin-left:0;width:100%;align-items:flex-start;text-align:left;}}
+
+  /* Bridge section */
+  .bridge-section{min-height:clamp(340px,42vw,480px);display:flex;align-items:center;justify-content:center;}
+  .bridge-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.85);}
+  .bridge-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.14) 0%,transparent 55%),linear-gradient(to bottom,rgba(20,20,18,.45) 0%,rgba(20,20,18,.7) 100%);}
+  .bridge-sparks{position:absolute;inset:0;pointer-events:none;}
+  .bridge-content{position:relative;z-index:2;text-align:center;padding:80px 24px;max-width:1100px;}
+
+  /* Get started CTA */
+  .get-started{margin-top:60px;text-align:center;}
+  .get-started-inner{max-width:640px;margin:0 auto;padding:48px 32px;background:rgba(204,153,36,.04);border:1px solid rgba(204,153,36,.25);backdrop-filter:blur(8px);}
+  .get-started-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+</style>
+
+<!-- YOUR GUIDES -->
+
+<section id="guides" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-6">
+      <p class="eyebrow mb-4">Your Guides</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#1a1a18;margin-bottom:16px;">Learn from facilitators who have done this<br/>thousands of times</h2>
+    </div>
+    <!-- Trainers Grid — 4 equal columns -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mt-10">
+      <div class="text-center fade-up">
+        <div class="img-overlay mx-auto" style="max-width:280px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/anthony-abbagnano-2-1.jpg" alt="Anthony Abbagnano" class="instructor-img" />
+        </div>
+        <h4 style="font-size:20px;color:#1a1a18;margin-top:16px;margin-bottom:4px;">Anthony Abbagnano</h4>
+        <p style="font-size:13px;color:#cc9924;letter-spacing:.06em;margin-bottom:8px;">FOUNDER</p>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;">Author of <em>Outer Chaos, Inner Calm</em>. 2,000+ practitioners trained across 40+ countries.</p>
+      </div>
+      <div class="text-center fade-up">
+        <div class="img-overlay mx-auto" style="max-width:280px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/amy-rachelle-1.jpg" alt="Amy Rachelle" class="instructor-img" />
+        </div>
+        <h4 style="font-size:20px;color:#1a1a18;margin-top:16px;margin-bottom:4px;">Amy Rachelle</h4>
+        <p style="font-size:13px;color:#cc9924;letter-spacing:.06em;margin-bottom:8px;">CO-FOUNDER</p>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;">Master facilitator. 15+ years in breathwork, somatic practice, and practitioner training.</p>
+      </div>
+      <div class="text-center fade-up">
+        <div class="img-overlay mx-auto" style="max-width:280px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/emily-ray-henderson-2.jpg" alt="Emily Ray Henderson" class="instructor-img" />
+        </div>
+        <h4 style="font-size:20px;color:#1a1a18;margin-top:16px;margin-bottom:4px;">Emily Ray Henderson</h4>
+        <p style="font-size:13px;color:#cc9924;letter-spacing:.06em;margin-bottom:8px;">MASTER TRAINER</p>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;">8-year senior trainer. Wellness counselor, Reiki master, 500-hour RYT yoga instructor.</p>
+      </div>
+      <div class="text-center fade-up">
+        <div class="img-overlay mx-auto" style="max-width:280px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/pablo-castro.jpg" alt="Pablo Castro" class="instructor-img" />
+        </div>
+        <h4 style="font-size:20px;color:#1a1a18;margin-top:16px;margin-bottom:4px;">Pablo Castro</h4>
+        <p style="font-size:13px;color:#cc9924;letter-spacing:.06em;margin-bottom:8px;">MASTER TRAINER</p>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;">8-year senior trainer. Specializes in somatic healing, water work, and felt-sense therapy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FROM THE FOUNDER — Anthony Video Feature -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 50%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 80%,rgba(82,187,144,.04) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Video -->
+      <div class="fade-up">
+        <div class="device-frame">
+          <div class="device-frame-screen">
+            <div style="width:100%;aspect-ratio:16/9;background:#000;">
+              <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;" poster="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69cf78154cde4bbc2a713424.png">
+                <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a3c2b3d5f8d7e941db2f.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Quote + Context -->
+      <div class="fade-up" style="position:relative;">
+        <p class="eyebrow mb-4">From the Founder</p>
+        <div class="gold-rule"></div>
+        <div class="big-quote" style="padding-left:8px;">
+          <blockquote style="font-family:'Marcellus',Georgia,serif;font-size:clamp(24px,2.8vw,32px);color:#fff;line-height:1.35;margin-bottom:28px;letter-spacing:-.01em;position:relative;z-index:1;">I built this training because I believe the world needs more people who can hold space with real skill and real presence.</blockquote>
+        </div>
+        <p style="font-size:16px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:20px;">Anthony Abbagnano founded Alchemy of Breath over 12 years ago. Since then, more than 1,000 facilitators across 40+ countries have trained under his guidance. In this video, he shares why he created the program and what he looks for in the people who join.</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);">
+          <div style="width:32px;height:1px;background:#cc9924;"></div>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;letter-spacing:.04em;">Author of <em>Outer Chaos, Inner Calm</em> &nbsp;&middot;&nbsp; Founder of ASHA Retreat Centre</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASHA / BREATHCAMP -->
+<section class="grain relative overflow-hidden" style="background:#1a1a18;padding:96px 0;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.06) 0%,transparent 60%);"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center mb-12">
+    <p class="eyebrow mb-4">BreathCamp Graduation</p>
+    <div class="section-divider mb-6"><span></span></div>
+    <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin-bottom:16px;">The home of Alchemy</h2>
+    <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto;">ASHA Retreat Centre sits on 15 hectares of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community. A place where all of you is welcome.</p>
+    <p style="font-size:15px;line-height:1.7;color:rgba(255,255,255,.45);max-width:520px;margin:16px auto 0;">This is where you graduate. Where you lead your first real sessions. And for AoB graduates who want to lead their own retreats, this can become your home too.</p>
+  </div>
+  <!-- ASHA Carousel -->
+  <div class="location-carousel-wrap">
+    <div class="location-carousel-track">
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA grounds" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg" alt="ASHA property" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA landscape" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="ASHA buildings" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA terrace" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA garden" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA retreat space" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA Tuscany" /></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA grounds" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg" alt="ASHA property" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA landscape" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="ASHA buildings" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA terrace" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA garden" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA retreat space" /></div>
+      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA Tuscany" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="py-24" style="background:#fff;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16">
+      <div class="fade-up">
+        <p class="eyebrow mb-4">Right Fit</p>
+        <div class="gold-rule"></div>
+        <h2 style="font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:24px;">This training is built for you if...</h2>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#cc9924;font-size:18px;flex-shrink:0;margin-top:2px;">&#10042;</span>
+            You have a personal breathwork practice and want to go deeper
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#cc9924;font-size:18px;flex-shrink:0;margin-top:2px;">&#10042;</span>
+            You are a yoga teacher, therapist, or coach looking to add breathwork to your work
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#cc9924;font-size:18px;flex-shrink:0;margin-top:2px;">&#10042;</span>
+            You want to build a standalone breathwork practice as a career
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#cc9924;font-size:18px;flex-shrink:0;margin-top:2px;">&#10042;</span>
+            You want rigorous, in-depth training with live mentorship, not a weekend certificate
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#cc9924;font-size:18px;flex-shrink:0;margin-top:2px;">&#10042;</span>
+            You are ready to do your own inner work as part of the process
+          </li>
+        </ul>
+      </div>
+      <div class="fade-up">
+        <p class="eyebrow mb-4">Honest Check</p>
+        <div class="gold-rule"></div>
+        <h2 style="font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:24px;">This might not be the right fit if...</h2>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#c5c3c2;font-size:16px;flex-shrink:0;margin-top:2px;">&middot;</span>
+            You are looking for a weekend or fast-track certification
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#c5c3c2;font-size:16px;flex-shrink:0;margin-top:2px;">&middot;</span>
+            You prefer a fully in-person experience. In that case, our 21-day residential program may be a better fit.
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#c5c3c2;font-size:16px;flex-shrink:0;margin-top:2px;">&middot;</span>
+            You are not willing to engage with your own inner work first
+          </li>
+          <li style="display:flex;gap:12px;align-items:flex-start;font-size:16px;color:#4a4a46;line-height:1.6;">
+            <span style="color:#c5c3c2;font-size:16px;flex-shrink:0;margin-top:2px;">&middot;</span>
+            You cannot travel to BreathCamp at ASHA in Tuscany. The 7-day in-person graduation is required to certify, so this program is not the right fit if travel is not possible.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL-WIDTH IMAGE BREAK 2 -->
+<section class="relative" style="height:clamp(250px,35vw,450px);overflow:hidden;">
+  <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4dddf15c4eec.jpg" alt="ASHA retreat centre aerial view" class="w-full h-full object-cover" style="filter:brightness(.6) saturate(.85);" />
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(255,255,255,.1) 0%,transparent 30%,transparent 60%,rgba(26,26,24,.6) 100%);"></div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(24px,4vw,44px);color:#fff;text-align:center;letter-spacing:-.02em;text-shadow:0 2px 20px rgba(0,0,0,.4);">Certification is the beginning,<br/>not the ceiling.</p>
+  </div>
+</section>
+
+<!-- BEYOND CERTIFICATION -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 40%,rgba(204,153,36,.07) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(82,187,144,.04) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">After You Graduate</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin-bottom:16px;">We do not just certify you.<br/>We help you build.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.55);max-width:520px;margin:0 auto;">Certification is the beginning, not the ceiling. No other breathwork school offers what comes next.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="lift-card-dark accent-top fade-up" style="padding:40px 32px;">
+        <div class="pathway-number">01</div>
+        <p class="eyebrow mb-3">Breathwork Business Toolkit</p>
+        <h3 style="font-size:22px;color:#fff;margin-bottom:14px;letter-spacing:-.01em;">Build a practice that pays</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.75;">Our in-house marketing team works with you to build your offer, run your ads, and set up your CRM. Everything you need to run a profitable breathwork practice. Not a PDF of tips. Real, hands-on support.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:40px 32px;">
+        <div class="pathway-number">02</div>
+        <p class="eyebrow mb-3">Host Retreats at ASHA</p>
+        <h3 style="font-size:22px;color:#fff;margin-bottom:14px;letter-spacing:-.01em;">Your retreat, our home</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.75;">Ready to lead your own retreat? Our 15-hectare Tuscan sanctuary is available to AoB graduates. You bring the vision and the participants. We provide the space, the beauty, and the infrastructure.</p>
+      </div>
+      <div class="lift-card-dark accent-top fade-up" style="padding:40px 32px;">
+        <div class="pathway-number">03</div>
+        <p class="eyebrow mb-3">Licensee Program</p>
+        <h3 style="font-size:22px;color:#fff;margin-bottom:14px;letter-spacing:-.01em;">Build your own breathwork school</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.75;">For graduates who want to go further: build your own breathwork school under the Alchemy of Breath brand. The first program of its kind, anywhere. Launching for graduates in 2027.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section id="pricing" class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 60% 30%,rgba(204,153,36,.1) 0%,transparent 55%),radial-gradient(ellipse at 20% 80%,rgba(82,187,144,.05) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">Investment</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:8px;">Your investment</h2>
+      <p style="font-size:16px;color:rgba(255,255,255,.5);line-height:1.7;">One program. Everything you need to become a certified facilitator.</p>
+    </div>
+
+    <!-- Payment Toggle Tabs -->
+    <div class="flex justify-center gap-2 mb-10 flex-wrap">
+      <button class="price-tab active" onclick="showPricing('full')" id="tab-full">Pay in Full</button>
+      <button class="price-tab" onclick="showPricing('6mo')" id="tab-6mo">6-Month Plan</button>
+      <button class="price-tab" onclick="showPricing('8mo')" id="tab-8mo">8-Month Plan</button>
+    </div>
+
+    <div class="max-w-2xl mx-auto">
+      <!-- Main Pricing Card -->
+      <div class="fade-up glass-card" style="padding:48px 40px;position:relative;border:1px solid rgba(204,153,36,.4);box-shadow:0 24px 64px rgba(0,0,0,.35),0 0 80px -20px rgba(204,153,36,.18),inset 0 1px 0 rgba(255,255,255,.06);">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,#cc9924,transparent);"></div>
+        <!-- Super Early Bird Strip -->
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(204,153,36,.1);border:1px solid rgba(204,153,36,.35);margin-bottom:20px;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#cc9924;box-shadow:0 0 8px rgba(204,153,36,.8);animation:pulseGlow 2.5s ease-in-out infinite;"></span>
+          <span style="font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;color:#cc9924;text-transform:uppercase;">Super Early Bird &middot; Save $500 &middot; Limited Spots</span>
+        </div>
+        <p class="eyebrow mb-4">8-Month Online Facilitator Training</p>
+
+        <!-- Full price view -->
+        <div id="price-full">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:rgba(255,255,255,.35);text-decoration:line-through;margin-bottom:6px;">$7,200</p>
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-.02em;line-height:1;" class="stat-number">$6,700</p>
+          <p style="font-size:14px;color:rgba(255,255,255,.6);margin-top:8px;">Paid in full. Super early bird saves $500.</p>
+        </div>
+        <!-- 6-month view -->
+        <div id="price-6mo" style="display:none;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-.02em;line-height:1;">$1,320<span style="font-size:24px;color:rgba(255,255,255,.4);">/mo</span></p>
+          <p style="font-size:14px;color:rgba(255,255,255,.6);margin-top:8px;">6 monthly payments of $1,320. Total: $7,920.</p>
+        </div>
+        <!-- 8-month view -->
+        <div id="price-8mo" style="display:none;">
+          <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(44px,6vw,64px);color:#cc9924;letter-spacing:-.02em;line-height:1;">$1,008<span style="font-size:24px;color:rgba(255,255,255,.4);">/mo</span></p>
+          <p style="font-size:14px;color:rgba(255,255,255,.6);margin-top:8px;">8 monthly payments of $1,008. Total: $8,064.</p>
+        </div>
+
+        <p style="font-size:13px;color:#cc9924;margin-top:12px;letter-spacing:.04em;">September 2026 Intake</p>
+
+        <div style="margin-top:32px;border-top:1px solid rgba(255,255,255,.1);padding-top:24px;">
+          <div class="grid grid-cols-2 gap-4 text-left" style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.8;">
+            <div>
+              <p style="color:#cc9924;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Included</p>
+              <p>400 hours of training</p>
+              <p>Weekly live calls</p>
+              <p>8 months of mentorship</p>
+              <p>Triple accreditation</p>
+            </div>
+            <div>
+              <p style="color:#cc9924;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">You Also Get</p>
+              <p>I Am Alchemy community (1 year)</p>
+              <p>Curated music playlists</p>
+              <p>Alumni network for life</p>
+              <p>Continued mentorship</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:12px;color:rgba(255,255,255,.45);margin-top:20px;line-height:1.6;"><span style="color:#cc9924;font-weight:500;">Please note:</span> BreathCamp at ASHA in Tuscany is <strong style="color:rgba(255,255,255,.7);">required for certification</strong> and is a separate registration (not included in this tuition).</p>
+
+        <a href="#apply" class="btn-gold mt-8 w-full text-center block">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">Common Questions</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,36px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Do I need prior breathwork experience?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">No prior breathwork training is necessary. The program begins with an introductory module that provides the foundational knowledge all participants need. What matters most is your willingness to do your own inner work and your genuine interest in holding space for others.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is the weekly time commitment?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Plan for approximately 8 to 10 hours per week. This includes self-paced video content and workbook exercises, plus one weekly live call with your trainers and cohort. The program is designed to fit alongside your current work and life commitments.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Can I actually build a career from this?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. Over 1,000 facilitators have graduated from this program and many run successful practices. The training includes a dedicated module on building breathwork as a business, and after certification you have access to the Breathwork Business Toolkit where our in-house marketing team helps you build your offer and attract clients.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What support do I get after certification?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Graduates receive lifetime access to the alumni network, advanced course opportunities, continued mentorship, and access to the Breathwork Business Toolkit. You can also apply to host your own retreats at ASHA Retreat Centre in Tuscany, and explore the Licensee Program to build your own breathwork school under the AoB brand.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What if I miss a live session?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">All live sessions are recorded and available on the learning platform. While attending live is encouraged for the interactive experience and real-time feedback, we understand that schedules vary, especially across time zones. You will not fall behind.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Is this recognized by professional bodies?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">The program carries triple accreditation from the Federation of Holistic Therapists, the American Association of Drugless Practitioners, and the Global Professional Breathwork Alliance (as a supporting organizational member). This provides professional credibility and insurance eligibility in most regions.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Can I pay in installments?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. Payment plans are available. We will discuss options during your application process to find an arrangement that works for you.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What makes this different from other breathwork trainings?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Three things. First, the depth: this is a 400-hour, 8-month program that begins with your own inner journey before teaching facilitation skills. Second, the graduation experience: you complete your training at BreathCamp at ASHA Retreat Centre in Tuscany. Third, what happens after: no other breathwork school offers a business toolkit with hands-on marketing support, the option to host retreats at a world-class venue, or a licensee program to build your own school.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        What is BreathCamp and is it included in the price?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">BreathCamp is the 7-day in-person graduation immersion at ASHA Retreat Centre in Tuscany, Italy. It is required to complete your certification. BreathCamp is a separate registration, not included in your tuition, with accommodation and meals priced so you can choose the option that fits your budget.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+        Do I have to attend BreathCamp in person?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. BreathCamp at ASHA in Tuscany is required to complete your certification. The online training is the foundation, and the in-person graduation is where you consolidate everything you have learned, lead real sessions with your cohort, and walk away certified. If travel is not possible for you, this program is not the right fit.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO GET STARTED -->
+<section class="py-24" style="background:#fff;">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="eyebrow mb-4">Enrollment</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Here is what happens next</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Step 1 -->
+      <div class="fade-up text-center">
+        <div class="img-overlay mx-auto" style="max-width:320px;margin-bottom:20px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/discover-1.jpg" alt="Submit your application" class="w-full" style="aspect-ratio:4/3;object-fit:cover;display:block;" />
+        </div>
+        <div style="width:36px;height:36px;border:1px solid rgba(204,153,36,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#cc9924;">1</span>
+        </div>
+        <h3 style="font-size:20px;color:#1a1a18;margin-bottom:8px;">Submit Your Application</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.7;">Fill out the short form below. It takes two minutes. No commitment required.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="fade-up text-center">
+        <div class="img-overlay mx-auto" style="max-width:320px;margin-bottom:20px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/discover-2.jpg" alt="Have a conversation" class="w-full" style="aspect-ratio:4/3;object-fit:cover;display:block;" />
+        </div>
+        <div style="width:36px;height:36px;border:1px solid rgba(204,153,36,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#cc9924;">2</span>
+        </div>
+        <h3 style="font-size:20px;color:#1a1a18;margin-bottom:8px;">Have a Conversation</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.7;">We will reach out to answer your questions, talk about your goals, and make sure this is the right fit for you.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="fade-up text-center">
+        <div class="img-overlay mx-auto" style="max-width:320px;margin-bottom:20px;">
+          <img src="https://alchemyofbreath.com/wp-content/uploads/discover-3.jpg" alt="Start your training" class="w-full" style="aspect-ratio:4/3;object-fit:cover;display:block;" />
+        </div>
+        <div style="width:36px;height:36px;border:1px solid rgba(204,153,36,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#cc9924;">3</span>
+        </div>
+        <h3 style="font-size:20px;color:#1a1a18;margin-bottom:8px;">Begin Your Training</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.7;">Enroll, get immediate access to your learning platform and preparation materials, and start your journey.</p>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#apply" class="btn-gold">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section id="apply" class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.07) 0%,transparent 55%);"></div>
+  <div class="relative z-10 max-w-xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <p class="eyebrow mb-4">Next Step</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,40px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:16px;">It starts with one breath.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.6);">Fill out a short application and we will be in touch to talk about your path. No pressure. Just a conversation.</p>
+    </div>
+
+    <div class="fade-up" style="background:rgba(255,255,255,.04);backdrop-filter:blur(12px);border:1px solid rgba(204,153,36,.25);box-shadow:0 24px 64px rgba(0,0,0,.35),0 0 80px -20px rgba(204,153,36,.18),inset 0 1px 0 rgba(255,255,255,.06);padding:12px;">
+    <iframe src="https://link.alchemyofbreath.com/widget/booking/nqi9d8dd3lS6nCTgGIbU" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="nqi9d8dd3lS6nCTgGIbU_1779386698406"></iframe><br><script src="https://link.alchemyofbreath.com/js/form_embed.js" type="text/javascript"></script>
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,.35);text-align:center;margin-top:16px;">We will respond within 48 hours. No spam, ever.</p>
+
+    <p style="font-size:14px;color:rgba(255,255,255,.4);text-align:center;margin-top:32px;">Not ready to apply? Email us at <a href="mailto:hello@alchemyofbreath.com" style="color:#cc9924;text-decoration:underline;">hello@alchemyofbreath.com</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a1a18;padding:48px 24px 32px;">
+  <div class="max-w-6xl mx-auto text-center">
+    <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" style="height:28px;margin:0 auto 24px;" />
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:24px;">
+      <a href="mailto:hello@alchemyofbreath.com" style="font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#cc9924'" onmouseout="this.style.color='rgba(255,255,255,.45)'">hello@alchemyofbreath.com</a>
+      <a href="https://www.asha.global/" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#cc9924'" onmouseout="this.style.color='rgba(255,255,255,.45)'">ASHA Retreat Centre</a>
+      <a href="https://alchemyofbreath.com" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#cc9924'" onmouseout="this.style.color='rgba(255,255,255,.45)'">alchemyofbreath.com</a>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,.2);max-width:600px;margin:0 auto;line-height:1.6;">Alchemy of Breath facilitator training is an educational program. Breathwork facilitation is not a substitute for medical or psychological treatment. Results vary by individual. Accredited by FHT, AADP, and GPBA.</p>
+  </div>
+</footer>
 
 <script>
-(function () {
-  const openBtn = document.getElementById('breath-open');
-  const closeBtn = document.getElementById('breath-close');
-  const pane = document.getElementById('breath-pane');
-  const cue = document.getElementById('breath-cue');
-  let cueTimer = null;
+// Sticky nav scroll effect
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('main-nav');
+  if(window.scrollY>60)nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
 
-  function startCue() {
-    const phases = ['Inhale', 'Hold', 'Exhale', 'Rest'];
-    const durations = [3000, 500, 3000, 500];
-    let i = 0;
-    const tick = () => {
-      cue.textContent = phases[i];
-      cueTimer = setTimeout(() => {
-        i = (i + 1) % phases.length;
-        tick();
-      }, durations[i]);
-    };
-    tick();
+// FAQ accordion
+function toggleFaq(btn){
+  const answer=btn.nextElementSibling;
+  const isOpen=answer.classList.contains('open');
+  document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q=>q.setAttribute('aria-expanded','false'));
+  if(!isOpen){
+    answer.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
   }
-  function stopCue() {
-    clearTimeout(cueTimer);
-    cueTimer = null;
-    cue.textContent = 'Inhale';
-  }
-  function open() {
-    pane.setAttribute('aria-hidden', 'false');
-    openBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-    startCue();
-  }
-  function close() {
-    pane.setAttribute('aria-hidden', 'true');
-    openBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-    stopCue();
-  }
+}
 
-  openBtn.addEventListener('click', open);
-  closeBtn.addEventListener('click', close);
-  pane.addEventListener('click', (e) => { if (e.target === pane) close(); });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && pane.getAttribute('aria-hidden') === 'false') close();
+// Breathing Mandala — Box Breath (4-4-4-4), loops continuously, auto-starts on load
+const BREATH_PHASES=[
+  {name:'Inhale',cls:'is-inhale',ms:4000},
+  {name:'Hold',cls:'is-hold-in',ms:4000},
+  {name:'Exhale',cls:'is-exhale',ms:4000},
+  {name:'Hold',cls:'is-hold-out',ms:4000}
+];
+const BREATH_REVEAL_CYCLE=4;
+const breathState={active:false,phase:0,cycle:0,timer:null,revealed:false};
+function startBreathing(){
+  if(breathState.active)return;
+  breathState.active=true;
+  runBreathPhase();
+}
+function runBreathPhase(){
+  if(!breathState.active)return;
+  const stage=document.getElementById('breathStage');
+  const phase=BREATH_PHASES[breathState.phase];
+  const ambient=stage.classList.contains('breath-stage-ambient');
+  stage.className=(ambient?'breath-stage breath-stage-ambient ':'breath-stage ')+phase.cls;
+  breathState.timer=setTimeout(()=>{
+    breathState.phase++;
+    if(breathState.phase>=BREATH_PHASES.length){breathState.phase=0;breathState.cycle++;}
+    runBreathPhase();
+  },phase.ms);
+}
+// Auto-start ambient breathing on load
+document.addEventListener('DOMContentLoaded',()=>{
+  const stage=document.getElementById('breathStage');
+  if(!stage)return;
+  const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!prefersReduced){setTimeout(()=>{startBreathing();},800);}
+});
+
+// Fade-up on scroll (Intersection Observer)
+const fadeObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
   });
+},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>fadeObserver.observe(el));
+
+// Stat counter animation
+const statObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('.stat-number').forEach(el=>statObserver.observe(el));
+
+// Pricing tabs
+function showPricing(plan){
+  document.querySelectorAll('.price-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+plan).classList.add('active');
+  document.getElementById('price-full').style.display=plan==='full'?'block':'none';
+  document.getElementById('price-6mo').style.display=plan==='6mo'?'block':'none';
+  document.getElementById('price-8mo').style.display=plan==='8mo'?'block':'none';
+}
+
+// Level card expand / collapse
+(function(){
+  function getCardForLevel(lvl){return document.querySelector('.level-card[data-level="'+lvl+'"]');}
+  function getPanelForLevel(lvl){return document.querySelector('.level-panel[data-panel="'+lvl+'"]');}
+  function panelSibling(card){
+    // Find the matching panel that sits inside the same grid after the card's grid row
+    var lvl=card.getAttribute('data-level');
+    return getPanelForLevel(lvl);
+  }
+  function closeAll(exceptLevel){
+    document.querySelectorAll('.level-panel').forEach(function(p){
+      if(exceptLevel && p.getAttribute('data-panel')===exceptLevel)return;
+      p.setAttribute('hidden','');
+    });
+    document.querySelectorAll('.level-card').forEach(function(c){
+      if(exceptLevel && c.getAttribute('data-level')===exceptLevel)return;
+      c.setAttribute('aria-expanded','false');
+      c.classList.remove('is-open');
+    });
+  }
+  function toggleCard(card){
+    var lvl=card.getAttribute('data-level');
+    var panel=getPanelForLevel(lvl);
+    if(!panel)return;
+    var isOpen=!panel.hasAttribute('hidden');
+    if(isOpen){
+      panel.setAttribute('hidden','');
+      card.setAttribute('aria-expanded','false');
+      card.classList.remove('is-open');
+    }else{
+      closeAll(lvl);
+      // Move panel directly after the card's grid (end of grid) so it expands below in-flow
+      var grid=card.parentElement;
+      if(panel.parentElement!==grid){grid.appendChild(panel);}
+      panel.removeAttribute('hidden');
+      card.setAttribute('aria-expanded','true');
+      card.classList.add('is-open');
+      // Smooth scroll so the panel is visible
+      setTimeout(function(){
+        var rect=panel.getBoundingClientRect();
+        if(rect.top<80||rect.bottom>window.innerHeight){
+          panel.scrollIntoView({block:'center',behavior:'smooth'});
+        }
+      },200);
+    }
+  }
+  document.querySelectorAll('.level-card').forEach(function(card){
+    card.addEventListener('click',function(){toggleCard(card);});
+  });
+  document.querySelectorAll('.level-panel-close').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var panel=btn.closest('.level-panel');
+      var lvl=panel.getAttribute('data-panel');
+      panel.setAttribute('hidden','');
+      var card=getCardForLevel(lvl);
+      if(card){card.setAttribute('aria-expanded','false');card.classList.remove('is-open');card.focus({preventScroll:true});}
+    });
+  });
+  // Prev / Next / Restart navigation between levels
+  function jumpToLevel(lvl){
+    closeAll();
+    var targetCard=getCardForLevel(lvl);
+    if(!targetCard)return;
+    // Scroll to the target card's grid first so the expansion lands in view
+    targetCard.scrollIntoView({block:'start',behavior:'smooth'});
+    // Small delay so scroll completes before expansion animates
+    setTimeout(function(){toggleCard(targetCard);},450);
+  }
+  document.querySelectorAll('.level-panel-next').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var next=btn.getAttribute('data-next')||btn.getAttribute('data-restart');
+      if(next)jumpToLevel(next);
+    });
+  });
+  document.querySelectorAll('.level-panel-prev').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      var prev=btn.getAttribute('data-prev');
+      if(prev)jumpToLevel(prev);
+    });
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll();}});
 })();
 </script>
+<script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 
 </body>
 </html>
