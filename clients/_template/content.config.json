@@ -1,0 +1,61 @@
+{
+  "meta":         { "title": "", "description": "", "lang": "en" },
+
+  "hero": {
+    "eyebrow":  "",
+    "headline": "",
+    "emphasis": "",
+    "subhead":  "",
+    "cta_primary":   { "label": "", "href": "#" },
+    "cta_secondary": { "label": "", "href": "#" },
+    "image":         { "src": "assets/hero.jpg", "alt": "" }
+  },
+
+  "tagline_strip": { "items": [] },
+
+  "about": { "heading": "", "body": "" },
+
+  "who_its_for": {
+    "heading": "",
+    "audiences": [
+      { "title": "", "body": "" }
+    ]
+  },
+
+  "modules": {
+    "heading": "",
+    "items": [
+      { "title": "", "body": "" }
+    ]
+  },
+
+  "testimonials": {
+    "heading": "",
+    "items": [
+      { "quote": "", "name": "", "role": "" }
+    ]
+  },
+
+  "outcomes": { "heading": "", "items": [] },
+
+  "enrol": {
+    "heading": "",
+    "price": "",
+    "guarantee": "",
+    "ghl_embed_html": ""
+  },
+
+  "faq": {
+    "heading": "",
+    "items": [
+      { "q": "", "a": "" }
+    ]
+  },
+
+  "footer": {
+    "copyright": "",
+    "links": [
+      { "label": "", "href": "#" }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+<section class="section hero" style="background:var(--bg);position:relative;overflow:hidden;">
+  <div class="container" style="display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1;">
+    <div>
+      <p style="text-transform:uppercase;letter-spacing:0.18em;color:var(--teal-mid);font-size:0.8rem;margin:0 0 1rem;">{{content.hero.eyebrow}}</p>
+      <h1>{{content.hero.headline}}</h1>
+      <p style="font-size:1.2rem;color:var(--ink-soft);max-width:30rem;">{{content.hero.subhead}}</p>
+      <div style="display:flex;gap:0.8rem;margin-top:1.8rem;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="{{content.hero.cta_primary.href}}">{{content.hero.cta_primary.label}}</a>
+        <a class="btn btn-ghost"   href="{{content.hero.cta_secondary.href}}">{{content.hero.cta_secondary.label}}</a>
+      </div>
+    </div>
+
+    <!--
+      Breathing orb: 4 concentric rings on a 7s inhale/exhale cycle.
+      Pure CSS — no JS. Scale + opacity drive the breath; box-shadow gives glow.
+    -->
+    <div class="breathing-orb" aria-hidden="true">
+      <span class="ring ring-1"></span>
+      <span class="ring ring-2"></span>
+      <span class="ring ring-3"></span>
+      <span class="ring ring-4"></span>
+      <span class="orb-core"></span>
+    </div>
+  </div>
+
+  <style>
+    .breathing-orb {
+      position: relative;
+      width: min(420px, 80vw);
+      aspect-ratio: 1;
+      margin: 0 auto;
+    }
+    .breathing-orb .ring,
+    .breathing-orb .orb-core {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      border-radius: 50%;
+      transform-origin: center;
+    }
+    .breathing-orb .ring {
+      border: 1px solid var(--teal);
+      opacity: 0.35;
+      animation: breathe 7s ease-in-out infinite;
+    }
+    .breathing-orb .ring-1 { width: 40%; height: 40%; animation-delay: 0s;     }
+    .breathing-orb .ring-2 { width: 60%; height: 60%; animation-delay: 0.4s;   }
+    .breathing-orb .ring-3 { width: 80%; height: 80%; animation-delay: 0.8s;   }
+    .breathing-orb .ring-4 { width: 100%;height: 100%;animation-delay: 1.2s; border-color: var(--gold); opacity: 0.25; }
+    .breathing-orb .orb-core {
+      width: 24%; height: 24%;
+      background: radial-gradient(circle, var(--teal-pale) 0%, var(--teal) 75%);
+      box-shadow: 0 0 60px var(--teal-pale), 0 0 120px rgba(0,165,178,0.25);
+      animation: breathe-core 7s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(0.88); opacity: 0.20; }
+      50%      { transform: scale(1.08); opacity: 0.55; }
+    }
+    @keyframes breathe-core {
+      0%, 100% { transform: scale(0.85); }
+      50%      { transform: scale(1.15); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .breathing-orb .ring,
+      .breathing-orb .orb-core { animation: none; }
+    }
+    @media (max-width: 768px) {
+      .section.hero .container { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</section>

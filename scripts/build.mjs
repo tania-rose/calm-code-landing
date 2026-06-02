@@ -2,41 +2,37 @@
 /**
  * Plug-and-play landing page builder.
  *
- * Inputs:
- *   --brand    path to brand config JSON   (default: pipeline/brand.config.json)
- *   --content  path to content config JSON (default: pipeline/content.config.json)
- *   --template path to page template HTML  (default: pipeline/templates/landing.html)
- *   --sections path to sections directory  (default: pipeline/sections)
- *   --out      path to write rendered HTML (default: pipeline/build/index.html)
+ * Usage:
+ *   node scripts/build.mjs [--client <slug>] [other flags]
  *
- * Syntax inside templates and section files:
+ * With --client <slug>, resolves:
+ *   --brand    clients/<slug>/brand.config.json
+ *   --content  clients/<slug>/content.config.json
+ *   --template clients/<slug>/template.html (if present) else pipeline/templates/landing.html
+ *   --out      clients/<slug>/build/index.html
  *
- *   {{> section-name}}
- *       Include pipeline/sections/section-name.html. The included content
- *       is also rendered (token replacement runs after inclusion).
+ * Any flag explicitly passed overrides the client-derived default.
  *
- *   {{brand.colors.teal}}
- *   {{content.hero.headline}}
- *       Resolve a dotted path against the merged context { brand, content }.
+ * Template syntax (in templates and section files):
+ *   {{> section-name}}                            include pipeline/sections/<name>.html
+ *   {{brand.colors.teal}} / {{content.hero.headline}}   dotted-path lookup
+ *   {{#content.modules.items}} ... {{/...}}       iterate; inside, {{.}} is the scalar item
  *
- *   {{#content.modules.items}} ... {{/content.modules.items}}
- *       Iterate over an array. Inside the block the current item is pushed
- *       onto the context stack — top-level keys like {{title}} resolve from
- *       the item first, then fall back to {brand, content}.
- *
- * Missing tokens emit a warning and render as empty string so the page
- * still builds while the schema is in flux.
+ * Missing tokens warn but don't crash.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
 const args = parseArgs(process.argv.slice(2));
-const BRAND_PATH    = args.brand    ?? "pipeline/brand.config.json";
-const CONTENT_PATH  = args.content  ?? "pipeline/content.config.json";
-const TEMPLATE_PATH = args.template ?? "pipeline/templates/landing.html";
+const CLIENT = args.client ?? "calm-code";
+
+const BRAND_PATH    = args.brand    ?? `clients/${CLIENT}/brand.config.json`;
+const CONTENT_PATH  = args.content  ?? `clients/${CLIENT}/content.config.json`;
+const CLIENT_TPL    = `clients/${CLIENT}/template.html`;
+const TEMPLATE_PATH = args.template ?? (existsSync(CLIENT_TPL) ? CLIENT_TPL : "pipeline/templates/landing.html");
 const SECTIONS_DIR  = args.sections ?? "pipeline/sections";
-const OUT_PATH      = args.out      ?? "pipeline/build/index.html";
+const OUT_PATH      = args.out      ?? `clients/${CLIENT}/build/index.html`;
 
 const brand   = readJson(BRAND_PATH);
 const content = readJson(CONTENT_PATH);
@@ -50,7 +46,7 @@ html = render(html, [root]);
 mkdirSync(dirname(OUT_PATH), { recursive: true });
 writeFileSync(OUT_PATH, html);
 
-console.log(`built  ${OUT_PATH}  (${html.length.toLocaleString()} bytes)`);
+console.log(`built  ${OUT_PATH}  (${html.length.toLocaleString()} bytes)  [client: ${CLIENT}, template: ${TEMPLATE_PATH}]`);
 if (warnings.size) {
   console.log(`warnings:`);
   for (const w of warnings) console.log(`  - ${w}`);
@@ -59,7 +55,6 @@ if (warnings.size) {
 // ---- internals -------------------------------------------------------------
 
 function expandPartials(src) {
-  // Multiple passes in case a partial includes another partial.
   for (let i = 0; i < 10; i++) {
     let changed = false;
     src = src.replace(/\{\{>\s*([\w./-]+)\s*\}\}/g, (_, name) => {
@@ -77,20 +72,15 @@ function expandPartials(src) {
 }
 
 function render(src, stack) {
-  // 1. Handle loop blocks first, innermost-out, to keep regex simple.
   while (true) {
-    // Match a block with no nested same-name block inside.
     const m = src.match(/\{\{#\s*([\w.]+)\s*\}\}((?:(?!\{\{#)[\s\S])*?)\{\{\/\s*\1\s*\}\}/);
     if (!m) break;
     const [full, path, inner] = m;
     const arr = lookupStack(stack, path);
     let rendered = "";
     if (Array.isArray(arr)) {
-      for (const item of arr) {
-        rendered += render(inner, [item, ...stack]);
-      }
+      for (const item of arr) rendered += render(inner, [item, ...stack]);
     } else if (arr) {
-      // truthy non-array: render once with arr pushed on stack (Mustache-ish).
       rendered = render(inner, [arr, ...stack]);
     } else {
       warnings.add(`missing array: ${path}`);
@@ -98,14 +88,10 @@ function render(src, stack) {
     src = src.slice(0, m.index) + rendered + src.slice(m.index + full.length);
   }
 
-  // 2. Token replacement. `{{.}}` references the current scalar loop item.
-  // Path segments allow word chars and hyphens (e.g. brand.colors.bg-warm).
   src = src.replace(/\{\{\s*([.\w-]+)\s*\}\}/g, (_, path) => {
     if (path === ".") {
       const top = stack[0];
-      if (top !== undefined && (typeof top === "string" || typeof top === "number")) {
-        return String(top);
-      }
+      if (top !== undefined && (typeof top === "string" || typeof top === "number")) return String(top);
       warnings.add(`{{.}} used outside a scalar loop`);
       return "";
     }
