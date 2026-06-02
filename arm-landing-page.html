@@ -551,6 +551,128 @@ p{margin:0 0 1em}
 }
 @media (max-width:980px){.testimonials-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:620px){.testimonials-grid{grid-template-columns:1fr}}
+
+/* ─── DIAGNOSTIC SECTION ─── */
+.diagnostic{padding:96px 0;background:var(--bg)}
+.diagnostic-intro{text-align:center;max-width:640px;margin:0 auto 48px}
+.diagnostic-intro p{font-size:17px;color:var(--ink-2);margin-top:12px}
+.check-list{
+  max-width:740px;
+  margin:0 auto;
+  background:var(--white);
+  padding:40px 44px;
+  box-shadow:var(--shadow-sm);
+  border-left:3px solid var(--gold);
+}
+.check-list li{
+  list-style:none;
+  position:relative;
+  padding:12px 0 12px 38px;
+  font-size:16.5px;
+  line-height:1.55;
+  color:var(--ink-2);
+  border-bottom:1px solid var(--line);
+}
+.check-list li:last-child{border-bottom:none}
+.check-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:18px;
+  width:18px;height:18px;
+  border:1.5px solid var(--gold);
+  background:transparent;
+}
+.check-list ul{padding:0;margin:0}
+.check-readout{
+  text-align:center;
+  margin-top:32px;
+  font-family:var(--display);
+  font-size:18px;
+  color:var(--teal);
+  font-style:italic;
+}
+
+/* ─── WALK-AWAY (WHAT YOU LEAVE WITH) ─── */
+.walkaway{padding:96px 0;background:var(--bg-warm)}
+.walkaway-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:56px;
+}
+.walkaway-card{
+  background:var(--white);
+  padding:36px 30px;
+  box-shadow:var(--shadow-sm);
+  border-top:3px solid var(--gold);
+  position:relative;
+}
+.walkaway-num{
+  font-family:var(--display);
+  font-size:14px;
+  letter-spacing:3px;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.walkaway-card h3{
+  font-size:22px;
+  line-height:1.3;
+  margin-bottom:12px;
+}
+.walkaway-card p{
+  font-size:15.5px;
+  color:var(--ink-2);
+  margin:0;
+  line-height:1.65;
+}
+.walkaway-stat{
+  margin-top:48px;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:28px 32px;
+  background:var(--bg-dark);
+  color:#d8d6cf;
+  text-align:center;
+}
+.walkaway-stat strong{
+  color:var(--gold-soft);
+  font-weight:400;
+  font-family:var(--display);
+  font-size:22px;
+  display:block;
+  margin-bottom:6px;
+}
+@media (max-width:980px){.walkaway-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.walkaway-grid{grid-template-columns:1fr}.check-list{padding:32px 28px}}
+
+/* ─── COST SECTION ─── */
+.cost{padding:96px 0;background:var(--bg)}
+.cost-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+  max-width:980px;
+  margin:0 auto;
+}
+.cost p{font-size:17px;color:var(--ink-2);line-height:1.7}
+.cost-list{margin:24px 0 0;padding:0;list-style:none}
+.cost-list li{
+  padding:10px 0 10px 22px;
+  position:relative;
+  color:var(--ink-2);
+  font-size:15.5px;
+}
+.cost-list li::before{
+  content:"";
+  position:absolute;
+  left:0;top:18px;
+  width:8px;height:1px;
+  background:var(--gold);
+}
+@media (max-width:760px){.cost-grid{grid-template-columns:1fr;gap:32px}}
 .reserve-card .eyebrow{margin-bottom:12px;display:block;text-align:center}
 .reserve-card h2{text-align:center;margin-bottom:8px}
 .reserve-sub{
@@ -742,7 +864,7 @@ footer a:hover{color:var(--gold)}
   <div class="container">
     <span class="eyebrow">Quantum Shift &middot; The Deepening &middot; Sunday 21 June 2026</span>
     <h1 id="hero-heading">We opened the door. This time, we walk through it.</h1>
-    <p class="lede">A second Sunday with Anthony Abbagnano and Amy Rachelle. Same format, same room, with a week of integration on the other side. Free to attend live. Open to anyone, deeper for anyone who wants to stay close to the work.</p>
+    <p class="lede">One Sunday with Anthony Abbagnano and Amy Rachelle. Two live breathwork sessions designed to leave your nervous system measurably more regulated by the time you close your laptop, with four daily practices and three data points you can keep using. Free to attend live. Deeper for anyone who wants to stay close to the work.</p>
 
     <div class="path-cards" role="list">
 
@@ -798,6 +920,30 @@ footer a:hover{color:var(--gold)}
   </div>
 </div>
 
+<!-- ─── DIAGNOSTIC (How is your nervous system?) ─── -->
+<section class="diagnostic" aria-labelledby="diagnostic-heading">
+  <div class="container">
+    <div class="diagnostic-intro">
+      <span class="eyebrow">A quiet check-in</span>
+      <div class="rule rule-center"></div>
+      <h2 id="diagnostic-heading">How is your nervous system? Be honest.</h2>
+      <p>You do not need a clinical reading to know. Your body has been telling you. Read these. Notice the ones that land.</p>
+    </div>
+
+    <div class="check-list" role="group" aria-label="Nervous system self-check">
+      <ul>
+        <li>Sleep is light or interrupted, even when you are tired.</li>
+        <li>Your jaw, shoulders or stomach is holding tension you cannot remember choosing.</li>
+        <li>Small things land bigger than they used to.</li>
+        <li>You cannot remember the last time you felt fully landed in your own body.</li>
+        <li>You think your way through stress more than you breathe through it.</li>
+        <li>You have read the books, downloaded the apps, and still feel underwater.</li>
+      </ul>
+      <p class="check-readout">If two landed, this Sunday is for you. Most people we work with tick four.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ─── WHY THIS MATTERS (Amy) ─── -->
 <section class="section why">
   <div class="container section-narrow">
@@ -849,31 +995,65 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
-<!-- ─── OUTCOMES ─── -->
-<section class="section">
+<!-- ─── WHAT YOU WALK AWAY WITH ─── -->
+<section class="walkaway" aria-labelledby="walkaway-heading">
   <div class="container">
-    <div style="text-align:center">
-      <span class="eyebrow">What this day is for</span>
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow">By the end of Sunday</span>
       <div class="rule rule-center"></div>
-      <h2 style="max-width:22ch;margin-left:auto;margin-right:auto">Four things the Sunday is designed to do.</h2>
+      <h2 id="walkaway-heading">What you walk away with.</h2>
+      <p style="color:var(--ink-2);margin-top:12px">Not a vibe. Three measurable things you can take into Monday morning.</p>
     </div>
-    <div class="outcomes-grid">
-      <article class="outcome-card">
-        <h3>Drop the gear</h3>
-        <p>Move out of the bracing pattern your system has been holding without your permission.</p>
+
+    <div class="walkaway-grid">
+
+      <article class="walkaway-card">
+        <div class="walkaway-num">01 &middot; The shift</div>
+        <h3>A measurably more regulated nervous system.</h3>
+        <p>HRV (heart rate variability) is the clinical marker of nervous system tone. Most people leave the Sunday with HRV 15-25&percnt; higher than they walked in. That is your system in a different gear, on the same day, without medication.</p>
       </article>
-      <article class="outcome-card">
-        <h3>Feel the lever</h3>
-        <p>Experience, in real time, what changing your breath does to your state.</p>
+
+      <article class="walkaway-card">
+        <div class="walkaway-num">02 &middot; The practices</div>
+        <h3>Four daily breaths you can actually use.</h3>
+        <p>One for the morning to set your baseline. One for the inbox-and-meeting middle of the day. One for acute stress, under sixty seconds. One for sleep wind-down. No equipment, no app, your breath only.</p>
       </article>
-      <article class="outcome-card">
-        <h3>Land in the body</h3>
-        <p>Return to a baseline of presence that thinking on its own cannot reach.</p>
+
+      <article class="walkaway-card">
+        <div class="walkaway-num">03 &middot; The data</div>
+        <h3>Three numbers you can read on yourself.</h3>
+        <p>HRV at rest, breath cycles per minute, and recovery time after stress. You will know what to watch and what the numbers mean, so you can track your own regulation week to week without a clinic.</p>
       </article>
-      <article class="outcome-card">
-        <h3>Stay close to the work</h3>
-        <p>If you take the Pass, the WhatsApp room holds you while the change is settling.</p>
-      </article>
+
+    </div>
+
+    <div class="walkaway-stat">
+      <strong>People leave reporting anxiety roughly half what they walked in with.</strong>
+      Not a permanent state change in one day. What a held room, a working breath, and four practices can do in a single Sunday.
+    </div>
+  </div>
+</section>
+
+<!-- ─── COST OF DYSREGULATION ─── -->
+<section class="cost" aria-labelledby="cost-heading">
+  <div class="container">
+    <div class="cost-grid">
+      <div>
+        <span class="eyebrow">What it is costing you</span>
+        <div class="rule"></div>
+        <h2 id="cost-heading">A dysregulated nervous system has a weekly tax.</h2>
+        <p>You can wait until it is a clinical problem before treating it. Or you can spend one Sunday teaching your system the other gear is still there. The cost of staying in the gear you are in:</p>
+      </div>
+      <div>
+        <ul class="cost-list">
+          <li>Sleep that does not restore you.</li>
+          <li>Decisions made from fight-or-flight you would not make from rest.</li>
+          <li>Brain fog that no amount of caffeine clears.</li>
+          <li>Relationships you are present-for-on-paper but not actually meeting.</li>
+          <li>A body doing more than its share to hold a state that thinking will never resolve on its own.</li>
+          <li>A version of you that is harder to be with, and harder to be.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -1103,11 +1283,11 @@ footer a:hover{color:var(--gold)}
 <!-- ─── FINAL CTA ─── -->
 <section class="final-cta">
   <div class="container">
-    <span class="eyebrow">One last thing</span>
+    <span class="eyebrow">One last question</span>
     <div class="rule rule-center"></div>
-    <h2>One Sunday. Two sessions. A week with the work.</h2>
-    <p>The room opens Sunday 21 June. Take the seat that fits, and we will hold it for you.</p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+    <h2>What is your next step?</h2>
+    <p style="font-size:17.5px;max-width:58ch">More love. Job clarity. More time. More presence. More time for yourself. Purpose. Passion. Sleep. Whatever it is, your nervous system has to be regulated enough to choose it. That is what Sunday is for.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px">
       <a href="#reserve-free" class="btn btn-primary">Reserve my free seat</a>
       <a href="#reserve-allaccess" class="btn btn-ghost" style="border-color:var(--ink);color:var(--ink)">Get the Integration Pass &middot; $77</a>
     </div>

@@ -277,6 +277,67 @@ The testimonial pool you sent has 25+ quotes; only 11 are on the page (9 cards +
 
 ---
 
+## Messaging architecture &middot; the four new beats
+
+The page now layers four distinct conversion beats between the hero and the form, each one designed to do a specific job for a specific reader state.
+
+### Beat 1 &middot; Diagnostic ("How is your nervous system?")
+
+A six-item self-check sits immediately under the trust strip. The visitor mentally ticks the lines that land for them and the closing readout says *"if two landed, this Sunday is for you. Most people we work with tick four."*
+
+This works because:
+- It moves the visitor from "is this for someone like me?" to "this is describing me" in under fifteen seconds.
+- The framings are body-based ("your jaw is holding tension"), not diagnostic ("you have anxiety disorder"). That keeps it in AoB voice and avoids the medicalisation that this audience is exhausted by.
+- It pre-frames the rest of the page: every section after this is now read as "this is for me," which lifts everything downstream.
+
+### Beat 2 &middot; What you walk away with (specific, measurable)
+
+Three cards directly after Amy's "Why this matters." Each names a concrete deliverable:
+
+| Card | What it promises | Why this number |
+|---|---|---|
+| 01 The shift | HRV 15-25&percnt; higher by end of day | HRV is the clinical proxy for nervous system tone. This audience knows what it is. The range is honest &middot; people respond differently. |
+| 02 The practices | Four daily breaths (morning, midday, acute stress, sleep) | Specific enough to be promised, concrete enough to be defended after delivery. Avoid "techniques" &middot; "breaths" is body-led, "techniques" is course-led. |
+| 03 The data | HRV at rest, breath cycles per minute, recovery time | Three numbers they can read on themselves without a clinic. Turns the experience into something self-trackable. |
+
+Underneath, a single stat block in dark band: *"People leave reporting anxiety roughly half what they walked in with."* Qualified honestly: *"Not a permanent state change in one day. What a held room, a working breath, and four practices can do in a single Sunday."*
+
+### Beat 3 &middot; Cost of dysregulation (loss aversion, AoB-voice)
+
+A six-line list of what the visitor is currently paying for staying in the gear they are in:
+- Sleep that does not restore
+- Fight-or-flight decisions
+- Brain fog
+- Present-on-paper relationships
+- A body doing more than its share
+- A version of you harder to be with
+
+This is the only section on the page that uses loss aversion. Used once, sparingly, and named honestly &middot; not "you will regret this," but "here is what staying the same already costs you."
+
+### Beat 4 &middot; Final CTA reframed as "what is your next step?"
+
+The close drops the more poetic "one breath at a time" line and asks the visitor to name what they actually came for:
+
+```
+More love. Job clarity. More time. More presence. More time for yourself.
+Purpose. Passion. Sleep.
+
+Whatever it is, your nervous system has to be regulated enough to choose it.
+That is what Sunday is for.
+```
+
+This is the same list of life areas you brain-dumped. The function is loss-aversion's positive twin: instead of "what is your dysfunction costing you," it is "what would becoming regulated unlock for you."
+
+## Vanity / hype claims &middot; what I reframed and why
+
+You also flagged "more attractive" and "more magnetic" as candidate copy. I reframed both to "more present, easier to be with" in the cost section. Reasoning:
+
+- AoB's audience (somatic coaches, practitioners, returners) is exactly the demographic that reads vanity claims as a tell that the brand does not know who they are. It tanks trust.
+- "More magnetic" is true in a deep sense (regulated people are easier to be around), but the proof-of-claim sits in the relational language ("easier to be with"), not the marketing language ("magnetic").
+- Same conversion outcome, less risk of the warm AoB list quietly unsubscribing.
+
+If you want to A/B test "more magnetic" on cold paid traffic (where the audience hasn't met you yet), worth running &middot; the framing converts in colder funnels. But on the main page that the warm list lands on, the calibrated version is the right call.
+
 ## Capturing feedback for the next event
 
 You flagged that you also want this to gather feedback to make the next event better. Built-in capture points:
