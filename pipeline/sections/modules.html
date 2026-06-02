@@ -1,0 +1,13 @@
+<section class="section" style="background:var(--ink);color:var(--bg);">
+  <div class="container">
+    <h2 style="color:var(--bg);text-align:center;">{{content.modules.heading}}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem;">
+      {{#content.modules.items}}
+      <div style="background:rgba(255,255,255,0.04);padding:2rem;border-radius:20px;border:1px solid rgba(225,182,104,0.2);">
+        <h3 style="color:var(--gold);">{{title}}</h3>
+        <p style="color:var(--bg);opacity:0.85;margin:0;">{{body}}</p>
+      </div>
+      {{/content.modules.items}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<section class="section" style="background:var(--bg-teal);">
+  <div class="container">
+    <h2 style="text-align:center;">{{content.who_its_for.heading}}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem;">
+      {{#content.who_its_for.audiences}}
+      <div style="background:var(--white);padding:2rem;border-radius:20px;box-shadow:var(--shadow-sm);">
+        <h3>{{title}}</h3>
+        <p style="color:var(--ink-soft);margin:0;">{{body}}</p>
+      </div>
+      {{/content.who_its_for.audiences}}
+    </div>
+  </div>
+</section>

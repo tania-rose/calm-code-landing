@@ -1,0 +1,16 @@
+<section class="section hero" style="background:var(--bg);">
+  <div class="container" style="display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;">
+    <div>
+      <p style="text-transform:uppercase;letter-spacing:0.18em;color:var(--teal-mid);font-size:0.8rem;margin:0 0 1rem;">{{content.hero.eyebrow}}</p>
+      <h1>{{content.hero.headline}}</h1>
+      <p style="font-size:1.2rem;color:var(--ink-soft);max-width:30rem;">{{content.hero.subhead}}</p>
+      <div style="display:flex;gap:0.8rem;margin-top:1.8rem;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="{{content.hero.cta_primary.href}}">{{content.hero.cta_primary.label}}</a>
+        <a class="btn btn-ghost"   href="{{content.hero.cta_secondary.href}}">{{content.hero.cta_secondary.label}}</a>
+      </div>
+    </div>
+    <div>
+      <img src="{{content.hero.image.src}}" alt="{{content.hero.image.alt}}" style="width:100%;border-radius:32px;box-shadow:var(--shadow-lg);"/>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+<section class="section">
+  <div class="container">
+    <h2 style="text-align:center;">{{content.testimonials.heading}}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem;">
+      {{#content.testimonials.items}}
+      <figure style="background:var(--white);padding:2rem;border-radius:20px;box-shadow:var(--shadow-sm);margin:0;">
+        <blockquote style="font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--ink);margin:0 0 1rem;">"{{quote}}"</blockquote>
+        <figcaption style="color:var(--teal-mid);font-size:0.9rem;">{{name}} — {{role}}</figcaption>
+      </figure>
+      {{/content.testimonials.items}}
+    </div>
+  </div>
+</section>

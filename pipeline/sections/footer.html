@@ -1,0 +1,8 @@
+<footer style="background:var(--ink);color:var(--bg);padding:2.5rem 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.9rem;">
+    <span>{{content.footer.copyright}}</span>
+    <nav style="display:flex;gap:1.5rem;">
+      {{#content.footer.links}}<a href="{{href}}" style="color:var(--bg);opacity:0.7;">{{label}}</a>{{/content.footer.links}}
+    </nav>
+  </div>
+</footer>

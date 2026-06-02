@@ -1,0 +1,13 @@
+<section class="section" style="background:var(--bg-teal);">
+  <div class="container" style="max-width:760px;">
+    <h2 style="text-align:center;">{{content.faq.heading}}</h2>
+    <div style="margin-top:2rem;display:grid;gap:1rem;">
+      {{#content.faq.items}}
+      <details style="background:var(--white);padding:1.25rem 1.5rem;border-radius:14px;">
+        <summary style="font-weight:600;cursor:pointer;">{{q}}</summary>
+        <p style="margin:0.75rem 0 0;color:var(--ink-soft);">{{a}}</p>
+      </details>
+      {{/content.faq.items}}
+    </div>
+  </div>
+</section>

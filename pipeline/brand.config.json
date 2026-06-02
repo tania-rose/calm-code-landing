@@ -1,0 +1,41 @@
+{
+  "_schema_note": "Placeholder schema. Will be replaced once the client brand-brief schema is finalised. Keys here mirror the CSS variables in pipeline/sections/_base.html — keep them in sync when you rename.",
+
+  "name": "Alchemy of Breath — The Calm Code",
+  "domain": "alchemyofbreath.com",
+
+  "colors": {
+    "bg":         "#F7F4EF",
+    "bg-warm":    "#F0EBE1",
+    "bg-teal":    "#EBF5F6",
+    "gold":       "#E1B668",
+    "gold-2":     "#D6A652",
+    "teal":       "#00a5b2",
+    "teal-mid":   "#5b7889",
+    "teal-pale":  "#d0ebee",
+    "ink":        "#221F20",
+    "ink-soft":   "#3d3a3b",
+    "muted":      "#7a8a8e",
+    "white":      "#ffffff"
+  },
+
+  "fonts": {
+    "display":        "Cormorant Garamond",
+    "display_weights":"300;400;600;1,300;1,400;1,600",
+    "body":           "Khula",
+    "body_weights":   "300;400;600;700",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
+  },
+
+  "shadows": {
+    "sm": "0 2px 20px rgba(34,31,32,0.06)",
+    "md": "0 8px 40px rgba(34,31,32,0.10)",
+    "lg": "0 20px 60px rgba(34,31,32,0.12)"
+  },
+
+  "tone": {
+    "voice": "calm, embodied, professional — somatic but not woo",
+    "avoid": ["em dashes", "corporate jargon", "spiritual cliché"],
+    "signature_motifs": ["live breathing orb", "organic blob shapes", "Cormorant italic emphasis word"]
+  }
+}

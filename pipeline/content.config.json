@@ -1,0 +1,86 @@
+{
+  "_schema_note": "Placeholder content. Keys here are referenced by section templates as {{content.<key>}}. The schema will be finalised when the client brand-brief schema lands.",
+
+  "meta": {
+    "title":       "The Calm Code — Alchemy of Breath",
+    "description": "Read the pattern. Apply the breath. Regulate the nervous system. Professional certification by Alchemy of Breath.",
+    "lang":        "en"
+  },
+
+  "hero": {
+    "eyebrow":  "Professional Certification",
+    "headline": "Read the pattern. Apply the breath.",
+    "emphasis": "breath",
+    "subhead":  "A practitioner-grade certification in nervous-system regulation.",
+    "cta_primary":   { "label": "Enrol now", "href": "#enrol" },
+    "cta_secondary": { "label": "How it works", "href": "#about" },
+    "image":         { "src": "assets/hero-placeholder.jpg", "alt": "Breathwork practitioner with client" }
+  },
+
+  "tagline_strip": {
+    "items": ["Somatic-informed", "Trauma-aware", "Evidence-based", "Internationally accredited"]
+  },
+
+  "about": {
+    "heading": "About the Calm Code",
+    "body":    "Replace this with the brand-brief about copy."
+  },
+
+  "who_its_for": {
+    "heading": "Who it's for",
+    "audiences": [
+      { "title": "Coaches",       "body": "Replace with audience copy." },
+      { "title": "Therapists",    "body": "Replace with audience copy." },
+      { "title": "Practitioners", "body": "Replace with audience copy." }
+    ]
+  },
+
+  "modules": {
+    "heading": "Six modules. One transformation.",
+    "items": [
+      { "title": "Module 1", "body": "Replace." },
+      { "title": "Module 2", "body": "Replace." },
+      { "title": "Module 3", "body": "Replace." },
+      { "title": "Module 4", "body": "Replace." },
+      { "title": "Module 5", "body": "Replace." },
+      { "title": "Module 6", "body": "Replace." }
+    ]
+  },
+
+  "testimonials": {
+    "heading": "From practitioners in the field",
+    "items": [
+      { "quote": "Replace.", "name": "First L.",  "role": "Role, Location" },
+      { "quote": "Replace.", "name": "First L.",  "role": "Role, Location" },
+      { "quote": "Replace.", "name": "First L.",  "role": "Role, Location" }
+    ]
+  },
+
+  "outcomes": {
+    "heading": "What you walk away with",
+    "items": ["Outcome one.", "Outcome two.", "Outcome three."]
+  },
+
+  "enrol": {
+    "heading": "Enrol in the next cohort",
+    "price":   "Confirm with Anthony/Amy",
+    "guarantee": "30-day satisfaction guarantee",
+    "ghl_embed_html": "<!-- Paste GoHighLevel form embed here -->"
+  },
+
+  "faq": {
+    "heading": "Questions",
+    "items": [
+      { "q": "Replace question?", "a": "Replace answer." },
+      { "q": "Replace question?", "a": "Replace answer." }
+    ]
+  },
+
+  "footer": {
+    "copyright": "© Alchemy of Breath",
+    "links": [
+      { "label": "Privacy", "href": "/privacy" },
+      { "label": "Terms",   "href": "/terms" }
+    ]
+  }
+}
