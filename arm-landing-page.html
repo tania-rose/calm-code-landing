@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quantum Shift &middot; A Free One-Day Breathwork Event &middot; 17 May 2026</title>
-<meta name="description" content="Sunday 17 May 2026. A free, live one-day breathwork event with Anthony Abbagnano and Amy Rachelle. Two sessions. One regulated nervous system at a time.">
-<link rel="canonical" href="https://go.alchemyofbreath.com/quantum-shift">
+<title>Quantum Shift &middot; The Deepening &middot; A One-Day Breathwork Event</title>
+<meta name="description" content="The second Quantum Shift. Same Sunday format with Anthony Abbagnano and Amy Rachelle, with a week of integration on the other side. Free live, or get the Integration Pass.">
+<link rel="canonical" href="https://go.alchemyofbreath.com/quantum-shift-deepening">
 
-<meta property="og:title" content="Quantum Shift &middot; A Free One-Day Breathwork Event">
-<meta property="og:description" content="Sunday 17 May 2026. Two sessions. Free live attendance with Anthony Abbagnano and Amy Rachelle.">
-<meta property="og:image" content="https://alchemyofbreath.com/og/quantum-shift-1200x630.jpg">
-<meta property="og:url" content="https://go.alchemyofbreath.com/quantum-shift">
+<meta property="og:title" content="Quantum Shift &middot; The Deepening">
+<meta property="og:description" content="One Sunday. Two sessions. A week of integration with Anthony and Amy on the other side. Free live attendance, or get the Integration Pass.">
+<meta property="og:image" content="https://alchemyofbreath.com/og/quantum-shift-deepening-1200x630.jpg">
+<meta property="og:url" content="https://go.alchemyofbreath.com/quantum-shift-deepening">
 <meta property="og:type" content="event">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quantum Shift &middot; 17 May 2026">
-<meta name="twitter:description" content="A free one-day breathwork event with Anthony Abbagnano and Amy Rachelle.">
-<meta name="twitter:image" content="https://alchemyofbreath.com/og/quantum-shift-1200x630.jpg">
+<meta name="twitter:title" content="Quantum Shift &middot; The Deepening">
+<meta name="twitter:description" content="A second Sunday with Anthony and Amy, plus a week of integration in a private WhatsApp room.">
+<meta name="twitter:image" content="https://alchemyofbreath.com/og/quantum-shift-deepening-1200x630.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,17 @@
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "Quantum Shift",
-  "startDate": "2026-05-17T10:00:00+01:00",
-  "endDate": "2026-05-17T20:30:00+01:00",
+  "name": "Quantum Shift · The Deepening",
+  "startDate": "2026-06-21T09:00:00+01:00",
+  "endDate": "2026-06-21T20:30:00+01:00",
   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
     "@type": "VirtualLocation",
-    "url": "https://go.alchemyofbreath.com/quantum-shift"
+    "url": "https://go.alchemyofbreath.com/quantum-shift-deepening"
   },
-  "image": "https://alchemyofbreath.com/og/quantum-shift-1200x630.jpg",
-  "description": "A free one-day live breathwork event with two sessions, hosted by Anthony Abbagnano and Amy Rachelle, ND.",
+  "image": "https://alchemyofbreath.com/og/quantum-shift-deepening-1200x630.jpg",
+  "description": "The second Quantum Shift event. Two live breathwork sessions in one day, hosted by Anthony Abbagnano and Amy Rachelle, ND, with an optional week-long integration room on the other side.",
   "organizer": {
     "@type": "Organization",
     "name": "Alchemy of Breath",
@@ -45,15 +45,24 @@
     {"@type": "Person", "name": "Anthony Abbagnano"},
     {"@type": "Person", "name": "Amy Rachelle, ND"}
   ],
-  "offers": [{
-    "@type": "Offer",
-    "name": "Live attendance",
-    "price": "0.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "url": "https://go.alchemyofbreath.com/quantum-shift",
-    "validFrom": "2026-05-01T00:00:00+01:00"
-  }]
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Live attendance",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://go.alchemyofbreath.com/quantum-shift-deepening#reserve-free"
+    },
+    {
+      "@type": "Offer",
+      "name": "Integration Pass",
+      "price": "77.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://go.alchemyofbreath.com/quantum-shift-deepening#reserve-allaccess"
+    }
+  ]
 }
 </script>
 
@@ -178,6 +187,95 @@ p{margin:0 0 1em}
 .hero .eyebrow{color:var(--gold-soft)}
 
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
+
+/* ─── Two-path hero cards ─── */
+.path-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin:36px 0 8px;
+}
+.path-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(230,197,118,0.25);
+  padding:28px 26px;
+  display:flex;
+  flex-direction:column;
+  color:#d8d6cf;
+  backdrop-filter:blur(6px);
+}
+.path-card--accent{
+  background:rgba(204,153,36,0.10);
+  border:1px solid var(--gold);
+  position:relative;
+}
+.path-card--accent::before{
+  content:"Most chosen";
+  position:absolute;
+  top:-12px;left:24px;
+  background:var(--gold);
+  color:var(--ink);
+  font-size:10.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:4px 12px;
+  font-weight:500;
+}
+.path-card .path-label{
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  font-weight:500;
+  margin-bottom:14px;
+}
+.path-card h3{
+  font-size:22px;
+  color:var(--bg);
+  margin:0 0 16px;
+}
+.path-card ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+  flex-grow:1;
+}
+.path-card ul li{
+  position:relative;
+  padding:6px 0 6px 22px;
+  font-size:14.5px;
+  line-height:1.55;
+  color:#c8c6bf;
+}
+.path-card ul li::before{
+  content:"";
+  position:absolute;
+  left:0;top:15px;
+  width:8px;height:1px;
+  background:var(--gold);
+}
+.path-card .price{
+  font-family:var(--display);
+  font-size:28px;
+  color:var(--bg);
+  margin-bottom:4px;
+}
+.path-card .price-strike{
+  font-size:13px;
+  color:var(--muted);
+  text-decoration:line-through;
+  margin-left:8px;
+  font-family:var(--body);
+}
+.path-card .price-sub{
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--gold-soft);
+  margin-bottom:18px;
+}
+.path-card .btn{width:100%}
+
 .session-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .pill{
   display:inline-flex;
@@ -361,6 +459,98 @@ p{margin:0 0 1em}
   box-shadow:var(--shadow-md);
   border-top:4px solid var(--gold);
 }
+.reserve-paths{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  max-width:980px;
+  margin:0 auto;
+}
+.reserve-paths .reserve-card{max-width:none;margin:0;padding:40px 32px}
+.reserve-paths .reserve-card--paid{
+  border-top:4px solid var(--gold);
+  background:linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
+}
+.pass-includes{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+  font-size:14.5px;
+  color:var(--ink-2);
+}
+.pass-includes li{
+  padding:8px 0 8px 22px;
+  position:relative;
+  border-bottom:1px solid var(--line);
+}
+.pass-includes li:last-child{border-bottom:none}
+.pass-includes li::before{
+  content:"";
+  position:absolute;
+  left:0;top:18px;
+  width:10px;height:1px;
+  background:var(--gold);
+}
+.pass-price-block{
+  text-align:center;
+  margin:16px 0 20px;
+  padding:16px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.pass-price{font-family:var(--display);font-size:34px;color:var(--ink)}
+.pass-price-after{font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+
+/* ─── TESTIMONIALS ─── */
+.testimonials{padding:96px 0;background:var(--bg-warm)}
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:56px;
+}
+.t-card{
+  background:var(--white);
+  padding:30px 28px;
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+.t-card::before{
+  content:"\201C";
+  position:absolute;
+  top:8px;left:18px;
+  font-family:var(--display);
+  font-size:64px;
+  line-height:1;
+  color:var(--gold);
+  opacity:.5;
+}
+.t-quote{
+  font-size:15.5px;
+  line-height:1.65;
+  color:var(--ink-2);
+  margin:18px 0 22px;
+  flex-grow:1;
+  position:relative;
+  z-index:2;
+}
+.t-attrib{
+  border-top:1px solid var(--line);
+  padding-top:14px;
+  font-size:13px;
+  color:var(--muted);
+}
+.t-name{
+  font-family:var(--display);
+  font-size:17px;
+  color:var(--ink);
+  display:block;
+  margin-bottom:2px;
+}
+@media (max-width:980px){.testimonials-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.testimonials-grid{grid-template-columns:1fr}}
 .reserve-card .eyebrow{margin-bottom:12px;display:block;text-align:center}
 .reserve-card h2{text-align:center;margin-bottom:8px}
 .reserve-sub{
@@ -517,12 +707,15 @@ footer a:hover{color:var(--gold)}
   .hero{padding:72px 0 64px;min-height:auto}
   .hero-cta{flex-direction:column;align-items:stretch}
   .hero-cta .btn{width:100%}
+  .path-cards{grid-template-columns:1fr;gap:16px;margin-top:28px}
+  .path-card{padding:24px 22px}
   .session-pills{flex-direction:column}
   .pill{justify-content:center}
   .what-grid{grid-template-columns:1fr;gap:40px}
   .outcomes-grid{grid-template-columns:1fr 1fr;gap:14px}
   .outcome-card{padding:24px 20px}
   .reserve-card{padding:32px 24px}
+  .reserve-paths{grid-template-columns:1fr;gap:32px}
   .section{padding:64px 0}
   .pullquote{padding:64px 0}
   .arm-callout,.final-cta,.faq,.reserve{padding:64px 0}
@@ -547,16 +740,45 @@ footer a:hover{color:var(--gold)}
 <!-- ─── HERO ─── -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="container">
-    <span class="eyebrow">Quantum Shift &middot; Sunday 17 May 2026</span>
-    <h1 id="hero-heading">One day. Two sessions. One breath at a time.</h1>
-    <p class="lede">A free, live one-day breathwork event with Anthony Abbagnano and Amy Rachelle. Drop your nervous system into the gear it has been trying to find for years.</p>
+    <span class="eyebrow">Quantum Shift &middot; The Deepening &middot; Sunday 21 June 2026</span>
+    <h1 id="hero-heading">We opened the door. This time, we walk through it.</h1>
+    <p class="lede">A second Sunday with Anthony Abbagnano and Amy Rachelle. Same format, same room, with a week of integration on the other side. Free to attend live. Open to anyone, deeper for anyone who wants to stay close to the work.</p>
 
-    <div class="hero-cta">
-      <a href="#reserve" class="btn btn-primary">Reserve my free seat</a>
+    <div class="path-cards" role="list">
+
+      <article class="path-card" role="listitem" aria-labelledby="path-free-title">
+        <span class="path-label">Join free</span>
+        <h3 id="path-free-title">Both live sessions</h3>
+        <ul>
+          <li>Morning session, 09:00 BST</li>
+          <li>Evening session, 19:00 BST</li>
+          <li>Held end to end by Anthony, Amy and the AoB facilitation team</li>
+          <li>Sunday only, live</li>
+        </ul>
+        <div class="price">Free</div>
+        <div class="price-sub">Live attendance</div>
+        <a href="#reserve-free" class="btn btn-ghost">Reserve my free seat</a>
+      </article>
+
+      <article class="path-card path-card--accent" role="listitem" aria-labelledby="path-pass-title">
+        <span class="path-label">Free + The Integration Pass</span>
+        <h3 id="path-pass-title">Both sessions, plus a week with Anthony and Amy</h3>
+        <ul>
+          <li>Everything in the free seat</li>
+          <li>Lifetime recording of both sessions</li>
+          <li>Live Q&amp;A with Anthony and Amy after each session</li>
+          <li>Private 7-day WhatsApp room with Anthony &amp; Amy</li>
+          <li>First access to ARM Online and ARM at ASHA</li>
+        </ul>
+        <div class="price">$77 <span class="price-strike">$127</span></div>
+        <div class="price-sub">On this page only</div>
+        <a href="#reserve-allaccess" class="btn btn-primary">Get the Integration Pass</a>
+      </article>
+
     </div>
 
     <div class="session-pills" role="list">
-      <span class="pill" role="listitem"><span class="pill-dot"></span>Morning &middot; 10:00 BST</span>
+      <span class="pill" role="listitem"><span class="pill-dot"></span>Morning &middot; 09:00 BST</span>
       <span class="pill" role="listitem"><span class="pill-dot"></span>Evening &middot; 19:00 BST</span>
     </div>
 
@@ -579,12 +801,12 @@ footer a:hover{color:var(--gold)}
 <!-- ─── WHY THIS MATTERS (Amy) ─── -->
 <section class="section why">
   <div class="container section-narrow">
-    <span class="eyebrow">Why this matters</span>
+    <span class="eyebrow">Why a second one</span>
     <div class="rule"></div>
-    <p class="lede-quote">Most people are not broken. Their nervous systems are stuck in a gear they did not choose, and no amount of thinking has moved the needle.</p>
-    <p>You can know all the tools and still feel underwater. Sleep is light. Patience is short. The body keeps bracing for something that may not even be there anymore.</p>
-    <p>The breath is the one autonomic lever you can move on purpose. Used well, in a held room, it can return you to a state your system remembers but has not been able to find on its own.</p>
-    <p>That is what Sunday is for. Two sessions, one day, no theory you have to absorb in advance. Just turn up and breathe.</p>
+    <p class="lede-quote">The first Quantum Shift was the felt sense. People left wanting more time with what they had just touched. The Deepening is that more time, with the room held a little longer.</p>
+    <p>Most nervous systems do not change in a single day. They change in the days right after, when whatever opened up needs somewhere to land. Most of us go straight back into the same week and the opening closes again.</p>
+    <p>This time, the live event is the door. The seven days that follow are the room. If you take the Integration Pass, Anthony and Amy hold that room with you, in real time, through the week the work is actually settling.</p>
+    <p>You do not need to have been at the first one. The two live sessions stand on their own. The deepening happens in what you choose to do with them.</p>
     <p class="signature">&mdash; Amy Rachelle, ND</p>
   </div>
 </section>
@@ -592,8 +814,8 @@ footer a:hover{color:var(--gold)}
 <!-- ─── PULL QUOTE 1 ─── -->
 <section class="pullquote">
   <div class="container">
-    <blockquote>The breath is the only autonomic system you can run by hand.</blockquote>
-    <cite>The premise of the day</cite>
+    <blockquote>"Maybe I am not broken. Maybe my nervous system is dysregulated my whole life. I have always been a rather anxious person. Maybe there is nothing wrong. This thought just gave me some kind of empathy for myself."</blockquote>
+    <cite>Laura P. &middot; after a Sunday session</cite>
   </div>
 </section>
 
@@ -602,11 +824,12 @@ footer a:hover{color:var(--gold)}
   <div class="container">
     <div class="what-grid">
       <div>
-        <span class="eyebrow">What Quantum Shift is</span>
+        <span class="eyebrow">What The Deepening is</span>
         <div class="rule"></div>
-        <h2>One day. Two live sessions. Held end to end.</h2>
-        <p>A free, live, online breathwork event hosted on Sunday 17 May 2026. You join from wherever you are. You will be lying down for about 90 minutes per session. Anthony or Amy guides every breath. The room is held by trained Alchemy of Breath facilitators throughout.</p>
-        <p>There is nothing to learn before Sunday. You do not need experience with breathwork. You do need a quiet room, a mat or sofa, water, and headphones.</p>
+        <h2>One Sunday. Two live sessions. A week with the work.</h2>
+        <p>A live, online breathwork event hosted on Sunday 21 June 2026. You join from wherever you are. You will be lying down for about 90 minutes per session. Anthony or Amy guides every breath. The room is held by trained Alchemy of Breath facilitators throughout.</p>
+        <p>There is nothing to learn before Sunday. You do not need experience with breathwork, and you do not need to have been at the first Quantum Shift. You do need a quiet room, a mat or sofa, water, and headphones.</p>
+        <p>The deepening happens on the other side. If you take the Integration Pass, the live event is the door and the week that follows is the room. Anthony and Amy hold that week with you in a private WhatsApp circle, every day, while the work is settling in your body.</p>
       </div>
       <div>
         <div class="founders-row">
@@ -630,9 +853,9 @@ footer a:hover{color:var(--gold)}
 <section class="section">
   <div class="container">
     <div style="text-align:center">
-      <span class="eyebrow">What it is for</span>
+      <span class="eyebrow">What this day is for</span>
       <div class="rule rule-center"></div>
-      <h2 style="max-width:22ch;margin-left:auto;margin-right:auto">Four things this day is designed to do for you.</h2>
+      <h2 style="max-width:22ch;margin-left:auto;margin-right:auto">Four things the Sunday is designed to do.</h2>
     </div>
     <div class="outcomes-grid">
       <article class="outcome-card">
@@ -648,8 +871,8 @@ footer a:hover{color:var(--gold)}
         <p>Return to a baseline of presence that thinking on its own cannot reach.</p>
       </article>
       <article class="outcome-card">
-        <h3>See what is next</h3>
-        <p>Understand where the work goes from here, if you want to take it further.</p>
+        <h3>Stay close to the work</h3>
+        <p>If you take the Pass, the WhatsApp room holds you while the change is settling.</p>
       </article>
     </div>
   </div>
@@ -658,45 +881,166 @@ footer a:hover{color:var(--gold)}
 <!-- ─── PULL QUOTE 2 ─── -->
 <section class="pullquote">
   <div class="container">
-    <blockquote>Regulate, measurably, in real time.</blockquote>
-    <cite>The point of the breath</cite>
+    <blockquote>"This is a summit in breathwork, and I am so grateful to you both."</blockquote>
+    <cite>Rom&eacute;o Cormier &middot; after a Quantum Shift session</cite>
   </div>
 </section>
 
-<!-- ─── RESERVE FORM ─── -->
+<!-- ─── RESERVE (DUAL PATH) ─── -->
 <section class="reserve" id="reserve" aria-labelledby="reserve-heading">
   <div class="container">
-    <div class="reserve-card">
-      <span class="eyebrow">Reserve your seat</span>
-      <h2 id="reserve-heading">Save your free seat for Sunday.</h2>
-      <p class="reserve-sub">Both sessions are open to you. Same link works for both.</p>
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="eyebrow">Choose your way in</span>
+      <div class="rule rule-center"></div>
+      <h2 id="reserve-heading">Two paths. Same room.</h2>
+      <p style="color:var(--ink-2);max-width:56ch;margin:8px auto 0">Free covers the live Sunday. The Integration Pass covers the week that follows.</p>
+    </div>
 
-      <div class="live-counter"><strong id="live-count">612</strong> already registered from <strong>31</strong> countries</div>
+    <div class="reserve-paths">
 
-      <!-- GHL form embed: replace this block with the GHL form snippet for JXFlOEgAhMoElAqLBG1L -->
-      <form id="qs-optin" novalidate>
-        <div class="field">
-          <label for="firstname">First name</label>
-          <input type="text" id="firstname" name="first_name" required autocomplete="given-name">
+      <!-- FREE PATH -->
+      <div class="reserve-card" id="reserve-free" aria-labelledby="reserve-free-heading">
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:8px">Free seat</span>
+        <h2 id="reserve-free-heading" style="text-align:center;font-size:26px;margin-bottom:6px">Save your seat for Sunday.</h2>
+        <p class="reserve-sub">Both sessions are open to you. Same link works for both.</p>
+
+        <!-- GHL form embed: replace this block with the GHL form snippet for JXFlOEgAhMoElAqLBG1L -->
+        <form id="qs-optin-free" novalidate>
+          <div class="field">
+            <label for="firstname-free">First name</label>
+            <input type="text" id="firstname-free" name="first_name" required autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="email-free">Email</label>
+            <input type="email" id="email-free" name="email" required autocomplete="email" inputmode="email">
+          </div>
+
+          <input type="hidden" name="time_zone" class="time_zone">
+          <input type="hidden" name="event_tag" value="quantum-shift-deepening-2026-06-21">
+          <input type="hidden" name="landing_page_id" value="qs-deepening">
+          <input type="hidden" name="pass_tier" value="free">
+          <input type="hidden" name="utm_source"   class="utm_source">
+          <input type="hidden" name="utm_medium"   class="utm_medium">
+          <input type="hidden" name="utm_campaign" class="utm_campaign">
+          <input type="hidden" name="utm_content"  class="utm_content">
+          <input type="hidden" name="utm_term"     class="utm_term">
+          <input type="hidden" name="referrer_url" class="referrer_url">
+
+          <button type="submit" class="btn btn-primary btn-block">Reserve my free seat</button>
+          <p class="helper"><span class="helper-strong">Takes 30 seconds. No card needed.</span><br>Pre-event reminders only. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <!-- INTEGRATION PASS PATH -->
+      <div class="reserve-card reserve-card--paid" id="reserve-allaccess" aria-labelledby="reserve-pass-heading">
+        <span class="eyebrow" style="display:block;text-align:center;margin-bottom:8px">The Integration Pass</span>
+        <h2 id="reserve-pass-heading" style="text-align:center;font-size:26px;margin-bottom:6px">A week with Anthony and Amy.</h2>
+        <p class="reserve-sub">Everything in the free seat, plus the integration layer that follows.</p>
+
+        <ul class="pass-includes">
+          <li>Lifetime recording of both sessions, chaptered</li>
+          <li>Live Q&amp;A with Anthony and Amy after each session</li>
+          <li>Private 7-day WhatsApp room with Anthony &amp; Amy</li>
+          <li>First access to ARM Online and ARM at ASHA</li>
+        </ul>
+
+        <div class="pass-price-block">
+          <div class="pass-price">$77</div>
+          <div class="pass-price-after">$127 if you come back later</div>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email" inputmode="email">
-        </div>
 
-        <input type="hidden" name="time_zone" id="time_zone">
-        <input type="hidden" name="event_tag" value="quantum-shift-2026-05-17">
-        <input type="hidden" name="landing_page_id" value="qs-2026">
-        <input type="hidden" name="utm_source"   id="utm_source">
-        <input type="hidden" name="utm_medium"   id="utm_medium">
-        <input type="hidden" name="utm_campaign" id="utm_campaign">
-        <input type="hidden" name="utm_content"  id="utm_content">
-        <input type="hidden" name="utm_term"     id="utm_term">
-        <input type="hidden" name="referrer_url" id="referrer_url">
+        <!-- GHL 1-step order form: replace this block with the GHL embed for product integration-pass-deepening-2026 -->
+        <form id="qs-pass" novalidate>
+          <div class="field">
+            <label for="firstname-pass">First name</label>
+            <input type="text" id="firstname-pass" name="first_name" required autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="email-pass">Email</label>
+            <input type="email" id="email-pass" name="email" required autocomplete="email" inputmode="email">
+          </div>
+          <div class="field">
+            <label>Card &middot; secured by Stripe</label>
+            <div style="padding:14px 16px;border:1px dashed var(--line);background:var(--bg);font-size:13px;color:var(--muted)">GHL order form &middot; Stripe card field renders here</div>
+          </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Reserve my free seat</button>
-        <p class="helper"><span class="helper-strong">Takes 30 seconds. No card needed.</span><br>Pre-event reminders only. Unsubscribe anytime.</p>
-      </form>
+          <input type="hidden" name="time_zone" class="time_zone">
+          <input type="hidden" name="event_tag" value="quantum-shift-deepening-2026-06-21">
+          <input type="hidden" name="landing_page_id" value="qs-deepening">
+          <input type="hidden" name="pass_tier" value="integration-pass">
+          <input type="hidden" name="product_id" value="integration-pass-deepening-2026">
+          <input type="hidden" name="utm_source"   class="utm_source">
+          <input type="hidden" name="utm_medium"   class="utm_medium">
+          <input type="hidden" name="utm_campaign" class="utm_campaign">
+          <input type="hidden" name="utm_content"  class="utm_content">
+          <input type="hidden" name="utm_term"     class="utm_term">
+          <input type="hidden" name="referrer_url" class="referrer_url">
+
+          <button type="submit" class="btn btn-primary btn-block">Get the Integration Pass &middot; $77</button>
+          <p class="helper"><span class="helper-strong">Sit in the first Q&amp;A on Sunday.</span><br>If the room does not give you something the free side cannot, full refund. No questions.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div style="text-align:center">
+      <span class="eyebrow">From the Sunday room</span>
+      <div class="rule rule-center"></div>
+      <h2 id="testimonials-heading">What people say after a session with Anthony and Amy.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <article class="t-card">
+        <p class="t-quote">I've returned here after 3 years of freeze, nervous system totally collapsed. Today my nervous system allowed me to choose to return to this amazing place and breathe. I'm so proud of this and so emotional all at once.</p>
+        <div class="t-attrib"><span class="t-name">Shelly Dance</span>Returning after 3 years</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">You are both so inspirational and hold a space like no one else. I really enjoy these more discursive sessions with Amy and Anthony. Knowing the people and feeling that deeper connection is important to me.</p>
+        <div class="t-attrib"><span class="t-name">Nicola Armstrong</span>Returning attendee</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">I went on a beautiful journey. I was holding on to so much, I felt it release. Worries are gone. Time to let go and begin again. I am new. Love and light to you all.</p>
+        <div class="t-attrib"><span class="t-name">Natalie Thompson</span>After a Sunday session</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">I feel calm, grounded, regulated. Years of yoga, swimming and tai chi, and learning about and using the breath, and obviously especially AoB Sunday sessions.</p>
+        <div class="t-attrib"><span class="t-name">Carole V.</span>Long-term practitioner</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">I always go so much deeper and release more when it is you two. Maybe it is a trust thing, or your facilitation experience. Thank you so much.</p>
+        <div class="t-attrib"><span class="t-name">Zi Zi</span>After breathwork</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">I am an Alchemy of Breath graduate. Breath changed my life. Currently I facilitate and teach my own breathwork training. I am forever grateful for this medicine and for Alchemy of Breath.</p>
+        <div class="t-attrib"><span class="t-name">Vonny Stella</span>AoB graduate, facilitator</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">Marking my first year anniversary of AoB sessions online every Sunday. That's how important it is to me now.</p>
+        <div class="t-attrib"><span class="t-name">Louise Burrows</span>1 year of Sundays</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">This breathwork has created more change super quickly, and given me a different knowing of things. The inner wisdom that is privately yours, your own blueprint but also shared in a heartbeat.</p>
+        <div class="t-attrib"><span class="t-name">Hana B.</span>New to AoB</div>
+      </article>
+
+      <article class="t-card">
+        <p class="t-quote">Peaceful, grounded, and connected to my body sensations.</p>
+        <div class="t-attrib"><span class="t-name">Karen Rickman</span>After a Sunday session</div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -711,20 +1055,24 @@ footer a:hover{color:var(--gold)}
     </div>
     <div class="faq-list">
       <details>
-        <summary>Is it really free?</summary>
-        <p>Yes. Live attendance is free. No card is needed to register. We ask only for your name and email so we can send the link and reminders.</p>
+        <summary>I attended the first Quantum Shift. Is this just a repeat?</summary>
+        <p>No. The two live sessions are designed to land for both newcomers and returners, but the deepening is the integration layer on the other side: live Q&amp;A with Anthony and Amy, and a week-long WhatsApp room where the work continues. The Integration Pass is built for returners who want to stay close to the practice.</p>
       </details>
       <details>
-        <summary>Will it be recorded?</summary>
-        <p>Yes. The recording is a separate, optional product so it can cover production and lifetime access. You will see it on the confirmation page after you register, and again after the event.</p>
+        <summary>What is the difference between free and the Integration Pass?</summary>
+        <p>Free gets you both live sessions on Sunday 21 June. The Pass adds the lifetime recording, 30 minutes of Q&amp;A with Anthony and Amy after each session, and a private 7-day WhatsApp room with both of them in it. Same event. More of it.</p>
+      </details>
+      <details>
+        <summary>How does the WhatsApp room work?</summary>
+        <p>It opens on the morning of Sunday 21 June and closes seven days later, on 28 June. You get a join link in your welcome email. Anthony and Amy check in daily with voice notes, prompts, and answers. You bring questions as they come up while the practice is settling in your body.</p>
       </details>
       <details>
         <summary>I have never done breathwork. Is this for me?</summary>
-        <p>It is. There is nothing to learn before Sunday. The whole point is that the room is held for you. Anthony or Amy guides every breath, and trained facilitators are there throughout.</p>
+        <p>It is. There is nothing to learn before Sunday. The whole point is that the room is held for you. Anthony or Amy guides every breath, and trained facilitators are there throughout. You do not need to have done the first Quantum Shift.</p>
       </details>
       <details>
         <summary>What if I cannot stay the full session?</summary>
-        <p>Stay for as much as you can. The recording covers anything you miss, and we will send a short integration note in the days afterward.</p>
+        <p>Stay for as much as you can. If you have the Pass, the recording covers anything you miss, and you can bring questions into the WhatsApp room afterward.</p>
       </details>
       <details>
         <summary>What do I need to set up?</summary>
@@ -742,8 +1090,8 @@ footer a:hover{color:var(--gold)}
 <section class="arm-callout">
   <div class="container section-narrow">
     <span class="eyebrow">What happens next</span>
-    <h2>If Sunday opens a door, the Alchemy Regulation Method is the room behind it.</h2>
-    <p>ARM is the foundation that makes deeper breathwork modalities safer. Sunday is the felt sense. ARM is the structured, six-stage method that turns it into something you can return to on your own. We will share the founding-rate door with everyone who registers, after the event.</p>
+    <h2>If the Sunday opens a door, the Alchemy Regulation Method is the room behind it.</h2>
+    <p>ARM is the foundation that makes deeper breathwork modalities safer. Sunday is the felt sense. ARM is the structured, six-stage method that turns it into something you can return to on your own. Integration Pass holders get the door first, 48 hours before public registration, at the founding rate.</p>
     <div class="arm-credentials">
       <span>ICF recognised</span>
       <span>SHRM credentials</span>
@@ -757,9 +1105,12 @@ footer a:hover{color:var(--gold)}
   <div class="container">
     <span class="eyebrow">One last thing</span>
     <div class="rule rule-center"></div>
-    <h2>One day. Two sessions. One breath at a time.</h2>
-    <p>The room opens Sunday 17 May. Save your seat now and we will hold it for you.</p>
-    <a href="#reserve" class="btn btn-primary">Reserve my free seat</a>
+    <h2>One Sunday. Two sessions. A week with the work.</h2>
+    <p>The room opens Sunday 21 June. Take the seat that fits, and we will hold it for you.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="#reserve-free" class="btn btn-primary">Reserve my free seat</a>
+      <a href="#reserve-allaccess" class="btn btn-ghost" style="border-color:var(--ink);color:var(--ink)">Get the Integration Pass &middot; $77</a>
+    </div>
   </div>
 </section>
 
@@ -781,29 +1132,29 @@ footer a:hover{color:var(--gold)}
 
 <!-- ─── STICKY MOBILE CTA ─── -->
 <div class="sticky-cta">
-  <a href="#reserve" class="btn btn-primary">Reserve my free seat</a>
+  <a href="#reserve-free" class="btn btn-primary">Reserve my free seat</a>
 </div>
 
 <script>
-// Time zone auto-detect into hidden field
-try {
-  document.getElementById('time_zone').value = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-} catch(e) {}
-
-// UTM + referrer capture
+// Populate hidden fields on BOTH forms (free + pass) via class selectors
 (function(){
+  function setAll(selector, value){
+    document.querySelectorAll('.' + selector).forEach(function(el){ el.value = value || ''; });
+  }
+  // Time zone auto-detect
+  try { setAll('time_zone', Intl.DateTimeFormat().resolvedOptions().timeZone); } catch(e) {}
+
+  // UTM + referrer capture
   var params = new URLSearchParams(location.search);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
-    var el = document.getElementById(k);
-    if (el) el.value = params.get(k) || '';
+    setAll(k, params.get(k));
   });
-  var ref = document.getElementById('referrer_url');
-  if (ref) ref.value = document.referrer || '';
+  setAll('referrer_url', document.referrer);
 })();
 
-// Countdown to first session: Sunday 17 May 2026, 10:00 BST (09:00 UTC)
+// Countdown to first session: Sunday 21 June 2026, 09:00 BST (08:00 UTC)
 (function(){
-  var target = new Date(Date.UTC(2026, 4, 17, 9, 0, 0)).getTime();
+  var target = new Date(Date.UTC(2026, 5, 21, 8, 0, 0)).getTime();
   var el = document.getElementById('countdown');
   if (!el) return;
   function tick(){
@@ -817,9 +1168,6 @@ try {
   tick();
   setInterval(tick, 60000);
 })();
-
-// Live counter (placeholder static value; wire to GHL count endpoint in production)
-// document.getElementById('live-count').textContent = liveValueFromAPI;
 </script>
 
 </body>
