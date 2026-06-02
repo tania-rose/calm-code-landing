@@ -54,6 +54,20 @@
     .image-break::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,20,18,.25) 0%,rgba(20,20,18,.55) 100%);}
     .image-break-quote{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px;z-index:2;}
     .image-break-quote p{font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,36px);line-height:1.35;letter-spacing:-.01em;color:#fff;text-align:center;max-width:760px;text-shadow:0 2px 28px rgba(0,0,0,.5);font-style:italic;}
+    .carousel-wrap{position:relative;max-width:720px;margin:0 auto;overflow:hidden;}
+    .carousel-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);}
+    .carousel-slide{min-width:100%;padding:0 12px;box-sizing:border-box;}
+    .carousel-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:clamp(28px,4vw,44px) clamp(24px,3.5vw,40px);text-align:center;height:100%;display:flex;flex-direction:column;justify-content:center;min-height:240px;}
+    .carousel-card blockquote{font-family:'Marcellus',Georgia,serif;font-size:clamp(16px,1.8vw,20px);line-height:1.6;color:rgba(255,255,255,.92);font-style:italic;margin:0 0 20px;max-width:560px;margin-left:auto;margin-right:auto;}
+    .carousel-card cite{font-family:'Roboto',sans-serif;font-style:normal;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#cc9924;}
+    .carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(204,153,36,.15);border:1px solid rgba(204,153,36,.4);color:#cc9924;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;z-index:5;-webkit-tap-highlight-color:transparent;}
+    .carousel-arrow:hover{background:rgba(204,153,36,.3);transform:translateY(-50%) scale(1.08);}
+    .carousel-arrow.prev{left:0;}
+    .carousel-arrow.next{right:0;}
+    .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:28px;flex-wrap:wrap;}
+    .carousel-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s;}
+    .carousel-dots button.active{background:#cc9924;transform:scale(1.25);box-shadow:0 0 8px rgba(204,153,36,.5);}
+    @media(max-width:640px){.carousel-arrow{width:36px;height:36px;font-size:14px;}.carousel-arrow.prev{left:-2px;}.carousel-arrow.next{right:-2px;}}
   </style>
 </head>
 <body>
@@ -98,9 +112,9 @@
   </div>
   <div class="relative z-10 max-w-3xl mx-auto px-6 pt-28 pb-20 w-full flex flex-col items-center text-center">
     <div class="date-pill mb-6">Quantum Shift · Sunday 21 June 2026</div>
-    <p style="font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:18px;">We don't ask each other that very often</p>
-    <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:840px;">How is your nervous system, really?</h1>
-    <p class="mb-8" style="font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.92);max-width:600px;">Sunday is a day to sit with the question properly. This is a full day with Anthony and Amy, and the point of it is simple. We want to help you remember what regulation feels like in your own body. There will be two live breathwork sessions, and you'll be breathing alongside other people who are doing the same quiet work. By the evening, regulation won't just be an idea you've read about. It will be a place you know how to find your way back to.</p>
+    <p style="font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:18px;">From our last event: "Maybe I am not broken."</p>
+    <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:840px;">What if nothing is wrong with you?</h1>
+    <p class="mb-8" style="font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.92);max-width:560px;">Two live breathwork sessions with Anthony and Amy. One day to find out what regulation actually feels like — in your body, not on a page.</p>
 
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
       <div style="display:flex;">
@@ -134,8 +148,17 @@
     <div class="text-center mb-12">
       <p class="eyebrow mb-4">The check-in</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">You're not broken. Your nervous system just hasn't been trained.</h2>
     </div>
+
+    <div style="background:linear-gradient(135deg,#354d4c,#2a3e3d);padding:clamp(36px,5vw,56px) clamp(28px,4vw,48px);margin-bottom:40px;text-align:center;">
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.15;letter-spacing:-.02em;color:#fff;margin:0 0 20px;">You are not broken.</h2>
+      <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(18px,2.2vw,24px);line-height:1.4;color:rgba(255,255,255,.85);margin:0 0 28px;">Your nervous system just hasn't been trained.</p>
+      <div style="max-width:540px;margin:0 auto;padding:24px 28px;background:rgba(255,255,255,.06);border-left:3px solid #cc9924;">
+        <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.9);font-style:italic;margin:0 0 10px;">"Maybe I am not broken. Maybe my nervous system is dysregulated my whole life. I have always been a rather anxious person. Maybe there is nothing wrong. Maybe my nervous system has been dysregulated since my birth... this thought just gave me some kind of empathy for myself."</p>
+        <p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#cc9924;margin:0;">Laura P. — from our last event</p>
+      </div>
+    </div>
+
     <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">Most people who come to a day like this aren't in crisis. On paper, they're doing fine. They get things done, and they show up for the people who need them. But there's often something running underneath all of that, and it's harder to put into words.</p>
     <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">Maybe you feel like you're always slightly switched on. Maybe you're tired in a way that a good night's sleep doesn't seem to touch. Maybe there's a version of yourself you keep meaning to get back to, and you're not quite sure where they went.</p>
     <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">That isn't a willpower problem, and it doesn't mean you're doing life wrong. It's what happens when a nervous system spends years holding on and rarely gets the chance to let go.</p>
@@ -294,6 +317,244 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS CAROUSEL -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 40%,rgba(204,153,36,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(53,77,76,.1) 0%,transparent 50%);"></div>
+  <div class="spark-field" aria-hidden="true">
+    <span class="spark sm" style="top:12%;left:20%;animation-duration:5s;animation-delay:.3s;--peak:.5;"></span>
+    <span class="spark" style="top:30%;left:85%;animation-duration:6.5s;animation-delay:1.5s;--peak:.6;"></span>
+    <span class="spark sm" style="top:75%;left:10%;animation-duration:4.5s;animation-delay:2s;--peak:.45;"></span>
+    <span class="spark" style="top:85%;left:75%;animation-duration:6s;animation-delay:.8s;--peak:.55;"></span>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">From our community</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:680px;margin:0 auto 14px;">In their own words.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:480px;margin:0 auto;">Real messages from people who came to our last nervous system regulation event.</p>
+    </div>
+
+    <div class="carousel-wrap" id="testimonialCarousel">
+      <button class="carousel-arrow prev" aria-label="Previous testimonial">&#8592;</button>
+      <button class="carousel-arrow next" aria-label="Next testimonial">&#8594;</button>
+      <div class="carousel-track" id="carouselTrack">
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I've returned here after 3 years of freeze / nervous system totally collapsed. I'm slowly returning and today my nervous system allowed me to choose to return to this amazing place and breathe. I'm so proud of this and so emotional all at once."</blockquote>
+          <cite>Shelly Dance</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"This makes me quite emotional. Maybe I am not broken. Maybe my nervous system is dysregulated my whole life. I have always been a rather anxious person. I was a very anxious and shy child. I am always wondering what is wrong with me. Maybe there is nothing wrong. Maybe my nervous system has been dysregulated since my birth... this thought just gave me some kind of empathy for myself."</blockquote>
+          <cite>Laura P.</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Marking my 1st year anniversary of AoB sessions online every Sunday. That's how important it is to me now."</blockquote>
+          <cite>Louise Burrows</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I feel calm, grounded, regulated. Years of yoga, swimming and tai chi, and learning about and using the breath — and obv, especially AoB Sunday sessions."</blockquote>
+          <cite>Carole V</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Just wanted to add that when I came across Anthony's work just recently, this breathwork has created more change super quickly, and given me a different knowing of things. The inner wisdom that is privately yours, your own blueprint but is also shared in a heartbeat."</blockquote>
+          <cite>Hana B Well</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Back today after a break for a while as I really enjoy these more discursive sessions with Amy and Anthony. Knowing the people and feeling that deeper connection is important to me. You are both so inspirational and hold a space like no one else."</blockquote>
+          <cite>Nicola Armstrong</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"This is the key take-home message for me... not to seek goals/outcomes, reducing my expectations and be conscious and present. Thanks Amy and Anthony for calling this out explicitly."</blockquote>
+          <cite>Susanne Farwer</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"10 years now that I've been breathing with you online. I first discovered you at Triyoga in London."</blockquote>
+          <cite>Amy R</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"So happy that I have this healthful focus every Sunday — for years!!"</blockquote>
+          <cite>Christy Herman</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"So happy I discovered it and shared it with friends as I had an amazing experience at my first session."</blockquote>
+          <cite>Nadja H</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Thank you, that was so beautiful. I went on a beautiful journey. I was holding on to so much, I felt it release. Worries are gone. Time to let go and begin again. I am new. Love and light to you all."</blockquote>
+          <cite>Natalie Thompson</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Breathed with and in the knot inside my heart space with openness and love. Feels lighter now. Sending love and hugs around the world to all of you."</blockquote>
+          <cite>Sabine Schlachter</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Wasn't expecting to get anything out of it, as normally I hate focusing on my breath as it triggers my breathing pattern disorder. But it was really great."</blockquote>
+          <cite>Seema G</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Thank you! That was incredible. I feel so much softer."</blockquote>
+          <cite>Lucy Keens</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"The rhythmic music lessened my effort and made it so much more natural and consistent. I could focus more deeply on the effect and flow. Fluid. Deep."</blockquote>
+          <cite>Cate Curtis</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I appreciate what I learned BEFORE the breathing. What you both shared with us helped open my perspective to how I can deal with my emotions as they affect me."</blockquote>
+          <cite>Cate Curtis</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Emotional but feeling lighter."</blockquote>
+          <cite>Harold Heywood</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Felt message from my body: I'm here with you, all the time, forever."</blockquote>
+          <cite>Markus Heimpel</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I can feel my essence."</blockquote>
+          <cite>Brigitte Kronenberg</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I am an Alchemy of Breath graduate. Breath changed my life. Currently I facilitate and teach my own breathwork training. I am forever grateful for this medicine and for Alchemy of Breath."</blockquote>
+          <cite>Vonny Stella</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I am so relaxed and remember now why I loved this so much... such a precious experience."</blockquote>
+          <cite>Shelly Dance</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Had a slight release and a moment of true self-compassion. Thank you for guiding."</blockquote>
+          <cite>Carina Garland</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Maybe it is a trust thing (I trust you both) or your facilitation experience — but I always go so much deeper / release more when it is you two. Thank you so much."</blockquote>
+          <cite>Zi Zi</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I feel so blessed to be here with you both, like how amazing is this... it's so special. Thank you everyone for sharing this space."</blockquote>
+          <cite>Hana B</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I'm so grateful. You are altering my (wheelchair-bound) life."</blockquote>
+          <cite>Cate Curtis</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Hello again from New Orleans. I am still floating with such clarity from this morning's session!"</blockquote>
+          <cite>Cate Curtis</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Breathing together is so much more powerful — it feels as if the collective energy is giving me an extra boost."</blockquote>
+          <cite>Susanne Farwer</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Thank you very much. I only attended part of the session but was able to reconnect to my body and release some activation, which allows me more groundedness."</blockquote>
+          <cite>Rivkah Bauman</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I felt so amazing this morning. Like waking up after a great night's sleep. Fully rested and comfortable in my skin and my life. Thank you!!!"</blockquote>
+          <cite>Nadja H</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"This is a summit in breathwork, and I am so grateful to you both and Rhiannon. You brought Breathe the World to new heights!"</blockquote>
+          <cite>Rom&eacute;o Cormier</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I let go of sooooo much in my lower chakras, I now feel so calm, content, full of love in my heart, connected and freeeeeeeeeeeeee."</blockquote>
+          <cite>Natalie (Plymouth UK)</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I'm vibrating and floating so peacefully. I felt the energy and just opened and accepted, then let it all go — such an evolutionary feeling!"</blockquote>
+          <cite>Jonquil Jenkins</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Fabulous!!! I feel like myself — creative, sensual, playful, calm."</blockquote>
+          <cite>Dena Joy</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"So much gratitude for this experience and your guidance through breathing... feeling peaceful and present."</blockquote>
+          <cite>Diana Romo</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Beautiful, thank you so much. Loved breathing with everyone, connecting with such compassionate, open, vulnerable, beautiful souls!!"</blockquote>
+          <cite>Judy Becker</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"This session was very healing of the whole body. There is always a feeling of release and coherence after each breath session with you. Thank you for your wisdom and generosity."</blockquote>
+          <cite>al tul</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Thank you so much to remember the sacredness of working with breath. This for me is the only place from which I hear the call to practice."</blockquote>
+          <cite>Marta Zygadlo</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"I yawned, shivered, my tummy gurgled throughout. Tears flowed towards the end. Feeling more connected to myself. Thank you so much."</blockquote>
+          <cite>Sonya Tynan</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Thank you so much for an astounding journey of healing, and excellent music. I am so relaxed and calm. Love and light to all."</blockquote>
+          <cite>Barbara Foster</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Peaceful, grounded, and connected to my body sensations."</blockquote>
+          <cite>Karen Rickman</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"Relaxed, ready, with an empty mind. Thank you for the profound insights and warm-hearted guidance."</blockquote>
+          <cite>Trang Do</cite>
+        </div></div>
+
+        <div class="carousel-slide"><div class="carousel-card">
+          <blockquote>"More aware of my inner climate and able to be with it."</blockquote>
+          <cite>Sharon F</cite>
+        </div></div>
+
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- YOUR NEXT STEP -->
 <section class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
   <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.1) 0%,transparent 55%);"></div>
@@ -405,6 +666,24 @@
 const fadeObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>fadeObserver.observe(el));
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+
+(function(){
+  const track=document.getElementById('carouselTrack');
+  const slides=track.querySelectorAll('.carousel-slide');
+  const dotsWrap=document.getElementById('carouselDots');
+  const prevBtn=document.querySelector('#testimonialCarousel .prev');
+  const nextBtn=document.querySelector('#testimonialCarousel .next');
+  let idx=0;const total=slides.length;
+  slides.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Go to testimonial '+(i+1));if(i===0)b.classList.add('active');dotsWrap.appendChild(b);});
+  const dots=dotsWrap.querySelectorAll('button');
+  function go(n){idx=((n%total)+total)%total;track.style.transform='translateX(-'+idx*100+'%)';dots.forEach((d,i)=>d.classList.toggle('active',i===idx));}
+  prevBtn.addEventListener('click',()=>go(idx-1));
+  nextBtn.addEventListener('click',()=>go(idx+1));
+  dotsWrap.addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){go([...dots].indexOf(e.target));}});
+  let startX=0;track.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchend',e=>{const diff=startX-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?go(idx+1):go(idx-1);}},{passive:true});
+  setInterval(()=>go(idx+1),8000);
+})();
 </script>
 <script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 </body></html>
