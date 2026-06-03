@@ -68,6 +68,16 @@
     .carousel-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s;}
     .carousel-dots button.active{background:#cc9924;transform:scale(1.25);box-shadow:0 0 8px rgba(204,153,36,.5);}
     @media(max-width:640px){.carousel-arrow{width:36px;height:36px;font-size:14px;}.carousel-arrow.prev{left:-2px;}.carousel-arrow.next{right:-2px;}}
+    .check-list li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:14px;}
+    .check-list li::before{content:'\2713';display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(204,153,36,.15);border:1px solid rgba(204,153,36,.4);color:#cc9924;font-size:12px;flex-shrink:0;margin-top:3px;}
+    .pattern-card{background:#fff;border:1px solid #d3cdb3;padding:40px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);text-align:center;}
+    .pattern-card h3{font-size:24px;color:#1a1a18;margin-bottom:10px;letter-spacing:-.01em;}
+    .pattern-card .pattern-label{display:inline-block;font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#cc9924;margin-bottom:16px;padding:6px 14px;background:rgba(204,153,36,.08);border:1px solid rgba(204,153,36,.2);}
+    .future-card{position:relative;padding:32px 28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);}
+    .future-card h3{font-family:'Marcellus',Georgia,serif;font-size:20px;color:#fff;margin-bottom:10px;}
+    .future-card p{font-size:15px;color:rgba(255,255,255,.8);line-height:1.7;}
+    .for-you-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
+    .for-you-item .icon{flex-shrink:0;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;}
   </style>
 </head>
 <body>
@@ -112,9 +122,9 @@
   </div>
   <div class="relative z-10 max-w-3xl mx-auto px-6 pt-28 pb-20 w-full flex flex-col items-center text-center">
     <div class="date-pill mb-6">Quantum Shift · Sunday 21 June 2026</div>
-    <p style="font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:18px;">A regulated nervous system by Sunday evening</p>
-    <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:840px;">By Sunday evening, calm won't be something you read about. It'll be something you feel.</h1>
-    <p class="mb-8" style="font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.92);max-width:560px;">Two live breathwork sessions with Anthony and Amy. One day to give your nervous system something it may never have had — the chance to settle.</p>
+    <p style="font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:18px;">Free · Live · One day</p>
+    <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:840px;">Find the hidden pattern keeping your nervous system stuck — and shift it in a single day.</h1>
+    <p class="mb-8" style="font-size:17px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.92);max-width:580px;">By Sunday evening, you'll think more clearly, feel less anxious, and carry a calm that the people around you can actually feel. Two live breathwork sessions with Anthony Abbagnano and Amy Rachelle.</p>
 
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;">
       <div style="display:flex;">
@@ -134,7 +144,7 @@
       <span class="session-pill"><span class="dot"></span>Part 2 · 5 to 7pm UK</span>
     </div>
 
-    <p style="font-family:'Roboto',sans-serif;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.88);margin-top:18px;">You're welcome to come to one session or both. They're free, and Breathe The World is included.</p>
+    <p style="font-family:'Roboto',sans-serif;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.88);margin-top:18px;">Come to one session or both. They're free, and Breathe The World is included.</p>
   </div>
   <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
     <span style="font-size:10px;letter-spacing:.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
@@ -142,18 +152,33 @@
   </div>
 </section>
 
-<!-- THE CHECK-IN -->
+<!-- SOMETHING FEELS OFF (PROBLEM) -->
 <section class="py-24" style="background:#f9f8f5;">
   <div class="max-w-3xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="eyebrow mb-4">The check-in</p>
+      <p class="eyebrow mb-4">Be honest with yourself</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">Nothing is broken. Your nervous system just hasn't had the chance to learn this yet.</h2>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">Something feels off. You can't quite name it — but you can feel it.</h2>
     </div>
-    <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">Most people who find their way to a day like this are doing fine on the surface. They show up, they get things done, they care about the people around them. But underneath all of that, there's often a quiet hum — something that doesn't quite switch off.</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">Maybe you feel like you're always slightly on. Maybe you're tired in a way that rest doesn't quite reach. Maybe there's a version of yourself you keep meaning to get back to, and you're not sure where they went.</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">That's not a discipline problem. It's not a lifestyle thing. It's simply what happens when a nervous system has been carrying more than it was ever shown how to put down.</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;"><strong style="color:#1a1a18;">The good news is that your nervous system runs on your breath — and most of us were simply never taught how to use that.</strong></p>
+    <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">You're functioning. Getting things done. Showing up for the people who need you. From the outside, everything looks fine.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">But underneath, there's this quiet hum that never quite switches off. A low-grade fog that makes even simple decisions feel heavier than they should. A tightness in your chest you've stopped noticing because it's been there so long. An edge to your patience that shows up at exactly the wrong moment — usually with the people you love most.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">You might be sleeping but not resting. Busy but not productive. Present but not really there.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;"><strong style="color:#1a1a18;">And here's the thing nobody told you: this isn't a personality trait. It isn't a discipline problem. And it has nothing to do with how hard you're trying.</strong></p>
+  </div>
+</section>
+
+<!-- REFRAME — IT'S YOUR NERVOUS SYSTEM -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 30%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(53,77,76,.12) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="eyebrow mb-4">The real reason</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:780px;margin:0 auto 22px;">It's not you. It's your nervous system.</h2>
+    </div>
+    <p style="font-size:18px;line-height:1.85;color:rgba(255,255,255,.88);margin-bottom:24px;">Your nervous system is the operating system behind everything — how you think, how you feel, how you show up, how you sleep, how you love. And most of us have never been taught how it works, let alone how to regulate it.</p>
+    <p style="font-size:18px;line-height:1.85;color:rgba(255,255,255,.78);margin-bottom:24px;">When it's dysregulated — stuck in a pattern of chronic activation — even good things feel hard. Your thinking gets cloudy. Your fuse gets short. Rest doesn't restore you. Connection feels effortful. And you blame yourself for all of it.</p>
+    <p style="font-size:18px;line-height:1.85;color:rgba(255,255,255,.88);"><strong style="color:#fff;">But here's what changes everything: your nervous system runs on your breath. And when you learn to use that — deliberately, skillfully — the entire pattern can shift. Not in months. In hours.</strong></p>
   </div>
 </section>
 
@@ -166,59 +191,114 @@
   </div>
 </section>
 
-<!-- THREE THINGS WORTH NOTICING -->
-<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 30%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(53,77,76,.12) 0%,transparent 50%);"></div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6">
+<!-- THREE PATTERNS -->
+<section class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-5xl mx-auto px-6">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-4">Three things worth noticing</p>
-      <div class="section-divider mb-6"><span></span></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:780px;margin:0 auto 22px;">Three quiet signs of how you're really doing.</h2>
-      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.88);max-width:640px;margin:0 auto;">Your body keeps a kind of record of how safe it feels, and you don't need a clinic to read it. On Sunday we'll look gently at three simple signs you can learn to notice in yourself, and you'll be able to keep checking in with them long after the day is over.</p>
+      <p class="eyebrow mb-4">Which one are you?</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:780px;margin:0 auto 16px;">Three hidden patterns that keep your nervous system stuck.</h2>
+      <p style="font-size:17px;line-height:1.75;color:#4a4a46;max-width:620px;margin:0 auto;">Most people fall into one of these patterns without realizing it. See which one you recognize in yourself.</p>
     </div>
 
-    <div class="grid gap-8 max-w-2xl mx-auto">
-      <div class="fade-up" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:36px 32px;">
-        <p class="eyebrow mb-3" style="color:rgba(204,153,36,.95);">Your breath at rest</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.75;">When nothing is actually wrong, how fast are you breathing? A settled body breathes more slowly than most of us expect. A lot of us have been moving quickly for so long that we've stopped feeling it.</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="pattern-card fade-up">
+        <span class="pattern-label">Pattern 1</span>
+        <h3>The Pusher</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">You power through everything. You don't stop until the list is done. People call you driven, but inside you know the truth — you can't actually slow down. Your nervous system is locked in go-mode, and the idea of stillness feels almost threatening. You've mistaken chronic activation for ambition.</p>
       </div>
-      <div class="fade-up" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:36px 32px;">
-        <p class="eyebrow mb-3" style="color:rgba(204,153,36,.95);">Heart rate variability</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.75;">The way your heart shifts between effort and rest tells you a great deal about whether your body genuinely trusts that it's safe right now.</p>
+      <div class="pattern-card fade-up">
+        <span class="pattern-label">Pattern 2</span>
+        <h3>The Thinker</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">You live in your head. You analyze, plan, overthink. The mental chatter never really stops — even when you're tired, even when you're trying to rest. Your nervous system has moved everything upward, into cognition, because it doesn't quite trust your body to handle what's underneath.</p>
       </div>
-      <div class="fade-up" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:36px 32px;">
-        <p class="eyebrow mb-3" style="color:rgba(204,153,36,.95);">Resting heart rate</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.88);line-height:1.75;">What your heart does when nothing is being asked of it reflects what it quietly believes about your safety. As you settle, that number tends to ease, and you can feel it happening.</p>
+      <div class="pattern-card fade-up">
+        <span class="pattern-label">Pattern 3</span>
+        <h3>The Withdrawer</h3>
+        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">You've gone quiet. Not dramatically — just slowly, over time. You say no to things you used to love. Socializing feels like effort. You're not depressed exactly, but there's a flatness. Your nervous system has pulled the handbrake — it's protecting you by shutting things down.</p>
       </div>
     </div>
 
-    <p class="text-center" style="font-size:15px;color:rgba(255,255,255,.65);margin-top:32px;max-width:480px;margin-left:auto;margin-right:auto;font-style:italic;">These aren't numbers to chase or optimize. They're three honest ways to listen to yourself.</p>
+    <div class="text-center" style="margin-top:40px;">
+      <p style="font-size:17px;line-height:1.75;color:#1a1a18;max-width:620px;margin:0 auto 28px;"><strong>All three patterns have the same root.</strong> A nervous system that never learned how to regulate itself. And all three can shift — often faster than you'd expect — when you give the body what it's actually been asking for.</p>
+      <a href="#reserve" class="btn-outline-dark">Register for free</a>
+    </div>
   </div>
 </section>
 
-<!-- WHAT YOU'VE BEEN CARRYING (PAIN) -->
+<!-- FUTURE PACING — WHAT BECOMES POSSIBLE -->
+<section class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.1) 0%,transparent 55%);"></div>
+  <div class="spark-field" aria-hidden="true">
+    <span class="spark sm" style="top:18%;left:14%;animation-duration:5s;animation-delay:.5s;--peak:.5;"></span>
+    <span class="spark" style="top:25%;left:84%;animation-duration:6s;animation-delay:1.8s;--peak:.65;"></span>
+    <span class="spark sm" style="top:78%;left:22%;animation-duration:4.5s;animation-delay:2.4s;--peak:.45;"></span>
+    <span class="spark" style="top:80%;left:78%;animation-duration:6.5s;animation-delay:.2s;--peak:.6;"></span>
+  </div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">Imagine this</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:780px;margin:0 auto 16px;">What becomes possible when your nervous system is regulated.</h2>
+      <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.8);max-width:620px;margin:0 auto;">This isn't wishful thinking. This is what people consistently describe after a single day of breathwork.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="future-card fade-up">
+        <h3>The fog lifts</h3>
+        <p>That mental haze between you and a clear thought — it dissolves. Decisions come easier. Ideas arrive without effort. You feel genuinely sharp again.</p>
+      </div>
+      <div class="future-card fade-up">
+        <h3>The anxiety quietens</h3>
+        <p>The background hum of low-grade worry softens. Not because your circumstances changed, but because your nervous system stopped treating ordinary life like a threat.</p>
+      </div>
+      <div class="future-card fade-up">
+        <h3>People feel different around you</h3>
+        <p>When you're calm — genuinely calm, not performing it — the people around you relax. Children settle. Partners open up. You become magnetic in the most natural way.</p>
+      </div>
+      <div class="future-card fade-up">
+        <h3>Presence replaces performance</h3>
+        <p>You stop trying to be present and just are. The moment you're in becomes enough. Time feels different — slower, richer, more yours.</p>
+      </div>
+      <div class="future-card fade-up">
+        <h3>Your energy comes back</h3>
+        <p>Not the caffeinated, push-through kind. The kind that comes from a body that actually rested, that isn't spending its reserves on invisible tension.</p>
+      </div>
+      <div class="future-card fade-up">
+        <h3>Purpose gets clearer</h3>
+        <p>When the noise quietens, you hear things you couldn't before. What matters, what doesn't, what you actually want — it starts to come through without forcing it.</p>
+      </div>
+    </div>
+
+    <blockquote class="fade-up" style="max-width:520px;margin:48px auto 0;text-align:center;padding:0;">
+      <p style="font-family:'Marcellus',Georgia,serif;font-size:18px;line-height:1.6;color:rgba(255,255,255,.9);font-style:italic;margin:0 0 10px;">"I felt so amazing this morning. Like waking up after a great night's sleep. Fully rested and comfortable in my skin and my life."</p>
+      <cite style="font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#cc9924;">Nadja H</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- THE BRIDGE — THIS IS WHERE THAT CHANGES -->
 <section class="py-24" style="background:#f9f8f5;">
   <div class="max-w-3xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="eyebrow mb-4">What you've been carrying</p>
+      <p class="eyebrow mb-4">This is where that changes</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin:8px 0 28px;">You're probably carrying more than you realize.</h2>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:780px;margin:0 auto 22px;">Quantum Shift: one day to cross the bridge from dysregulated to settled.</h2>
     </div>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">When a nervous system stays busy for a long time, the effects are quiet, but they add up. You might find it takes a little longer to think clearly than it used to. Your patience might be thinnest in the evening, which is often exactly when the people you love are closest by. Sometimes a good idea won't arrive because part of you is still on guard. And sometimes you say yes to something when everything in you wanted to say no.</p>
-    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:32px;"><strong style="color:#1a1a18;">None of this means there is anything wrong with you. It's simply what a tired nervous system does. The reassuring part is that a body can learn to put this weight down again.</strong></p>
-    <div class="text-center"><a href="#reserve" class="btn-outline-dark">Register for free</a></div>
+    <p style="font-size:18px;line-height:1.85;color:#1a1a18;margin-bottom:24px;">This isn't a talk about breathwork. It's two live sessions where you're actually breathing — in real time, in your own body — with hundreds of people doing the same thing around the world.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">The morning session gives you context most people never get about how their nervous system actually works, followed by a full guided breathwork journey. The evening session goes deeper — helping your body hold on to the calmer state rather than just visiting it for an hour.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;margin-bottom:24px;">Think of it as a bridge. On one side is where you are now — the hum, the fog, the tightness. On the other is a version of you who thinks more clearly, reacts less, sleeps more deeply, and carries a presence that other people can feel.</p>
+    <p style="font-size:18px;line-height:1.85;color:#4a4a46;"><strong style="color:#1a1a18;">Alchemy of Breath is facilitating that bridge. Sunday is the day you walk across it.</strong></p>
   </div>
 </section>
 
-<!-- WHAT QUANTUM SHIFT IS (BRIDGE) -->
+<!-- ANTHONY & AMY -->
 <section class="py-24" style="background:#f9f8f5;">
   <div class="max-w-5xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <p class="eyebrow mb-4">What Quantum Shift is</p>
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">Your guides</p>
       <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:780px;margin:0 auto 22px;">One day. Two live sessions.<br>Anthony and Amy, right there with you.</h2>
-      <p style="font-size:17px;line-height:1.75;color:#4a4a46;max-width:640px;margin:0 auto 14px;">This isn't a talk about breathwork. It's two live sessions where you're actually breathing, in real time, in your own body, with other people doing the same thing.</p>
-      <p style="font-size:17px;line-height:1.75;color:#4a4a46;max-width:620px;margin:0 auto;">The morning session gives you some context that's easy to miss, followed by your first full breathwork journey of the day. The evening session goes a little deeper. It helps your body stay with the calmer state, rather than just visiting it for an hour. You're welcome to come to one or to both. Either way, something settles.</p>
+      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:680px;margin:8px auto 16px;">Led by Anthony and Amy — two of the world's most experienced breathwork facilitators.</h2>
     </div>
 
     <div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -227,16 +307,16 @@
           <img src="https://alchemyofbreath.com/wp-content/uploads/anthony-abbagnano-2-1.jpg" alt="Anthony Abbagnano" class="instructor-img">
         </div>
         <p class="eyebrow mb-1">Founder</p>
-        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin:6px 0 6px;">Anthony Abbagnano</h3>
-        <p style="font-size:13px;color:#4a4a46;line-height:1.6;max-width:280px;margin:0 auto;">Anthony is the founder of Alchemy of Breath and ASHA in Tuscany, and the author of <em>Outer Chaos, Inner Calm.</em> He has trained more than 2,000 practitioners across over 40 countries.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin:6px 0 6px;">Anthony Abbagnano</h3>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;max-width:280px;margin:0 auto;">Founder of Alchemy of Breath and ASHA in Tuscany, and author of <em>Outer Chaos, Inner Calm.</em> He has trained more than 2,000 practitioners across over 40 countries.</p>
       </div>
       <div class="text-center fade-up">
         <div class="img-overlay mx-auto mb-5" style="max-width:240px;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/amy-rachelle-1.jpg" alt="Amy Rachelle" class="instructor-img">
         </div>
         <p class="eyebrow mb-1">Co-Founder</p>
-        <h3 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin:6px 0 6px;">Amy Rachelle</h3>
-        <p style="font-size:13px;color:#4a4a46;line-height:1.6;max-width:280px;margin:0 auto;">Amy is a Naturopathic Coach and Medical Medium, and co-founder of Alchemy of Breath and ASHA in Tuscany. She has spent two decades weaving together breathwork, somatics, fasting, nutrition and intuitive medicine.</p>
+        <h3 style="font-size:22px;color:#1a1a18;margin:6px 0 6px;">Amy Rachelle</h3>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;max-width:280px;margin:0 auto;">Naturopathic Coach and Medical Medium, and co-founder of Alchemy of Breath and ASHA in Tuscany. Two decades weaving together breathwork, somatics, fasting, nutrition and intuitive medicine.</p>
       </div>
     </div>
 
@@ -244,48 +324,67 @@
       <p style="font-size:15px;line-height:1.7;color:#4a4a46;font-style:italic;margin:0 0 8px;">"Maybe it is a trust thing — but I always go so much deeper / release more when it is you two."</p>
       <cite style="font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#cc9924;">Zi Zi</cite>
     </blockquote>
-
-    <div class="text-center" style="margin-top:36px;"><a href="#reserve" class="btn-outline-dark">Register for free</a></div>
   </div>
 </section>
 
-<!-- WHAT CHANGES (TRANSFORMATION) -->
-<section class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-5xl mx-auto px-6">
+<!-- BY SUNDAY EVENING -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 30%,rgba(204,153,36,.08) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(53,77,76,.12) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-4">What changes</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:680px;margin:8px auto 16px;">What people tend to notice afterward.</h2>
-      <p style="font-size:17px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">Everyone describes this a little differently, but a few things come up again and again.</p>
+      <p class="eyebrow mb-4">What you'll walk away with</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">By Sunday evening, you'll have:</h2>
     </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">A clearer head</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The mental fog that sits between you and a simple thought starts to lift.</p>
-      </div>
-      <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">Less reaction</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">The sharp comment, the overflowing inbox and the long day don't disappear, but they tend to land more softly. You find there's a little more room between what happens and how you respond to it.</p>
-      </div>
-      <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">The people around you feel it too</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">When your nervous system settles, the people around you feel it too. They relax near you, often without knowing why. It isn't that you're performing calm. It's that your body genuinely is calm, and that's something other people can sense.</p>
-      </div>
-      <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">A softer edge</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">For a lot of people, the low background hum of anxiety quietens down, sometimes within a single session.</p>
-      </div>
-      <div class="fade-up md:col-span-2 max-w-xl mx-auto w-full" style="background:#fff;border:1px solid #d3cdb3;padding:36px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
-        <h3 style="font-size:22px;color:#1a1a18;margin-bottom:14px;letter-spacing:-.01em;">Sleep that actually lands</h3>
-        <p style="font-size:15px;color:#4a4a46;line-height:1.75;">It becomes the kind of tired that leads to rest, rather than the kind that leaves you lying awake with the same thoughts going around.</p>
-      </div>
+
+    <div class="max-w-2xl mx-auto">
+      <ol style="list-style:none;padding:0;counter-reset:takeaway;">
+        <li class="fade-up" style="display:flex;gap:20px;align-items:flex-start;margin-bottom:28px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:32px;color:#cc9924;line-height:1;flex-shrink:0;width:36px;text-align:right;">1</span>
+          <div>
+            <h3 style="font-size:19px;color:#fff;margin-bottom:6px;">A direct experience of what a regulated nervous system feels like</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;">Not an idea of it. Not a description. The actual felt sense in your body — so you know what you're aiming for.</p>
+          </div>
+        </li>
+        <li class="fade-up" style="display:flex;gap:20px;align-items:flex-start;margin-bottom:28px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:32px;color:#cc9924;line-height:1;flex-shrink:0;width:36px;text-align:right;">2</span>
+          <div>
+            <h3 style="font-size:19px;color:#fff;margin-bottom:6px;">Three signs you can check in yourself — anytime, anywhere</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;">Your breath at rest, heart rate variability, and resting heart rate. Simple ways to listen to your own nervous system long after Sunday.</p>
+          </div>
+        </li>
+        <li class="fade-up" style="display:flex;gap:20px;align-items:flex-start;margin-bottom:28px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:32px;color:#cc9924;line-height:1;flex-shrink:0;width:36px;text-align:right;">3</span>
+          <div>
+            <h3 style="font-size:19px;color:#fff;margin-bottom:6px;">A clearer, calmer way of thinking</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;">The fog that sits between you and a clear thought starts to lift. Decisions come easier. You feel sharper, lighter, more like yourself.</p>
+          </div>
+        </li>
+        <li class="fade-up" style="display:flex;gap:20px;align-items:flex-start;margin-bottom:28px;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:32px;color:#cc9924;line-height:1;flex-shrink:0;width:36px;text-align:right;">4</span>
+          <div>
+            <h3 style="font-size:19px;color:#fff;margin-bottom:6px;">A calm that other people can feel</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;">Not performed calm. The kind that comes from a settled body. Children relax around it. Partners notice. Something shifts in how you land in a room.</p>
+          </div>
+        </li>
+        <li class="fade-up" style="display:flex;gap:20px;align-items:flex-start;">
+          <span style="font-family:'Marcellus',Georgia,serif;font-size:32px;color:#cc9924;line-height:1;flex-shrink:0;width:36px;text-align:right;">5</span>
+          <div>
+            <h3 style="font-size:19px;color:#fff;margin-bottom:6px;">The foundation of a breathwork practice you can keep</h3>
+            <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;">This isn't a one-off experience. It's the starting point for a relationship with your breath that deepens over time.</p>
+          </div>
+        </li>
+      </ol>
     </div>
-    <div class="text-center" style="margin-top:40px;"><a href="#reserve" class="btn-outline-dark">Register for free</a></div>
+
+    <div class="text-center" style="margin-top:40px;">
+      <a href="#reserve" class="btn-gold" style="padding:18px 44px;font-size:13px;">Register for free</a>
+    </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS CAROUSEL -->
-<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+<section class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
   <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 40%,rgba(204,153,36,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 60%,rgba(53,77,76,.1) 0%,transparent 50%);"></div>
   <div class="spark-field" aria-hidden="true">
     <span class="spark sm" style="top:12%;left:20%;animation-duration:5s;animation-delay:.3s;--peak:.5;"></span>
@@ -297,7 +396,7 @@
     <div class="text-center mb-14">
       <p class="eyebrow mb-4">From our community</p>
       <div class="section-divider mb-6"><span></span></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:680px;margin:0 auto 14px;">In their own words.</h2>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:680px;margin:0 auto 14px;">In their own words.</h2>
       <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:480px;margin:0 auto;">Real messages from people who came to our last nervous system regulation event.</p>
     </div>
 
@@ -522,49 +621,135 @@
   </div>
 </section>
 
-<!-- YOUR NEXT STEP -->
-<section class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 50%,rgba(204,153,36,.1) 0%,transparent 55%);"></div>
-  <div class="spark-field" aria-hidden="true">
-    <span class="spark sm" style="top:18%;left:14%;animation-duration:5s;animation-delay:.5s;--peak:.5;"></span>
-    <span class="spark" style="top:25%;left:84%;animation-duration:6s;animation-delay:1.8s;--peak:.65;"></span>
-    <span class="spark sm" style="top:78%;left:22%;animation-duration:4.5s;animation-delay:2.4s;--peak:.45;"></span>
-    <span class="spark" style="top:80%;left:78%;animation-duration:6.5s;animation-delay:.2s;--peak:.6;"></span>
-  </div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">Your next step</p>
-    <div class="section-divider mb-6"><span></span></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:22px;">So what's your next step?</h2>
-    <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 20px;">You didn't end up here by accident. Something in you is asking a question, and the chances are it isn't really about breathing.</p>
-    <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.78);max-width:600px;margin:0 auto 20px;">It might be about being more present with the people you live with. It might be about finding some clarity around your work, or having time that feels like it's actually your own. Maybe it's energy for the thing you keep promising yourself you'll get back to. Often, underneath all of it, it's about a kinder relationship with yourself.</p>
-    <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 32px;"><strong style="color:#fff;">There's a steadier, calmer, more settled version of you waiting on the other side of a regulated nervous system. Sunday is simply a day spent in their company.</strong></p>
-    <a href="#reserve" class="btn-gold" style="padding:18px 44px;font-size:13px;">Register for free</a>
+<!-- THIS IS FOR YOU IF -->
+<section class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">Is this for you?</p>
+      <div class="gold-rule centered"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="fade-up">
+        <h2 style="font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:24px;">This is for you if:</h2>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're functioning fine on the outside but feel like something is off underneath</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're tired in a way that sleep doesn't seem to fix</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You've noticed brain fog, a short fuse, or a low hum of anxiety that won't quite switch off</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You want to feel more present with the people you love</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're curious about breathwork but haven't tried it, or you've tried it and want to go deeper</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#52bb90;">&#10003;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're ready for something to actually shift — not just another thing to think about</p>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <h2 style="font-size:clamp(24px,3vw,34px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:24px;">This probably isn't for you if:</h2>
+        <div class="for-you-item">
+          <span class="icon" style="color:#c5c3c2;">&#10005;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're looking for a quick hack or a productivity trick</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#c5c3c2;">&#10005;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You'd prefer to watch a recording rather than participate live</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#c5c3c2;">&#10005;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You're not willing to give yourself two hours on a Sunday</p>
+        </div>
+        <div class="for-you-item">
+          <span class="icon" style="color:#c5c3c2;">&#10005;</span>
+          <p style="font-size:16px;color:#4a4a46;line-height:1.7;">You want to think about change rather than feel it in your body</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- WHAT YOU GET WHEN YOU REGISTER -->
-<section id="offers" class="py-24 grain relative overflow-hidden" style="background:#141412;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.08) 0%,transparent 55%);"></div>
-  <div class="spark-field" aria-hidden="true">
-    <span class="spark sm" style="top:18%;left:14%;animation-duration:5s;animation-delay:.5s;--peak:.5;"></span>
-    <span class="spark" style="top:25%;left:84%;animation-duration:6s;animation-delay:1.8s;--peak:.65;"></span>
-    <span class="spark sm" style="top:78%;left:22%;animation-duration:4.5s;animation-delay:2.4s;--peak:.45;"></span>
-    <span class="spark" style="top:80%;left:78%;animation-duration:6.5s;animation-delay:.2s;--peak:.6;"></span>
+<!-- HOW THE DAY UNFOLDS -->
+<section class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 30%,rgba(204,153,36,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 70%,rgba(53,77,76,.1) 0%,transparent 50%);"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">How the day unfolds</p>
+      <div class="section-divider mb-6"><span></span></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Two sessions. One day. A real shift.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto;">You're welcome to join one session or both. Either way, something settles.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div class="fade-up" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:36px 28px;">
+        <div class="session-pill mb-6"><span class="dot"></span>9:30 — 11:30am UK</div>
+        <h3 style="font-size:22px;color:#fff;margin-bottom:12px;">Part 1 — Understanding + First Journey</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:16px;">Anthony and Amy open with context most people never get about how their nervous system actually works — why it does what it does, and what you can do about it. Then you'll move into your first full guided breathwork experience of the day.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Includes Breathe The World — a collective breathing moment with people across multiple time zones.</p>
+      </div>
+      <div class="fade-up" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:36px 28px;">
+        <div class="session-pill mb-6"><span class="dot"></span>5:00 — 7:00pm UK</div>
+        <h3 style="font-size:22px;color:#fff;margin-bottom:12px;">Part 2 — Going Deeper</h3>
+        <p style="font-size:15px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:16px;">The evening session builds on what the morning started. By now your body has had time to integrate, and you're ready to go further. This session helps your nervous system hold the calmer state rather than just visiting it for an hour.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;">Includes Q&A and time for your questions.</p>
+      </div>
+    </div>
   </div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">What you get</p>
-    <div class="section-divider mb-6"><span></span></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Everything you need comes to your inbox.</h2>
-    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.85);max-width:580px;margin:0 auto 36px;">One registration covers both sessions, so there's nothing complicated to sort out. We'll send you the live link the day before, along with a calendar invite, and we'll send a gentle reminder twenty-four hours ahead. There's no app to download and no platform to figure out.</p>
+</section>
 
-    <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:14px;max-width:580px;margin:0 auto 36px;text-align:left;">
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Both live sessions with Anthony and Amy.</strong> The morning runs from 9:30 to 11:30am UK, and the evening from 5 to 7pm UK. Each one includes a full breathwork experience and time for your questions.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">The three signs to look out for,</strong> so you leave able to check in with your own nervous system.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Real practice rather than a demonstration.</strong> You'll be breathing and settling in your own body, on the day.</span></li>
-      <li style="display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.92);line-height:1.6;"><span style="width:8px;height:8px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:8px;box-shadow:0 0 8px rgba(204,153,36,.5);"></span><span><strong style="color:#fff;font-weight:400;">Can't make it live?</strong> Register anyway. After the event, you can purchase the full recording and join The Integration Experience for $49.99 — a guided follow-up to help your body hold on to what it learned.</span></li>
-    </ul>
+<!-- WHAT YOU GET + $49.99 UPSELL -->
+<section id="offers" class="py-24" style="background:#f9f8f5;">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-4">What you get</p>
+      <div class="gold-rule centered"></div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:14px;">Choose your experience.</h2>
+    </div>
 
-    <a href="#reserve" class="btn-gold" style="padding:18px 44px;font-size:13px;">Register for free</a>
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <!-- FREE -->
+      <div class="fade-up" style="background:#fff;border:1px solid #d3cdb3;padding:40px 32px;box-shadow:0 8px 28px rgba(53,77,76,.06);">
+        <p class="eyebrow mb-3">Free registration</p>
+        <h3 style="font-size:36px;color:#1a1a18;margin-bottom:6px;">Free</h3>
+        <p style="font-size:14px;color:#4a4a46;margin-bottom:24px;">Join live on Sunday</p>
+        <ul style="list-style:none;padding:0;margin:0 0 28px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span>Both live sessions with Anthony and Amy</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span>Full guided breathwork journeys</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span>Three nervous system check-in signs</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span>Breathe The World included</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span>Live Q&A</li>
+        </ul>
+        <a href="#reserve" class="btn-outline-dark" style="width:100%;text-align:center;">Register for free</a>
+      </div>
+
+      <!-- $49.99 UPSELL -->
+      <div class="fade-up" style="background:#fff;border:2px solid #cc9924;padding:40px 32px;box-shadow:0 8px 36px rgba(204,153,36,.12),0 0 60px -16px rgba(204,153,36,.1);position:relative;">
+        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:6px 18px;">Most popular</div>
+        <p class="eyebrow mb-3" style="margin-top:12px;">Recording + Integration</p>
+        <h3 style="font-size:36px;color:#1a1a18;margin-bottom:6px;">$49.99</h3>
+        <p style="font-size:14px;color:#4a4a46;margin-bottom:24px;">Available after the event</p>
+        <ul style="list-style:none;padding:0;margin:0 0 28px;">
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#52bb90;flex-shrink:0;">&#10003;</span><strong style="font-weight:400;color:#1a1a18;">Everything in Free, plus:</strong></li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#cc9924;flex-shrink:0;">&#9733;</span>Full recording of both sessions to revisit anytime</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;margin-bottom:12px;"><span style="color:#cc9924;flex-shrink:0;">&#9733;</span><strong style="font-weight:400;color:#1a1a18;">The Integration Experience</strong> — a guided follow-up to help your body hold on to what it learned</li>
+          <li style="display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#4a4a46;line-height:1.6;"><span style="color:#cc9924;flex-shrink:0;">&#9733;</span>Deepen the shift at your own pace</li>
+        </ul>
+        <p style="font-size:13px;color:#4a4a46;line-height:1.6;font-style:italic;margin-bottom:20px;">Register free now — you'll have the option to add the recording and Integration Experience after the event.</p>
+        <a href="#reserve" class="btn-gold" style="width:100%;text-align:center;">Register now — choose later</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -574,8 +759,8 @@
   <div class="relative z-10 max-w-2xl mx-auto px-6">
     <div class="text-center mb-10">
       <div class="date-pill mb-6" style="background:rgba(204,153,36,.16);">Sunday 21 June · Live · Free</div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Come on Sunday.</h2>
-      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);max-width:480px;margin:0 auto;">Register once and your place is held for both sessions. Everything you need will arrive by email the day before. We'd love to have you there.</p>
+      <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Your nervous system has been waiting for this.</h2>
+      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.88);max-width:480px;margin:0 auto;">Register once and your place is held for both sessions. Everything you need arrives by email the day before.</p>
     </div>
 
     <div class="fade-up form-shell">
@@ -618,8 +803,8 @@
   </div>
   <div class="relative z-10 max-w-2xl mx-auto px-6 text-center">
     <div class="ornament" style="margin-bottom:20px;justify-content:center;"></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:16px;">There's a steadier, calmer, more settled version of you waiting.</h2>
-    <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);max-width:480px;margin:0 auto 32px;">Sunday is simply a day spent in their company.</p>
+    <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:16px;">There's a steadier, calmer, more settled version of you on the other side of Sunday.</h2>
+    <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);max-width:480px;margin:0 auto 32px;">Less fog. Less reaction. More presence. More you. Come and find them.</p>
     <div class="flex flex-wrap gap-4 justify-center">
       <a href="#reserve" class="btn-gold">Register for free</a>
     </div>
