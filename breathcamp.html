@@ -94,10 +94,41 @@
     .breath-modal.open{display:flex}
     .breath-modal-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s;z-index:3}
     .breath-modal-close:hover{background:rgba(204,153,36,.15);color:#cc9924;border-color:rgba(204,153,36,.4)}
+
+    /* June promo */
+    @keyframes promoPulse{0%,100%{box-shadow:inset 0 0 0 0 rgba(255,255,255,0)}50%{box-shadow:inset 0 0 30px 0 rgba(255,255,255,.12)}}
+    .promo-bar{position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,#a8201a 0%,#c5281f 50%,#a8201a 100%);color:#fff;text-align:center;padding:10px 16px;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.04em;line-height:1.4;animation:promoPulse 3s ease-in-out infinite;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+    .promo-bar strong{font-weight:600;letter-spacing:.06em}
+    .promo-bar .pill{display:inline-flex;align-items:center;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border-radius:100px;font-weight:600}
+    .promo-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+    .promo-bar a:hover{color:#ffe4a3}
+    body{padding-top:42px}
+    #main-nav{top:42px!important}
+    @media(max-width:640px){.promo-bar{font-size:11.5px;padding:8px 12px;gap:8px}body{padding-top:62px}#main-nav{top:62px!important}}
+
+    /* Promo callout */
+    .promo-callout{background:linear-gradient(135deg,#a8201a 0%,#c5281f 100%);color:#fff;border:1px solid rgba(255,255,255,.15);padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;border-radius:2px;box-shadow:0 8px 32px rgba(168,32,26,.25)}
+    .promo-callout .left{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
+    .promo-callout .badge{display:inline-flex;align-items:center;background:rgba(255,255,255,.18);color:#fff;font-family:'Roboto',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:100px;border:1px solid rgba(255,255,255,.3);white-space:nowrap}
+    .promo-callout .headline{font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);color:#fff;line-height:1.3;margin:0}
+    .promo-callout .deadline{font-size:13px;color:rgba(255,255,255,.85);letter-spacing:.02em;margin:4px 0 0;font-weight:400}
+    .promo-callout .btn-promo{display:inline-block;background:#fff;color:#a8201a;font-family:'Roboto',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 26px;text-decoration:none;border-radius:2px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
+    .promo-callout .btn-promo:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+
+    /* Hero promo chip */
+    .promo-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(168,32,26,.92);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:'Roboto',sans-serif;font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:100px;margin-bottom:18px;box-shadow:0 6px 20px rgba(168,32,26,.4)}
+    .promo-chip::before{content:'';width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;animation:pulse-dot 1.6s ease-in-out infinite}
+
     @media(max-width:768px){.breath-orb{width:110px;height:110px}.day-tab{font-size:18px;padding:12px 6px}.day-panel{padding:28px 22px}}
   </style>
 </head>
 <body>
+
+<!-- JUNE PROMO BAR -->
+<div class="promo-bar" role="banner">
+  <span class="pill">June Only</span>
+  <span><strong>15% OFF</strong> all BreathCamp 2026 dates &middot; <a href="#dates">Book by June 18</a></span>
+</div>
 
 <!-- NAV -->
 <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
@@ -130,6 +161,7 @@
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 pb-16 pt-36 w-full">
     <div class="max-w-2xl">
+      <span class="promo-chip">June Promo &middot; 15% Off Every Date</span>
       <p class="eyebrow mb-5">BreathCamp Tuscany &nbsp;&middot;&nbsp; ASHA Retreat Centre &nbsp;&middot;&nbsp; 5 Sessions in 2026</p>
       <h1 class="text-white mb-6 leading-tight" style="font-size:clamp(36px,5vw,60px);letter-spacing:-.02em;">Seven days to reset<br/><span class="gold-text">your nervous system.</span></h1>
       <p class="text-white mb-10 max-w-xl" style="font-size:18px;line-height:1.7;font-weight:300;opacity:.85;">A residential retreat that brings together conscious breathing, movement, sound, and the people you did not know you were looking for. Held on 37 acres of untouched land in the Tuscan hills.</p>
@@ -312,6 +344,18 @@
       <div class="gold-rule centered"></div>
       <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:14px;">Five sessions in 2026.</h2>
       <p style="font-size:16px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">Pick the week that fits you best.</p>
+    </div>
+
+    <!-- JUNE PROMO CALLOUT -->
+    <div class="promo-callout" style="margin-bottom:28px;">
+      <div class="left">
+        <span class="badge">June Promo</span>
+        <div>
+          <p class="headline"><strong>15% off every 2026 date.</strong></p>
+          <p class="deadline">Offer ends <strong>June 18</strong> &middot; Discount applied automatically at checkout.</p>
+        </div>
+      </div>
+      <a href="#dates" class="btn-promo">Claim 15% Off</a>
     </div>
 
     <!-- Graduates redirect banner -->
@@ -552,11 +596,23 @@
       <div style="background:#fff;border:1px solid #d3cdb3;padding:20px;text-align:center;"><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#354d4c;margin-bottom:4px;">Community</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;text-transform:uppercase;">A global tribe</p></div>
     </div>
 
+    <!-- JUNE PROMO CALLOUT -->
+    <div class="promo-callout" style="margin-bottom:16px;">
+      <div class="left">
+        <span class="badge">June Only</span>
+        <div>
+          <p class="headline"><strong>15% off every 2026 date</strong> &middot; ends June 18</p>
+          <p class="deadline">Applied automatically at checkout on Retreat Guru.</p>
+        </div>
+      </div>
+      <a href="#dates" class="btn-promo">Claim 15% Off</a>
+    </div>
+
     <!-- Early bird banner -->
     <div style="background:#354d4c;border:1px solid rgba(204,153,36,.3);padding:20px 28px;margin-bottom:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
       <div>
         <p class="eyebrow mb-1" style="color:#cc9924;">Early Bird</p>
-        <p style="font-size:16px;color:#fff;font-family:'Marcellus',Georgia,serif;line-height:1.3;">20% off all accommodations (excluding private cottages)</p>
+        <p style="font-size:16px;color:#fff;font-family:'Marcellus',Georgia,serif;line-height:1.3;">Plus 20% off most accommodations (excluding private cottages)</p>
       </div>
       <p style="font-size:13px;color:rgba(255,255,255,.78);line-height:1.5;">Applied automatically at checkout on Retreat Guru.</p>
     </div>
