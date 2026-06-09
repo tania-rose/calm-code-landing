@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Booked. See You on the Call | Alchemy of Breath</title>
+  <meta name="description" content="Your call with the Alchemy of Breath team is confirmed. A short message from Anthony, plus what to expect." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--teal:#354d4c;--gold:#cc9924;--beige:#d3cdb3;--offwhite:#f9f8f5;--green:#52bb90;--ink:#1a1a18;--ink-soft:#4a4a46;--gray:#c5c3c2}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Roboto',sans-serif;font-weight:300;color:var(--ink);background:var(--offwhite);line-height:1.7;-webkit-font-smoothing:antialiased;margin:0}
+    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;font-weight:400;letter-spacing:-.02em}
+    a{color:var(--gold);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1000px;margin:0 auto;padding:0 24px}
+    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+    .gold-rule{width:40px;height:2px;background:var(--gold);margin:14px auto 22px}
+
+    /* NAV */
+    nav.top{position:sticky;top:0;z-index:50;background:rgba(53,77,76,.97);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(204,153,36,.18)}
+    nav.top .row{display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav.top img{height:26px;width:auto}
+    nav.top a.back{font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+    nav.top a.back:hover{color:#fff}
+
+    /* HERO (above the fold: video + headline) */
+    .hero{background:var(--ink);color:#fff;padding:40px 0 56px}
+    .hero .container{max-width:920px}
+    .confirm-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(82,187,144,.12);border:1px solid rgba(82,187,144,.4);color:var(--green);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:100px;font-weight:500;margin:0 0 18px}
+    .confirm-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(82,187,144,.18)}
+    .hero h1{font-size:clamp(28px,3.6vw,40px);line-height:1.18;color:#fff;margin:0 0 12px;text-align:center}
+    .hero h1 em{font-style:italic;color:var(--gold);font-family:inherit}
+    .hero p.lede{font-size:16px;line-height:1.7;color:rgba(255,255,255,.78);max-width:580px;margin:0 auto 28px;font-weight:300;text-align:center}
+    .hero .center-top{text-align:center;margin:0 0 22px}
+
+    .video-frame{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.5),0 4px 12px rgba(0,0,0,.25);background:#000;max-width:820px;margin:0 auto}
+    .video-frame .ratio{padding:56.25% 0 0 0;position:relative}
+    .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    .video-meta{margin-top:16px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.55);letter-spacing:.04em}
+    .video-meta strong{color:rgba(255,255,255,.82);font-weight:500}
+
+    /* WHAT TO EXPECT */
+    .expect{background:var(--offwhite);padding:72px 0;border-top:1px solid var(--beige)}
+    .expect .head{text-align:center;max-width:600px;margin:0 auto 40px}
+    .expect .head h2{font-size:clamp(24px,3vw,34px);line-height:1.22;color:var(--ink);margin:0 0 12px}
+    .expect .head p{font-size:15.5px;line-height:1.7;color:var(--ink-soft);margin:0}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:920px;margin:0 auto}
+    .step{background:#fff;border:1px solid var(--beige);padding:28px 26px;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .step:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(53,77,76,.08);border-color:var(--gold)}
+    .step .num{font-family:'Marcellus',Georgia,serif;font-size:14px;color:var(--gold);letter-spacing:.04em;margin-bottom:10px}
+    .step h4{font-size:17px;color:var(--ink);margin:0 0 8px}
+    .step p{font-size:14.5px;color:var(--ink-soft);margin:0;line-height:1.65}
+    @media(max-width:780px){.steps{grid-template-columns:1fr}}
+
+    /* PREP */
+    .prep{background:#fff;padding:72px 0;border-top:1px solid var(--beige);border-bottom:1px solid var(--beige)}
+    .prep .inner{max-width:640px;margin:0 auto;text-align:center}
+    .prep h2{font-size:clamp(24px,2.8vw,32px);line-height:1.25;color:var(--ink);margin:0 0 14px}
+    .prep p{font-size:16px;line-height:1.75;color:var(--ink-soft);margin:0}
+
+    /* FOOTER */
+    footer{background:var(--ink);color:rgba(255,255,255,.45);padding:30px 0;font-size:12px;border-top:1px solid rgba(255,255,255,.06)}
+    footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+    footer a{color:rgba(255,255,255,.6)}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="https://alchemyofbreath.com/" aria-label="Alchemy of Breath"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" /></a>
+    <a href="https://alchemyofbreath.com/" class="back">&larr; alchemyofbreath.com</a>
+  </div>
+</nav>
+
+<!-- HERO: VIDEO ABOVE THE FOLD -->
+<section class="hero">
+  <div class="container">
+    <div class="center-top">
+      <span class="confirm-badge">You're booked</span>
+    </div>
+    <h1>See you on the <em>call.</em></h1>
+    <p class="lede">A quick message from Anthony before we meet.</p>
+
+    <div class="video-frame">
+      <div class="ratio">
+        <iframe src="https://player.vimeo.com/video/1072499390?h=d2f8db8562&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="A message from Anthony before your call"></iframe>
+      </div>
+    </div>
+    <p class="video-meta"><strong>Two minutes from Anthony.</strong> Worth pressing play.</p>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="expect">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">What Happens Next</p>
+      <div class="gold-rule"></div>
+      <h2>Three small things before we meet.</h2>
+      <p>Nothing complicated. We just want you to arrive settled.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <p class="num">01</p>
+        <h4>Check your inbox</h4>
+        <p>A confirmation and calendar invite are on their way. Add the time to your calendar so it sticks.</p>
+      </div>
+      <div class="step reveal">
+        <p class="num">02</p>
+        <h4>Bring your questions</h4>
+        <p>Anything that's been on your mind about the training, the work, or where you are. The more honest the call, the more useful it is.</p>
+      </div>
+      <div class="step reveal">
+        <p class="num">03</p>
+        <h4>Find a quiet spot</h4>
+        <p>A real conversation, not a Zoom meeting. Headphones, somewhere you won't be interrupted, a glass of water.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREP -->
+<section class="prep">
+  <div class="container">
+    <div class="inner reveal">
+      <p class="eyebrow">A Small Invitation</p>
+      <div class="gold-rule"></div>
+      <h2>Take a few slow breaths before we begin.</h2>
+      <p>You don't need to prepare anything. Just come as you are. We're looking forward to it.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container row">
+    <p>&copy; 2026 Alchemy of Breath &middot; <a href="https://alchemyofbreath.com/">Visit the main site</a></p>
+    <p><a href="mailto:info@alchemyofbreath.com">info@alchemyofbreath.com</a></p>
+  </div>
+</footer>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  const obs=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
