@@ -1,31 +1,1216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Calm Code — Alchemy of Breath</title>
-  <meta name="description" content="Read the pattern. Apply the breath. Regulate the nervous system. Professional certification by Alchemy of Breath."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Breathwork Facilitator Training 2026 — Alchemy of Breath</title>
+<meta name="description" content="Become a certified breathwork facilitator with Alchemy of Breath. An accredited, 400-hour, 8-month online training. Book your free discovery call."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Khula:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
-  <style>
-  /* ────────────────────────────────────────────
-     TOKENS
-  ──────────────────────────────────────────── */
-  :root {
-    --bg:         #F7F4EF;
-    --bg-warm:    #F0EBE1;
-    --bg-teal:    #EBF5F6;
-    --gold:       #E1B668;
-    --gold-2:     #D6A652;
-    --teal:       #00a5b2;
-    --teal-mid:   #5b7889;
-    --teal-pale:  #d0ebee;
-    --ink:        #221F20;
-    --ink-soft:   #3d3a3b;
-    --muted:      #7a8a8e;
-    --white:      #ffffff;
-    --shadow-sm:  0 2px 20px rgba(34,31,32,0.06);
-    --shadow-md:  0 8px 40px rgba(34,31,32,0.10);
-    --shadow-lg:  0 20px 60px rgba(34,31,32,0.12);
-  }
+<style>
+/* ══════════════════════════════════════════════════════════
+   ALCHEMY OF BREATH · FACILITATOR TRAINING 2026
+   Light · airy · layered depth · rust-red voice
+══════════════════════════════════════════════════════════ */
+:root{
+  --ivory:      #FBF7F0;
+  --ivory-2:    #F5EEE2;
+  --blush:      #F7EBE3;
+  --red:        #A93821;          /* brand rust-red — headings & voice */
+  --red-deep:   #7E2A18;
+  --red-soft:   #C96A50;
+  --red-tint:   #F2DFD6;
+  --gold:       #C09032;
+  --gold-soft:  #E2C786;
+  --ink:        #3A332C;
+  --ink-soft:   #6B6056;
+  --line:       rgba(126,42,24,.14);
+  --white:      #FFFFFF;
+  --sh-1: 0 1px 2px rgba(126,42,24,.05), 0 6px 24px rgba(126,42,24,.07);
+  --sh-2: 0 2px 6px rgba(126,42,24,.06), 0 18px 50px rgba(126,42,24,.12);
+  --sh-3: 0 4px 12px rgba(126,42,24,.08), 0 32px 80px rgba(126,42,24,.16);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Khula', 'Helvetica Neue', Arial, sans-serif;
+  --max: 1180px;
+  --ease: cubic-bezier(.22,.8,.32,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:17px;
+  line-height:1.75;
+  color:var(--ink);
+  background:var(--ivory);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* paper grain over everything — the handcrafted layer */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection{background:var(--red);color:var(--ivory)}
+
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:400;color:var(--red);line-height:1.12}
+em{font-style:italic}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.wrap-n{max-width:880px;margin:0 auto;padding:0 28px}
+
+/* kicker — small caps eyebrow */
+.kicker{
+  font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;
+}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+.kicker.center{justify-content:center}
+.kicker.center::after{content:"";width:34px;height:1px;background:var(--gold)}
+
+/* hand-drawn underline accent */
+.uline{position:relative;white-space:nowrap}
+.uline svg{position:absolute;left:-2%;bottom:-.12em;width:104%;height:.35em;overflow:visible}
+.uline svg path{fill:none;stroke:var(--gold);stroke-width:3.2;stroke-linecap:round;opacity:.85}
+
+/* reveal-on-scroll */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}.rv.d4{transition-delay:.48s}
+
+/* ── buttons ── */
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;
+  padding:20px 36px 17px;border-radius:999px;text-decoration:none;cursor:pointer;border:0;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .3s;
+  position:relative;
+}
+.btn-red{background:var(--red);color:var(--ivory);box-shadow:0 10px 30px rgba(126,42,24,.28)}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-3px);box-shadow:0 18px 44px rgba(126,42,24,.34)}
+.btn-red .arr{transition:transform .45s var(--ease)}
+.btn-red:hover .arr{transform:translateX(5px)}
+.btn-ghost{
+  background:transparent;color:var(--red);box-shadow:inset 0 0 0 1.5px var(--red);
+}
+.btn-ghost:hover{background:var(--red);color:var(--ivory);transform:translateY(-3px)}
+.btn-note{font-size:13px;color:var(--ink-soft);margin-top:14px;letter-spacing:.02em}
+.btn-note .dot{color:var(--gold)}
+
+/* ══════════ NAV ══════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .4s,box-shadow .4s,padding .4s;
+  padding:22px 0;
+}
+nav.scrolled{background:rgba(251,247,240,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none}
+.logo-mark{width:42px;height:42px;flex:0 0 auto}
+.logo-word{font-family:var(--serif);font-size:21px;letter-spacing:.06em;color:var(--red);line-height:1.05}
+.logo-word small{display:block;font-family:var(--sans);font-size:8.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+.nav-links a{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);position:relative;padding-bottom:4px}
+.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--red);transition:width .35s var(--ease)}
+.nav-links a:not(.btn):hover::after{width:100%}
+.nav-cta{padding:13px 26px 11px;font-size:12px;white-space:nowrap}
+@media(max-width:920px){.nav-links li:not(.keep){display:none}}
+@media(max-width:560px){
+  .nav-cta{padding:11px 18px 9px;font-size:10.5px}
+  .logo-word{font-size:16px}
+  .logo-word small{letter-spacing:.26em;font-size:7.5px}
+  .logo-mark{width:34px;height:34px}
+}
+
+/* ══════════ HERO ══════════ */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  padding:150px 0 90px;overflow:hidden;
+  background:
+    radial-gradient(1200px 700px at 82% 18%, rgba(201,106,80,.13), transparent 60%),
+    radial-gradient(900px 600px at 8% 90%, rgba(192,144,50,.10), transparent 55%),
+    linear-gradient(180deg,#FDFAF4 0%, var(--ivory) 70%);
+}
+.hero-arc{position:absolute;right:-16vw;top:-22vw;width:62vw;height:62vw;border-radius:50%;
+  background:radial-gradient(circle at 35% 65%, rgba(169,56,33,.07), rgba(169,56,33,.02) 55%, transparent 70%);
+  pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.hero h1{
+  font-size:clamp(44px,5.6vw,76px);font-weight:400;letter-spacing:-.01em;line-height:1.06;
+  margin:26px 0 26px;
+}
+.hero h1 em{font-weight:300}
+.hero-sub{font-size:19px;line-height:1.8;color:var(--ink-soft);max-width:520px;margin-bottom:38px}
+.hero-sub strong{font-weight:600;color:var(--ink)}
+.hero-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero-scroll{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none}
+.hero-scroll svg{transition:transform .4s var(--ease)}
+.hero-scroll:hover svg{transform:translateY(4px)}
+
+/* breathing orb */
+.orb-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:480px}
+.orb{position:relative;width:min(380px,80vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.orb .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(169,56,33,.25)}
+.orb .ring.r2{inset:11%;border-color:rgba(169,56,33,.3)}
+.orb .ring.r3{inset:22%;border-color:rgba(192,144,50,.4)}
+.orb .core{
+  position:absolute;inset:33%;border-radius:50%;
+  background:radial-gradient(circle at 38% 32%, #E8A488, var(--red) 78%);
+  box-shadow:0 24px 60px rgba(169,56,33,.35), inset 0 -10px 30px rgba(126,42,24,.4), inset 0 12px 26px rgba(255,236,220,.5);
+}
+@keyframes breathe-core{0%,100%{transform:scale(.86)}42%,58%{transform:scale(1.06)}}
+@keyframes breathe-r1{0%,100%{transform:scale(.94);opacity:.55}42%,58%{transform:scale(1.07);opacity:1}}
+@keyframes breathe-r2{0%,100%{transform:scale(.92);opacity:.5}42%,58%{transform:scale(1.1);opacity:1}}
+@keyframes breathe-r3{0%,100%{transform:scale(.9);opacity:.45}42%,58%{transform:scale(1.13);opacity:1}}
+.orb .core{animation:breathe-core 10s ease-in-out infinite}
+.orb .ring.r1{animation:breathe-r1 10s ease-in-out infinite}
+.orb .ring.r2{animation:breathe-r2 10s ease-in-out infinite}
+.orb .ring.r3{animation:breathe-r3 10s ease-in-out infinite}
+.orb-label{
+  position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);
+  font-family:var(--serif);font-style:italic;font-size:21px;color:var(--red);white-space:nowrap;
+  transition:opacity .9s ease;
+}
+.orb-tip{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+
+/* floating leaf-stroke decorations */
+.stroke{position:absolute;pointer-events:none;opacity:.5}
+
+/* hero trust strip */
+.hero-stats{
+  margin-top:64px;border-top:1px solid var(--line);padding-top:34px;
+  display:grid;grid-template-columns:repeat(4,auto);gap:18px 56px;justify-content:start;
+}
+.stat .num{font-family:var(--serif);font-size:40px;color:var(--red);line-height:1}
+.stat .num sup{font-size:.55em;color:var(--red-soft)}
+.stat .lbl{font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+@media(max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .orb-stage{min-height:300px;order:-1}
+  .orb{width:min(240px,62vw)}
+  .orb-label{font-size:17px;bottom:-4px}
+  .orb-tip{display:none}
+  .hero{padding-top:108px}
+  .hero-stats{grid-template-columns:repeat(2,auto);gap:26px 48px;margin-top:48px}
+}
+
+/* ══════════ ACCREDITATION BAR (Authority Trust Badge) ══════════ */
+.accred{
+  position:relative;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:46px 0 40px;
+}
+.accred-in{display:flex;align-items:center;justify-content:center;gap:clamp(22px,3vw,42px);flex-wrap:wrap}
+.accred-title{font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);text-align:center;width:100%;margin-bottom:8px}
+.badge{display:flex;align-items:center;gap:14px;filter:saturate(.9)}
+.badge svg{flex:0 0 auto}
+.badge .b-name{font-family:var(--serif);font-size:17px;line-height:1.25;color:var(--ink)}
+.badge .b-name small{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+
+/* the prominent GPBA seal used again later */
+.seal{
+  width:150px;height:150px;border-radius:50%;position:relative;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ══════════ CALLING / EMPATHY ══════════ */
+.section{padding:120px 0}
+.s-head{max-width:760px;margin-bottom:64px}
+.s-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.s-head h2{font-size:clamp(34px,4vw,52px);margin:22px 0 20px}
+.s-head p{font-size:18px;color:var(--ink-soft)}
+
+.calling{background:linear-gradient(180deg,var(--ivory) 0%, var(--blush) 100%)}
+.calling-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.calling-left{position:sticky;top:120px}
+.calling-left h2{font-size:clamp(34px,4vw,50px);margin:22px 0 24px}
+.calling-left p{color:var(--ink-soft);font-size:18px;margin-bottom:18px}
+.calling-left .serif-pull{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--red);line-height:1.4;margin-top:30px;padding-left:24px;border-left:2px solid var(--gold)}
+.know-list{display:flex;flex-direction:column;gap:16px;list-style:none}
+.know{
+  background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px 30px 22px;
+  display:flex;gap:20px;align-items:flex-start;box-shadow:var(--sh-1);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.know:hover{transform:translateX(8px);box-shadow:var(--sh-2)}
+.know .n{font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1.2;min-width:34px}
+.know h3{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--ink);letter-spacing:.01em;margin-bottom:5px}
+.know p{font-size:15.5px;color:var(--ink-soft);line-height:1.65}
+@media(max-width:920px){.calling-grid{grid-template-columns:1fr}.calling-left{position:static}}
+
+/* ══════════ VIDEO ══════════ */
+.video-wrap{position:relative;max-width:920px;margin:0 auto}
+.video-frame{
+  position:relative;border-radius:24px;overflow:hidden;aspect-ratio:16/9;background:var(--red-deep);
+  box-shadow:var(--sh-3);cursor:pointer;
+}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-poster{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  background:
+    radial-gradient(900px 500px at 70% 20%, rgba(201,106,80,.5), transparent 60%),
+    linear-gradient(160deg,#8E3A26 0%, #6E2414 100%);
+  color:var(--ivory);text-align:center;padding:30px;transition:opacity .5s;
+}
+.video-poster .vp-rings{position:absolute;inset:0;pointer-events:none;opacity:.25}
+.play-btn{
+  width:88px;height:88px;border-radius:50%;background:var(--ivory);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 16px 40px rgba(0,0,0,.3);transition:transform .45s var(--ease);position:relative;z-index:1;
+}
+.video-frame:hover .play-btn{transform:scale(1.1)}
+.play-btn svg{margin-left:5px}
+.video-poster .vt{font-family:var(--serif);font-size:clamp(22px,3vw,30px);font-style:italic;position:relative;z-index:1;max-width:560px;line-height:1.3}
+.video-poster .vs{font-size:11.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-soft);position:relative;z-index:1}
+.video-cap{text-align:center;font-size:14px;color:var(--ink-soft);margin-top:22px}
+.video-cap em{font-family:var(--serif);font-size:16px;color:var(--red)}
+
+/* ══════════ JOURNEY TIMELINE ══════════ */
+.journey{background:var(--white);position:relative;overflow:hidden}
+.tline{position:relative;max-width:860px;margin:0 auto;padding-left:70px}
+.tline::before{
+  content:"";position:absolute;left:23px;top:8px;bottom:8px;width:1.5px;
+  background:linear-gradient(180deg,transparent, var(--line) 6%, var(--line) 94%, transparent);
+}
+.tline .progress{
+  position:absolute;left:23px;top:8px;width:1.5px;height:0;background:var(--red);transition:height .25s linear;
+}
+.phase{position:relative;padding:8px 0 64px}
+.phase:last-child{padding-bottom:8px}
+.phase .ph-dot{
+  position:absolute;left:-70px;top:14px;width:47px;height:47px;border-radius:50%;
+  background:var(--ivory);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:19px;color:var(--ink-soft);transition:all .5s var(--ease);
+}
+.phase.lit .ph-dot{background:var(--red);border-color:var(--red);color:var(--ivory);box-shadow:0 8px 24px rgba(169,56,33,.3)}
+.phase .ph-months{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.phase h3{font-size:30px;margin-bottom:12px}
+.phase p{color:var(--ink-soft);max-width:600px;margin-bottom:16px}
+.ph-tags{display:flex;flex-wrap:wrap;gap:9px;list-style:none}
+.ph-tags li{
+  font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--red-deep);
+  background:var(--red-tint);border-radius:999px;padding:8px 16px 6px;
+}
+
+/* ══════════ PLATFORM MOCKUP ══════════ */
+.platform{
+  background:
+    radial-gradient(1000px 600px at 15% 10%, rgba(192,144,50,.12), transparent 55%),
+    linear-gradient(180deg,var(--ivory-2), var(--ivory));
+  overflow:hidden;
+}
+.plat-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+.plat-points{list-style:none;display:flex;flex-direction:column;gap:26px;margin-top:38px}
+.plat-points li{display:flex;gap:18px;align-items:flex-start}
+.plat-points .ic{
+  width:46px;height:46px;border-radius:14px;background:var(--white);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:var(--sh-1);
+}
+.plat-points h3{font-family:var(--sans);font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.plat-points p{font-size:15.5px;color:var(--ink-soft);line-height:1.65}
+
+/* laptop */
+.device-stage{position:relative;perspective:1400px}
+.laptop{
+  position:relative;border-radius:20px 20px 0 0;background:#2E2622;padding:16px 16px 0;
+  box-shadow:var(--sh-3);transform:rotateY(-6deg) rotateX(3deg);transform-style:preserve-3d;
+  transition:transform .8s var(--ease);
+}
+.device-stage:hover .laptop{transform:rotateY(-2deg) rotateX(1deg)}
+.laptop-base{height:14px;background:linear-gradient(180deg,#4A403A,#2E2622);border-radius:0 0 18px 18px;box-shadow:0 18px 40px rgba(60,40,25,.3)}
+.screen{background:var(--ivory);border-radius:8px 8px 0 0;overflow:hidden;font-size:10px}
+.scr-bar{display:flex;align-items:center;gap:6px;background:#EFE6D8;padding:9px 14px}
+.scr-bar i{width:9px;height:9px;border-radius:50%;background:#D8C7AE}
+.scr-bar i:first-child{background:var(--red-soft)}
+.scr-bar .url{flex:1;background:var(--white);border-radius:99px;font-size:9px;color:var(--ink-soft);padding:4px 12px 2px;letter-spacing:.04em;font-weight:600}
+.scr-body{display:grid;grid-template-columns:130px 1fr;min-height:300px}
+.scr-side{background:#F4ECDF;padding:16px 14px;border-right:1px solid rgba(126,42,24,.08)}
+.scr-side .s-logo{font-family:var(--serif);color:var(--red);font-size:12px;letter-spacing:.04em;margin-bottom:14px}
+.scr-side .s-item{font-size:9px;font-weight:600;color:var(--ink-soft);padding:7px 10px 5px;border-radius:8px;margin-bottom:4px;letter-spacing:.03em}
+.scr-side .s-item.on{background:var(--red);color:var(--ivory)}
+.scr-main{padding:18px 20px}
+.scr-main .m-kick{font-size:7.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.scr-main h4{font-family:var(--serif);font-weight:500;font-size:17px;color:var(--red);margin-bottom:3px}
+.scr-main .m-sub{font-size:9px;color:var(--ink-soft);margin-bottom:12px}
+.scr-prog{height:5px;border-radius:99px;background:#EADFCE;margin-bottom:14px;overflow:hidden}
+.scr-prog i{display:block;height:100%;width:62%;border-radius:99px;background:linear-gradient(90deg,var(--gold),var(--red))}
+.scr-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scr-card{background:var(--white);border:1px solid rgba(126,42,24,.09);border-radius:10px;padding:11px 12px 9px;box-shadow:0 4px 14px rgba(126,42,24,.05)}
+.scr-card .cc-tag{font-size:6.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-soft);margin-bottom:3px}
+.scr-card h5{font-family:var(--serif);font-weight:500;font-size:11.5px;color:var(--ink);margin-bottom:3px;line-height:1.25}
+.scr-card p{font-size:8px;color:var(--ink-soft);line-height:1.5}
+.scr-card .cc-meta{display:flex;align-items:center;gap:5px;margin-top:6px;font-size:7px;font-weight:600;color:var(--gold);letter-spacing:.06em}
+/* floating phone */
+.phone{
+  position:absolute;right:-26px;bottom:-34px;width:128px;border-radius:22px;background:#2E2622;padding:8px;
+  box-shadow:var(--sh-3);transform:rotate(5deg);transition:transform .8s var(--ease);
+}
+.device-stage:hover .phone{transform:rotate(2deg) translateY(-6px)}
+.phone-scr{border-radius:16px;background:linear-gradient(170deg,#8E3A26,#6E2414);padding:16px 12px 14px;color:var(--ivory)}
+.phone-scr .p-kick{font-size:6px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:6px}
+.phone-scr h5{font-family:var(--serif);font-weight:400;font-size:13px;line-height:1.25;margin-bottom:10px}
+.phone-orb{width:54px;height:54px;border-radius:50%;margin:6px auto 10px;background:radial-gradient(circle at 36% 30%,#E8A488,var(--red));box-shadow:0 8px 20px rgba(0,0,0,.3);animation:breathe-core 10s ease-in-out infinite}
+.phone-scr .p-time{text-align:center;font-size:7px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+@media(max-width:980px){.plat-grid{grid-template-columns:1fr}.phone{right:0}}
+
+/* ══════════ CURRICULUM ACCORDION ══════════ */
+.curric{background:var(--white)}
+.acc{max-width:860px;margin:0 auto;border-top:1px solid var(--line)}
+.acc-item{border-bottom:1px solid var(--line)}
+.acc-head{
+  width:100%;background:none;border:0;cursor:pointer;text-align:left;
+  display:flex;align-items:baseline;gap:26px;padding:30px 8px;font-family:var(--serif);
+}
+.acc-head .a-num{font-size:17px;color:var(--gold);min-width:36px;font-style:italic}
+.acc-head .a-title{font-size:clamp(21px,2.6vw,28px);color:var(--red);flex:1;transition:transform .4s var(--ease)}
+.acc-item:hover .a-title{transform:translateX(6px)}
+.acc-head .a-x{
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--line);position:relative;flex:0 0 auto;align-self:center;
+  transition:transform .5s var(--ease),background .3s,border-color .3s;
+}
+.acc-head .a-x::before,.acc-head .a-x::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--red);transition:background .3s;
+}
+.acc-head .a-x::before{width:12px;height:1.5px;transform:translate(-50%,-50%)}
+.acc-head .a-x::after{width:1.5px;height:12px;transform:translate(-50%,-50%)}
+.acc-item.open .a-x{transform:rotate(135deg);background:var(--red);border-color:var(--red)}
+.acc-item.open .a-x::before,.acc-item.open .a-x::after{background:var(--ivory)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .65s var(--ease)}
+.acc-body-in{padding:0 8px 36px 70px;max-width:680px}
+.acc-body-in p{color:var(--ink-soft);margin-bottom:16px}
+.acc-body-in ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.acc-body-in ul li{padding-left:24px;position:relative;font-size:15.5px;color:var(--ink)}
+.acc-body-in ul li::before{content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:50%;background:var(--red-tint);border:2px solid var(--red-soft)}
+@media(max-width:640px){.acc-body-in{padding-left:8px}}
+
+/* ══════════ FOUNDER ══════════ */
+.founder{background:linear-gradient(180deg,var(--ivory), var(--blush) 130%)}
+.fo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.fo-portrait{position:relative}
+.fo-card{
+  position:relative;border-radius:200px 200px 26px 26px;overflow:hidden;aspect-ratio:3.4/4.4;
+  background:
+    radial-gradient(420px 320px at 60% 24%, rgba(232,164,136,.65), transparent 65%),
+    linear-gradient(170deg,#9A4530 0%, #6E2414 100%);
+  box-shadow:var(--sh-3);display:flex;align-items:flex-end;
+}
+.fo-card .fo-glyph{position:absolute;left:50%;top:26%;transform:translateX(-50%);opacity:.9}
+.fo-card .fo-cap{position:relative;width:100%;padding:26px 28px;background:linear-gradient(180deg,transparent,rgba(64,18,8,.72));color:var(--ivory)}
+.fo-card .fo-cap b{font-family:var(--serif);font-weight:500;font-size:23px;letter-spacing:.02em;display:block}
+.fo-card .fo-cap span{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
+.fo-badge{
+  position:absolute;right:-18px;top:30px;background:var(--white);border:1px solid var(--line);border-radius:16px;
+  padding:14px 18px 11px;box-shadow:var(--sh-2);text-align:center;transform:rotate(3deg);
+}
+.fo-badge b{font-family:var(--serif);font-size:24px;color:var(--red);display:block;line-height:1}
+.fo-badge span{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.fo-right h2{font-size:clamp(32px,3.8vw,48px);margin:22px 0 24px}
+.fo-right p{color:var(--ink-soft);margin-bottom:18px;max-width:560px}
+.fo-quote{
+  font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.45;color:var(--red);
+  padding:6px 0 6px 26px;border-left:2px solid var(--gold);margin:28px 0;
+}
+.fo-creds{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin-top:8px}
+.fo-creds li{font-size:12.5px;font-weight:600;color:var(--red-deep);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 18px 7px}
+@media(max-width:920px){.fo-grid{grid-template-columns:1fr;gap:54px}.fo-badge{right:8px}}
+
+/* ══════════ TESTIMONIALS ══════════ */
+.testi{background:var(--white);overflow:hidden;position:relative}
+.t-stage{max-width:860px;margin:0 auto;position:relative;min-height:380px}
+.t-slide{
+  position:absolute;inset:0;opacity:0;transform:translateX(46px);transition:opacity .8s var(--ease),transform .8s var(--ease);
+  pointer-events:none;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px;
+}
+.t-slide.on{opacity:1;transform:none;pointer-events:auto}
+.t-slide .t-mark{font-family:var(--serif);font-size:110px;line-height:.4;color:var(--gold-soft);height:44px}
+.t-slide blockquote{font-family:var(--serif);font-size:clamp(23px,3.1vw,33px);font-weight:400;line-height:1.42;color:var(--ink);max-width:780px}
+.t-slide blockquote em{color:var(--red)}
+.t-slide .t-who{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.t-slide .t-stars{color:var(--gold);letter-spacing:5px;font-size:14px}
+.t-slide .t-name{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.t-slide .t-role{font-size:13px;color:var(--ink-soft)}
+.t-nav{display:flex;align-items:center;justify-content:center;gap:26px;margin-top:46px}
+.t-btn{
+  width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:var(--white);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease);color:var(--red);
+}
+.t-btn:hover{background:var(--red);color:var(--ivory);border-color:var(--red);transform:translateY(-2px)}
+.t-dots{display:flex;gap:9px}
+.t-dot{width:8px;height:8px;border-radius:50%;background:var(--red-tint);border:0;cursor:pointer;padding:0;transition:all .4s var(--ease)}
+.t-dot.on{background:var(--red);transform:scale(1.35)}
+
+/* ══════════ CERTIFICATION ══════════ */
+.cert{
+  position:relative;color:var(--ivory);overflow:hidden;
+  background:
+    radial-gradient(1100px 600px at 80% 0%, rgba(232,164,136,.22), transparent 55%),
+    radial-gradient(800px 500px at 5% 100%, rgba(192,144,50,.18), transparent 55%),
+    linear-gradient(165deg,#7E2A18 0%, #5D1D0E 100%);
+}
+.cert h2,.cert h3{color:var(--ivory)}
+.cert .kicker{color:var(--gold-soft)}
+.cert .kicker::before,.cert .kicker.center::after{background:var(--gold-soft)}
+.cert-grid{display:grid;grid-template-columns:1fr .9fr;gap:80px;align-items:center}
+.cert p{color:rgba(251,247,240,.78)}
+.cert-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:34px;border-top:1px solid rgba(251,247,240,.16)}
+.cert-list li{display:flex;gap:20px;align-items:baseline;padding:22px 4px;border-bottom:1px solid rgba(251,247,240,.16)}
+.cert-list .c-check{color:var(--gold-soft);font-family:var(--serif);font-size:20px}
+.cert-list b{font-weight:600;color:var(--ivory)}
+.cert-list span{display:block;font-size:15px;color:rgba(251,247,240,.7)}
+.seal-stage{display:flex;flex-direction:column;align-items:center;gap:30px}
+.big-seal{position:relative;width:min(320px,70vw);aspect-ratio:1}
+.big-seal .spin{position:absolute;inset:0;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.seal-cap{text-align:center;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);line-height:2}
+@media(max-width:920px){.cert-grid{grid-template-columns:1fr;gap:56px}}
+
+/* ══════════ OUTCOMES ══════════ */
+.outcomes{background:var(--ivory)}
+.out-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.out-card{
+  background:var(--white);border:1px solid var(--line);border-radius:22px;padding:38px 32px 32px;
+  box-shadow:var(--sh-1);transition:transform .5s var(--ease),box-shadow .5s var(--ease);position:relative;overflow:hidden;
+}
+.out-card:nth-child(2){transform:translateY(22px)}
+.out-card:hover{transform:translateY(-8px);box-shadow:var(--sh-2)}
+.out-card:nth-child(2):hover{transform:translateY(14px)}
+.out-card .o-num{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--gold);margin-bottom:18px}
+.out-card h3{font-size:25px;margin-bottom:12px}
+.out-card p{font-size:15.5px;color:var(--ink-soft)}
+.out-card::after{content:"";position:absolute;right:-46px;bottom:-46px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,var(--red-tint),transparent 70%);opacity:0;transition:opacity .5s}
+.out-card:hover::after{opacity:1}
+@media(max-width:920px){.out-grid{grid-template-columns:1fr}.out-card:nth-child(2){transform:none}}
+
+/* ══════════ DISCOVERY CALL ══════════ */
+.book{
+  background:
+    radial-gradient(900px 540px at 88% 14%, rgba(201,106,80,.14), transparent 60%),
+    linear-gradient(180deg,var(--blush), var(--ivory) 90%);
+  position:relative;overflow:hidden;
+}
+.book-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.steps{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:36px;counter-reset:st}
+.steps li{display:flex;gap:24px;padding:24px 0;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .st-n{
+  counter-increment:st;width:50px;height:50px;border-radius:50%;background:var(--white);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:21px;color:var(--red);
+  flex:0 0 auto;box-shadow:var(--sh-1);
+}
+.steps .st-n::before{content:counter(st)}
+.steps h3{font-family:var(--sans);font-size:17px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.steps p{font-size:15.5px;color:var(--ink-soft)}
+.book-card{
+  background:var(--white);border-radius:28px;border:1px solid var(--line);box-shadow:var(--sh-3);
+  padding:48px 46px 42px;position:relative;
+}
+.book-card::before{
+  content:"";position:absolute;inset:10px;border:1px solid var(--red-tint);border-radius:20px;pointer-events:none;
+}
+.bc-kick{font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:14px}
+.book-card h3{font-size:clamp(28px,3vw,36px);text-align:center;line-height:1.18;margin-bottom:14px}
+.book-card .bc-sub{text-align:center;font-size:15.5px;color:var(--ink-soft);max-width:360px;margin:0 auto 30px}
+.bc-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:34px}
+.bc-list li{display:flex;gap:13px;align-items:baseline;font-size:15px;color:var(--ink)}
+.bc-list .ch{color:var(--red);font-family:var(--serif);font-size:17px}
+.book-card .btn{width:100%;justify-content:center}
+.bc-foot{text-align:center;font-size:13px;color:var(--ink-soft);margin-top:16px}
+@media(max-width:920px){.book-grid{grid-template-columns:1fr}}
+
+/* ══════════ FAQ ══════════ */
+.faq{background:var(--white)}
+.faq .acc-head .a-title{font-family:var(--sans);font-weight:600;font-size:18px;color:var(--ink)}
+.faq .acc-body-in{padding-left:8px}
+
+/* ══════════ FINAL CTA ══════════ */
+.final{
+  text-align:center;position:relative;overflow:hidden;padding:140px 0;
+  background:
+    radial-gradient(1000px 560px at 50% 120%, rgba(201,106,80,.16), transparent 60%),
+    linear-gradient(180deg,var(--ivory), var(--blush));
+}
+.final h2{font-size:clamp(38px,5vw,62px);max-width:840px;margin:24px auto 24px}
+.final p{font-size:18px;color:var(--ink-soft);max-width:540px;margin:0 auto 42px}
+.final-orb{width:74px;height:74px;border-radius:50%;margin:0 auto 34px;background:radial-gradient(circle at 36% 30%,#E8A488,var(--red));box-shadow:0 14px 36px rgba(169,56,33,.3);animation:breathe-core 10s ease-in-out infinite}
+
+/* ══════════ FOOTER ══════════ */
+footer{background:#40150A;color:rgba(251,247,240,.7);padding:70px 0 40px;font-size:14px}
+.ft-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start;padding-bottom:44px;border-bottom:1px solid rgba(251,247,240,.14)}
+.ft-brand .logo-word{color:var(--ivory)}
+.ft-brand p{max-width:300px;margin-top:14px;line-height:1.7}
+.ft-col b{display:block;font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px}
+.ft-col a{display:block;text-decoration:none;margin-bottom:10px;transition:color .3s}
+.ft-col a:hover{color:var(--ivory)}
+.ft-base{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:28px;font-size:12.5px;color:rgba(251,247,240,.45)}
+
+/* sticky mobile CTA */
+.m-cta{
+  position:fixed;left:14px;right:14px;bottom:14px;z-index:90;display:none;
+  transform:translateY(120%);transition:transform .6s var(--ease);
+}
+.m-cta.show{transform:none}
+.m-cta .btn{width:100%;justify-content:center;box-shadow:0 14px 40px rgba(126,42,24,.4)}
+@media(max-width:760px){.m-cta{display:block}.section{padding:88px 0}}
+</style>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Alchemy of Breath">
+      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" stroke="#A93821" stroke-width="1.4"/>
+        <circle cx="22" cy="22" r="13.5" stroke="#C09032" stroke-width="1.1"/>
+        <path d="M22 9 C28 15, 28 29, 22 35 C16 29, 16 15, 22 9 Z" fill="#A93821" opacity=".88"/>
+      </svg>
+      <span class="logo-word">Alchemy of Breath<small>Conscious Breathwork Academy</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#journey">The Journey</a></li>
+      <li><a href="#curriculum">Curriculum</a></li>
+      <li><a href="#founder">Your Guide</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li class="keep"><a href="#book" class="btn btn-red nav-cta">Book a Discovery Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero" id="top">
+  <div class="hero-arc"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker rv">Accredited Facilitator Training · 2026 Cohort</p>
+        <h1 class="rv d1">Become a Certified <em>Breathwork</em> Facilitator
+          <span class="uline">— and transform<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3 9 C 50 3, 105 2.5, 197 7.5"/></svg></span>
+          thousands of lives.</h1>
+        <p class="hero-sub rv d2">An 8-month, 400-hour journey into the art and science of the breath — guided live by the Alchemy of Breath team. You'll embark on the journey of the hero: becoming the author of your own life, and learning to hold that space for others. <strong>It begins with one conversation.</strong></p>
+        <div class="hero-ctas rv d3">
+          <a class="btn btn-red" href="#book">Book Your Free Discovery Call <span class="arr">→</span></a>
+          <a class="hero-scroll" href="#calling">Or keep breathing with us
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M7 1v13M2 9.5 7 14.5 12 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats rv d4">
+          <div class="stat"><div class="num" data-count="1000">0</div><div class="lbl">Graduates worldwide</div></div>
+          <div class="stat"><div class="num" data-count="40">0</div><div class="lbl">Countries reached</div></div>
+          <div class="stat"><div class="num" data-count="400" data-plain="1">0</div><div class="lbl">Hours of training</div></div>
+          <div class="stat"><div class="num" data-count="14" data-plain="1">0</div><div class="lbl">Years of teaching</div></div>
+        </div>
+      </div>
+
+      <div class="orb-stage rv d2" aria-hidden="true">
+        <div class="orb" id="orb">
+          <span class="ring r1"></span>
+          <span class="ring r2"></span>
+          <span class="ring r3"></span>
+          <span class="core"></span>
+          <span class="orb-label" id="orbLabel">Breathe in…</span>
+          <span class="orb-tip">A live 10-second breath · join it</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ════════ ACCREDITATION / AUTHORITY TRUST BADGE ════════ -->
+<section class="accred" aria-label="Accreditations">
+  <div class="wrap">
+    <div class="accred-in rv">
+      <p class="accred-title">Internationally Accredited &amp; Professionally Recognized</p>
+
+      <div class="badge">
+        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" aria-hidden="true">
+          <circle cx="29" cy="29" r="27" stroke="#C09032" stroke-width="1.4"/>
+          <circle cx="29" cy="29" r="21.5" stroke="#A93821" stroke-width="1" opacity=".5"/>
+          <path d="M29 14c5 5.4 5 24.6 0 30-5-5.4-5-24.6 0-30Z" fill="#A93821" opacity=".85"/>
+          <path d="M14 29c5.4-5 24.6-5 30 0-5.4 5-24.6 5-30 0Z" fill="#C09032" opacity=".5"/>
+        </svg>
+        <span class="b-name">Global Professional<br/>Breathwork Alliance<small>Accredited Training School</small></span>
+      </div>
+
+      <div class="badge">
+        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+          <path d="M27 3 49 12v13c0 12-9 21-22 25C14 46 5 37 5 25V12L27 3Z" stroke="#A93821" stroke-width="1.4"/>
+          <path d="M18 27.5 24.5 34 37 21" stroke="#C09032" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="b-name">Federation of<br/>Holistic Therapies<small>Accredited Course</small></span>
+      </div>
+
+      <div class="badge">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+          <circle cx="28" cy="28" r="25" stroke="#A93821" stroke-width="1.4"/>
+          <path d="M28 10v36M10 28h36" stroke="#C09032" stroke-width="1" opacity=".55"/>
+          <circle cx="28" cy="28" r="9" stroke="#A93821" stroke-width="1.4"/>
+          <circle cx="28" cy="28" r="3" fill="#C09032"/>
+        </svg>
+        <span class="b-name">American Association of<br/>Drugless Practitioners<small>Certified Program</small></span>
+      </div>
+
+      <div class="badge">
+        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" aria-hidden="true">
+          <path d="M27 4l6.2 12.6L47 18.6l-10 9.7 2.4 13.8L27 35.6l-12.4 6.5L17 28.3 7 18.6l13.8-2L27 4Z" stroke="#C09032" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="27" cy="24" r="5.5" fill="#A93821" opacity=".85"/>
+        </svg>
+        <span class="b-name">Founded 2012<small>1,000+ Certified Facilitators</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ THE CALLING ════════ -->
+<section class="section calling" id="calling">
+  <div class="wrap">
+    <div class="calling-grid">
+      <div class="calling-left">
+        <p class="kicker rv">Is this calling you?</p>
+        <h2 class="rv d1">You already know the breath can change a life. <em>It changed yours.</em></h2>
+        <p class="rv d2">Maybe it found you in a season of burnout, of grief, of searching. One conscious breath became two, and something in you exhaled for the first time in years.</p>
+        <p class="rv d2">Now there's a quieter question rising: <em>what if I could hold this space for someone else?</em></p>
+        <p class="serif-pull rv d3">"In a free discovery call, you'll discover whether you're ready to share the power of the breath with the world."</p>
+      </div>
+      <ul class="know-list">
+        <li class="know rv"><span class="n">i.</span><div><h3>You feel a pull toward deeper purpose</h3><p>The life you built is fine — but "fine" has stopped being enough. You want work that means something, work that heals.</p></div></li>
+        <li class="know rv d1"><span class="n">ii.</span><div><h3>People already come to you to feel safe</h3><p>Friends open up around you. Strangers tell you their stories. You hold space naturally — you've just never been trained to do it professionally.</p></div></li>
+        <li class="know rv d2"><span class="n">iii.</span><div><h3>You want depth, not a weekend certificate</h3><p>You're wary of quick-fix trainings. You want a school with real lineage, real supervision, and real accreditation behind your name.</p></div></li>
+        <li class="know rv d3"><span class="n">iv.</span><div><h3>You're ready to meet yourself first</h3><p>You understand that a facilitator can only take others as deep as they've gone themselves. Your own inner inquiry doesn't scare you — it excites you.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VIDEO ════════ -->
+<section class="section" id="watch">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">Hear it from the source</p>
+      <h2 class="rv d1">What makes this training <em>unlike any other</em></h2>
+    </div>
+    <div class="video-wrap rv d2">
+      <div class="video-frame" id="videoFrame" role="button" tabindex="0" aria-label="Play: Joining the Alchemy of Breath Facilitator Training">
+        <div class="video-poster" id="videoPoster">
+          <svg class="vp-rings" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <circle cx="400" cy="225" r="120" stroke="#FBF7F0" fill="none" stroke-width="1"/>
+            <circle cx="400" cy="225" r="190" stroke="#FBF7F0" fill="none" stroke-width=".8"/>
+            <circle cx="400" cy="225" r="270" stroke="#FBF7F0" fill="none" stroke-width=".6"/>
+          </svg>
+          <div class="play-btn"><svg width="26" height="30" viewBox="0 0 26 30" fill="none"><path d="M24 13.3 3.5 1.2C2.2.4.5 1.4.5 3v24c0 1.6 1.7 2.6 3 1.8L24 16.7c1.3-.8 1.3-2.6 0-3.4Z" fill="#A93821"/></svg></div>
+          <p class="vt">"Joining the Alchemy of Breath Facilitator Training"</p>
+          <p class="vs">Watch · 3 minutes with Anthony Abbagnano</p>
+        </div>
+      </div>
+      <p class="video-cap">Founder <em>Anthony Abbagnano</em> on the heart of the training — and who it's truly for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ THE JOURNEY ════════ -->
+<section class="section journey" id="journey">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">The 8-month journey</p>
+      <h2 class="rv d1">From your first conscious breath<br/>to your <em>certification day</em></h2>
+      <p class="rv d2">Four hundred hours, carefully paced. Live calls every week, a digital learning platform you can return to forever, and mentors beside you the entire way.</p>
+    </div>
+
+    <div class="tline" id="tline">
+      <span class="progress" id="tprog"></span>
+
+      <div class="phase rv" data-phase>
+        <span class="ph-dot">I</span>
+        <p class="ph-months">Months 1 – 2 · Arrive</p>
+        <h3>Foundations of the Breath</h3>
+        <p>You begin with your own nervous system. The history and science of conscious connected breathing, the physiology of stress and release, and a daily personal practice that becomes your anchor for the months ahead.</p>
+        <ul class="ph-tags"><li>Breath science &amp; physiology</li><li>Nervous system regulation</li><li>Daily personal practice</li><li>Weekly live calls</li></ul>
+      </div>
+
+      <div class="phase rv" data-phase>
+        <span class="ph-dot">II</span>
+        <p class="ph-months">Months 3 – 4 · Descend</p>
+        <h3>Inner Alchemy</h3>
+        <p>The work turns inward. Shadow work, inner-child inquiry, and trauma-informed awareness — rooted in depth psychology — because a facilitator can only guide others as far as they have traveled themselves.</p>
+        <ul class="ph-tags"><li>Shadow work</li><li>Inner inquiry</li><li>Trauma-informed practice</li><li>Group process</li></ul>
+      </div>
+
+      <div class="phase rv" data-phase>
+        <span class="ph-dot">III</span>
+        <p class="ph-months">Months 5 – 6 · Serve</p>
+        <h3>The Art of Facilitation</h3>
+        <p>Now you learn to hold the room. Creating a safe and loving container, the signature Mandala Breath method, working one-on-one and with groups, ethics, contraindications, and the subtle craft of presence.</p>
+        <ul class="ph-tags"><li>Holding space</li><li>Mandala Breath method</li><li>1:1 &amp; group facilitation</li><li>Ethics &amp; safety</li></ul>
+      </div>
+
+      <div class="phase rv" data-phase>
+        <span class="ph-dot">IV</span>
+        <p class="ph-months">Months 7 – 8 · Rise</p>
+        <h3>Practicum &amp; Certification</h3>
+        <p>Supervised practice sessions, written case studies, and personal mentorship carry you across the threshold. You graduate as a Certified Breathwork Facilitator — with the option to deepen at a 7-day residential BreathCamp in Tuscany.</p>
+        <ul class="ph-tags"><li>Supervised case studies</li><li>Peer facilitation</li><li>Building your practice</li><li>Certification</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PLATFORM ════════ -->
+<section class="section platform" id="platform">
+  <div class="wrap">
+    <div class="plat-grid">
+      <div>
+        <p class="kicker rv">Your learning home</p>
+        <h2 class="rv d1" style="font-size:clamp(32px,3.8vw,48px);margin:22px 0 20px">Everything lives in one beautiful, <em>lifetime-access</em> platform</h2>
+        <p class="rv d2" style="color:var(--ink-soft)">The heart of the training is a digital learning platform holding the full curriculum — video sessions, live call links, your workbook, and every resource you'll need. Wherever you are in the world, your training travels with you.</p>
+        <ul class="plat-points">
+          <li class="rv"><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="12" rx="2" stroke="#A93821" stroke-width="1.4"/><path d="M8.5 7.2v3.6L12 9l-3.5-1.8Z" fill="#C09032"/><path d="M6 18h8" stroke="#A93821" stroke-width="1.4" stroke-linecap="round"/></svg></span><div><h3>A complete video library</h3><p>Pre-recorded teachings you can revisit forever, organized module by module.</p></div></li>
+          <li class="rv d1"><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#A93821" stroke-width="1.4"/><path d="M10 5.5V10l3 2" stroke="#C09032" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><h3>Live calls every week</h3><p>Real-time classes, live breathwork sessions, and weekly coaching with the team — not a self-study course you do alone.</p></div></li>
+          <li class="rv d2"><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 3h9.5L17 6.5V17a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="#A93821" stroke-width="1.4"/><path d="M7 9h6M7 12.5h6" stroke="#C09032" stroke-width="1.4" stroke-linecap="round"/></svg></span><div><h3>A crafted companion workbook</h3><p>Written summaries, exercises, and reflection tasks that deepen every video and keep key concepts alive.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="device-stage rv d2" aria-hidden="true">
+        <div class="laptop">
+          <div class="screen">
+            <div class="scr-bar"><i></i><i></i><i></i><span class="url">learn.alchemyofbreath.com</span></div>
+            <div class="scr-body">
+              <div class="scr-side">
+                <div class="s-logo">Alchemy of Breath</div>
+                <div class="s-item on">My Journey</div>
+                <div class="s-item">Video Library</div>
+                <div class="s-item">Live Calls</div>
+                <div class="s-item">Workbook</div>
+                <div class="s-item">Community</div>
+                <div class="s-item">Case Studies</div>
+              </div>
+              <div class="scr-main">
+                <div class="m-kick">Welcome back</div>
+                <h4>Phase III · The Art of Facilitation</h4>
+                <div class="m-sub">Your journey is 62% complete · next live call Thursday</div>
+                <div class="scr-prog"><i></i></div>
+                <div class="scr-cards">
+                  <div class="scr-card"><div class="cc-tag">Module 11</div><h5>Holding the Container</h5><p>Creating safety for deep release in group settings.</p><div class="cc-meta">▶ 42 min · resume</div></div>
+                  <div class="scr-card"><div class="cc-tag">Module 12</div><h5>The Mandala Breath</h5><p>The signature Alchemy of Breath facilitation method.</p><div class="cc-meta">▶ 56 min · up next</div></div>
+                  <div class="scr-card"><div class="cc-tag">Workbook</div><h5>Reflection: Your Edge</h5><p>Inquiry exercise before this week's breath circle.</p><div class="cc-meta">✎ 20 min</div></div>
+                  <div class="scr-card"><div class="cc-tag">Live</div><h5>Weekly Coaching Call</h5><p>Bring your practicum questions to the mentors.</p><div class="cc-meta">● Thursday 6 PM</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="phone">
+          <div class="phone-scr">
+            <div class="p-kick">Daily Practice</div>
+            <h5>Morning<br/>Breath · Day 114</h5>
+            <div class="phone-orb"></div>
+            <div class="p-time">Inhale 4 · Exhale 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CURRICULUM ════════ -->
+<section class="section curric" id="curriculum">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">Inside the curriculum</p>
+      <h2 class="rv d1">What you'll <em>actually learn</em></h2>
+      <p class="rv d2">Application-focused and practical — every module pairs teaching with intensive exercises, so the knowledge lives in your hands, not just your notes.</p>
+    </div>
+
+    <div class="acc rv d2" id="curricAcc">
+      <div class="acc-item open">
+        <button class="acc-head" aria-expanded="true"><span class="a-num">01</span><span class="a-title">The Science &amp; Soul of Breathwork</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in">
+          <p>Where modern neuroscience meets ancient practice. You'll understand precisely what happens in the body and brain during conscious connected breathing — and why it works.</p>
+          <ul><li>Respiratory physiology &amp; biochemistry</li><li>The vagus nerve and polyvagal theory in practice</li><li>Breath patterns as a map of the psyche</li><li>The lineages and history of breathwork</li></ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">02</span><span class="a-title">Nervous System Mastery</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in">
+          <p>Learn to read states of activation and rest — in yourself first, then in the people you'll serve — and to guide a system gently back to safety.</p>
+          <ul><li>Stress, trauma &amp; the breath</li><li>Regulation and co-regulation techniques</li><li>Working with intensity and release</li><li>Contraindications and screening</li></ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">03</span><span class="a-title">Shadow Work &amp; Inner Inquiry</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in">
+          <p>Rooted in depth psychology, this is the transformational core of the training — the part graduates say changed everything.</p>
+          <ul><li>Meeting the shadow with compassion</li><li>Inner-child and parts work</li><li>The hero's journey as a living framework</li><li>Integration practices that last</li></ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">04</span><span class="a-title">The Mandala Breath &amp; Facilitation Craft</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in">
+          <p>The signature Alchemy of Breath method — a complete protocol for guiding individual and group sessions with skill, sensitivity, and confidence.</p>
+          <ul><li>Session architecture from opening to integration</li><li>Voice, music, and the art of presence</li><li>Holding group fields safely</li><li>Ethics and professional boundaries</li></ul>
+        </div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">05</span><span class="a-title">Practicum, Case Studies &amp; Your Practice</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in">
+          <p>Supervised real-world experience, written case studies, and the practical foundations of a sustainable breathwork practice — so you graduate ready, not just certified.</p>
+          <ul><li>Supervised practice sessions with feedback</li><li>Written case studies</li><li>Building an ethical, thriving practice</li><li>Optional 7-day residential BreathCamp in Tuscany, Italy</li></ul>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOUNDER ════════ -->
+<section class="section founder" id="founder">
+  <div class="wrap">
+    <div class="fo-grid">
+      <div class="fo-portrait rv">
+        <div class="fo-card">
+          <svg class="fo-glyph" width="120" height="150" viewBox="0 0 120 150" fill="none" aria-hidden="true">
+            <circle cx="60" cy="60" r="52" stroke="#FBF7F0" stroke-width="1" opacity=".5"/>
+            <circle cx="60" cy="60" r="36" stroke="#E2C786" stroke-width="1" opacity=".7"/>
+            <path d="M60 18 C76 34, 76 86, 60 102 C44 86, 44 34, 60 18 Z" fill="#FBF7F0" opacity=".9"/>
+          </svg>
+          <div class="fo-cap"><b>Anthony Abbagnano</b><span>Founder · Alchemy of Breath</span></div>
+        </div>
+        <div class="fo-badge"><b>40+</b><span>Years with<br/>the breath</span></div>
+      </div>
+      <div class="fo-right">
+        <p class="kicker rv">Your guide</p>
+        <h2 class="rv d1">A lifetime of breath, distilled into <em>your training</em></h2>
+        <p class="rv d2">Anthony Abbagnano founded Alchemy of Breath in 2012, after a life-threatening illness revealed the breath as his way back to life. In the years since, he has guided breathwork everywhere from festivals and corporations to hospitals, prisons, and end-of-life care.</p>
+        <p class="rv d2">He serves on the board of the Global Professional Breathwork Alliance, and his weekly Breathe The World sessions have gathered hundreds of breathers across 40+ countries. Alongside co-founder Amy Rachelle and a team of master trainers, he teaches every cohort personally.</p>
+        <blockquote class="fo-quote rv d3">"The breath is the bridge between who you've been and who you're becoming. Our work is simply to help you cross it."</blockquote>
+        <ul class="fo-creds rv d3">
+          <li>Founder, Alchemy of Breath (2012)</li>
+          <li>GPBA Board Member</li>
+          <li>Author, <em>Outer Chaos, Inner Calm</em></li>
+          <li>Creator of the Mandala Breath</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TESTIMONIALS ════════ -->
+<section class="section testi" id="stories">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">Graduate stories</p>
+      <h2 class="rv d1">They arrived curious.<br/>They left <em>changed</em>.</h2>
+    </div>
+
+    <div class="t-stage rv d2" id="tStage">
+      <div class="t-slide on">
+        <div class="t-mark">"</div>
+        <blockquote>Starting the training with Alchemy of Breath was <em>one of the best decisions of my life</em>. Meeting consistently over a long period of time gave me the opportunity to dive deep into my own inner inquiry.</blockquote>
+        <div class="t-who"><div class="t-stars">★★★★★</div><div class="t-name">Facilitator Training Graduate</div><div class="t-role">Certified Breathwork Facilitator</div></div>
+      </div>
+      <div class="t-slide">
+        <div class="t-mark">"</div>
+        <blockquote>It creates the space for <em>deep insight, connection and transformation</em> in a safe and loving container. My experience with Anthony and Alchemy of Breath has been a profound and powerful life tool.</blockquote>
+        <div class="t-who"><div class="t-stars">★★★★★</div><div class="t-name">Facilitator Training Graduate</div><div class="t-role">From festival workshops to certification</div></div>
+      </div>
+      <div class="t-slide">
+        <div class="t-mark">"</div>
+        <blockquote>The decision to train as a breathwork facilitator was <em>hands down one of the best decisions</em> I've ever made in my life.</blockquote>
+        <div class="t-who"><div class="t-stars">★★★★★</div><div class="t-name">Facilitator Training Graduate</div><div class="t-role">Now facilitating professionally</div></div>
+      </div>
+      <div class="t-slide">
+        <div class="t-mark">"</div>
+        <blockquote>The combination of personal process and structured teaching <em>dramatically changed the course of my professional career</em>.</blockquote>
+        <div class="t-who"><div class="t-stars">★★★★★</div><div class="t-name">Facilitator Training Graduate</div><div class="t-role">Career-changer, Class of 2024</div></div>
+      </div>
+    </div>
+
+    <div class="t-nav rv d3">
+      <button class="t-btn" id="tPrev" aria-label="Previous story"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 7H1m0 0 5.5-5.5M1 7l5.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="t-dots" id="tDots"></div>
+      <button class="t-btn" id="tNext" aria-label="Next story"><svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 7h16m0 0-5.5-5.5M17 7l-5.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CERTIFICATION ════════ -->
+<section class="section cert" id="certification">
+  <div class="wrap">
+    <div class="cert-grid">
+      <div>
+        <p class="kicker rv">Your credential</p>
+        <h2 class="rv d1" style="font-size:clamp(32px,3.8vw,48px);margin:22px 0 22px">A certification that <em style="color:var(--gold-soft)">carries weight</em> — anywhere in the world</h2>
+        <p class="rv d2">Quick-fix weekend certificates are everywhere. This isn't one of them. Alchemy of Breath has trained facilitators since 2012 — longer than nearly any school in the field — and its accreditations are the backbone of your professional credibility.</p>
+        <ul class="cert-list">
+          <li class="rv"><span class="c-check">✦</span><div><b>Certified Breathwork Facilitator title</b><span>Awarded on completion of all 400 hours, practicum, and case studies.</span></div></li>
+          <li class="rv d1"><span class="c-check">✦</span><div><b>GPBA-accredited training school</b><span>The Global Professional Breathwork Alliance — the field's gold standard.</span></div></li>
+          <li class="rv d2"><span class="c-check">✦</span><div><b>Recognized by the FHT &amp; AADP</b><span>Federation of Holistic Therapies and American Association of Drugless Practitioners.</span></div></li>
+          <li class="rv d3"><span class="c-check">✦</span><div><b>Listed in the global facilitator directory</b><span>Graduates join a worldwide community — and a referral network that works.</span></div></li>
+        </ul>
+      </div>
+
+      <div class="seal-stage rv d2">
+        <div class="big-seal" aria-hidden="true">
+          <svg class="spin" viewBox="0 0 320 320" fill="none">
+            <defs><path id="circ" d="M160 30a130 130 0 1 1 0 260a130 130 0 1 1 0-260"/></defs>
+            <text font-family="Khula,Arial" font-size="14.5" font-weight="600" letter-spacing="5.5" fill="#E2C786">
+              <textPath href="#circ">ACCREDITED BREATHWORK TRAINING · GLOBAL PROFESSIONAL BREATHWORK ALLIANCE ·</textPath>
+            </text>
+          </svg>
+          <svg viewBox="0 0 320 320" fill="none" style="position:absolute;inset:0">
+            <circle cx="160" cy="160" r="104" stroke="#E2C786" stroke-width="1.2"/>
+            <circle cx="160" cy="160" r="96" stroke="#FBF7F0" stroke-width=".7" opacity=".4"/>
+            <path d="M160 86c20 19, 20 129, 0 148c-20-19-20-129 0-148Z" fill="#FBF7F0" opacity=".94"/>
+            <path d="M86 160c19-20, 129-20, 148 0c-19 20-129 20-148 0Z" fill="#E2C786" opacity=".5"/>
+            <circle cx="160" cy="160" r="7" fill="#5D1D0E" stroke="#E2C786" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="seal-cap">Certified · Accredited · Trusted<br/>since 2012</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ OUTCOMES ════════ -->
+<section class="section outcomes">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">Eight months from now</p>
+      <h2 class="rv d1">Who you become <em>on the other side</em></h2>
+    </div>
+    <div class="out-grid">
+      <div class="out-card rv"><div class="o-num">— one</div><h3>A facilitator with real authority</h3><p>You'll guide one-on-one and group breathwork sessions with calm, grounded confidence — backed by an internationally accredited certification and hundreds of supervised hours.</p></div>
+      <div class="out-card rv d1"><div class="o-num">— two</div><h3>The author of your own life</h3><p>Graduates say the deepest transformation is personal. You'll know your shadow, trust your nervous system, and show up authentically in the world — no matter the situation.</p></div>
+      <div class="out-card rv d2"><div class="o-num">— three</div><h3>Part of a worldwide family</h3><p>You join 1,000+ facilitators across 40+ countries — a living community of mentors, referrals, alumni gatherings, and friends who speak the language of breath.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ BOOK A DISCOVERY CALL ════════ -->
+<section class="section book" id="book">
+  <div class="wrap">
+    <div class="book-grid">
+      <div>
+        <p class="kicker rv">The next step is a conversation</p>
+        <h2 class="rv d1" style="font-size:clamp(32px,4vw,50px);margin:22px 0 20px">No application forms. No pressure. <em>Just a real conversation.</em></h2>
+        <p class="rv d2" style="color:var(--ink-soft);max-width:520px">Every journey at Alchemy of Breath begins the same way: a free discovery call with a senior member of our team. We'll listen to your story, answer everything honestly — and together discover whether you're ready to share the power of the breath with the world.</p>
+        <ol class="steps">
+          <li class="rv"><span class="st-n"></span><div><h3>Choose a time that suits you</h3><p>Pick a spot on the calendar — calls run across time zones, all week.</p></div></li>
+          <li class="rv d1"><span class="st-n"></span><div><h3>Meet your guide for 30 minutes</h3><p>A senior team member — not a salesperson — hears where you are and where you're called.</p></div></li>
+          <li class="rv d2"><span class="st-n"></span><div><h3>Receive your personal roadmap</h3><p>Whether it's this training or not, you'll leave with clarity on your next step with the breath.</p></div></li>
+        </ol>
+      </div>
+
+      <div class="book-card rv d2">
+        <p class="bc-kick">Free · 30 minutes · 2026 cohort</p>
+        <h3>Book Your<br/>Discovery Call</h3>
+        <p class="bc-sub">Spaces in the 2026 cohort are limited — and every enrollment begins with this call.</p>
+        <ul class="bc-list">
+          <li><span class="ch">✦</span>Honest answers about the training, investment &amp; payment plans</li>
+          <li><span class="ch">✦</span>A feel for the Alchemy of Breath way — warmth first, always</li>
+          <li><span class="ch">✦</span>Your questions on certification, accreditation &amp; BreathCamp</li>
+          <li><span class="ch">✦</span>Zero obligation — if it's not your path, we'll say so</li>
+        </ul>
+        <a class="btn btn-red" href="https://alchemyofbreath.com/breathwork-training/" target="_blank" rel="noopener">Reserve My Free Call <span class="arr">→</span></a>
+        <p class="bc-foot">Average reply within 24 hours · <span style="color:var(--gold)">★★★★★</span> rated by graduates</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FAQ ════════ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="s-head center">
+      <p class="kicker center rv">Questions, answered honestly</p>
+      <h2 class="rv d1">Everything you're <em>wondering</em></h2>
+    </div>
+    <div class="acc rv d2" id="faqAcc">
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">Do I need prior breathwork experience?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>No. Many of our strongest graduates arrived with nothing but curiosity and a calling. The first phase builds your personal practice from the ground up — what matters is your willingness to go inward, not your résumé.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">How much time does the training take each week?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>Plan for roughly 8–10 hours weekly: live calls, video modules, your personal practice, and reflection work. The 400 hours unfold over 8 months — paced deliberately, because integration can't be rushed. Most students train alongside full-time work.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">Is the training fully online?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>The 8-month certification is delivered fully online through live calls and the digital learning platform — students join from 40+ countries. Graduates may also deepen their in-person certification at a 7-day residential BreathCamp at ASHA in Tuscany, Italy.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">What certification will I receive — and is it recognized?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>You graduate as a Certified Breathwork Facilitator. Alchemy of Breath is accredited by the Global Professional Breathwork Alliance, the Federation of Holistic Therapies, and the American Association of Drugless Practitioners — credentials recognized by practitioners worldwide.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">What does the training cost?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>Investment and payment plans are shared openly on your discovery call, where we can tailor options to your situation. We keep it off the page deliberately — not as a tactic, but because the right plan depends on your circumstances, and that deserves a conversation.</p></div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-head" aria-expanded="false"><span class="a-num">Q.</span><span class="a-title">Can I really build a career from this?</span><span class="a-x"></span></button>
+        <div class="acc-body"><div class="acc-body-in"><p>Over 1,000 graduates have — in private practice, retreats, corporate wellness, addiction recovery, and end-of-life care. The final phase covers the practical foundations of building an ethical practice, and our global directory and alumni network keep working for you after graduation.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FINAL CTA ════════ -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-orb rv" aria-hidden="true"></div>
+    <p class="kicker center rv d1">One breath. One call. One decision.</p>
+    <h2 class="rv d2">The world is holding its breath.<br/><em>You can teach it to exhale.</em></h2>
+    <p class="rv d3">The 2026 cohort is forming now. Your discovery call is free, warm, and entirely without obligation.</p>
+    <div class="rv d4">
+      <a class="btn btn-red" href="#book">Book Your Free Discovery Call <span class="arr">→</span></a>
+      <p class="btn-note">Free 30-minute call <span class="dot">·</span> No pressure <span class="dot">·</span> Limited spaces</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="#top" style="text-decoration:none">
+          <svg class="logo-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <circle cx="22" cy="22" r="20" stroke="#E2C786" stroke-width="1.4"/>
+            <path d="M22 9 C28 15, 28 29, 22 35 C16 29, 16 15, 22 9 Z" fill="#E2C786" opacity=".9"/>
+          </svg>
+          <span class="logo-word">Alchemy of Breath<small style="color:var(--gold-soft)">Conscious Breathwork Academy</small></span>
+        </a>
+        <p>Training certified breathwork facilitators since 2012. Accredited by the GPBA, FHT &amp; AADP, with graduates in 40+ countries.</p>
+      </div>
+      <div class="ft-col">
+        <b>The Training</b>
+        <a href="#journey">The 8-Month Journey</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#certification">Certification</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="ft-col">
+        <b>Alchemy of Breath</b>
+        <a href="https://alchemyofbreath.com/who-is-alchemy-of-breath/" target="_blank" rel="noopener">About Us</a>
+        <a href="https://alchemyofbreath.com/anthony-abbagnano/" target="_blank" rel="noopener">Anthony Abbagnano</a>
+        <a href="https://alchemyofbreath.com/breathcamp/" target="_blank" rel="noopener">BreathCamp · Tuscany</a>
+        <a href="https://alchemyofbreath.com/find-facilitator/" target="_blank" rel="noopener">Find a Facilitator</a>
+      </div>
+      <div class="ft-col">
+        <b>Begin</b>
+        <a href="#book">Book a Discovery Call</a>
+        <a href="https://alchemyofbreath.com/free-breathwork-sessions/" target="_blank" rel="noopener">Free Breathwork Sessions</a>
+        <a href="https://alchemyofbreath.com/events/" target="_blank" rel="noopener">Events</a>
+      </div>
+    </div>
+    <div class="ft-base">
+      <span>© 2026 Alchemy of Breath. All rights reserved.</span>
+      <span>Breathe in. You're home.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- sticky mobile CTA -->
+<div class="m-cta" id="mCta"><a class="btn btn-red" href="#book">Book Your Free Discovery Call →</a></div>
+
+<script>
+/* ── nav shrink ── */
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+/* ── reveal on scroll ── */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ── breathing orb label, synced to the 10s animation ── */
+const orbLabel=document.getElementById('orbLabel');
+if(orbLabel){
+  const cues=[[0,'Breathe in…'],[4200,'Hold, softly'],[5800,'Breathe out…']];
+  const t0=performance.now();
+  setInterval(()=>{
+    const t=(performance.now()-t0)%10000;
+    let txt=cues[0][1];
+    for(const[ms,c]of cues) if(t>=ms) txt=c;
+    if(orbLabel.textContent!==txt){orbLabel.style.opacity=0;setTimeout(()=>{orbLabel.textContent=txt;orbLabel.style.opacity=1},250)}
+  },200);
+}
+
+/* ── stat counters ── */
+const fmt=(n,plain)=>plain?String(n):n.toLocaleString('en-US');
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,end=+el.dataset.count,plain=el.dataset.plain,t0=performance.now(),dur=1600;
+  const tick=t=>{const p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));
+    el.innerHTML=fmt(v,plain)+(p===1?'<sup>+</sup>':'');
+    if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);
+}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+/* ── lazy video ── */
+const vf=document.getElementById('videoFrame');
+if(vf){const load=()=>{if(vf.dataset.on)return;vf.dataset.on=1;
+  const f=document.createElement('iframe');
+  f.src='https://www.youtube.com/embed/WlmUgmRzQvA?autoplay=1&rel=0';
+  f.title='Joining the Alchemy of Breath Facilitator Training';
+  f.allow='autoplay;encrypted-media;picture-in-picture';f.allowFullscreen=true;
+  vf.appendChild(f);document.getElementById('videoPoster').style.opacity=0;
+  setTimeout(()=>document.getElementById('videoPoster').remove(),600)};
+  vf.addEventListener('click',load);
+  vf.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();load()}});
+}
+
+/* ── timeline progress + dot lighting ── */
+const tline=document.getElementById('tline'),tprog=document.getElementById('tprog');
+if(tline){
+  const phases=[...tline.querySelectorAll('[data-phase]')];
+  addEventListener('scroll',()=>{
+    const r=tline.getBoundingClientRect(),vh=innerHeight;
+    const h=Math.min(Math.max(vh*.55-r.top,0),r.height-16);
+    tprog.style.height=h+'px';
+    phases.forEach(p=>{const pr=p.getBoundingClientRect();p.classList.toggle('lit',pr.top<vh*.55)});
+  },{passive:true});
+}
+
+/* ── accordions ── */
+document.querySelectorAll('.acc').forEach(acc=>{
+  acc.querySelectorAll('.acc-item').forEach(item=>{
+    const head=item.querySelector('.acc-head'),body=item.querySelector('.acc-body');
+    if(item.classList.contains('open'))body.style.maxHeight=body.scrollHeight+'px';
+    head.addEventListener('click',()=>{
+      const open=item.classList.contains('open');
+      acc.querySelectorAll('.acc-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.acc-body').style.maxHeight=0;o.querySelector('.acc-head').setAttribute('aria-expanded','false')});
+      if(!open){item.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';head.setAttribute('aria-expanded','true')}
+    });
+  });
+});
+
+/* ── testimonial slider ── */
+const slides=[...document.querySelectorAll('.t-slide')],dots=document.getElementById('tDots');
+let ti=0,timer;
+slides.forEach((_,i)=>{const d=document.createElement('button');d.className='t-dot'+(i?'':' on');d.setAttribute('aria-label','Story '+(i+1));d.addEventListener('click',()=>go(i));dots.appendChild(d)});
+function go(i){ti=(i+slides.length)%slides.length;
+  slides.forEach((s,j)=>s.classList.toggle('on',j===ti));
+  dots.querySelectorAll('.t-dot').forEach((d,j)=>d.classList.toggle('on',j===ti));
+  clearInterval(timer);timer=setInterval(()=>go(ti+1),7000)}
+document.getElementById('tPrev').addEventListener('click',()=>go(ti-1));
+document.getElementById('tNext').addEventListener('click',()=>go(ti+1));
+timer=setInterval(()=>go(ti+1),7000);
+/* equalize stage height */
+const stage=document.getElementById('tStage');
+const sizeStage=()=>{let h=0;slides.forEach(s=>{s.style.position='static';h=Math.max(h,s.offsetHeight);s.style.position=''});stage.style.minHeight=h+'px'};
+addEventListener('load',sizeStage);addEventListener('resize',sizeStage);
+
+/* ── sticky mobile CTA after hero ── */
+const mCta=document.getElementById('mCta'),bookSec=document.getElementById('book');
+addEventListener('scroll',()=>{
+  const past=scrollY>innerHeight*.85;
+  const nearBook=bookSec.getBoundingClientRect().top<innerHeight&&bookSec.getBoundingClientRect().bottom>0;
+  mCta.classList.toggle('show',past&&!nearBook);
+},{passive:true});
+</script>
+</body>
+</html>

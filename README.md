@@ -1,31 +1,35 @@
-# Calm Code — Alchemy of Breath Landing Page
+# Alchemy of Breath — Facilitator Training Landing Page
 
-High-converting, organic-feel certification landing page for The Calm Code by Alchemy of Breath.
+A handcrafted, conversion-focused landing page for the 8-month online Breathwork
+Facilitator Training, optimized for booking a free discovery call.
+Single self-contained file: `index.html` (no build step, no dependencies).
 
-## Brand Spec
-- **Background:** `#F7F4EF` warm off-white  
-- **Teal:** `#00a5b2` (digital accent)  
-- **Gold:** `#E1B668`  
-- **Ink:** `#221F20`  
-- **Fonts:** Cormorant Garamond (display) + Khula (body)  
+## Brand system
+- **Background:** `#FBF7F0` warm ivory (light, airy, layered depth via warm-hued shadows + paper grain)
+- **Brand red (headings & voice):** `#A93821` rust, deep `#7E2A18`
+- **Gold accent:** `#C09032`
+- **Ink:** `#3A332C`
+- **Fonts:** Cormorant Garamond (display) + Khula (body) — matching alchemyofbreath.com
+- American spelling throughout.
 
-## Signature Feature
-Live breathing orb in the hero — 4 concentric rings pulse on a 7-second inhale/exhale cycle. Organic blob shapes throughout. Custom teal/gold cursor.
+## Page flow (conversion path)
+Hero (breathing orb + animated stats) → Accreditation trust bar (GPBA / FHT / AADP)
+→ "Is this calling you?" empathy section → Founder video (lazy YouTube embed)
+→ 8-month journey timeline (scroll-drawn progress) → Learning platform mockup
+(CSS laptop + phone) → Curriculum accordion → Founder (Anthony Abbagnano)
+→ Testimonial slider → Certification (dark section, spinning GPBA seal)
+→ Outcomes → **Discovery call booking section** → FAQ → Final CTA → Footer.
+A sticky mobile CTA appears after the hero and hides near the booking section.
 
-## Sections
-Hero · Tagline Strip · About · Who It's For · Modules (dark) · Testimonials · Outcomes · Enrolment · FAQ · Footer
+## Interactions
+Live 10-second breathing orb with synced inhale/hold/exhale cues · scroll reveals ·
+animated counters · timeline progress line · accordions · auto-advancing
+testimonial slider · click-to-load video facade · nav shrink on scroll.
 
-## Deploy
-| Platform | Method |
-|---|---|
-| GoHighLevel | Paste HTML into custom page editor |
-| GitHub Pages | Settings → Pages → main branch |
-| Netlify | Drag-drop the folder |
-
-## To Customise
-1. Edit `:root` CSS variables for brand tokens  
-2. Replace hero image `src`  
-3. Swap enrolment form inputs with GHL embed  
-4. Confirm pricing with Anthony/Amy  
-
-Built with: Vanilla HTML/CSS/JS · Google Fonts · CSS custom properties · SVG waves · Blob animations
+## Before launch
+1. Point the booking CTA (`Reserve My Free Call` in `#book` and all `#book` anchors)
+   at the real scheduling link (Calendly/GHL) — currently links to the live training page.
+2. Replace the founder portrait card (`.fo-card`) with a real photo of Anthony.
+3. Swap the SVG accreditation marks for official logo files if licensing allows.
+4. Confirm testimonial attributions (currently quoted verbatim from public
+   sources, attributed to "Facilitator Training Graduate").
