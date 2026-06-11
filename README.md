@@ -5,10 +5,11 @@ Facilitator Training, optimized for booking a free discovery call.
 Single self-contained file: `index.html` (no build step, no dependencies).
 
 ## Brand system
-- **Background:** `#FBF7F0` warm ivory (light, airy, layered depth via warm-hued shadows + paper grain)
-- **Brand red (headings & voice):** `#A93821` rust, deep `#7E2A18`
-- **Gold accent:** `#C09032`
-- **Ink:** `#3A332C`
+- **Background:** `#F7F4EF` warm off-white (light, airy, layered depth via soft shadows + paper grain)
+- **Brand red (headline copy & CTAs):** `#A93821`
+- **Teal accent:** `#00A5B2` (dark sections `#11525C` → `#0A343B`)
+- **Gold accent:** `#E1B668` / `#D6A652`
+- **Ink:** `#221F20`
 - **Fonts:** Cormorant Garamond (display) + Khula (body) — matching alchemyofbreath.com
 - American spelling throughout.
 
