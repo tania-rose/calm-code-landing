@@ -1,972 +1,970 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BreathCamp Tuscany | 7-Day Breathwork Retreat — Alchemy of Breath</title>
-  <meta name="description" content="A 7-day, 6-night residential breathwork retreat in Tuscany. Reset your nervous system, find your community, and practice with senior trainers at ASHA. Five sessions in 2026." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{teal:'#354d4c',gold:'#cc9924',beige:'#d3cdb3',offwhite:'#f9f8f5',green:'#52bb90',ink:'#1a1a18',inksoft:'#4a4a46',gray:'#c5c3c2'},fontFamily:{display:['Marcellus','Georgia','serif'],body:['Roboto','sans-serif']}}}}</script>
-  <style>
-    *{box-sizing:border-box}body{font-family:'Roboto',sans-serif;font-weight:300;color:#1a1a18;background:#f9f8f5;-webkit-font-smoothing:antialiased}h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif}
-    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#cc9924}
-    .grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
-    .nav-link{position:relative;font-family:'Roboto',sans-serif;font-weight:400;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.85);text-decoration:none}.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;right:100%;height:1px;background:#cc9924;transition:right .3s cubic-bezier(.4,0,.2,1)}.nav-link:hover::after{right:0}.nav-link:hover{color:#fff}
-    .btn-gold{display:inline-block;background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(204,153,36,.25),0 1px 4px rgba(204,153,36,.15);transition:transform .2s cubic-bezier(.4,0,.2,1),box-shadow .2s cubic-bezier(.4,0,.2,1)}.btn-gold::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.12);opacity:0;transition:opacity .2s}.btn-gold:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(204,153,36,.35),0 2px 8px rgba(204,153,36,.2)}.btn-gold:hover::before{opacity:1}.btn-gold:active{transform:translateY(0)}.btn-gold:focus-visible{outline:2px solid #cc9924;outline-offset:3px}
-    .btn-outline{display:inline-block;background:transparent;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:13px 32px;border:1px solid rgba(255,255,255,.4);cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,transform .2s cubic-bezier(.4,0,.2,1)}.btn-outline:hover{border-color:#cc9924;background:rgba(204,153,36,.08);transform:translateY(-1px)}.btn-outline:active{transform:translateY(0)}.btn-outline:focus-visible{outline:2px solid #cc9924;outline-offset:3px}
-    .btn-outline-dark{display:inline-block;background:transparent;color:#354d4c;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:11px 22px;border:1px solid #354d4c;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,color .2s,transform .2s cubic-bezier(.4,0,.2,1)}.btn-outline-dark:hover{border-color:#cc9924;color:#cc9924;background:rgba(204,153,36,.05);transform:translateY(-1px)}
-    .gold-rule{width:56px;height:3px;background:linear-gradient(90deg,#cc9924 0%,#e6b94d 100%);margin:20px 0 28px;border-radius:2px;box-shadow:0 0 12px rgba(204,153,36,.35)}.gold-rule.centered{margin:20px auto 28px}
-    .gold-text{background:linear-gradient(120deg,#e6b94d 0%,#cc9924 50%,#a87a14 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-    .img-overlay{position:relative;overflow:hidden}.img-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(53,77,76,.5) 0%,transparent 50%)}
-    .instructor-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;filter:grayscale(10%)}
-    .faq-item{border-bottom:1px solid #d3cdb3}.faq-question{width:100%;text-align:left;padding:22px 0;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Roboto',sans-serif;font-weight:400;font-size:16px;color:#1a1a18;line-height:1.5;gap:16px}.faq-question:hover{color:#354d4c}.faq-question:focus-visible{outline:2px solid #cc9924;outline-offset:2px}.faq-icon{flex-shrink:0;width:20px;height:20px;border:1px solid #d3cdb3;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#cc9924;font-size:14px;transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .2s}.faq-question[aria-expanded="true"] .faq-icon{transform:rotate(45deg);border-color:#cc9924}.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}.faq-answer.open{max-height:600px}.faq-answer-inner{padding-bottom:22px;font-size:15px;line-height:1.7;color:#4a4a46}
-    #main-nav{transition:background .3s,box-shadow .3s}#main-nav.scrolled{background:rgba(31,48,47,.97);box-shadow:0 2px 24px rgba(0,0,0,.18);backdrop-filter:blur(8px)}
-    .breath-orb{width:140px;height:140px;border-radius:50%;border:1px solid rgba(204,153,36,.4);background:radial-gradient(circle,rgba(204,153,36,.12) 0%,transparent 70%);transition:transform 5s cubic-bezier(.4,0,.2,1),border-color 5s,box-shadow 5s}.breath-orb.inhale{transform:scale(1.6);border-color:rgba(204,153,36,.7);box-shadow:0 0 60px rgba(204,153,36,.15),0 0 120px rgba(204,153,36,.06)}.breath-orb.exhale{transform:scale(1);border-color:rgba(204,153,36,.3);box-shadow:0 0 20px rgba(204,153,36,.05)}.breath-label{font-family:'Roboto',sans-serif;font-weight:300;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.68)}.breath-counter{font-family:'Marcellus',Georgia,serif;font-size:28px;color:#cc9924;line-height:1}
-    @keyframes carouselSlide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}.location-carousel-track{display:flex;gap:16px;animation:carouselSlide 40s linear infinite;width:max-content}.location-carousel-track:hover{animation-play-state:paused}.location-carousel-wrap{overflow:hidden;position:relative}.location-carousel-wrap::before,.location-carousel-wrap::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}.location-carousel-wrap::before{left:0;background:linear-gradient(to right,#1a1a18,transparent)}.location-carousel-wrap::after{right:0;background:linear-gradient(to left,#1a1a18,transparent)}.location-carousel-item{flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:2px}.location-carousel-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s cubic-bezier(.4,0,.2,1)}.location-carousel-item:hover img{transform:scale(1.03)}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BreathCamp Tuscany | 7-Day Breathwork Retreat at ASHA | Alchemy of Breath</title>
+<meta name="description" content="A 7-day, 6-night residential breathwork retreat in Tuscany. Reset your nervous system, find your community, and practice with senior trainers at ASHA. Five sessions in 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;--paper-2:#FBF7EF;--cream:#FDF6E9;
+  --gold:#E1B668;--gold-deep:#D6A652;--gold-soft:#EFDCB6;--gold-wash:#F7EBD2;
+  --teal:#00A5B2;--slate:#5B7889;
+  --ink:#221F20;--foot:#191617;
+  --grad-gold:linear-gradient(135deg,#E1B668 0%,#D6A652 100%);
+  --grad-red:linear-gradient(135deg,#7B0712 0%,#9D1018 50%,#7B0712 100%);
+  --shadow-soft:0 1px 2px rgba(34,31,32,.04),0 8px 24px rgba(34,31,32,.06),0 24px 64px rgba(34,31,32,.07);
+  --shadow-lift:0 2px 4px rgba(34,31,32,.05),0 14px 34px rgba(34,31,32,.10),0 34px 80px rgba(34,31,32,.10);
+  --serif:'Marcellus',Georgia,serif;
+  --sans:'Roboto',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;padding-top:48px}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.18}
+h1{font-size:clamp(2.4rem,5vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,3.2vw,2.4rem);letter-spacing:-.005em}
+h3{font-size:1.32rem}
+h4{font-size:1.08rem}
+em{color:var(--gold-deep);font-style:italic;font-family:var(--serif)}
+strong{font-weight:500}
+a{color:var(--ink)}
 
-    /* Day arc — interactive */
-    .day-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
-    .day-tab{flex:1 1 auto;min-width:64px;max-width:120px;padding:18px 10px;background:rgba(255,255,255,.05);border:1px solid rgba(211,205,179,.2);color:rgba(255,255,255,.65);font-family:'Marcellus',Georgia,serif;font-size:24px;line-height:1;cursor:pointer;transition:background .25s,border-color .25s,color .25s,transform .25s}
-    .day-tab small{display:block;font-family:'Roboto',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,.45);margin-top:8px}
-    .day-tab:hover{border-color:rgba(204,153,36,.6);color:#fff;transform:translateY(-2px)}
-    .day-tab.active{background:rgba(204,153,36,.12);border-color:#cc9924;color:#cc9924}
-    .day-tab.active small{color:rgba(204,153,36,.9)}
-    .day-panel{background:rgba(255,255,255,.05);border:1px solid rgba(211,205,179,.2);padding:40px 36px;min-height:200px;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
-    .day-panel.visible{opacity:1;transform:translateY(0)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+section{padding:96px 0;position:relative}
+@media(max-width:760px){section{padding:64px 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:.72rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--slate);margin-bottom:18px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.eyebrow.center{justify-content:center}
+.lead{font-size:1.12rem;line-height:1.7;color:var(--ink);max-width:34em}
+.muted{color:var(--slate)}
+.alt{background:var(--paper-2)}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+.center .lead{margin-left:auto;margin-right:auto}
 
-    /* Trainer carousel */
-    .trainer-carousel{position:relative}
-    .trainer-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px 4px 24px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .trainer-track::-webkit-scrollbar{display:none}
-    .trainer-card{flex:0 0 calc(25% - 18px);scroll-snap-align:start;text-align:center}
-    .trainer-nav{position:absolute;top:42%;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid #d3cdb3;color:#354d4c;font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(53,77,76,.12);z-index:5;transition:background .2s,border-color .2s,color .2s,transform .2s}
-    .trainer-nav:hover{background:#cc9924;border-color:#cc9924;color:#fff;transform:translateY(-50%) scale(1.05)}
-    .trainer-nav.prev{left:-20px;transform:translateY(-50%)}
-    .trainer-nav.next{right:-20px;transform:translateY(-50%)}
-    @media(max-width:1024px){.trainer-card{flex:0 0 calc(33.33% - 16px)}}
-    @media(max-width:768px){.trainer-card{flex:0 0 calc(60% - 12px)}.trainer-nav{display:none}}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E")}
 
-    /* Testimonial card polish */
-    .video-card{background:#f9f8f5;border:1px solid #d3cdb3;overflow:hidden;box-shadow:0 2px 12px rgba(53,77,76,.06);transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s}
-    .video-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(53,77,76,.12);border-color:#cc9924}
+.orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+.orb.g{background:radial-gradient(circle,rgba(225,182,104,.22) 0%,rgba(225,182,104,0) 70%)}
+.orb.t{background:radial-gradient(circle,rgba(0,165,178,.12) 0%,rgba(0,165,178,0) 70%)}
+section>.wrap{position:relative;z-index:1}
 
-    .date-card{background:#fff;border:1px solid #d3cdb3;padding:28px 24px;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s}.date-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(53,77,76,.12);border-color:#cc9924}
-    .accom-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(53,77,76,.12);border-color:#cc9924}.accom-card img{transition:transform .4s cubic-bezier(.4,0,.2,1)}.accom-card:hover img{transform:scale(1.04)}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.4,0,.2,1),transform .9s cubic-bezier(.4,0,.2,1)}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
-    @keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(204,153,36,.5)}50%{box-shadow:0 0 0 10px rgba(204,153,36,0)}}
-    .spots-badge{display:inline-flex;align-items:center;gap:6px;background:#cc9924;color:#fff;font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:100px;animation:pulse-gold 2.4s ease-in-out infinite;margin-bottom:12px}
-    .spots-badge::before{content:'';width:6px;height:6px;background:#fff;border-radius:50%;display:inline-block;animation:pulse-dot 1.6s ease-in-out infinite}
-    .students-badge{display:inline-flex;align-items:center;background:rgba(53,77,76,.1);color:#354d4c;font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:100px;margin-bottom:12px;border:1px solid rgba(53,77,76,.2)}
-    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.7)}}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-    .float-subtle{animation:float 6s ease-in-out infinite}
-    .eb-badge{display:inline-block;background:rgba(82,187,144,.12);color:#2e8a65;font-family:'Roboto',sans-serif;font-weight:500;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-left:8px}
-    .price-strike{text-decoration:line-through;text-decoration-color:rgba(197,195,194,.8);color:#c5c3c2;font-size:14px;margin-right:8px}
-    @keyframes slow-zoom{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
-    .hero-img{animation:slow-zoom 30s ease-in-out infinite}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--sans);font-weight:500;font-size:.92rem;letter-spacing:.04em;cursor:pointer;padding:16px 32px;border-radius:999px;border:none;transition:transform .25s,box-shadow .25s,filter .25s}
+.btn .arr{display:inline-block;transition:transform .25s}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-primary{background:var(--grad-gold);color:var(--ink);box-shadow:0 10px 28px rgba(214,166,82,.42)}
+.btn-primary:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 16px 38px rgba(214,166,82,.55)}
+.btn-ghost{color:var(--ink);border:1px solid rgba(34,31,32,.3);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(34,31,32,.04);transform:translateY(-2px)}
+.btn-small{padding:11px 22px;font-size:.82rem}
+.dark .btn-ghost{color:#FBF7EF;border-color:rgba(255,255,255,.32)}
+.dark .btn-ghost:hover{border-color:#FBF7EF;background:rgba(255,255,255,.06)}
 
-    /* Trusted By — horizontal marquee */
-    @keyframes trustedScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .trusted-wrap{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%)}
-    .trusted-track{display:flex;align-items:center;gap:80px;animation:trustedScroll 45s linear infinite;width:max-content;will-change:transform;padding:12px 0}
-    .trusted-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;height:64px}
-    .trusted-logo img{max-height:64px;max-width:180px;width:auto;object-fit:contain;opacity:1}
-    @media(max-width:768px){.trusted-track{gap:48px;animation-duration:35s}.trusted-logo img{max-height:50px;max-width:140px}}
+/* Urgency banner (June promo) */
+.urgency{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--grad-red);color:#FBF7EF;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:14px;font-size:.92rem;letter-spacing:.04em;border-bottom:1px solid rgba(225,182,104,.35)}
+.urgency .pulse{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(225,182,104,.6);animation:bdPulse 2.2s ease-out infinite;flex-shrink:0}
+@keyframes bdPulse{0%{box-shadow:0 0 0 0 rgba(225,182,104,.55)}70%{box-shadow:0 0 0 11px rgba(225,182,104,0)}100%{box-shadow:0 0 0 0 rgba(225,182,104,0)}}
+.urgency strong{color:var(--gold);font-weight:600}
+.urgency .sep{opacity:.5}
+.urgency a{color:#FBF7EF;text-decoration:underline;text-underline-offset:3px;font-weight:500}
+.urgency a:hover{color:var(--gold)}
+@media(max-width:680px){.urgency{font-size:.78rem;padding:10px 14px;gap:10px}body{padding-top:60px}}
 
-    /* Golden orbs — hero atmosphere */
-    @keyframes orbDrift{0%{transform:translate(0,0) scale(1);opacity:.35}50%{opacity:.7}100%{transform:translate(50px,-80px) scale(1.08);opacity:.25}}
-    .gold-orb{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(204,153,36,.65) 0%,rgba(204,153,36,.18) 45%,transparent 75%);pointer-events:none;animation:orbDrift 11s ease-in-out infinite alternate;will-change:transform,opacity;filter:blur(8px);z-index:2}
+/* Nav */
+nav.main-nav{position:fixed;top:48px;left:0;right:0;z-index:50;padding:18px 0;transition:background .3s,box-shadow .3s,padding .3s}
+nav.main-nav.scrolled{background:rgba(251,247,239,.97);box-shadow:0 2px 24px rgba(34,31,32,.08);padding:12px 0;backdrop-filter:blur(8px)}
+nav.main-nav .row{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1140px;margin:0 auto;padding:0 28px}
+nav.main-nav img{height:30px;width:auto}
+nav.main-nav .links{display:flex;gap:24px;align-items:center}
+nav.main-nav .links a:not(.btn){font-size:.84rem;letter-spacing:.04em;text-decoration:none;color:var(--ink);font-weight:400;opacity:.7;transition:opacity .2s}
+nav.main-nav .links a:not(.btn):hover{opacity:1}
+@media(max-width:860px){nav.main-nav .links a:not(.btn){display:none}}
+@media(max-width:680px){nav.main-nav{top:60px}}
 
-    /* Atmosphere photo sections */
-    .atmos{position:relative;min-height:60vh;overflow:hidden;background:#1a1a18}
-    .atmos-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
-    .atmos-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,26,24,.4) 0%,rgba(26,26,24,.78) 100%)}
-    .atmos-inner{position:relative;z-index:3;padding:140px 24px;text-align:center;max-width:780px;margin:0 auto}
-    .atmos-watermark{position:absolute;top:32px;right:32px;width:60px;height:auto;opacity:.25;z-index:3}
+/* Hero */
+.hero{padding:170px 0 100px;background:radial-gradient(120% 80% at 50% 0%,var(--cream) 0%,var(--paper) 60%);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;position:relative;z-index:1}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero{padding:140px 0 70px}}
+.hero-copy h1{margin-bottom:22px;max-width:15ch}
+.hero-copy .lead{margin-bottom:32px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:38px}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;background:rgba(251,247,239,.7);border:1px solid rgba(225,182,104,.35);border-radius:999px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:500;backdrop-filter:blur(6px)}
+.hero-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
-    /* Breath modal */
-    .breath-modal{position:fixed;inset:0;background:rgba(13,13,12,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-    .breath-modal.open{display:flex}
-    .breath-modal-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.75);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s;z-index:3}
-    .breath-modal-close:hover{background:rgba(204,153,36,.15);color:#cc9924;border-color:rgba(204,153,36,.4)}
+/* Arch frame */
+.arch{position:relative;border-radius:300px 300px 16px 16px;overflow:hidden;outline:1px solid rgba(225,182,104,.5);outline-offset:8px;transform:rotate(-.5deg);box-shadow:var(--shadow-soft);aspect-ratio:3/4}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* June promo */
-    @keyframes promoPulse{0%,100%{box-shadow:inset 0 0 0 0 rgba(255,255,255,0)}50%{box-shadow:inset 0 0 30px 0 rgba(255,255,255,.12)}}
-    .promo-bar{position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,#a8201a 0%,#c5281f 50%,#a8201a 100%);color:#fff;text-align:center;padding:10px 16px;font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.04em;line-height:1.4;animation:promoPulse 3s ease-in-out infinite;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
-    .promo-bar strong{font-weight:600;letter-spacing:.06em}
-    .promo-bar .pill{display:inline-flex;align-items:center;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;border-radius:100px;font-weight:600}
-    .promo-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
-    .promo-bar a:hover{color:#ffe4a3}
-    body{padding-top:42px}
-    #main-nav{top:42px!important}
-    @media(max-width:640px){.promo-bar{font-size:11.5px;padding:8px 12px;gap:8px}body{padding-top:62px}#main-nav{top:62px!important}}
+/* Stats */
+.stats-row{display:grid;grid-template-columns:repeat(5,1fr);border-radius:18px;background:var(--paper);border:1px solid rgba(225,182,104,.28);box-shadow:var(--shadow-soft);overflow:hidden;margin-top:48px}
+@media(max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:30px 18px;text-align:center;border-right:1px solid rgba(225,182,104,.22)}
+.stat:last-child{border-right:none}
+@media(max-width:760px){.stat{border-bottom:1px solid rgba(225,182,104,.22)}.stat:nth-child(2n){border-right:none}.stat:nth-last-child(-n+2){border-bottom:none}}
+.stat .big{font-family:var(--serif);font-size:2.2rem;color:var(--ink);line-height:1;display:block;margin-bottom:6px}
+.stat .lbl{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:500}
 
-    /* Promo callout */
-    .promo-callout{background:linear-gradient(135deg,#a8201a 0%,#c5281f 100%);color:#fff;border:1px solid rgba(255,255,255,.15);padding:22px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;border-radius:2px;box-shadow:0 8px 32px rgba(168,32,26,.25)}
-    .promo-callout .left{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
-    .promo-callout .badge{display:inline-flex;align-items:center;background:rgba(255,255,255,.18);color:#fff;font-family:'Roboto',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:100px;border:1px solid rgba(255,255,255,.3);white-space:nowrap}
-    .promo-callout .headline{font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);color:#fff;line-height:1.3;margin:0}
-    .promo-callout .deadline{font-size:13px;color:rgba(255,255,255,.85);letter-spacing:.02em;margin:4px 0 0;font-weight:400}
-    .promo-callout .btn-promo{display:inline-block;background:#fff;color:#a8201a;font-family:'Roboto',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 26px;text-decoration:none;border-radius:2px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
-    .promo-callout .btn-promo:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+/* Mini-tiles */
+.mini-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+@media(max-width:760px){.mini-gal{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mini-gal{grid-template-columns:1fr}}
+.mini-tile{border-radius:18px;padding:30px 28px;border:1px solid rgba(225,182,104,.3);background:var(--paper);box-shadow:var(--shadow-soft);transition:transform .3s,box-shadow .3s}
+.mini-tile:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.mini-tile .num{font-family:var(--serif);font-size:1rem;color:var(--gold-deep);letter-spacing:.06em;display:block;margin-bottom:10px}
+.mini-tile h4{margin-bottom:8px;font-size:1.1rem}
+.mini-tile p{font-size:.9rem;color:var(--slate);line-height:1.65}
 
-    /* Hero promo chip */
-    .promo-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(168,32,26,.92);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:'Roboto',sans-serif;font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:100px;margin-bottom:18px;box-shadow:0 6px 20px rgba(168,32,26,.4)}
-    .promo-chip::before{content:'';width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block;animation:pulse-dot 1.6s ease-in-out infinite}
+/* Two-up image+copy */
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px}
+@media(max-width:900px){.two-up{grid-template-columns:1fr;gap:48px}}
+.two-up.flip .img-col{order:2}
+@media(max-width:900px){.two-up.flip .img-col{order:0}}
 
-    @media(max-width:768px){.breath-orb{width:110px;height:110px}.day-tab{font-size:18px;padding:12px 6px}.day-panel{padding:28px 22px}}
-  </style>
+/* The Journey (dark pathway, only dark section) */
+.pathway{background:var(--ink);color:#FBF7EF;padding:110px 0;position:relative;overflow:hidden}
+.pathway::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(225,182,104,.5),transparent)}
+.pathway::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(225,182,104,.5),transparent)}
+.pathway h2{color:#FBF7EF}
+.pathway .lead{color:rgba(251,247,239,.85)}
+.pathway .eyebrow{color:rgba(225,182,104,.85)}
+.pathway .muted{color:rgba(251,247,239,.6)}
+.day-tabs{position:relative;display:flex;justify-content:space-between;gap:8px;margin:48px 0 36px}
+.day-tabs::before{content:"";position:absolute;left:27px;right:27px;top:50%;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 10%,var(--gold) 90%,transparent);transform:translateY(-50%)}
+.day-tab{background:var(--ink);border:1px solid rgba(225,182,104,.4);color:rgba(251,247,239,.7);width:54px;height:54px;border-radius:50%;font-family:var(--serif);font-size:1.06rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;padding:0;position:relative;z-index:1}
+.day-tab:hover{border-color:var(--gold);color:#FBF7EF;transform:translateY(-2px)}
+.day-tab.active{background:var(--grad-gold);color:var(--ink);border-color:var(--gold);box-shadow:0 10px 28px rgba(214,166,82,.4)}
+.day-tab small{position:absolute;top:62px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(251,247,239,.5);font-weight:500;white-space:nowrap}
+.day-tab.active small{color:var(--gold)}
+.day-panel{background:rgba(251,247,239,.04);border:1px solid rgba(225,182,104,.2);border-radius:18px;padding:42px 40px;min-height:200px;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s;margin-top:52px}
+.day-panel.visible{opacity:1;transform:translateY(0)}
+.day-panel .eyebrow{color:rgba(225,182,104,.85);margin-bottom:14px}
+.day-panel h3{color:#FBF7EF;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:14px}
+.day-panel p{font-size:1rem;color:rgba(251,247,239,.85);line-height:1.75;max-width:42em}
+.rhythm-note{margin-top:32px;background:rgba(0,0,0,.25);border:1px solid rgba(225,182,104,.18);padding:24px 32px;border-radius:14px}
+.rhythm-note .eyebrow{color:rgba(225,182,104,.85);margin-bottom:10px}
+.rhythm-note p{font-size:.95rem;color:rgba(251,247,239,.82);line-height:1.7}
+
+/* Explore cards */
+.explore-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+@media(max-width:760px){.explore-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.explore-grid{grid-template-columns:1fr}}
+.explore-card{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:18px;padding:28px 30px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.explore-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--gold)}
+.explore-card .eyebrow{margin-bottom:14px}
+.explore-card h3{font-size:1.16rem;color:var(--ink);margin-bottom:10px}
+.explore-card p{font-size:.92rem;color:var(--slate);line-height:1.65}
+
+/* Date cards */
+.dates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+@media(max-width:900px){.dates-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.dates-grid{grid-template-columns:1fr}}
+.date-card{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:18px;padding:26px 24px;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column;gap:10px}
+.date-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--gold)}
+.date-card.feature{background:var(--ink);color:#FBF7EF;border-color:var(--ink)}
+.date-card.feature h3,.date-card.feature .lbl{color:#FBF7EF}
+.date-card.feature .sub{color:rgba(251,247,239,.7)}
+.date-card .badge{display:inline-flex;align-items:center;gap:6px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;align-self:flex-start;padding:4px 10px;border-radius:999px;background:rgba(225,182,104,.14);border:1px solid rgba(225,182,104,.35)}
+.date-card .badge.urgent{color:#9D1018;background:rgba(157,16,24,.08);border-color:rgba(157,16,24,.35)}
+.date-card .lbl{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--slate);font-weight:500}
+.date-card h3{font-family:var(--serif);font-size:1.28rem;color:var(--ink);line-height:1.3}
+.date-card .sub{font-size:.82rem;color:var(--slate)}
+.date-card a.book{margin-top:auto;padding-top:12px;align-self:flex-start}
+
+/* Grad redirect banner */
+.grad-banner{background:var(--ink);border-radius:18px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:28px;color:#FBF7EF}
+.grad-banner .eyebrow{color:var(--gold);margin-bottom:6px}
+.grad-banner h4{color:#FBF7EF;font-family:var(--serif);font-size:1.06rem;font-weight:400}
+
+/* Pricing accommodation */
+.accom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+@media(max-width:900px){.accom-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.accom-grid{grid-template-columns:1fr}}
+.accom-grid.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.accom-grid.four{grid-template-columns:repeat(2,1fr)}}
+.accom-card{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:18px;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.accom-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--gold)}
+.accom-card .pic{aspect-ratio:3/2;overflow:hidden;position:relative}
+.accom-card .pic img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.accom-card:hover .pic img{transform:scale(1.04)}
+.accom-card .eb{position:absolute;top:12px;left:12px;background:var(--grad-gold);color:var(--ink);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:999px;font-weight:600}
+.accom-card .body{padding:20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.accom-card h4{font-family:var(--serif);font-size:1.08rem;color:var(--ink);line-height:1.3}
+.accom-card .sub{font-size:.78rem;color:var(--slate)}
+.accom-card .row-prc{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid rgba(225,182,104,.22);padding-top:14px;margin-top:12px;gap:10px}
+.accom-card .row-prc .lbl{font-size:.6rem;color:var(--slate);letter-spacing:.16em;text-transform:uppercase;margin-bottom:3px;font-weight:500}
+.accom-card .row-prc .price{font-family:var(--serif);font-size:1.18rem;color:var(--ink)}
+.accom-card .row-prc .price-pay{color:var(--gold-deep);font-size:1.04rem}
+.accom-card .row-prc .strike{text-decoration:line-through;color:var(--slate);font-size:.78rem;margin-right:6px;font-family:var(--serif)}
+.section-sublbl{font-family:var(--serif);font-size:1rem;color:var(--gold-deep);margin:36px 0 4px;letter-spacing:.06em}
+.section-sublbl:first-of-type{margin-top:20px}
+
+/* Pricing banners */
+.price-banner{padding:22px 28px;border-radius:14px;margin-bottom:14px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
+.price-banner.eb{background:var(--gold-wash);border:1px solid rgba(225,182,104,.4)}
+.price-banner.eb h4{font-family:var(--serif);font-size:1.06rem;color:var(--ink);margin-bottom:2px;font-weight:400}
+.price-banner.eb p{font-size:.86rem;color:var(--slate)}
+.price-banner.june{background:var(--grad-red);color:#FBF7EF;border:1px solid rgba(225,182,104,.3)}
+.price-banner.june h4{font-family:var(--serif);font-size:1.2rem;color:#FBF7EF;margin-bottom:2px;font-weight:400}
+.price-banner.june h4 em{color:var(--gold);font-style:normal;font-weight:500}
+.price-banner.june p{font-size:.84rem;color:rgba(251,247,239,.85)}
+
+/* Trainers */
+.trainers{position:relative;margin-top:38px}
+.trainer-nav-btns{display:flex;gap:10px;justify-content:flex-end;margin-bottom:16px}
+.trainer-nav-btn{width:42px;height:42px;border-radius:50%;background:var(--paper);border:1px solid rgba(225,182,104,.4);color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:1rem}
+.trainer-nav-btn:hover{background:var(--grad-gold);border-color:var(--gold)}
+.trainer-track{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:12px 4px 28px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.trainer-track::-webkit-scrollbar{display:none}
+.trainer-card{flex:0 0 calc(25% - 20px);scroll-snap-align:start;text-align:center}
+@media(max-width:1024px){.trainer-card{flex:0 0 calc(33.33% - 18px)}}
+@media(max-width:760px){.trainer-card{flex:0 0 calc(60% - 14px)}}
+.trainer-card .arch{margin-bottom:20px;border-radius:200px 200px 14px 14px;aspect-ratio:3/4.2}
+.trainer-card .eyebrow{justify-content:center;margin-bottom:8px;font-size:.66rem}
+.trainer-card h4{font-size:1.1rem;margin-bottom:6px}
+.trainer-card p{font-size:.86rem;color:var(--slate);line-height:1.65}
+
+/* Double-ring video frame */
+.dbring{position:relative;border-radius:18px;overflow:hidden;outline:1px solid rgba(225,182,104,.55);outline-offset:8px;background:var(--ink)}
+.dbring::before{content:"";position:absolute;inset:-22px;border-radius:30px;border:1px solid rgba(0,165,178,.3);pointer-events:none}
+.dbring video,.dbring img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Tape note */
+.tape{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:8px;padding:36px 38px;position:relative;transform:rotate(.3deg);box-shadow:var(--shadow-soft);max-width:480px}
+.tape::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);width:120px;height:24px;background:rgba(239,220,182,.7);border:1px solid rgba(225,182,104,.3)}
+.tape h3{font-family:var(--serif);font-size:1.18rem;margin-bottom:14px}
+.tape p{font-family:var(--serif);font-size:.96rem;line-height:1.65;color:var(--ink);margin-bottom:12px}
+.tape .sig{margin-top:16px;font-family:var(--serif);font-style:italic;color:var(--gold-deep);font-size:.94rem}
+
+/* ASHA Carousel */
+@keyframes ashaScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.asha-wrap{overflow:hidden;position:relative;margin-top:36px}
+.asha-wrap::before,.asha-wrap::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.alt .asha-wrap::before{background:linear-gradient(to right,var(--paper-2),transparent)}
+.alt .asha-wrap::after{background:linear-gradient(to left,var(--paper-2),transparent)}
+.asha-wrap::before{left:0;background:linear-gradient(to right,var(--paper),transparent)}
+.asha-wrap::after{right:0;background:linear-gradient(to left,var(--paper),transparent)}
+.asha-track{display:flex;gap:18px;animation:ashaScroll 50s linear infinite;width:max-content;align-items:center}
+.asha-track:hover{animation-play-state:paused}
+.asha-item{flex:0 0 clamp(280px,30vw,400px);aspect-ratio:3/2;overflow:hidden;border-radius:14px;box-shadow:var(--shadow-soft)}
+.asha-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.asha-item:hover img{transform:scale(1.04)}
+
+/* About ASHA info grid */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:40px;align-items:start}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:36px}}
+.info-row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(225,182,104,.25);gap:18px}
+.info-row:last-child{border-bottom:none}
+.info-row .k{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:500;flex-shrink:0}
+.info-row .v{font-size:.94rem;color:var(--ink);text-align:right}
+.info-row .v.gold{color:var(--gold-deep);font-weight:500}
+.info-row .v a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+
+/* Testimonials */
+.vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:48px}
+@media(max-width:900px){.vid-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.vid-grid{grid-template-columns:1fr}}
+.vid-card .dbring{aspect-ratio:9/16;margin-bottom:32px}
+.vid-card .who{text-align:center}
+.vid-card .who strong{font-family:var(--serif);font-size:1.06rem;color:var(--ink);display:block;margin-bottom:4px;font-weight:400}
+.vid-card .who small{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+@media(max-width:760px){.quote-grid{grid-template-columns:1fr}}
+.quote{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-left:3px solid var(--gold);border-radius:18px;padding:28px 32px;box-shadow:var(--shadow-soft)}
+.quote p{font-family:var(--serif);font-size:1.04rem;line-height:1.55;color:var(--ink);margin-bottom:14px}
+.quote small{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);font-weight:500}
+
+/* Brochure */
+.brochure-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;margin-top:36px}
+@media(max-width:900px){.brochure-grid{grid-template-columns:1fr;gap:36px}}
+.brochure-form{background:#EDEDED;padding:10px;border-radius:18px;box-shadow:var(--shadow-soft);border:1px solid rgba(225,182,104,.3)}
+.brochure-form iframe{display:block;border:none;width:100%;min-height:560px;border-radius:10px}
+.brochure-list{list-style:none;padding:0;margin:20px 0 24px;display:flex;flex-direction:column;gap:10px}
+.brochure-list li{font-size:.95rem;color:var(--ink);padding-left:22px;position:relative;line-height:1.65}
+.brochure-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+
+/* Transport */
+.transport-pills{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:32px 0 38px}
+.transport-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--paper);border:1px solid rgba(225,182,104,.4);font-size:.84rem;color:var(--ink);box-shadow:var(--shadow-soft)}
+.transport-pill strong{color:var(--gold-deep);font-weight:600;letter-spacing:.06em;font-size:.7rem;text-transform:uppercase;letter-spacing:.14em}
+
+/* FAQ */
+.faq{max-width:760px;margin:48px auto 0}
+.faq-item{border-bottom:1px solid rgba(225,182,104,.25)}
+.faq-q{width:100%;background:none;border:none;padding:22px 0;display:flex;justify-content:space-between;align-items:center;text-align:left;cursor:pointer;font-family:var(--serif);font-weight:400;font-size:1.04rem;color:var(--ink);line-height:1.4;gap:18px}
+.faq-q:hover{color:var(--gold-deep)}
+.faq-q .ic{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1px solid var(--slate);color:var(--slate);display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .25s;font-family:var(--sans);font-weight:300}
+.faq-q[aria-expanded="true"] .ic{transform:rotate(45deg);border-color:var(--gold);color:var(--gold)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a.open{max-height:600px}
+.faq-a-in{padding-bottom:22px;font-size:.94rem;line-height:1.75;color:var(--slate);max-width:42em}
+
+/* Checks list */
+.checks{margin-top:28px;max-width:48em}
+.checks li{list-style:none;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(225,182,104,.2);font-size:.94rem;color:var(--ink);align-items:flex-start;line-height:1.65}
+.checks li:last-child{border:none}
+.checks li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--grad-gold);flex-shrink:0;margin-top:3px;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 9.5 L7 14 L15 4' fill='none' stroke='%23221F20' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:100% 100%}
+
+/* Scroll progress pill (signature) */
+.scroll-pill{position:fixed;bottom:28px;right:28px;z-index:90;text-decoration:none;display:flex;align-items:center;transform:translateY(80px);opacity:0;transition:transform .4s,opacity .4s;cursor:pointer}
+.scroll-pill.visible{transform:translateY(0);opacity:1}
+.scroll-pill .ring-out{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:conic-gradient(var(--gold-deep) var(--p,0%),rgba(91,120,137,.22) 0);box-shadow:0 10px 24px rgba(34,31,32,.22)}
+.scroll-pill .ring-in{width:54px;height:54px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center}
+.scroll-pill svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round}
+@media(max-width:600px){.scroll-pill{bottom:20px;right:20px}.scroll-pill .ring-out{width:56px;height:56px}.scroll-pill .ring-in{width:46px;height:46px}}
+
+/* Final CTA */
+.final-cta{text-align:center;padding:120px 0}
+.final-cta h2{margin:18px auto 18px;max-width:18ch}
+.final-cta .lead{margin:0 auto 36px}
+.final-cta .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.final-cta .fine{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:30px;font-weight:500}
+
+/* Footer */
+footer{background:var(--foot);padding:64px 0 32px;color:rgba(251,247,239,.65);position:relative;z-index:1}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+footer img{height:36px;width:auto;opacity:.85;margin-bottom:14px}
+footer p{font-size:.84rem;line-height:1.65}
+footer .col{display:flex;flex-direction:column;gap:8px}
+footer .col strong{font-family:var(--serif);font-weight:400;color:var(--gold);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+footer a{color:rgba(251,247,239,.78);text-decoration:none;font-size:.86rem}
+footer a:hover{color:var(--gold)}
+footer .legal{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);width:100%}
+footer .legal p{font-size:.72rem;color:rgba(251,247,239,.4)}
+</style>
 </head>
 <body>
 
-<!-- JUNE PROMO BAR -->
-<div class="promo-bar" role="banner">
-  <span class="pill">June Only</span>
-  <span><strong>15% OFF</strong> all BreathCamp 2026 dates &middot; <a href="#dates">Book by June 18</a></span>
+<!-- URGENCY: June 15% promo -->
+<div class="urgency" role="banner">
+  <span class="pulse"></span>
+  <span><strong>June 15% off</strong> every BreathCamp 2026 date<span class="sep"> &middot; </span>Ends June 18 &middot; <a href="#dates">Book now &rarr;</a></span>
 </div>
 
 <!-- NAV -->
-<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#" aria-label="Alchemy of Breath home"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto" /></a>
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#week" class="nav-link">The Week</a>
-      <a href="#dates" class="nav-link">Dates</a>
-      <a href="#stories" class="nav-link">Stories</a>
-      <a href="#pricing" class="nav-link">Pricing</a>
-      <a href="#faq" class="nav-link">FAQ</a>
+<nav class="main-nav" id="mainNav">
+  <div class="row">
+    <a href="#" aria-label="Alchemy of Breath home"><img src="https://alchemyofbreath.com/wp-content/uploads/AOB-Gold-Black-Transparant.png" alt="Alchemy of Breath" /></a>
+    <div class="links">
+      <a href="#journey">The week</a>
+      <a href="#dates">Dates</a>
+      <a href="#stories">Stories</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#dates" class="btn btn-primary btn-small">Choose Your Dates <span class="arr">&rarr;</span></a>
     </div>
-    <a href="#dates" class="btn-gold text-xs">Choose Your Dates</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="relative flex items-end grain overflow-hidden" style="background:#1a1a18;min-height:min(720px,78vh);">
-  <div class="absolute inset-0">
-    <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="ASHA Retreat Centre, Tuscany" class="w-full h-full object-cover object-center hero-img" style="filter:brightness(.5) saturate(.9);" />
-    <div class="absolute inset-0" style="background:radial-gradient(ellipse at 60% 40%,rgba(53,77,76,.4) 0%,transparent 65%),linear-gradient(to top,rgba(26,26,24,.95) 0%,rgba(26,26,24,.3) 45%,transparent 70%);"></div>
-  </div>
-
-  <!-- Floating golden orbs -->
-  <div class="gold-orb" style="width:140px;height:140px;top:18%;left:6%;animation-duration:12s;"></div>
-  <div class="gold-orb" style="width:70px;height:70px;top:55%;left:22%;animation-duration:9s;animation-delay:-3s;"></div>
-  <div class="gold-orb" style="width:100px;height:100px;top:30%;right:12%;animation-duration:14s;animation-delay:-2s;"></div>
-  <div class="gold-orb" style="width:50px;height:50px;top:70%;right:28%;animation-duration:10s;animation-delay:-6s;"></div>
-  <div class="gold-orb" style="width:80px;height:80px;top:12%;right:34%;animation-duration:13s;animation-delay:-4s;"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-16 pt-36 w-full">
-    <div class="max-w-2xl">
-      <span class="promo-chip">June Promo &middot; 15% Off Every Date</span>
-      <p class="eyebrow mb-5">BreathCamp Tuscany &nbsp;&middot;&nbsp; ASHA Retreat Centre &nbsp;&middot;&nbsp; 5 Sessions in 2026</p>
-      <h1 class="text-white mb-6 leading-tight" style="font-size:clamp(36px,5vw,60px);letter-spacing:-.02em;">Seven days to reset<br/><span class="gold-text">your nervous system.</span></h1>
-      <p class="text-white mb-10 max-w-xl" style="font-size:18px;line-height:1.7;font-weight:300;opacity:.85;">A residential retreat that brings together conscious breathing, movement, sound, and the people you did not know you were looking for. Held on 37 acres of untouched land in the Tuscan hills.</p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#dates" class="btn-gold">Choose Your Dates</a>
-        <button onclick="openBreathModal()" class="btn-outline" style="background:transparent;cursor:pointer;">Try One Breath</button>
+<section class="hero">
+  <div class="orb g" style="width:520px;height:520px;top:-200px;right:-120px"></div>
+  <div class="orb t" style="width:480px;height:480px;bottom:-200px;left:-180px"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">BreathCamp Tuscany &middot; 2026</span>
+        <h1>Seven days to reset <em>your nervous system</em></h1>
+        <p class="lead">A 7-day residential breathwork retreat at ASHA in the Tuscan hills. 37 acres of untouched land, three plant-based meals a day, and the people you did not know you were looking for. Five sessions in 2026, August through October.</p>
+        <div class="hero-cta">
+          <a href="#dates" class="btn btn-primary">Choose your dates <span class="arr">&rarr;</span></a>
+          <a href="#brochure" class="btn btn-ghost">Get the guide</a>
+        </div>
+        <div class="hero-chips">
+          <span class="hero-chip">7 days &middot; 6 nights</span>
+          <span class="hero-chip">5 sessions in 2026</span>
+          <span class="hero-chip">8 senior trainers</span>
+          <span class="hero-chip">37 acres</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="arch">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg" alt="ASHA Retreat Centre, Tuscany" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
-    <span style="font-size:10px;letter-spacing:.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
-    <div style="width:1px;height:40px;background:rgba(255,255,255,.4);"></div>
-  </div>
-</section>
-
-<!-- STATS STRIP -->
-<section style="background:#354d4c;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-5 divide-x divide-y md:divide-y-0" style="border-color:rgba(211,205,179,.15);">
-      <div style="text-align:center;padding:24px 16px;"><span style="font-family:'Marcellus',Georgia,serif;font-size:36px;color:#cc9924;line-height:1;display:block;margin-bottom:6px;">7</span><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);">Days &middot; 6 nights</span></div>
-      <div style="text-align:center;padding:24px 16px;"><span style="font-family:'Marcellus',Georgia,serif;font-size:36px;color:#cc9924;line-height:1;display:block;margin-bottom:6px;">5</span><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);">Sessions in 2026</span></div>
-      <div style="text-align:center;padding:24px 16px;"><span style="font-family:'Marcellus',Georgia,serif;font-size:36px;color:#cc9924;line-height:1;display:block;margin-bottom:6px;">8</span><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);">Expert trainers</span></div>
-      <div style="text-align:center;padding:24px 16px;"><span style="font-family:'Marcellus',Georgia,serif;font-size:36px;color:#cc9924;line-height:1;display:block;margin-bottom:6px;">37</span><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);">Acres of Tuscan land</span></div>
-      <div style="text-align:center;padding:24px 16px;" class="col-span-2 md:col-span-1"><span style="font-family:'Marcellus',Georgia,serif;font-size:36px;color:#cc9924;line-height:1;display:block;margin-bottom:6px;">13+</span><span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.78);">Years running</span></div>
+    <div class="stats-row">
+      <div class="stat"><span class="big">7</span><span class="lbl">Days &middot; 6 nights</span></div>
+      <div class="stat"><span class="big">5</span><span class="lbl">Sessions in 2026</span></div>
+      <div class="stat"><span class="big">8</span><span class="lbl">Senior trainers</span></div>
+      <div class="stat"><span class="big">37</span><span class="lbl">Acres of Tuscan land</span></div>
+      <div class="stat"><span class="big">13+</span><span class="lbl">Years running</span></div>
     </div>
   </div>
 </section>
 
-<!-- TRUSTED BY (horizontal) -->
-<section class="py-14" style="background:#fff;">
-  <div class="max-w-6xl mx-auto px-6 text-center mb-8">
-    <p class="eyebrow mb-3">Trusted By</p>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,28px);color:#1a1a18;letter-spacing:-.01em;">In good company.</h2>
-  </div>
-  <div class="trusted-wrap">
-    <div class="trusted-track">
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
-      <div class="trusted-logo" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
-    </div>
-  </div>
-</section>
-
-<!-- ATMOSPHERE — The Land -->
-<section class="atmos">
-  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills at ASHA" loading="lazy" />
-  <div class="atmos-overlay"></div>
-  <img class="atmos-watermark" src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="" aria-hidden="true" />
-  <div class="atmos-inner">
-    <p class="eyebrow mb-4" style="color:#cc9924;">The Land</p>
-    <div class="gold-rule centered"></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;color:#fff;font-size:clamp(32px,4.5vw,54px);line-height:1.15;letter-spacing:-.02em;margin-bottom:18px;">A pool, the hills,<br/>and the sound of bees.</h2>
-    <p style="font-size:17px;line-height:1.8;color:rgba(255,255,255,.85);max-width:540px;margin:0 auto;">Olive groves and vineyards. A swimming pool with the Tuscan hills behind it. Natural hot springs ten minutes down the road. A different kind of quiet than the one you arrived with.</p>
+<!-- EMPATHY: A needed pause -->
+<section class="alt" id="essence">
+  <div class="orb g" style="width:440px;height:440px;top:-160px;right:-160px"></div>
+  <div class="wrap center">
+    <span class="eyebrow">A needed pause</span>
+    <h2>When the world feels loud, <em>stillness</em> becomes a form of care.</h2>
+    <p class="lead" style="margin-top:18px">The last few years have asked a lot of us. Wars that do not end, headlines that do not soften, a climate that keeps reminding us it is listening, and a pace of life that treats rest like a luxury instead of a requirement. If your nervous system feels tired, it is not a personal failing. It is a reasonable response to the moment we are living in.</p>
+    <p class="lead" style="margin-top:18px">A week in Tuscany will not fix what is happening in the world, and we will not pretend otherwise. What it can offer is a quiet room to set things down for a while. Slow mornings, honest breath, food grown nearby, and the company of people who also came looking for ground beneath their feet.</p>
   </div>
 </section>
 
 <!-- WHAT IS BREATHCAMP -->
-<section class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div class="img-overlay order-2 md:order-1">
-        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg" alt="Group breathwork session" class="w-full" style="aspect-ratio:4/5;object-fit:cover;display:block;" />
+<section id="what">
+  <div class="wrap">
+    <div class="two-up">
+      <div class="img-col">
+        <div class="arch" style="border-radius:240px 240px 16px 16px;transform:rotate(.4deg)">
+          <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg" alt="Group breathwork session at ASHA" />
+        </div>
       </div>
-      <div class="order-1 md:order-2">
-        <p class="eyebrow mb-4">What BreathCamp Is</p>
-        <div class="gold-rule"></div>
-        <h2 style="font-size:clamp(28px,3.5vw,40px);line-height:1.2;letter-spacing:-.02em;margin-bottom:24px;color:#1a1a18;">A week of breath,<br/>body, and community.</h2>
-        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">BreathCamp is a 7-day, 6-night residential retreat that combines conscious breathing with movement, sound, and the kind of deep connection that only happens when you live and practice alongside others for a full week.</p>
-        <p style="font-size:16px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">It is led by Anthony Abbagnano, Amy Rachelle, and a team of senior Alchemy of Breath trainers, on 37 acres of quiet Tuscan land. Three meals a day. Plant-based, locally sourced. Practice spaces under the open sky when the weather is kind.</p>
-        <p style="font-size:16px;line-height:1.8;color:#4a4a46;">The week is designed for people who want to reset their nervous system, find their community, and spend time in one of the most beautiful places in Italy. No prior breathwork experience required.</p>
+      <div>
+        <span class="eyebrow">What BreathCamp is</span>
+        <h2>A week of breath, body, <em>and community</em></h2>
+        <p class="lead" style="margin-top:18px">BreathCamp is a 7-day, 6-night residential retreat that combines conscious breathing with movement, sound, and the kind of deep connection that only happens when you live and practice alongside others for a full week.</p>
+        <p class="lead" style="margin-top:14px">It is led by Anthony Abbagnano, Amy Rachelle, and a team of senior Alchemy of Breath trainers, on 37 acres of quiet Tuscan land. Three meals a day, plant-based, locally sourced. Practice spaces under the open sky when the weather is kind.</p>
+        <p class="lead" style="margin-top:14px">The week is designed for people who want to reset their nervous system, find their community, and spend time in one of the most beautiful places in Italy. No prior breathwork experience required.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SANCTUARY / A NEEDED PAUSE -->
-<section class="py-24 relative overflow-hidden" style="background:#1a1a18;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 20% 30%,rgba(204,153,36,.07) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(82,187,144,.05) 0%,transparent 55%);"></div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
-    <p class="eyebrow mb-4">A Needed Pause</p>
-    <div class="gold-rule centered"></div>
-    <h2 style="font-size:clamp(26px,3.5vw,38px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin-bottom:28px;">When the world feels loud,<br/>stillness becomes a form of care.</h2>
-    <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,.8);margin-bottom:20px;">The last few years have asked a lot of us. Wars that do not end, headlines that do not soften, a climate that keeps reminding us it is listening, and a pace of life that treats rest like a luxury instead of a requirement. If your nervous system feels tired, it is not a personal failing. It is a reasonable response to the moment we are living in.</p>
-    <p style="font-size:16px;line-height:1.85;color:rgba(255,255,255,.8);">A week in Tuscany will not fix what is happening in the world, and we will not pretend otherwise. What it can offer is a quiet room to set things down for a while. Slow mornings, honest breath, food grown nearby, and the company of people who also came looking for ground beneath their feet. Not an escape from your life, but a place to remember how to meet it.</p>
+<!-- JOURNEY: The only dark band -->
+<section class="pathway" id="journey">
+  <div class="wrap center">
+    <span class="eyebrow center">The journey</span>
+    <h2>Seven days. <em>One natural arc.</em></h2>
+    <p class="lead" style="margin-top:18px;margin-left:auto;margin-right:auto">Tap a number to step into that day. The week moves as one piece, from arrival, through deep practice, to integration and home.</p>
   </div>
-</section>
-
-<!-- ATMOSPHERE — Mornings -->
-<section class="atmos" style="min-height:50vh;">
-  <img class="atmos-bg" src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="Morning at ASHA" loading="lazy" />
-  <div class="atmos-overlay" style="background:linear-gradient(to right,rgba(26,26,24,.85) 0%,rgba(26,26,24,.45) 60%,rgba(26,26,24,.3) 100%);"></div>
-  <div class="atmos-inner" style="text-align:left;padding:120px 24px;max-width:980px;">
-    <div style="max-width:480px;">
-      <p class="eyebrow mb-4" style="color:#cc9924;">Mornings</p>
-      <div class="gold-rule"></div>
-      <h2 style="font-family:'Marcellus',Georgia,serif;color:#fff;font-size:clamp(28px,4vw,46px);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px;">The kind of quiet you forgot existed.</h2>
-      <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.82);">Wake to the light over the hills. Move slow. Breathe. Eat something grown nearby. Then begin.</p>
-    </div>
-  </div>
-</section>
-
-<!-- THE JOURNEY (interactive) -->
-<section id="week" class="py-24 grain relative overflow-hidden" style="background:#354d4c;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 80% 20%,rgba(204,153,36,.08) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(82,187,144,.05) 0%,transparent 50%);"></div>
-  <div class="relative z-10 max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12 reveal">
-      <p class="eyebrow mb-4">The Journey</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;max-width:560px;margin:0 auto 12px;">Seven days. One natural arc.</h2>
-      <p style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#cc9924;font-weight:500;margin-bottom:14px;">7 days &middot; 6 nights</p>
-      <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.72);max-width:520px;margin:0 auto;">Tap a number to step into that day. The week moves as one piece, from arrival, through deep practice, to integration and home.</p>
-    </div>
-
+  <div class="wrap">
     <div class="day-tabs" role="tablist" aria-label="Daily journey">
-      <button class="day-tab active" role="tab" aria-selected="true" data-day="1">01<small>Arrival</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="2">02<small>Foundations</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="3">03<small>Intuition</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="4">04<small>The Bridge</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="5">05<small>Water &amp; Sound</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="6">06<small>Mandala</small></button>
-      <button class="day-tab" role="tab" aria-selected="false" data-day="7">07<small>Integration</small></button>
+      <button class="day-tab active" role="tab" aria-selected="true" data-day="1">1<small>Arrival</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="2">2<small>Foundations</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="3">3<small>Intuition</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="4">4<small>The Bridge</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="5">5<small>Water &amp; Sound</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="6">6<small>Mandala</small></button>
+      <button class="day-tab" role="tab" aria-selected="false" data-day="7">7<small>Integration</small></button>
     </div>
-
     <div id="dayPanel" class="day-panel visible" role="tabpanel">
-      <p class="eyebrow mb-3" id="dayPanelEyebrow">Day One</p>
-      <h3 id="dayPanelTitle" style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.5vw,30px);color:#fff;margin-bottom:14px;letter-spacing:-.01em;">Arrival and meeting</h3>
-      <p id="dayPanelBody" style="font-size:15px;color:rgba(255,255,255,.82);line-height:1.8;max-width:680px;">Land at ASHA. Settle in. Meet the people you will share the week with. Evening drum circle as the sun sets over the hills.</p>
+      <span class="eyebrow" id="dayEyebrow">Day One</span>
+      <h3 id="dayTitle">Arrival and meeting</h3>
+      <p id="dayBody">Land at ASHA. Settle in. Meet the people you will share the week with. Evening drum circle as the sun sets over the hills.</p>
     </div>
-
-    <!-- Typical day note -->
-    <div style="margin-top:40px;background:rgba(0,0,0,.15);border:1px solid rgba(211,205,179,.1);padding:28px 32px;">
-      <p class="eyebrow mb-3">A Typical Day</p>
-      <p style="font-size:15px;color:rgba(255,255,255,.82);line-height:1.8;">Morning movement. Breakfast. Breathwork or workshop. Group share. Lunch. Breathwork or workshop. Dinner. Free time, or whatever the evening calls for. Spacious, rhythmic, and rooted in the land.</p>
+    <div class="rhythm-note">
+      <span class="eyebrow">A typical day</span>
+      <p>Morning movement. Breakfast. Breathwork or workshop. Group share. Lunch. Breathwork or workshop. Dinner. Free time, or whatever the evening calls for. Spacious, rhythmic, and rooted in the land.</p>
     </div>
   </div>
 </section>
 
 <!-- WHAT YOU'LL EXPLORE -->
-<section class="py-24" style="background:#fff;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16 reveal">
-      <p class="eyebrow mb-4">What You Will Explore</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:560px;margin:0 auto 16px;">Breath is the thread.<br/>The rest is invitation.</h2>
-      <p style="font-size:16px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">Different days bring different themes. You come as you are, take what lands, and leave the rest.</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Science</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">Biomechanics of breath</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">How the body is designed to breathe, and what happens when it does not.</p></div>
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Practice</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">Daily breath practice</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">A sustainable home practice you take with you. Not something you forget by the end of the week.</p></div>
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Techniques</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">Beginner to advanced</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">Coherence breathing, box breath, connected breath, and more. Taught with safety and pacing.</p></div>
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Intuition</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">The art of listening</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">How to listen to your body, your breath, and the quiet voice that often gets drowned out.</p></div>
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Ceremony</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">Rites of passage</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">Marking thresholds with simple, shared ceremony. Something many of us have forgotten how to do.</p></div>
-      <div style="background:#f9f8f5;border:1px solid #d3cdb3;padding:28px;"><p class="eyebrow mb-3">Integration</p><h4 style="font-size:18px;color:#354d4c;margin-bottom:10px;">The Bridge</h4><p style="font-size:14px;color:#4a4a46;line-height:1.7;">Anthony's signature integration practice. A way of moving through what is ready to shift, gently.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- DATES -->
-<section id="dates" class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-10 reveal">
-      <p class="eyebrow mb-4">Choose Your Dates</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:14px;">Five sessions in 2026.</h2>
-      <p style="font-size:16px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">Pick the week that fits you best.</p>
-    </div>
-
-    <!-- JUNE PROMO CALLOUT -->
-    <div class="promo-callout" style="margin-bottom:28px;">
-      <div class="left">
-        <span class="badge">June Promo</span>
-        <div>
-          <p class="headline"><strong>15% off every 2026 date.</strong></p>
-          <p class="deadline">Offer ends <strong>June 18</strong> &middot; Discount applied automatically at checkout.</p>
-        </div>
-      </div>
-      <a href="#dates" class="btn-promo">Claim 15% Off</a>
-    </div>
-
-    <!-- Graduates redirect banner -->
-    <div style="background:#354d4c;border:1px solid rgba(204,153,36,.3);padding:18px 26px;margin-bottom:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
-      <div>
-        <p class="eyebrow mb-1" style="color:#cc9924;">Returning Students</p>
-        <p style="font-size:15px;color:#fff;font-family:'Marcellus',Georgia,serif;line-height:1.4;">Already a BreathCamp graduate? Book your next camp on the dedicated graduates page.</p>
-      </div>
-      <a href="https://alchemyofbreath.com/breathcamps-students/" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:11px 22px;border:1px solid #cc9924;text-decoration:none;transition:background .2s;">Graduates &rarr;</a>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="date-card">
-        <span class="students-badge">Selling out</span>
-        <p class="eyebrow mb-3">BreathCamp 1</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">August 16&ndash;22</h4>
-        <p style="font-size:13px;color:#c5c3c2;margin-bottom:16px;">2026</p>
-        <a href="https://asha.secure.retreat.guru/program/breathcamp-aug-16-aug-22-2026-students-copy/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book This Session</a>
-      </div>
-      <div class="date-card">
-        <p class="eyebrow mb-3">BreathCamp 2</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">August 30 &ndash; September 5</h4>
-        <p style="font-size:13px;color:#c5c3c2;margin-bottom:16px;">2026</p>
-        <a href="https://asha.secure.retreat.guru/program/breathcamp-aug-30-sep-5-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book This Session</a>
-      </div>
-      <div class="date-card">
-        <span class="spots-badge">A Few Spots Left</span>
-        <p class="eyebrow mb-3">BreathCamp 3</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">September 6&ndash;12</h4>
-        <p style="font-size:13px;color:#c5c3c2;margin-bottom:16px;">2026</p>
-        <a href="https://asha.secure.retreat.guru/program/breathcamp-sep-6-sep-12-2026-2027/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book This Session</a>
-      </div>
-      <div class="date-card">
-        <p class="eyebrow mb-3">BreathCamp 4</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">September 20&ndash;26</h4>
-        <p style="font-size:13px;color:#c5c3c2;margin-bottom:16px;">2026</p>
-        <a href="https://asha.secure.retreat.guru/program/breathcamp-sep-20-sep-26-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book This Session</a>
-      </div>
-      <div class="date-card">
-        <span class="spots-badge">Last Few Spots</span>
-        <p class="eyebrow mb-3">BreathCamp 5</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">October 25&ndash;31</h4>
-        <p style="font-size:13px;color:#c5c3c2;margin-bottom:16px;">2026</p>
-        <a href="https://asha.secure.retreat.guru/program/breathcamp-oct-25-oct-31-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn-outline-dark">Book This Session</a>
-      </div>
-      <div class="date-card" style="background:#354d4c;border-color:#354d4c;color:#fff;">
-        <p class="eyebrow mb-3" style="color:#cc9924;">Not Sure Yet</p>
-        <h4 style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#fff;margin-bottom:4px;line-height:1.3;">Talk to us first</h4>
-        <p style="font-size:13px;color:rgba(255,255,255,.78);margin-bottom:16px;">A free conversation</p>
-        <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:11px 22px;border:1px solid #cc9924;text-decoration:none;transition:background .2s;">Book a Conversation</a>
-      </div>
+<section>
+  <div class="wrap center">
+    <span class="eyebrow">What you will explore</span>
+    <h2>Breath is the thread. <em>The rest</em> is invitation.</h2>
+    <p class="lead" style="margin-top:18px;margin-left:auto;margin-right:auto">Different days bring different themes. You come as you are, take what lands, and leave the rest.</p>
+    <div class="explore-grid">
+      <div class="explore-card"><span class="eyebrow">Science</span><h3>Biomechanics of breath</h3><p>How the body is designed to breathe, and what happens when it does not.</p></div>
+      <div class="explore-card"><span class="eyebrow">Practice</span><h3>Daily breath practice</h3><p>A sustainable home practice you take with you, not something you forget by the end of the week.</p></div>
+      <div class="explore-card"><span class="eyebrow">Techniques</span><h3>Beginner to advanced</h3><p>Coherence breathing, box breath, connected breath, and more. Taught with safety and pacing.</p></div>
+      <div class="explore-card"><span class="eyebrow">Intuition</span><h3>The art of listening</h3><p>How to listen to your body, your breath, and the quiet voice that often gets drowned out.</p></div>
+      <div class="explore-card"><span class="eyebrow">Ceremony</span><h3>Rites of passage</h3><p>Marking thresholds with simple, shared ceremony. Something many of us have forgotten how to do.</p></div>
+      <div class="explore-card"><span class="eyebrow">Integration</span><h3>The Bridge</h3><p>Anthony's signature integration practice. A way of moving through what is ready to shift, gently.</p></div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="stories" class="py-24" style="background:#fff;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16 reveal">
-      <p class="eyebrow mb-4">From the Tribe</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">In their own words.</h2>
-    </div>
-
-    <!-- Video testimonials — 4 columns -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
-      <div class="video-card">
-        <div style="width:100%;aspect-ratio:9/16;background:#1a1a18;"><video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a420b3d5f8859c41fe69.mp4" type="video/mp4" /></video></div>
-        <div style="padding:14px 18px 16px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Melissa</p><p style="font-size:11px;color:#c5c3c2;letter-spacing:.06em;text-transform:uppercase;">BreathCamp Graduate</p></div>
+<section class="alt" id="stories">
+  <div class="orb g" style="width:480px;height:480px;top:-180px;left:-160px"></div>
+  <div class="wrap center">
+    <span class="eyebrow">From the tribe</span>
+    <h2>In <em>their own</em> words</h2>
+    <div class="vid-grid">
+      <div class="vid-card">
+        <div class="dbring"><video controls preload="metadata"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a420b3d5f8859c41fe69.mp4" type="video/mp4" /></video></div>
+        <div class="who"><strong>Melissa</strong><small>BreathCamp Graduate</small></div>
       </div>
-      <div class="video-card">
-        <div style="width:100%;aspect-ratio:9/16;background:#1a1a18;"><video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a431b3d5f87a764204d4.mp4" type="video/mp4" /></video></div>
-        <div style="padding:14px 18px 16px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Amira</p><p style="font-size:11px;color:#c5c3c2;letter-spacing:.06em;text-transform:uppercase;">BreathCamp Graduate</p></div>
+      <div class="vid-card">
+        <div class="dbring"><video controls preload="metadata"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a431b3d5f87a764204d4.mp4" type="video/mp4" /></video></div>
+        <div class="who"><strong>Amira</strong><small>BreathCamp Graduate</small></div>
       </div>
-      <div class="video-card">
-        <div style="width:100%;aspect-ratio:9/16;background:#1a1a18;"><video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a439d614c97d7d439a20.mp4" type="video/mp4" /></video></div>
-        <div style="padding:14px 18px 16px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Matt</p><p style="font-size:11px;color:#c5c3c2;letter-spacing:.06em;text-transform:uppercase;">BreathCamp Graduate</p></div>
+      <div class="vid-card">
+        <div class="dbring"><video controls preload="metadata"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a439d614c97d7d439a20.mp4" type="video/mp4" /></video></div>
+        <div class="who"><strong>Matt</strong><small>BreathCamp Graduate</small></div>
       </div>
-      <div class="video-card">
-        <div style="width:100%;aspect-ratio:9/16;background:#1a1a18;"><video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a436d614c938b14399ae.mp4" type="video/mp4" /></video></div>
-        <div style="padding:14px 18px 16px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:2px;">Camo</p><p style="font-size:11px;color:#c5c3c2;letter-spacing:.06em;text-transform:uppercase;">BreathCamp Graduate</p></div>
+      <div class="vid-card">
+        <div class="dbring"><video controls preload="metadata"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995a436d614c938b14399ae.mp4" type="video/mp4" /></video></div>
+        <div class="who"><strong>Camo</strong><small>BreathCamp Graduate</small></div>
       </div>
     </div>
-
-    <!-- Written testimonials -->
-    <div class="grid md:grid-cols-3 gap-6">
-      <div style="background:#f9f8f5;border-left:2px solid #cc9924;padding:24px 28px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;line-height:1.5;margin-bottom:16px;">"I have attended many retreats, but nothing opened my heart like this."</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;">Livia, Copenhagen</p></div>
-      <div style="background:#f9f8f5;border-left:2px solid #cc9924;padding:24px 28px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;line-height:1.5;margin-bottom:16px;">"I came to heal. I left ready to serve."</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;">Catalina, Spain</p></div>
-      <div style="background:#f9f8f5;border-left:2px solid #cc9924;padding:24px 28px;"><p style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;line-height:1.5;margin-bottom:16px;">"I finally learned how to breathe with my heart."</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;">Pippa, France</p></div>
+    <div class="quote-grid">
+      <div class="quote"><p>"I have attended many retreats, but nothing opened my heart like this."</p><small>Livia &middot; Copenhagen</small></div>
+      <div class="quote"><p>"I came to heal. I left ready to serve."</p><small>Catalina &middot; Spain</small></div>
+      <div class="quote"><p>"I finally learned how to breathe with my heart."</p><small>Pippa &middot; France</small></div>
     </div>
   </div>
 </section>
 
-<!-- ASHA CAROUSEL -->
-<section style="background:#1a1a18;padding:64px 0 0;">
-  <div class="max-w-6xl mx-auto px-6 mb-10">
-    <p class="eyebrow mb-4">The Setting</p>
-    <div class="gold-rule"></div>
-    <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:8px;">ASHA Retreat Centre. Tuscany, Italy.</h2>
-    <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.72);max-width:560px;">37 acres of untouched land in the Tuscan hills. Stone buildings, olive groves, vineyards, and a natural quiet that does its own work.</p>
-  </div>
-  <div class="location-carousel-wrap">
-    <div class="location-carousel-track">
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA retreat spaces" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA retreat spaces" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
-      <div class="location-carousel-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
+<!-- DATES -->
+<section id="dates">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow center">Choose your dates</span>
+      <h2>Five sessions, <em>one place</em></h2>
+      <p class="lead" style="margin:18px auto 0">Pick the week that fits you best. June promo applies automatically at checkout, ends June 18.</p>
     </div>
-  </div>
-</section>
 
-<!-- ABOUT ASHA -->
-<section class="py-24" style="background:#1a1a18;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-16 items-start">
+    <div class="grad-banner" style="margin-top:42px">
       <div>
-        <p class="eyebrow mb-4">About ASHA</p>
-        <div class="gold-rule"></div>
-        <h3 style="font-size:28px;color:#fff;margin-bottom:16px;letter-spacing:-.01em;">Welcome Home.</h3>
-        <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,.78);margin-bottom:16px;">ASHA Retreat Centre sits on 37 acres of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community. A place where all of you is welcome.</p>
-        <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,.78);margin-bottom:24px;">Swimming pool, meditation spaces, dining room, group practice rooms including the open-air Prana Shala. Nearby natural hot springs, Etruscan historical sites, and Pitigliano if you want to wander.</p>
-        <a href="https://www.asha.global/" target="_blank" rel="noopener" style="font-size:13px;color:#cc9924;text-decoration:none;letter-spacing:.06em;font-weight:500;">Explore ASHA &rarr;</a>
+        <span class="eyebrow">Returning students</span>
+        <h4>Already a BreathCamp graduate? Book on the dedicated graduates page.</h4>
       </div>
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Address</span><span style="font-size:14px;color:#fff;text-align:right;max-width:240px;">Località Le Piane, Castell'Azzara, Tuscany</span></div>
-        <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Meals</span><span style="font-size:14px;color:#52bb90;">Plant-based, locally sourced</span></div>
-        <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Amenities</span><span style="font-size:14px;color:#fff;">Pool, practice spaces, gardens</span></div>
-        <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.15);"><span style="font-size:14px;color:rgba(255,255,255,.72);">Nearest station</span><span style="font-size:14px;color:#fff;">Chiusi-Chianciano Terme</span></div>
-        <div style="display:flex;justify-content:space-between;padding:14px 0;"><span style="font-size:14px;color:rgba(255,255,255,.72);">Nearest airport</span><span style="font-size:14px;color:#fff;">Rome Fiumicino (FCO)</span></div>
+      <a href="https://alchemyofbreath.com/breathcamps-students/" target="_blank" rel="noopener" class="btn btn-ghost" style="color:var(--gold);border-color:var(--gold)">Graduates &rarr;</a>
+    </div>
+
+    <div class="dates-grid">
+      <div class="date-card">
+        <span class="badge">Selling out</span>
+        <span class="lbl">BreathCamp 1</span>
+        <h3>August 16&ndash;22</h3>
+        <p class="sub">2026 &middot; Students session</p>
+        <a href="https://asha.secure.retreat.guru/program/breathcamp-aug-16-aug-22-2026-students-copy/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn btn-primary btn-small book">Book this session <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="date-card">
+        <span class="lbl">BreathCamp 2</span>
+        <h3>August 30 &ndash; September 5</h3>
+        <p class="sub">2026</p>
+        <a href="https://asha.secure.retreat.guru/program/breathcamp-aug-30-sep-5-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn btn-primary btn-small book">Book this session <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="date-card">
+        <span class="badge urgent">A few spots left</span>
+        <span class="lbl">BreathCamp 3</span>
+        <h3>September 6&ndash;12</h3>
+        <p class="sub">2026</p>
+        <a href="https://asha.secure.retreat.guru/program/breathcamp-sep-6-sep-12-2026-2027/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn btn-primary btn-small book">Book this session <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="date-card">
+        <span class="lbl">BreathCamp 4</span>
+        <h3>September 20&ndash;26</h3>
+        <p class="sub">2026</p>
+        <a href="https://asha.secure.retreat.guru/program/breathcamp-sep-20-sep-26-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn btn-primary btn-small book">Book this session <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="date-card">
+        <span class="badge urgent">Last few spots</span>
+        <span class="lbl">BreathCamp 5</span>
+        <h3>October 25&ndash;31</h3>
+        <p class="sub">2026</p>
+        <a href="https://asha.secure.retreat.guru/program/breathcamp-oct-25-oct-31-2026/?form=1&amp;lang=en" target="_blank" rel="noopener" class="btn btn-primary btn-small book">Book this session <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="date-card feature">
+        <span class="lbl" style="color:var(--gold)">Not sure yet</span>
+        <h3>Talk to us first</h3>
+        <p class="sub">A free conversation, no pressure to book.</p>
+        <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener" class="btn btn-ghost btn-small book" style="color:var(--gold);border-color:var(--gold)">Book a conversation <span class="arr">&rarr;</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRAINERS — carousel -->
-<section class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12 reveal">
-      <p class="eyebrow mb-4">Your Team</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Led by Alchemy of Breath<br/>master trainers.</h2>
+<!-- ASHA: THE SETTING -->
+<section class="alt" id="setting">
+  <div class="wrap">
+    <span class="eyebrow">The setting</span>
+    <h2>ASHA Retreat Centre, <em>Tuscany</em></h2>
+    <p class="lead" style="margin-top:18px">37 acres of untouched land in the Tuscan hills. Stone buildings, olive groves, vineyards, and a natural quiet that does its own work.</p>
+  </div>
+  <div class="asha-wrap">
+    <div class="asha-track">
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="ASHA campus" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="ASHA landscape" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="ASHA spaces" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="Tuscan hills" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="ASHA facilities" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="ASHA grounds" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="ASHA buildings" loading="lazy" /></div>
+      <div class="asha-item"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="ASHA nature" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_32ddf3b52523469883de3db5354fd23e~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/DSCF7077.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_649c81878f3443ac804c803ac75b54d4~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_a6326dee928845669463b102e5053034~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_20dd2b61ce414231af273443067de5de~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_3e7a3dab116e4475a43436406f721935~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_b49f5e2d5bfc440cbe0d75a1b6f08662~mv2.jpg" alt="" loading="lazy" /></div>
+      <div class="asha-item" aria-hidden="true"><img src="https://static.wixstatic.com/media/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/c2dd9b_19851cb7a5fa484a8a41f54c6c40cff1~mv2.jpg" alt="" loading="lazy" /></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">About ASHA</span>
+        <h3 style="font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin-bottom:14px;font-weight:400">Welcome home.</h3>
+        <p class="lead">ASHA Retreat Centre sits on 37 acres of untouched Tuscan land near Castell'Azzara. Founded in 2020 by Anthony Abbagnano and Amy Rachelle, it was built as a sanctuary for healing, creativity, and community.</p>
+        <p class="lead" style="margin-top:14px">Swimming pool, meditation spaces, dining room, group practice rooms including the open-air Prana Shala. Nearby natural hot springs, Etruscan historical sites, and Pitigliano if you want to wander.</p>
+        <a href="https://www.asha.global/" target="_blank" rel="noopener" style="margin-top:24px;display:inline-block;color:var(--gold-deep);text-decoration:none;font-size:.9rem;font-weight:500;letter-spacing:.06em">Explore ASHA &rarr;</a>
+      </div>
+      <div>
+        <div class="info-row"><span class="k">Address</span><span class="v">Località Le Piane, Castell'Azzara</span></div>
+        <div class="info-row"><span class="k">Meals</span><span class="v gold">Plant-based, locally sourced</span></div>
+        <div class="info-row"><span class="k">Amenities</span><span class="v">Pool, practice spaces, gardens</span></div>
+        <div class="info-row"><span class="k">Nearest station</span><span class="v">Chiusi-Chianciano Terme</span></div>
+        <div class="info-row"><span class="k">Nearest airport</span><span class="v">Rome Fiumicino (FCO)</span></div>
+        <div class="info-row"><span class="k">Accommodation</span><span class="v gold">From &euro;220/night &middot; <a href="#pricing">See pricing</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR TEAM -->
+<section id="team">
+  <div class="orb t" style="width:420px;height:420px;top:-100px;right:-160px"></div>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow center">Your team</span>
+      <h2>Led by Alchemy of Breath <em>master trainers</em></h2>
+      <p class="lead" style="margin:18px auto 0">A small international group, held by experienced trainers. People who came looking for the same things you did.</p>
     </div>
 
-    <div class="trainer-carousel">
-      <button class="trainer-nav prev" aria-label="Previous trainers" onclick="scrollTrainers(-1)">&larr;</button>
-      <button class="trainer-nav next" aria-label="Next trainers" onclick="scrollTrainers(1)">&rarr;</button>
+    <div class="trainer-nav-btns" style="margin-top:32px">
+      <button class="trainer-nav-btn" aria-label="Previous trainers" onclick="scrollTrainers(-1)">&larr;</button>
+      <button class="trainer-nav-btn" aria-label="Next trainers" onclick="scrollTrainers(1)">&rarr;</button>
+    </div>
+    <div class="trainers">
       <div id="trainerTrack" class="trainer-track">
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69a159bd753f159f94bc1ed5.png" alt="Anthony Abbagnano" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Founder</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Anthony Abbagnano</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Founder of Alchemy of Breath and ASHA. Creator of The Bridge process. Author of <em>Outer Chaos, Inner Calm</em>.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69a159bd753f159f94bc1ed5.png" alt="Anthony Abbagnano" /></div>
+          <span class="eyebrow center">Founder</span>
+          <h4>Anthony Abbagnano</h4>
+          <p>Founder of Alchemy of Breath and ASHA. Creator of The Bridge process. Author of <em style="color:var(--ink);font-style:italic;font-family:var(--serif)">Outer Chaos, Inner Calm</em>.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69bc358ca37cc2875107f667.jpg" alt="Amy Rachelle" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Co-Founder</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Amy Rachelle, ND</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Co-founder of Alchemy of Breath. Naturopath and intuition specialist. 15+ years facilitating.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69bc358ca37cc2875107f667.jpg" alt="Amy Rachelle" /></div>
+          <span class="eyebrow center">Co-founder</span>
+          <h4>Amy Rachelle, ND</h4>
+          <p>Co-founder of Alchemy of Breath. Naturopath and intuition specialist. 15+ years facilitating.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69d4e1e2bec7abdef136e5de.jpeg" alt="Pablo Castro" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Senior Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Pablo Castro</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Senior Alchemy of Breath trainer for 8 years. Somatic healing, water therapy, and deep listening.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69d4e1e2bec7abdef136e5de.jpeg" alt="Pablo Castro" /></div>
+          <span class="eyebrow center">Senior Trainer</span>
+          <h4>Pablo Castro</h4>
+          <p>Senior Alchemy of Breath trainer for 8 years. Somatic healing, water therapy, and deep listening.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69d4e25c3d63f9b9380569e9.jpeg" alt="Nick Garrow-Fisher" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Senior Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Nick Garrow-Fisher</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Authentic relating, IFS, boundaries, and soul initiation. Believes balance is everything.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69d4e25c3d63f9b9380569e9.jpeg" alt="Nick Garrow-Fisher" /></div>
+          <span class="eyebrow center">Senior Trainer</span>
+          <h4>Nick Garrow-Fisher</h4>
+          <p>Authentic relating, IFS, boundaries, and soul initiation. Believes balance is everything.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb7e85f42ae50232e340e1.jpg" alt="Emily Ray Henderson" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Senior Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Emily Ray Henderson</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">8-year senior trainer. Reiki master and 500-hour RYT yoga instructor.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb7e85f42ae50232e340e1.jpg" alt="Emily Ray Henderson" /></div>
+          <span class="eyebrow center">Senior Trainer</span>
+          <h4>Emily Ray Henderson</h4>
+          <p>8-year senior trainer. Reiki master and 500-hour RYT yoga instructor.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://alchemyofbreath.com/wp-content/uploads/simona-dvorackova-400x400-1.jpg" alt="Simona Dvorackova" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Master Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Simona Dvorackova</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Bodywork, energy healing, and hypnotherapy.</p>
+          <div class="arch"><img src="https://alchemyofbreath.com/wp-content/uploads/simona-dvorackova-400x400-1.jpg" alt="Simona Dvorackova" /></div>
+          <span class="eyebrow center">Master Trainer</span>
+          <h4>Simona Dvorackova</h4>
+          <p>Bodywork, energy healing, and hypnotherapy.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://alchemyofbreath.com/wp-content/uploads/btwfest-speaker-giulia-vaccari-768x768.jpg" alt="Giulia Vaccari" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Master Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Giulia Vaccari</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Craniosacral therapy, Reiki, and movement integration.</p>
+          <div class="arch"><img src="https://alchemyofbreath.com/wp-content/uploads/btwfest-speaker-giulia-vaccari-768x768.jpg" alt="Giulia Vaccari" /></div>
+          <span class="eyebrow center">Master Trainer</span>
+          <h4>Giulia Vaccari</h4>
+          <p>Craniosacral therapy, Reiki, and movement integration.</p>
         </div>
         <div class="trainer-card">
-          <div class="img-overlay mb-5"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69fb50339594baa062e170e2.jpg" alt="Tina Marie Bertoli" class="instructor-img" /></div>
-          <p class="eyebrow mb-1">Master Trainer</p>
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;margin-bottom:6px;">Tina Marie Bertoli</h4>
-          <p style="font-size:13px;line-height:1.7;color:#4a4a46;">Certified breathwork facilitator, Reiki and IET master, intuitive healer and international speaker.</p>
+          <div class="arch"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69fb50339594baa062e170e2.jpg" alt="Tina Marie Bertoli" /></div>
+          <span class="eyebrow center">Master Trainer</span>
+          <h4>Tina Marie Bertoli</h4>
+          <p>Certified breathwork facilitator, Reiki and IET master, intuitive healer and international speaker.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER VIDEO -->
-<section class="py-24" style="background:#fff;border-top:1px solid #d3cdb3;">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">From Anthony</p>
-    <div class="gold-rule centered"></div>
-    <h2 style="font-size:clamp(24px,3vw,36px);line-height:1.25;letter-spacing:-.02em;color:#1a1a18;margin-bottom:12px;">Why we do this every summer</h2>
-    <p style="font-size:16px;line-height:1.7;color:#4a4a46;margin-bottom:40px;max-width:620px;margin-left:auto;margin-right:auto;">People come from all over the world to create a container we could not have designed on our own. A perfect blend of experience, culture, and stories, all aiming for the same thing: connection, breath, and healing.</p>
-    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#1a1a18;border-radius:2px;overflow:hidden;box-shadow:0 12px 48px rgba(53,77,76,.2),0 2px 8px rgba(53,77,76,.1);"><video controls preload="metadata" poster="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69cf78154cde4bbc2a713424.png" style="width:100%;height:100%;object-fit:cover;display:block;"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995732e5c2265a1151ddfc6.mp4" type="video/mp4" /></video></div>
+<!-- FROM ANTHONY: Tape note + video -->
+<section class="alt" id="anthony">
+  <div class="orb g" style="width:480px;height:480px;bottom:-180px;left:-150px"></div>
+  <div class="wrap">
+    <div class="two-up">
+      <div>
+        <div class="tape">
+          <span class="eyebrow">A message from Anthony</span>
+          <h3 style="margin-top:8px">Why we do this every summer</h3>
+          <p>People come from all over the world to create a container we could not have designed on our own. A perfect blend of experience, culture, and stories, all aiming for the same thing: connection, breath, and healing.</p>
+          <p>Every camp is its own thing. The land is constant. The people are not. And so each week becomes a kind of small miracle, the same and different.</p>
+          <p class="sig">Anthony</p>
+        </div>
+      </div>
+      <div>
+        <div class="dbring" style="aspect-ratio:16/9">
+          <video controls preload="metadata" poster="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69cf78154cde4bbc2a713424.png">
+            <source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6995732e5c2265a1151ddfc6.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-12 reveal">
-      <p class="eyebrow mb-4">Investment</p>
-      <div class="gold-rule centered"></div>
-      <h2 style="font-size:clamp(28px,3.5vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:16px;">Same price across all dates.<br/>Everything included.</h2>
-      <p style="font-size:16px;line-height:1.7;color:#4a4a46;max-width:560px;margin:0 auto;">Your investment covers the full 7-day program, 6 nights of accommodation at ASHA, and three plant-based meals a day. The only thing not included is your travel to Tuscany.</p>
+<section id="pricing">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow center">Investment</span>
+      <h2>Same price across all dates. <em>Everything included.</em></h2>
+      <p class="lead" style="margin:18px auto 0">Your investment covers the full 7-day program, 6 nights of accommodation at ASHA, and three plant-based meals a day. The only thing not included is your travel to Tuscany.</p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-      <div style="background:#fff;border:1px solid #d3cdb3;padding:20px;text-align:center;"><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#354d4c;margin-bottom:4px;">7 Days</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;text-transform:uppercase;">Full program</p></div>
-      <div style="background:#fff;border:1px solid #d3cdb3;padding:20px;text-align:center;"><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#354d4c;margin-bottom:4px;">6 Nights</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;text-transform:uppercase;">Accommodation</p></div>
-      <div style="background:#fff;border:1px solid #d3cdb3;padding:20px;text-align:center;"><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#354d4c;margin-bottom:4px;">3 Meals</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;text-transform:uppercase;">Plant-based, daily</p></div>
-      <div style="background:#fff;border:1px solid #d3cdb3;padding:20px;text-align:center;"><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#354d4c;margin-bottom:4px;">Community</p><p style="font-size:12px;color:#4a4a46;letter-spacing:.06em;text-transform:uppercase;">A global tribe</p></div>
-    </div>
-
-    <!-- JUNE PROMO CALLOUT -->
-    <div class="promo-callout" style="margin-bottom:16px;">
-      <div class="left">
-        <span class="badge">June Only</span>
+    <div style="margin-top:42px">
+      <div class="price-banner june">
         <div>
-          <p class="headline"><strong>15% off every 2026 date</strong> &middot; ends June 18</p>
-          <p class="deadline">Applied automatically at checkout on Retreat Guru.</p>
+          <h4><em>15% off</em> every 2026 date</h4>
+          <p>June promo. Ends June 18. Applied automatically at checkout on Retreat Guru.</p>
         </div>
+        <a href="#dates" class="btn btn-primary btn-small" style="background:#FBF7EF;color:#7B0712">Claim 15% off <span class="arr">&rarr;</span></a>
       </div>
-      <a href="#dates" class="btn-promo">Claim 15% Off</a>
-    </div>
-
-    <!-- Early bird banner -->
-    <div style="background:#354d4c;border:1px solid rgba(204,153,36,.3);padding:20px 28px;margin-bottom:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;">
-      <div>
-        <p class="eyebrow mb-1" style="color:#cc9924;">Early Bird</p>
-        <p style="font-size:16px;color:#fff;font-family:'Marcellus',Georgia,serif;line-height:1.3;">Plus 20% off most accommodations (excluding private cottages)</p>
-      </div>
-      <p style="font-size:13px;color:rgba(255,255,255,.78);line-height:1.5;">Applied automatically at checkout on Retreat Guru.</p>
-    </div>
-
-    <div class="text-center mb-8">
-      <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(24px,3vw,32px);color:#1a1a18;letter-spacing:-.02em;margin-bottom:8px;">Starting from &euro;1,319 with early bird</p>
-      <p style="font-size:15px;color:#4a4a46;line-height:1.7;">The difference is where you sleep. Shared, private, glamping, or bring your own tent.</p>
-    </div>
-
-    <!-- PRIVATE -->
-    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Private</p></div>
-    <div class="grid md:grid-cols-3 gap-5 mb-10">
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;"><img src="https://alchemyofbreath.com/wp-content/uploads/Private-Cottage-1-1-1-768x512.jpg" alt="Private Cottage" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Private Cottage</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">2 people total</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;1,379</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;">&euro;6,895</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;"><img src="https://alchemyofbreath.com/wp-content/uploads/private-cottage-1-2-1-768x511.jpg" alt="Private Cottage Solo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Private Cottage</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">Solo</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;1,015</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;">&euro;5,075</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/single-ensuite-1-1-1-768x512.jpg" alt="Single Room Ensuite" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Single Room Ensuite</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">Private room</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;439</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;"><span class="price-strike">&euro;2,745</span>&euro;2,196</p></div>
-          </div>
+      <div class="price-banner eb">
+        <div>
+          <h4>Early bird stacks on top</h4>
+          <p>Plus 20% off most accommodations (private cottages excluded). Applied automatically.</p>
         </div>
       </div>
     </div>
 
-    <!-- SHARED -->
-    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Shared <span style="color:#c5c3c2;font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;">(per person)</span></p></div>
-    <div class="grid md:grid-cols-3 gap-5 mb-10">
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/twin-ensuite-1-1-1-768x512.jpg" alt="Twin Ensuite" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Twin Ensuite</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">Shared with 1 other</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;367</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;"><span class="price-strike">&euro;2,295</span>&euro;1,836</p></div>
-          </div>
-        </div>
+    <div class="center" style="margin-top:36px">
+      <p style="font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,1.9rem);color:var(--ink);margin-bottom:8px">Starting from <em>&euro;1,319</em> with early bird</p>
+      <p class="lead" style="margin:0 auto;font-size:.96rem">The difference is where you sleep. Shared, private, glamping, or bring your own tent.</p>
+    </div>
+
+    <p class="section-sublbl">Private</p>
+    <div class="accom-grid">
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/Private-Cottage-1-1-1-768x512.jpg" alt="Private Cottage" loading="lazy" /></div>
+        <div class="body"><h4>Private Cottage</h4><p class="sub">2 people total</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;1,379</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price">&euro;6,895</p></div></div></div>
       </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/twin-non-ensuite-1-1-1-768x512.jpg" alt="Twin Non-Ensuite" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Twin Non-Ensuite</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">Shared bathroom</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;329</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;"><span class="price-strike">&euro;2,059</span>&euro;1,647</p></div>
-          </div>
-        </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/private-cottage-1-2-1-768x511.jpg" alt="Private Cottage Solo" loading="lazy" /></div>
+        <div class="body"><h4>Private Cottage</h4><p class="sub">Solo</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;1,015</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price">&euro;5,075</p></div></div></div>
       </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/triple-ensuite-1-1-1-1-768x512.jpg" alt="Triple Ensuite" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:20px 22px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Triple Ensuite</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:14px;">Shared with 2 others</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:12px;">
-            <div><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:18px;color:#354d4c;">&euro;319</p></div>
-            <div style="text-align:right;"><p style="font-size:11px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:22px;color:#1a1a18;"><span class="price-strike">&euro;1,995</span>&euro;1,596</p></div>
-          </div>
-        </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/single-ensuite-1-1-1-768x512.jpg" alt="Single Room Ensuite" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Single Room Ensuite</h4><p class="sub">Private room</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;439</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;2,745</span>&euro;2,196</p></div></div></div>
       </div>
     </div>
 
-    <!-- GLAMPING & CAMPING -->
-    <div class="mb-3"><p class="eyebrow" style="color:#cc9924;">Glamping &amp; Camping</p></div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-1-1-1-768x512.jpg" alt="Glamping Single Tent" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:18px 20px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Glamping Single</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:12px;">Solo tent</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:10px;">
-            <div><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#354d4c;">&euro;328</p></div>
-            <div style="text-align:right;"><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;2,049</span>&euro;1,639</p></div>
-          </div>
-        </div>
+    <p class="section-sublbl">Shared <span style="color:var(--slate);font-family:var(--sans);font-size:.82rem;letter-spacing:0">(per person)</span></p>
+    <div class="accom-grid">
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/twin-ensuite-1-1-1-768x512.jpg" alt="Twin Ensuite" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Twin Ensuite</h4><p class="sub">Shared with 1 other</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;367</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;2,295</span>&euro;1,836</p></div></div></div>
       </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-5-1-1-768x512.jpg" alt="Glamping Twin Tent" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:18px 20px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Glamping Twin</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:12px;">Shared tent, pp</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:10px;">
-            <div><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#354d4c;">&euro;308</p></div>
-            <div style="text-align:right;"><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,925</span>&euro;1,540</p></div>
-          </div>
-        </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/twin-non-ensuite-1-1-1-768x512.jpg" alt="Twin Non-Ensuite" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Twin Non-Ensuite</h4><p class="sub">Shared bathroom</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;329</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;2,059</span>&euro;1,647</p></div></div></div>
       </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-camper-1-1-1-1-1-768x492.jpg" alt="Camper Van" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:18px 20px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Camper Van</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:12px;">Bring your own</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:10px;">
-            <div><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#354d4c;">&euro;271</p></div>
-            <div style="text-align:right;"><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,695</span>&euro;1,356</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="accom-card" style="background:#fff;border:1px solid #d3cdb3;overflow:hidden;transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s,border-color .25s;">
-        <div style="aspect-ratio:3/2;overflow:hidden;position:relative;"><img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-tent-1-1-1-1-1-768x453.jpg" alt="Personal Tent" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;" /><span style="position:absolute;top:12px;left:12px;" class="eb-badge">Early Bird</span></div>
-        <div style="padding:18px 20px;">
-          <h4 style="font-family:'Marcellus',Georgia,serif;font-size:17px;color:#1a1a18;margin-bottom:4px;line-height:1.3;">Personal Tent</h4>
-          <p style="font-size:12px;color:#c5c3c2;margin-bottom:12px;">Bring your own</p>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #d3cdb3;padding-top:10px;">
-            <div><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:#354d4c;">&euro;264</p></div>
-            <div style="text-align:right;"><p style="font-size:10px;color:#4a4a46;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif;font-size:20px;color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,649</span>&euro;1,319</p></div>
-          </div>
-        </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/triple-ensuite-1-1-1-1-768x512.jpg" alt="Triple Ensuite" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Triple Ensuite</h4><p class="sub">Shared with 2 others</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;319</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;1,995</span>&euro;1,596</p></div></div></div>
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row gap-6 items-start">
-      <div style="flex:1;background:#fff;border:1px solid #d3cdb3;padding:24px 28px;"><p class="eyebrow mb-2">Payment</p><p style="font-size:15px;color:#4a4a46;line-height:1.7;">Pay 20% today to secure your place. The rest is split into monthly installments, with the final balance due two weeks before arrival.</p></div>
-      <div style="flex:1;display:flex;flex-direction:column;gap:12px;justify-content:center;"><a href="#dates" class="btn-gold text-center" style="display:block;">Choose Your Dates</a><p style="font-size:12px;color:#c5c3c2;text-align:center;line-height:1.5;">Travel not included. Booking handled through Retreat Guru.</p></div>
+    <p class="section-sublbl">Glamping &amp; camping</p>
+    <div class="accom-grid four">
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-1-1-1-768x512.jpg" alt="Glamping Single" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Glamping Single</h4><p class="sub">Solo tent</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;328</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;2,049</span>&euro;1,639</p></div></div></div>
+      </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-5-1-1-768x512.jpg" alt="Glamping Twin" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Glamping Twin</h4><p class="sub">Shared tent, per person</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;308</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;1,925</span>&euro;1,540</p></div></div></div>
+      </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-camper-1-1-1-1-1-768x492.jpg" alt="Camper Van" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Camper Van</h4><p class="sub">Bring your own</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;271</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;1,695</span>&euro;1,356</p></div></div></div>
+      </div>
+      <div class="accom-card">
+        <div class="pic"><img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-tent-1-1-1-1-1-768x453.jpg" alt="Personal Tent" loading="lazy" /><span class="eb">Early Bird</span></div>
+        <div class="body"><h4>Personal Tent</h4><p class="sub">Bring your own</p><div class="row-prc"><div><p class="lbl">Pay today</p><p class="price price-pay">&euro;264</p></div><div style="text-align:right"><p class="lbl">Total</p><p class="price"><span class="strike">&euro;1,649</span>&euro;1,319</p></div></div></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px" class="payment-grid">
+      <div style="background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:14px;padding:24px 28px">
+        <span class="eyebrow">Payment</span>
+        <p style="font-size:.94rem;color:var(--slate);line-height:1.7;margin-top:6px">Pay 20% today to secure your place. The rest splits into monthly installments, with the final balance due two weeks before arrival.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;justify-content:center;align-items:center;text-align:center">
+        <a href="#dates" class="btn btn-primary">Choose your dates <span class="arr">&rarr;</span></a>
+        <p style="font-size:.72rem;color:var(--slate);letter-spacing:.1em;text-transform:uppercase;font-weight:500">Travel not included &middot; Booking via Retreat Guru</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHO FOR -->
-<section class="py-20" style="background:#fff;">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">Who Comes to BreathCamp</p>
-    <div class="gold-rule centered"></div>
-    <h3 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#1a1a18;line-height:1.3;letter-spacing:-.01em;margin-bottom:20px;">Scientists, doctors, coaches, healers, educators. And people who do not identify as any of those.</h3>
-    <p style="font-size:16px;line-height:1.7;color:#4a4a46;">BreathCamp draws an international group each session. Some come because they have worked with breath for years. Some come because they have never tried any of this and something in them is asking for it. Both are welcome. The week holds both.</p>
+<!-- WHO IT'S FOR -->
+<section class="alt center">
+  <div class="wrap" style="max-width:760px">
+    <span class="eyebrow center">Who comes to BreathCamp</span>
+    <h2>Scientists, doctors, coaches, healers, educators. <em>And people who do not identify as any of those.</em></h2>
+    <p class="lead" style="margin:24px auto 0">BreathCamp draws an international group each session. Some come because they have worked with breath for years. Some come because they have never tried any of this and something in them is asking for it. Both are welcome. The week holds both.</p>
   </div>
 </section>
 
-<!-- BROCHURE OPT-IN -->
-<section id="brochure" class="py-24" style="background:#1a1a18;">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+<!-- BROCHURE -->
+<section id="brochure">
+  <div class="wrap">
+    <div class="brochure-grid">
       <div>
-        <p class="eyebrow mb-4">Step Inside</p>
-        <div class="gold-rule"></div>
-        <h2 style="font-size:clamp(26px,3.2vw,38px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:18px;">Feel BreathCamp,<br/>before you arrive.</h2>
-        <p style="font-size:16px;line-height:1.8;color:rgba(255,255,255,.78);margin-bottom:18px;">A closer look at the week. The people you will meet. The rhythm of the days. The land, the long shared table, the practices that change a body, and the stories from those who came home different. We tucked the practical bits in there too, because you will need them. But the guide is mostly an invitation.</p>
-        <ul style="list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:10px;">
-          <li style="font-size:14px;color:rgba(255,255,255,.85);padding-left:22px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>A walk through the seven days</li>
-          <li style="font-size:14px;color:rgba(255,255,255,.85);padding-left:22px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Stories from BreathCamp graduates</li>
-          <li style="font-size:14px;color:rgba(255,255,255,.85);padding-left:22px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>The food, the land, where you will sleep</li>
-          <li style="font-size:14px;color:rgba(255,255,255,.85);padding-left:22px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Pricing across every accommodation</li>
-          <li style="font-size:14px;color:rgba(255,255,255,.85);padding-left:22px;position:relative;line-height:1.6;"><span style="position:absolute;left:0;top:8px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Travel, transport &amp; what to pack</li>
+        <span class="eyebrow">The guide</span>
+        <h2>Feel BreathCamp, <em>before you arrive</em></h2>
+        <p class="lead" style="margin-top:18px">A closer look at the week. The people you will meet. The rhythm of the days. The land, the long shared table, and the stories from those who came home different. The practical bits are in there too: pricing, travel, what to bring.</p>
+        <ul class="brochure-list">
+          <li>A walk through the seven days</li>
+          <li>Stories from BreathCamp graduates</li>
+          <li>The food, the land, where you will sleep</li>
+          <li>Pricing across every accommodation</li>
+          <li>Travel, transport, what to pack</li>
         </ul>
-        <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;">Free. No spam. Unsubscribe anytime.</p>
+        <p class="muted" style="font-size:.84rem">Free. No spam. Unsubscribe anytime.</p>
       </div>
-      <div style="background:#fff;padding:8px;border-radius:4px;box-shadow:0 12px 48px rgba(0,0,0,.25);">
-        <iframe
-          src="https://link.alchemyofbreath.com/widget/form/oYN0IKN1fcNsjCXk0y5V"
-          style="width:100%;min-height:520px;border:none;border-radius:3px;display:block;"
-          id="inline-oYN0IKN1fcNsjCXk0y5V"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="BreathCamp: Brochure Opt in"
-          data-height="520"
-          data-layout-iframe-id="inline-oYN0IKN1fcNsjCXk0y5V"
-          data-form-id="oYN0IKN1fcNsjCXk0y5V"
-          title="BreathCamp: Brochure Opt in"></iframe>
+      <div class="brochure-form">
+        <iframe src="https://link.alchemyofbreath.com/widget/form/oYN0IKN1fcNsjCXk0y5V" id="inline-oYN0IKN1fcNsjCXk0y5V" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="BreathCamp: Brochure Opt in" data-height="520" data-layout-iframe-id="inline-oYN0IKN1fcNsjCXk0y5V" data-form-id="oYN0IKN1fcNsjCXk0y5V" title="BreathCamp Brochure"></iframe>
       </div>
-    </div>
-
-    <!-- Social proof strip -->
-    <div style="margin-top:56px;padding-top:40px;border-top:1px solid rgba(211,205,179,.15);">
-      <p class="eyebrow text-center mb-8" style="color:rgba(204,153,36,.85);">From people who came</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(211,205,179,.12);padding:24px 26px;">
-          <p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:rgba(255,255,255,.92);line-height:1.55;margin-bottom:14px;">"As a first-timer, I'm blown away. What a relief to just be who I am. I felt held throughout the entire experience."</p>
-          <p style="font-size:11px;color:rgba(204,153,36,.75);letter-spacing:.1em;text-transform:uppercase;">BreathCamp Graduate</p>
-        </div>
-        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(211,205,179,.12);padding:24px 26px;">
-          <p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:rgba(255,255,255,.92);line-height:1.55;margin-bottom:14px;">"Helped me connect with my intuition on a very deep and safe level. It will push you forward in ways you wouldn't expect."</p>
-          <p style="font-size:11px;color:rgba(204,153,36,.75);letter-spacing:.1em;text-transform:uppercase;">BreathCamp Graduate</p>
-        </div>
-        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(211,205,179,.12);padding:24px 26px;">
-          <p style="font-family:'Marcellus',Georgia,serif;font-size:16px;color:rgba(255,255,255,.92);line-height:1.55;margin-bottom:14px;">"BreathCamp in one word: WOW. The learning and growth were beyond. A deep dive into the breath."</p>
-          <p style="font-size:11px;color:rgba(204,153,36,.75);letter-spacing:.1em;text-transform:uppercase;">BreathCamp Graduate</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Talk to a human -->
-    <div style="margin-top:48px;text-align:center;padding-top:36px;border-top:1px solid rgba(211,205,179,.1);">
-      <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);color:#fff;line-height:1.4;margin-bottom:14px;letter-spacing:-.01em;">Or, talk it through with a human.</p>
-      <p style="font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;">Book a free conversation with our team. We will answer anything &mdash; about the week, your nervous system, the practices, whatever is on your mind. No pressure to book.</p>
-      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener" class="btn-outline" style="font-size:13px;">Book a Conversation</a>
     </div>
   </div>
 </section>
 <script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 
-<!-- TRANSPORT — short summary, full details in guide -->
-<section id="transport" class="py-24" style="background:#354d4c;">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">Getting There</p>
-    <div class="gold-rule centered"></div>
-    <h2 style="font-size:clamp(24px,3vw,34px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin-bottom:18px;">Tuscany is closer than you think.</h2>
-    <p style="font-size:15px;line-height:1.8;color:rgba(255,255,255,.8);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;">Fly into Rome Fiumicino (FCO), train to Chiusi-Chianciano Terme, or drive the scenic route through the hills. Full directions, GPS, train schedules, and transfer tips live in the guide.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;font-size:13px;color:rgba(255,255,255,.78);margin-bottom:32px;">
-      <span style="border:1px solid rgba(204,153,36,.3);padding:8px 16px;border-radius:100px;"><strong style="color:#cc9924;">Address &middot;</strong> Località Le Piane, Castell'Azzara</span>
-      <span style="border:1px solid rgba(204,153,36,.3);padding:8px 16px;border-radius:100px;"><strong style="color:#cc9924;">Airport &middot;</strong> Rome Fiumicino (FCO)</span>
-      <span style="border:1px solid rgba(204,153,36,.3);padding:8px 16px;border-radius:100px;"><strong style="color:#cc9924;">Station &middot;</strong> Chiusi-Chianciano Terme</span>
+<!-- TRANSPORT -->
+<section class="alt" id="transport">
+  <div class="wrap center">
+    <span class="eyebrow center">Getting there</span>
+    <h2>Tuscany is <em>closer than you think</em></h2>
+    <p class="lead" style="margin:18px auto 0">Fly into Rome Fiumicino (FCO), train to Chiusi-Chianciano Terme, or drive the scenic route through the hills. Full directions, GPS, train schedules, and transfer tips live in the guide.</p>
+    <div class="transport-pills">
+      <span class="transport-pill"><strong>Address:</strong> Località Le Piane, Castell'Azzara</span>
+      <span class="transport-pill"><strong>Airport:</strong> Rome Fiumicino (FCO)</span>
+      <span class="transport-pill"><strong>Station:</strong> Chiusi-Chianciano Terme</span>
     </div>
-    <a href="#brochure" class="btn-outline">Get the full guide</a>
+    <a href="#brochure" class="btn btn-ghost">Get the full guide</a>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="text-center mb-16"><p class="eyebrow mb-4">Questions</p><div class="gold-rule centered"></div><h2 style="font-size:clamp(28px,3vw,38px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;">Frequently asked.</h2></div>
-    <div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>Do I need any breathwork experience?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">None at all. BreathCamp is designed for people who have never done breathwork and people who have practiced for years. The teaching starts where you are.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>What airport should I fly into?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Rome Fiumicino (FCO) is the recommended airport. From there you can rent a car (best option) or take the train to Chiusi-Chianciano Terme and a short taxi or ride-share to ASHA. A WhatsApp group helps participants coordinate rides.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>When does the program start and end?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Check-in is Sunday, 2:30 PM to 5:00 PM, with orientation at 4:30 PM. Check-out is the following Saturday, 8:00 AM to 9:30 AM, after a closing lunch around 2:00 PM. Book return flights accordingly.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>How long is the retreat?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">7 days and 6 nights. Check-in Sunday afternoon, check-out the following Saturday after lunch.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>Is there a payment plan?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. A 20% deposit secures your place and you can pay the balance in monthly installments. Full balance is due two weeks before arrival.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>What is the food like?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Three plant-based, locally sourced meals a day, prepared on site. ASHA caters to dietary needs, just let us know in advance. The food is a real part of the experience.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>Can I bring my partner or children?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Partners are welcome to book alongside you. Children under 10 stay free. Ages 11 and up receive a 20% discount. Please contact us to arrange family bookings.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>What is the refund policy?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">BreathCamp is non-refundable and locations are non-transferable. We strongly recommend travel insurance to cover unexpected events.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>What should I bring?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Your own yoga mat is recommended. Comfortable clothing for practice. A journal if you like to write. Swimwear for the pool and nearby hot springs. Walking shoes for the hills. Everything else is provided.</div></div></div>
-      <div class="faq-item"><button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)"><span>Can I book more than one session?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, many people do. Book each session separately through Retreat Guru. If you need help coordinating, email us at info@alchemyofbreath.com.</div></div></div>
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow center">Questions</span><h2>Frequently <em>asked</em></h2></div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Do I need any breathwork experience?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">None at all. BreathCamp is designed for people who have never done breathwork and people who have practiced for years. The teaching starts where you are.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>What airport should I fly into?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Rome Fiumicino (FCO) is the recommended airport. From there you can rent a car (best option) or take the train to Chiusi-Chianciano Terme and a short taxi or ride-share to ASHA. A WhatsApp group helps participants coordinate rides.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>When does the program start and end?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Check-in is Sunday, 2:30 PM to 5:00 PM, with orientation at 4:30 PM. Check-out is the following Saturday, 8:00 AM to 9:30 AM, after a closing lunch around 2:00 PM. Book return flights accordingly.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>How long is the retreat?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">7 days and 6 nights. Check-in Sunday afternoon, check-out the following Saturday after lunch.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Is there a payment plan?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Yes. A 20% deposit secures your place and you can pay the balance in monthly installments. Full balance is due two weeks before arrival.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>What is the food like?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Three plant-based, locally sourced meals a day, prepared on site. ASHA caters to dietary needs, just let us know in advance. The food is a real part of the experience.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Can I bring my partner or children?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Partners are welcome to book alongside you. Children under 10 stay free. Ages 11 and up receive a 20% discount. Please contact us to arrange family bookings.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>What is the refund policy?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">BreathCamp is non-refundable and locations are non-transferable. We strongly recommend travel insurance to cover unexpected events.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>What should I bring?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Your own yoga mat is recommended. Comfortable clothing for practice. A journal if you like to write. Swimwear for the pool and nearby hot springs. Walking shoes for the hills. Everything else is provided.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)"><span>Can I book more than one session?</span><span class="ic">+</span></button><div class="faq-a"><div class="faq-a-in">Yes, many people do. Book each session separately through Retreat Guru. If you need help coordinating, email us at info@alchemyofbreath.com.</div></div></div>
     </div>
-    <p style="font-size:13px;color:#c5c3c2;margin-top:20px;font-style:italic;text-align:center;">[Additional FAQs from alchemyofbreath.com/breathcamps/ — sim cards, laundry, animals, taxis, offsite stays, shops, drugs — to be copied across verbatim.]</p>
   </div>
 </section>
 
-<!-- TERMS & CONDITIONS -->
-<section id="terms" class="py-20" style="background:#fff;border-top:1px solid #d3cdb3;">
-  <div class="max-w-3xl mx-auto px-6">
-    <p class="eyebrow mb-4">Terms &amp; Conditions</p>
-    <div class="gold-rule"></div>
-    <h3 style="font-family:'Marcellus',Georgia,serif;font-size:24px;color:#1a1a18;margin-bottom:20px;letter-spacing:-.01em;">Before you book.</h3>
-    <ul style="list-style:none;padding-left:0;display:flex;flex-direction:column;gap:14px;">
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>We recommend securing travel insurance to cover different regulations, changes, etc., as applicable, depending on variable circumstances that may or may not arise when you come to ASHA.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Because the situation is still current, we will update any requirements for testing, etc., closer to the date.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>We recommend bringing your own yoga mat for safety.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>We do not offer refunds.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>BreathCamp locations are non-transferable.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>All students are required to stay on-site at ASHA. No exceptions except for resident students who live around ASHA for at least 6 months out of the year.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Please note that the weather can be variable and it is difficult to predict in May and September. For the tent and glamping options use at your own risk; refunds are not possible.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Depending on the circumstances and availability, it may be possible to attend a BreathCamp on a different date.</li>
-      <li style="font-size:14px;line-height:1.8;color:#4a4a46;padding-left:22px;position:relative;"><span style="position:absolute;left:0;top:10px;width:6px;height:6px;background:#cc9924;border-radius:50%;"></span>Should we cancel BreathCamp, we will refund the full amount, minus currency exchange and bank platform fees we may be charged.</li>
+<!-- TERMS -->
+<section class="alt" id="terms">
+  <div class="wrap">
+    <span class="eyebrow">Terms &amp; conditions</span>
+    <h2>Before <em>you book</em></h2>
+    <ul class="checks">
+      <li>We recommend securing travel insurance to cover different regulations, changes, or other variable circumstances that may arise.</li>
+      <li>We recommend bringing your own yoga mat for safety.</li>
+      <li>We do not offer refunds.</li>
+      <li>BreathCamp locations are non-transferable.</li>
+      <li>All students stay on-site at ASHA. Exception: resident students who live around ASHA for at least 6 months of the year.</li>
+      <li>Weather can be variable and difficult to predict in May and September. For tent and glamping options, use at your own risk. Refunds are not possible for weather-related changes.</li>
+      <li>Depending on circumstances and availability, it may be possible to attend a BreathCamp on a different date.</li>
+      <li>If we cancel BreathCamp, we refund the full amount, minus currency exchange and bank platform fees we may be charged.</li>
     </ul>
-    <p style="font-size:13px;color:#4a4a46;line-height:1.7;margin-top:24px;font-style:italic;">By making payment, you agree to the full terms and conditions. Please read them carefully for full details.</p>
+    <p class="muted" style="margin-top:24px;font-style:italic;font-size:.86rem">By making payment, you agree to the full terms and conditions. Please read them carefully for full details.</p>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="py-28 grain relative overflow-hidden" style="background:#354d4c;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 50%,rgba(204,153,36,.1) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(82,187,144,.06) 0%,transparent 55%);"></div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-5">Five sessions &nbsp;&middot;&nbsp; August to October 2026</p>
-    <div class="gold-rule centered"></div>
-    <h2 style="font-size:clamp(32px,4.5vw,52px);line-height:1.15;letter-spacing:-.025em;color:#fff;margin-bottom:20px;">Come breathe with us<br/>in Tuscany.</h2>
-    <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.8);margin-bottom:40px;max-width:520px;margin-left:auto;margin-right:auto;">Seven days of breath, community, good food, and Tuscan sun. Five sessions to choose from. A small group held by experienced trainers.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-      <a href="#dates" class="btn-gold" style="font-size:14px;padding:16px 40px;">Choose Your Dates</a>
-      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" class="btn-outline" style="font-size:14px;padding:16px 40px;">Book a Discovery Call</a>
+<section class="final-cta">
+  <div class="orb g" style="width:520px;height:520px;top:-180px;left:-160px"></div>
+  <div class="orb t" style="width:460px;height:460px;bottom:-180px;right:-150px"></div>
+  <div class="wrap center">
+    <span class="eyebrow center">Five sessions &middot; August to October 2026</span>
+    <h2>Come breathe with us <em>in Tuscany</em></h2>
+    <p class="lead">Seven days of breath, community, good food, and Tuscan sun. Five sessions to choose from. A small group held by experienced trainers.</p>
+    <div class="cta-row">
+      <a href="#dates" class="btn btn-primary">Choose your dates <span class="arr">&rarr;</span></a>
+      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener" class="btn btn-ghost">Book a conversation</a>
     </div>
-    <p style="font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.04em;">20% deposit &nbsp;&middot;&nbsp; Monthly installments available &nbsp;&middot;&nbsp; Travel not included</p>
+    <p class="fine">20% deposit &middot; Monthly installments available &middot; Travel not included</p>
   </div>
 </section>
 
+<!-- SCROLL PROGRESS PILL -->
+<a href="#dates" class="scroll-pill" id="scrollPill" aria-label="Choose your dates">
+  <div class="ring-out" id="ringOut">
+    <div class="ring-in">
+      <svg viewBox="0 0 24 24"><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8"/><circle cx="12" cy="12" r="3.4"/></svg>
+    </div>
+  </div>
+</a>
+
 <!-- FOOTER -->
-<footer style="background:#1a1a18;padding:48px 24px 32px;">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
-      <div><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-8 w-auto mb-6" style="opacity:.7;" /><p style="font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:280px;">Alchemy of Breath. Breath as a tool for life.</p></div>
-      <div class="flex flex-col gap-3"><p style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:500;margin-bottom:4px;">Contact</p><a href="mailto:info@alchemyofbreath.com" style="font-size:13px;color:rgba(255,255,255,.68);text-decoration:none;">info@alchemyofbreath.com</a></div>
+<footer>
+  <div class="wrap">
+    <div class="col">
+      <img src="https://alchemyofbreath.com/wp-content/uploads/AoB-emblem-web-white.png" alt="Alchemy of Breath" />
+      <p style="max-width:280px">Alchemy of Breath. Breath as a tool for life.</p>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;flex-direction:column;gap:8px;">
-      <p style="font-size:11px;color:rgba(255,255,255,.2);line-height:1.6;">BreathCamp is a residential breathwork retreat. It is not a substitute for medical treatment, therapy, or clinical care. If you have a medical condition, please consult your doctor before attending.</p>
-      <p style="font-size:11px;color:rgba(255,255,255,.2);">&copy; 2026 Alchemy of Breath. All rights reserved.</p>
+    <div class="col">
+      <strong>Contact</strong>
+      <a href="mailto:info@alchemyofbreath.com">info@alchemyofbreath.com</a>
     </div>
+    <div class="col">
+      <strong>More</strong>
+      <a href="#brochure">Get the guide</a>
+      <a href="https://go.alchemyofbreath.com/book-your-discovery-call-" target="_blank" rel="noopener">Book a conversation</a>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>BreathCamp is a residential breathwork retreat. It is not a substitute for medical treatment, therapy, or clinical care. If you have a medical condition, please consult your doctor before attending.</p>
+    <p style="margin-top:8px">&copy; 2026 Alchemy of Breath. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- BREATH MODAL -->
-<div id="breathModal" class="breath-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="One breath together">
-  <button class="breath-modal-close" onclick="closeBreathModal()" aria-label="Close">&#10005;</button>
-  <div style="text-align:center;max-width:480px;">
-    <p class="eyebrow mb-3" style="color:#cc9924;">One Breath Together</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,3vw,30px);color:#fff;letter-spacing:-.02em;margin-bottom:8px;">One breath to begin.</p>
-    <p style="font-size:15px;color:rgba(255,255,255,.68);line-height:1.7;margin-bottom:36px;max-width:380px;margin-left:auto;margin-right:auto;">Match your breath to the circle. Five seconds in, five seconds out. This is coherence breathing, one of the many practices you will learn at camp.</p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:24px;">
-      <div style="padding:24px 0;"><div id="breathOrb" class="breath-orb exhale"></div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-        <span id="breathLabel" class="breath-label">Tap to begin</span>
-        <span id="breathCounter" class="breath-counter" style="opacity:0;">&nbsp;</span>
-      </div>
-      <button id="breathToggle" onclick="toggleBreathing()" style="background:none;border:1px solid rgba(204,153,36,.5);color:#cc9924;font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 24px;cursor:pointer;transition:border-color .2s,background .2s;">Start Breathing</button>
-    </div>
-  </div>
-</div>
-
 <script>
-  const nav=document.getElementById('main-nav');
-  window.addEventListener('scroll',()=>{if(window.scrollY>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');});
+  // Nav scroll state
+  const nav=document.getElementById('mainNav');
+  const pill=document.getElementById('scrollPill');
+  const ringOut=document.getElementById('ringOut');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>60)nav.classList.add('scrolled');else nav.classList.remove('scrolled');
+    if(window.scrollY>720)pill.classList.add('visible');else pill.classList.remove('visible');
+    const h=document.documentElement.scrollHeight-window.innerHeight;
+    const p=Math.min(100,Math.max(0,(window.scrollY/h)*100));
+    ringOut.style.setProperty('--p',p+'%');
+  });
 
-  // Breath modal
-  function openBreathModal(){
-    const m=document.getElementById('breathModal');
-    m.classList.add('open');m.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-  }
-  function closeBreathModal(){
-    const m=document.getElementById('breathModal');
-    m.classList.remove('open');m.setAttribute('aria-hidden','true');
-    document.body.style.overflow='';
-    if(breathingActive){toggleBreathing();}
-  }
-  document.getElementById('breathModal').addEventListener('click',e=>{if(e.target.id==='breathModal')closeBreathModal();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('breathModal').classList.contains('open'))closeBreathModal();});
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
 
-  const revealObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
-
+  // FAQ
   function toggleFaq(btn){
     const expanded=btn.getAttribute('aria-expanded')==='true';
-    document.querySelectorAll('.faq-question').forEach(q=>{q.setAttribute('aria-expanded','false');q.nextElementSibling.classList.remove('open');});
+    document.querySelectorAll('.faq-q').forEach(q=>{q.setAttribute('aria-expanded','false');q.nextElementSibling.classList.remove('open');});
     if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');}
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}});});
-
-  // Day arc — interactive tabs
+  // Day arc
   const dayContent={
     1:{eyebrow:'Day One',title:'Arrival and meeting',body:'Land at ASHA. Settle in. Meet the people you will share the week with. Evening drum circle as the sun sets over the hills.'},
     2:{eyebrow:'Day Two',title:'Foundations of breath',body:'The fundamentals of conscious breathing. Beginner and advanced techniques. Support for your own personal process.'},
@@ -977,22 +975,16 @@
     7:{eyebrow:'Day Seven',title:'Integration and home',body:'Morning integration practices. Closing ritual. A shared lunch before you carry the week home with you. The practices you have learned stay with you because you have lived them every day.'}
   };
   const dayPanel=document.getElementById('dayPanel');
-  const dayPanelEyebrow=document.getElementById('dayPanelEyebrow');
-  const dayPanelTitle=document.getElementById('dayPanelTitle');
-  const dayPanelBody=document.getElementById('dayPanelBody');
+  const dayEyebrow=document.getElementById('dayEyebrow');
+  const dayTitle=document.getElementById('dayTitle');
+  const dayBody=document.getElementById('dayBody');
   document.querySelectorAll('.day-tab').forEach(tab=>{
     tab.addEventListener('click',()=>{
       document.querySelectorAll('.day-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
       tab.classList.add('active');tab.setAttribute('aria-selected','true');
-      const day=tab.getAttribute('data-day');
-      const data=dayContent[day];
+      const day=tab.getAttribute('data-day');const data=dayContent[day];
       dayPanel.classList.remove('visible');
-      setTimeout(()=>{
-        dayPanelEyebrow.textContent=data.eyebrow;
-        dayPanelTitle.textContent=data.title;
-        dayPanelBody.textContent=data.body;
-        dayPanel.classList.add('visible');
-      },180);
+      setTimeout(()=>{dayEyebrow.textContent=data.eyebrow;dayTitle.textContent=data.title;dayBody.textContent=data.body;dayPanel.classList.add('visible');},180);
     });
   });
 
@@ -1001,20 +993,8 @@
     const track=document.getElementById('trainerTrack');
     const card=track.querySelector('.trainer-card');
     if(!card)return;
-    const amount=card.getBoundingClientRect().width+24;
+    const amount=card.getBoundingClientRect().width+26;
     track.scrollBy({left:amount*dir,behavior:'smooth'});
-  }
-
-  // Breathing probe
-  let breathingActive=false,countInterval=null;
-  function toggleBreathing(){
-    const orb=document.getElementById('breathOrb'),label=document.getElementById('breathLabel'),counter=document.getElementById('breathCounter'),btn=document.getElementById('breathToggle');
-    if(breathingActive){breathingActive=false;clearInterval(countInterval);orb.className='breath-orb exhale';label.textContent='Tap to begin';counter.style.opacity='0';btn.textContent='Start Breathing';return;}
-    breathingActive=true;btn.textContent='Stop';counter.style.opacity='1';
-    function runCount(s,cb){let t=s;counter.textContent=t;clearInterval(countInterval);countInterval=setInterval(()=>{t--;if(t>0)counter.textContent=t;else{clearInterval(countInterval);if(cb)cb();}},1000);}
-    function inhale(){if(!breathingActive)return;orb.className='breath-orb inhale';label.textContent='Breathe in';runCount(5,()=>{if(breathingActive)exhale();});}
-    function exhale(){if(!breathingActive)return;orb.className='breath-orb exhale';label.textContent='Breathe out';runCount(5,()=>{if(breathingActive)inhale();});}
-    inhale();
   }
 </script>
 </body>
