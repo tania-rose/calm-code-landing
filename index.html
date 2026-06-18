@@ -102,7 +102,8 @@
     .accom-card { background:#fff; border:1px solid #d3cdb3; overflow:hidden; transition:transform .25s cubic-bezier(.4,0,.2,1), box-shadow .25s, border-color .25s; }
     .accom-card:hover { transform:translateY(-3px); border-color:rgba(204,153,36,.45); box-shadow:0 12px 32px rgba(53,77,76,.08), 0 0 60px -20px rgba(204,153,36,.22); }
     .eb-badge { background:#cc9924; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; box-shadow:0 2px 8px rgba(0,0,0,.15); }
-    .price-strike { color:#c5c3c2; text-decoration:line-through; font-size:13px; margin-right:8px; font-weight:400; }
+    .price-strike { color:#9a9794; text-decoration:line-through; text-decoration-color:#d94a3a; text-decoration-thickness:2px; font-size:13px; margin-right:8px; font-weight:400; }
+    .price-now { font-weight:700; color:#1a1a18; letter-spacing:-.01em; }
     /* Quantum Shift banner */
     .quantum-inner { display:flex; align-items:center; justify-content:center; gap:18px; padding:14px 12px; flex-wrap:wrap; text-align:center; }
     .qb-dot { width:9px; height:9px; border-radius:50%; background:#1a1a18; box-shadow:0 0 10px rgba(0,0,0,.4); animation:qbPulse 2s ease-in-out infinite; flex-shrink:0; }
@@ -309,18 +310,46 @@
   </div>
 </section>
 
-<!-- ===================== AS FEATURED IN ===================== -->
-<section style="background:#f9f8f5; border-bottom:1px solid #d3cdb3; padding:36px 24px;">
-  <div class="max-w-6xl mx-auto">
-    <p style="text-align:center; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#c5c3c2; margin-bottom:26px;">Featured in</p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:24px 48px;">
-      <span class="featured-name">YOGA WORLD</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">mindvalley</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">Shift</span>
-      <span class="featured-name">The Healing Company</span>
-      <span class="featured-name">USA Today</span>
-      <span class="featured-name">NBC</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">yogabarn</span>
+<!-- ===================== AS FEATURED IN / LOGO MARQUEE ===================== -->
+<style>
+  @keyframes logoScroll { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+  .logo-marquee-section { position:relative; background:#1a1a18; padding:56px 0; overflow:hidden; }
+  .logo-marquee-section .eyebrow-mq { font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#cc9924; text-align:center; margin:0 0 32px; opacity:.8; }
+  .logo-marquee { position:relative; overflow:hidden; mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%); -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%); }
+  .logo-marquee-track { display:flex; align-items:center; gap:80px; width:max-content; animation:logoScroll 40s linear infinite; }
+  .logo-marquee:hover .logo-marquee-track { animation-play-state:paused; }
+  .logo-mark { flex-shrink:0; display:flex; align-items:center; line-height:1; }
+  .logo-mark img { height:34px; width:auto; opacity:.6; filter:brightness(0) invert(1); transition:opacity .35s, filter .35s; display:block; }
+  .logo-mark:hover img { opacity:.95; filter:brightness(0) saturate(100%) invert(70%) sepia(60%) saturate(420%) hue-rotate(2deg) brightness(95%) contrast(85%); }
+  @media (prefers-reduced-motion:reduce) { .logo-marquee-track { animation:none; } }
+  @media (max-width:768px) { .logo-marquee-track { gap:48px; } .logo-mark img { height:26px; } }
+</style>
+<section class="logo-marquee-section">
+  <p class="eyebrow-mq">As Featured In &nbsp;&middot;&nbsp; Trusted By</p>
+  <div class="logo-marquee">
+    <div class="logo-marquee-track">
+      <!-- Set 1 -->
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
+      <!-- Set 2: duplicated for seamless loop -->
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -1001,7 +1030,7 @@
       </div>
       <div style="text-align:right;">
         <p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Value</p>
-        <p style="font-family:'Marcellus',Georgia,serif; font-size:24px; color:#1a1a18; line-height:1;"><span class="price-strike" style="font-size:16px;">&euro;499</span>Free</p>
+        <p style="font-family:'Marcellus',Georgia,serif; font-size:24px; color:#1a1a18; line-height:1;"><span class="price-strike" style="font-size:16px;">&euro;499</span><span class="price-now" style="color:#cc9924;">Free</span></p>
       </div>
     </div>
 
@@ -1018,7 +1047,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Premium private accommodation</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
             <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,738</span>&euro;2,327</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,738</span><span class="price-now">&euro;2,327</span></p></div>
           </div>
         </div>
       </div>
@@ -1032,7 +1061,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Your own room and bathroom</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
             <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,416</span>&euro;2,054</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,416</span><span class="price-now">&euro;2,054</span></p></div>
           </div>
         </div>
       </div>
@@ -1051,7 +1080,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with one other</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
             <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,063</span>&euro;1,754</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,063</span><span class="price-now">&euro;1,754</span></p></div>
           </div>
         </div>
       </div>
@@ -1065,7 +1094,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared bathroom</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
             <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,003</span>&euro;1,703</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;2,003</span><span class="price-now">&euro;1,703</span></p></div>
           </div>
         </div>
       </div>
@@ -1079,7 +1108,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with two others</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
             <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;1,969</span>&euro;1,674</p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;1,969</span><span class="price-now">&euro;1,674</span></p></div>
           </div>
         </div>
       </div>
@@ -1098,7 +1127,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Solo tent</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
             <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;2,003</span>&euro;1,703</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;2,003</span><span class="price-now">&euro;1,703</span></p></div>
           </div>
         </div>
       </div>
@@ -1112,7 +1141,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Shared tent, per person</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
             <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,909</span>&euro;1,623</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,909</span><span class="price-now">&euro;1,623</span></p></div>
           </div>
         </div>
       </div>
@@ -1126,7 +1155,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Bring your own</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
             <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,763</span>&euro;1,499</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,763</span><span class="price-now">&euro;1,499</span></p></div>
           </div>
         </div>
       </div>
@@ -1140,7 +1169,7 @@
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Personal tent</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
             <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Pay Today</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#354d4c;">&euro;249</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,701</span>&euro;1,446</p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Total</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;1,701</span><span class="price-now">&euro;1,446</span></p></div>
           </div>
         </div>
       </div>
