@@ -6,276 +6,337 @@
 
   <!-- SEO -->
   <title>Quantum Shift &middot; Alchemy Regulation Method | Sunday 21 June 2026</title>
-  <meta name="description" content="One Sunday. Two free live breathwork sessions with Anthony Abbagnano and Amy Rachelle. The Alchemy Regulation Method: the next step." />
+  <meta name="description" content="One Sunday. Two free live breathwork sessions with Anthony Abbagnano and Amy Rachelle. The Alchemy Regulation Method, the next step." />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Quantum Shift &middot; Alchemy Regulation Method" />
   <meta property="og:description" content="One Sunday. Two sessions. A nervous system that finally works for you." />
-  <meta property="og:image" content="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" />
+  <meta property="og:image" content="https://alchemyofbreath.com/wp-content/uploads/AOB-Gold-Black-Transparant.png" />
 
-  <!-- Fonts + Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{teal:'#354d4c',gold:'#cc9924',beige:'#d3cdb3',offwhite:'#f9f8f5',green:'#52bb90',ink:'#1a1a18',inksoft:'#4a4a46',gray:'#c5c3c2'},fontFamily:{display:['Marcellus','Georgia','serif'],body:['Roboto','sans-serif']}}}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
 
   <style>
-    *{box-sizing:border-box}
-    body{font-family:'Roboto',sans-serif;font-weight:300;color:#1a1a18;background:#f9f8f5;-webkit-font-smoothing:antialiased}
-    h1,h2,h3,h4{font-family:'Marcellus',Georgia,serif;text-wrap:balance}
-    p{text-wrap:pretty}
+    :root{
+      --paper:#FFFFFF;--paper-2:#FBF7EF;--cream:#FDF6E9;
+      --gold:#E1B668;--gold-deep:#D6A652;--gold-soft:#EFDCB6;--gold-wash:#F7EBD2;
+      --teal:#00A5B2;--slate:#5B7889;
+      --ink:#221F20;--foot:#191617;
+      --grad-gold:linear-gradient(135deg,#E1B668 0%,#D6A652 100%);
+      --shadow-soft:0 1px 2px rgba(34,31,32,.04),0 8px 24px rgba(34,31,32,.06),0 24px 64px rgba(34,31,32,.07);
+      --shadow-lift:0 2px 4px rgba(34,31,32,.05),0 14px 34px rgba(34,31,32,.10),0 34px 80px rgba(34,31,32,.10);
+      --serif:'Marcellus',Georgia,serif;
+      --sans:'Roboto',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;overflow-x:clip}
+    body{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:400;color:var(--ink);line-height:1.18}
+    h1{font-size:clamp(2.5rem,5.4vw,4.1rem);letter-spacing:-.01em}
+    h2{font-size:clamp(1.9rem,3.6vw,2.7rem);letter-spacing:-.005em}
+    h3{font-size:1.32rem}
+    em{color:var(--gold-deep);font-style:italic}
+    a{color:var(--gold-deep);text-decoration:none}
 
-    .eyebrow{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#cc9924}
-    .eyebrow-lg{font-family:'Roboto',sans-serif;font-weight:500;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:#cc9924}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+    section{padding:96px 0;position:relative}
+    .alt{background:var(--paper-2)}
+    @media(max-width:760px){section{padding:64px 0}}
 
-    .gold-rule{width:48px;height:2px;background:#cc9924;margin:24px auto 32px}
-    .gold-rule.left{margin:20px 0 28px}
+    /* Paper grain (fixed brand element) */
+    body::after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    }
 
-    .section-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto;width:fit-content}
-    .section-divider::before,.section-divider::after{content:'';width:56px;height:1px;background:linear-gradient(to right,transparent,rgba(204,153,36,.5),transparent)}
-    .section-divider span{width:7px;height:7px;border-radius:50%;background:#cc9924;box-shadow:0 0 14px rgba(204,153,36,.5)}
+    /* Ambient orbs */
+    .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+    .orb.g{background:radial-gradient(circle,rgba(225,182,104,.22) 0%,rgba(225,182,104,0) 70%)}
+    .orb.t{background:radial-gradient(circle,rgba(0,165,178,.12) 0%,rgba(0,165,178,0) 70%)}
+    section>.wrap{position:relative;z-index:1}
 
-    /* Sectioned photo backgrounds (faded for life) */
-    .photo-bg{position:relative;overflow:hidden;}
-    .photo-bg::before{content:'';position:absolute;inset:0;background-image:var(--bg);background-size:cover;background-position:center;opacity:.10;filter:saturate(.85) contrast(1.05);z-index:0;pointer-events:none;}
-    .photo-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(249,248,245,.85) 0%,rgba(249,248,245,.4) 50%,rgba(249,248,245,.9) 100%);z-index:0;pointer-events:none;}
-    .photo-bg > *{position:relative;z-index:1;}
+    /* Eyebrow pattern (34px gold rule + uppercase slate) */
+    .eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:.72rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--slate);margin-bottom:18px}
+    .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+    .eyebrow.centered{justify-content:center}
+    .eyebrow.gold{color:var(--gold-deep)}
 
-    .photo-bg-cream::before{opacity:.08;}
-    .photo-bg-cream::after{background:linear-gradient(to bottom,rgba(249,248,245,.95) 0%,rgba(249,248,245,.7) 50%,rgba(249,248,245,.95) 100%);}
+    .lead{font-size:1.12rem;line-height:1.7;color:var(--ink);max-width:34em}
+    .muted{color:var(--slate)}
 
-    /* Hero specific */
-    .hero-bg::before{opacity:.16;}
-    .hero-bg::after{background:radial-gradient(ellipse at 50% 40%,rgba(204,153,36,.06) 0%,transparent 50%),linear-gradient(to bottom,rgba(249,248,245,.6) 0%,rgba(249,248,245,.4) 30%,rgba(249,248,245,.9) 100%);}
+    /* Cover */
+    .cover{padding:160px 0 96px;background:radial-gradient(120% 80% at 50% 0%,var(--cream) 0%,var(--paper) 60%);text-align:center;overflow:hidden}
+    .cover h1{max-width:18ch;margin:0 auto 22px}
+    .cover .lead{margin:0 auto 36px;font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2vw,1.4rem);color:var(--slate);max-width:30em}
+    .cover-meta{margin-top:48px;display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-size:.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--slate)}
+    .cover-meta span{display:flex;align-items:center;gap:10px}
+    .cover-meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
 
-    /* Pattern cards */
-    .pattern-card{background:#fff;border:1px solid #d3cdb3;padding:32px 28px;position:relative;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;height:100%;}
-    .pattern-card:hover{transform:translateY(-4px);border-color:rgba(204,153,36,.45);box-shadow:0 16px 40px rgba(53,77,76,.08),0 0 80px -24px rgba(204,153,36,.18);}
-    .pattern-label{font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.4vw,28px);color:#1a1a18;letter-spacing:-.01em;margin-bottom:6px;}
-    .pattern-sub{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#cc9924;margin-bottom:18px;}
+    .pill-arrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:.84rem;letter-spacing:.06em;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(34,31,32,.18);padding-bottom:5px;transition:color .25s,border-color .25s,gap .25s}
+    .pill-arrow:hover{color:var(--gold-deep);border-color:var(--gold);gap:14px}
 
-    /* Session card */
-    .session-card{background:#fff;border:1px solid #d3cdb3;padding:32px 30px;box-shadow:0 4px 24px rgba(53,77,76,.05);}
-    .session-time{font-family:'Marcellus',Georgia,serif;font-size:clamp(24px,2.8vw,30px);color:#cc9924;line-height:1.1;letter-spacing:-.01em;}
-    .session-label{font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#4a4a46;margin-bottom:8px;}
+    /* Sample tile */
+    .sample-tile{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:18px;box-shadow:var(--shadow-soft);padding:38px 40px;text-align:left;max-width:720px;margin:0 auto}
+    .sample-tile h3{margin-bottom:12px}
 
-    /* Stat */
-    .imagine-line{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(211,205,179,.6);font-family:'Marcellus',Georgia,serif;font-size:clamp(18px,2.2vw,22px);color:#1a1a18;font-style:italic;line-height:1.5;letter-spacing:-.005em;}
-    .imagine-line:last-child{border-bottom:none;}
-    .imagine-line::before{content:'';width:7px;height:7px;border-radius:50%;background:#cc9924;flex-shrink:0;margin-top:14px;box-shadow:0 0 10px rgba(204,153,36,.4);}
+    /* Mini tiles (used for 3 patterns) */
+    .mini-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+    @media(max-width:880px){.mini-gal{grid-template-columns:1fr}}
+    .mini-tile{border-radius:18px;padding:34px 30px;border:1px solid rgba(225,182,104,.3);background:var(--paper);box-shadow:var(--shadow-soft);min-height:200px;display:flex;flex-direction:column;justify-content:flex-start;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+    .mini-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:rgba(214,166,82,.55)}
+    .mini-tile .num{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gold-deep);letter-spacing:.06em;margin-bottom:10px}
+    .mini-tile h4{font-size:1.18rem;margin-bottom:10px}
+    .mini-tile p{font-size:.94rem;color:var(--slate);line-height:1.7}
 
-    /* Form container */
-    .form-frame{background:#fff;border:1px solid rgba(204,153,36,.4);padding:14px;box-shadow:0 24px 64px rgba(53,77,76,.08),0 0 100px -30px rgba(204,153,36,.22);position:relative;}
-    .form-frame::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,transparent,#cc9924,transparent);}
+    /* Imagine list */
+    .imagine{max-width:540px;margin:32px auto 0;text-align:left}
+    .imagine li{list-style:none;display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(225,182,104,.25);font-family:var(--serif);font-style:italic;font-size:clamp(1.08rem,1.8vw,1.28rem);color:var(--ink);line-height:1.5;align-items:flex-start}
+    .imagine li:last-child{border-bottom:none}
+    .imagine li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-deep);flex-shrink:0;margin-top:14px;box-shadow:0 0 10px rgba(214,166,82,.4)}
 
-    /* Date badge */
-    .date-badge{display:inline-flex;align-items:center;gap:14px;padding:10px 22px;background:#fff;border:1px solid rgba(204,153,36,.45);box-shadow:0 4px 24px rgba(204,153,36,.1);}
-    .date-badge .pulse{width:7px;height:7px;border-radius:50%;background:#cc9924;box-shadow:0 0 10px rgba(204,153,36,.7);animation:pulseDot 2s ease-in-out infinite;}
-    @keyframes pulseDot{0%,100%{opacity:.7;transform:scale(1);}50%{opacity:1;transform:scale(1.15);}}
-    @media(prefers-reduced-motion:reduce){.pulse{animation:none;}}
+    /* Event card with arch-framed image */
+    .event-card{background:var(--paper);border:1px solid rgba(225,182,104,.3);border-radius:22px;box-shadow:var(--shadow-soft);padding:48px 44px;max-width:920px;margin:0 auto;display:grid;grid-template-columns:.35fr .65fr;gap:48px;align-items:center}
+    @media(max-width:760px){.event-card{grid-template-columns:1fr;padding:36px 28px;gap:32px}}
+    .arch-photo{width:170px;aspect-ratio:4/5.2;border-radius:170px 170px 14px 14px;overflow:hidden;outline:1px solid rgba(225,182,104,.5);outline-offset:8px;transform:rotate(-.6deg);margin:0 auto;background:linear-gradient(160deg,var(--gold-soft),var(--gold) 50%,var(--gold-deep));box-shadow:var(--shadow-soft)}
+    .arch-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.95)}
+    .event-card .date{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.2rem);color:var(--ink);line-height:1.15;letter-spacing:-.01em;margin-bottom:12px}
+    .event-card .date em{font-style:italic;color:var(--gold-deep)}
+    .sessions{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+    @media(max-width:500px){.sessions{grid-template-columns:1fr}}
+    .session{background:var(--paper-2);border:1px solid rgba(225,182,104,.3);border-radius:14px;padding:20px 22px}
+    .session .label{font-family:var(--sans);font-weight:500;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+    .session .time{font-family:var(--serif);font-size:1.32rem;color:var(--ink);line-height:1.15;margin-bottom:10px}
+    .session p{font-size:.88rem;color:var(--slate);line-height:1.6}
 
-    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);}
-    .fade-up.visible{opacity:1;transform:translateY(0);}
+    /* Bonus tile (highlight) */
+    .bonus-tile{background:linear-gradient(180deg,var(--paper),var(--gold-wash));border:1px solid rgba(225,182,104,.5);border-radius:22px;box-shadow:var(--shadow-soft);padding:48px 44px;max-width:880px;margin:0 auto;position:relative;overflow:hidden}
+    .bonus-tile::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:4px;background:var(--grad-gold);border-radius:0 0 14px 14px}
+    .bonus-ribbon{display:inline-flex;align-items:center;gap:10px;background:var(--grad-gold);color:var(--ink);font-family:var(--sans);font-weight:600;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:22px;box-shadow:0 6px 18px rgba(214,166,82,.32)}
+    .bonus-tile h2{margin-bottom:18px}
+    .bonus-tile .meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px;padding-top:24px;border-top:1px solid rgba(225,182,104,.4)}
+    .bonus-tile .meta div{flex:1;min-width:160px}
+    .bonus-tile .meta strong{display:block;font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:4px}
+    .bonus-tile .meta p{font-size:.86rem;color:var(--slate);line-height:1.55}
 
-    .heading-script{font-family:'Marcellus',Georgia,serif;font-style:italic;color:#cc9924;font-weight:normal;}
+    /* Form frame */
+    .form-frame{background:var(--paper);border:1px solid rgba(225,182,104,.5);border-radius:20px;padding:16px;box-shadow:var(--shadow-soft);position:relative;max-width:680px;margin:0 auto}
+    .form-frame::before{content:"";position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:160px;height:3px;background:var(--grad-gold);border-radius:0 0 6px 6px}
+
+    /* Testimonial quote */
+    .quote{max-width:640px;margin:0 auto;text-align:center}
+    .quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.55;color:var(--ink);letter-spacing:-.005em;margin-bottom:22px}
+    .quote .who{display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-size:.78rem;letter-spacing:.08em;color:var(--slate)}
+    .quote .who::before{content:"";width:34px;height:1px;background:var(--gold)}
+
+    .send-off{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.4;color:var(--gold-deep);text-align:center;margin-top:48px}
+
+    /* Footer */
+    footer{background:var(--foot);padding:48px 0 36px;color:#C9BFA9;position:relative;z-index:1}
+    footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    footer img{height:32px;width:auto;opacity:.85}
+    footer p{font-size:.78rem}
+    footer a{color:#C9BFA9}
+    footer a:hover{color:var(--gold)}
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav style="background:#354d4c;">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-center">
-    <a href="https://alchemyofbreath.com" aria-label="Alchemy of Breath home">
-      <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto" />
-    </a>
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="orb g" style="width:560px;height:560px;top:-220px;left:-160px"></div>
+  <div class="orb t" style="width:620px;height:620px;bottom:-260px;right:-180px"></div>
+  <div class="wrap">
+    <span class="eyebrow centered">Free live event &middot; Sunday 21 June 2026</span>
+    <h1>Alchemy Regulation Method: <em>the next step.</em></h1>
+    <p class="lead">One Sunday. Two sessions. A nervous system that finally works for you.</p>
+
+    <a href="#register" class="pill-arrow">Reserve your free spot <span aria-hidden="true">&darr;</span></a>
+
+    <div class="cover-meta">
+      <span>Free to join</span>
+      <span>With Anthony &amp; Amy</span>
+      <span>Bonus included</span>
+    </div>
   </div>
-</nav>
+</section>
 
-<!-- HERO -->
-<section class="photo-bg hero-bg py-24 md:py-32" style="--bg:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/cbdad6b6-5b41-40ab-986a-e91948becd22.jpeg');">
-  <div class="max-w-4xl mx-auto px-6 text-center">
+<!-- ============ THE MOMENT ============ -->
+<section class="alt">
+  <div class="orb g" style="width:420px;height:420px;top:-140px;right:-160px"></div>
+  <div class="wrap" style="text-align:center;max-width:760px;margin:0 auto;padding:0 32px">
+    <span class="eyebrow centered">The moment</span>
+    <h2>The moment you stop blaming yourself is the moment <em>everything changes.</em></h2>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:22px">You&rsquo;re not lazy. You&rsquo;re not weak. You&rsquo;re not &ldquo;too sensitive&rdquo; or &ldquo;too much.&rdquo;</p>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:18px">Your nervous system is running a program it learned years ago, long before you had any say in it. Nobody ever showed you that it can be changed.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.2vw,1.6rem);color:var(--gold-deep);margin-top:34px">That&rsquo;s what June 21st is for.</p>
+  </div>
+</section>
 
-    <div class="date-badge mb-8">
-      <span class="pulse"></span>
-      <span style="font-family:'Roboto',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#1a1a18;">Sunday 21 June 2026 &middot; Free</span>
+<!-- ============ LET ME ASK ============ -->
+<section>
+  <div class="orb t" style="width:480px;height:480px;top:-180px;left:-180px"></div>
+  <div class="wrap" style="text-align:center;max-width:760px;margin:0 auto;padding:0 32px">
+    <span class="eyebrow centered">Let me ask you something real</span>
+    <h2>Are you functioning, but <em>not truly living?</em></h2>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:22px">That fog between you and a clear thought. That tightness in your chest you&rsquo;ve learned to ignore. That version of yourself that snaps at the wrong moment, with the wrong people, for the tenth time.</p>
+    <p style="font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.5;color:var(--ink);margin-top:32px;letter-spacing:-.005em">That isn&rsquo;t who you are. It&rsquo;s a pattern. <em style="display:inline-block;margin-top:6px">And patterns can change.</em></p>
+  </div>
+</section>
+
+<!-- ============ NOBODY TOLD YOU ============ -->
+<section class="alt">
+  <div class="orb g" style="width:520px;height:520px;bottom:-220px;left:-200px"></div>
+  <div class="wrap" style="text-align:center;max-width:760px;margin:0 auto;padding:0 32px">
+    <span class="eyebrow centered">Here&rsquo;s what nobody told you</span>
+    <h2>Your nervous system is the <em>master operating system.</em></h2>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:22px">It runs your thoughts, your emotions, your relationships, your sleep, your health. All of it.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--gold-deep);margin:32px 0">And your breath is the direct line into it.</p>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:18px">The body can move out of a stuck state faster than the mind believes it can. Sometimes the shift begins in a single breath.</p>
+    <p style="font-size:1.12rem;line-height:1.75;color:var(--ink);margin-top:18px;font-weight:400">This isn&rsquo;t theory. It&rsquo;s biology. And on June 21st, you&rsquo;re going to feel it in your own body.</p>
+  </div>
+</section>
+
+<!-- ============ WHICH PATTERN ============ -->
+<section>
+  <div class="orb t" style="width:460px;height:460px;top:-140px;right:-160px"></div>
+  <div class="wrap">
+    <div style="text-align:center;max-width:680px;margin:0 auto">
+      <span class="eyebrow centered">Which pattern has you stuck?</span>
+      <h2>Three shapes. One root. <em>All can change.</em></h2>
     </div>
 
-    <p class="eyebrow-lg mb-5">Quantum Shift</p>
-    <h1 style="font-size:clamp(36px,5.5vw,68px);line-height:1.05;letter-spacing:-.02em;color:#1a1a18;margin-bottom:24px;">
-      Alchemy Regulation Method:<br/><span class="heading-script">The Next Step</span>
-    </h1>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.6vw,28px);color:#4a4a46;line-height:1.45;letter-spacing:-.01em;max-width:680px;margin:0 auto 40px;font-style:italic;">
-      One Sunday. Two sessions.<br/>A nervous system that finally works for you.
-    </p>
-
-    <a href="#register" style="display:inline-flex;align-items:center;gap:10px;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#1a1a18;text-decoration:none;border-bottom:1px solid rgba(26,26,24,.25);padding-bottom:6px;transition:color .25s,border-color .25s;">
-      Reserve your free spot
-      <span aria-hidden="true">&darr;</span>
-    </a>
-  </div>
-</section>
-
-<!-- SECTION: THE MOMENT -->
-<section class="photo-bg photo-bg-cream py-24" style="--bg:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0277ba0a4ab9c57e1.jpg');">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">The Moment</p>
-    <div class="gold-rule"></div>
-    <h2 style="font-size:clamp(28px,3.8vw,44px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:28px;">
-      The moment you stop blaming yourself<br/>is the moment everything changes.
-    </h2>
-    <p style="font-size:17px;line-height:1.75;color:#4a4a46;margin-bottom:18px;">You&rsquo;re not lazy. You&rsquo;re not weak. You&rsquo;re not &ldquo;too sensitive&rdquo; or &ldquo;too much.&rdquo;</p>
-    <p style="font-size:17px;line-height:1.75;color:#4a4a46;margin-bottom:18px;">Your nervous system is running a program it learned years ago, long before you had any say in it. Nobody ever showed you that it can be changed.</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.4;color:#cc9924;font-style:italic;margin-top:28px;">
-      That&rsquo;s what June 21st is for.
-    </p>
-  </div>
-</section>
-
-<!-- SECTION: LET ME ASK -->
-<section class="py-24" style="background:#fff;border-top:1px solid #d3cdb3;border-bottom:1px solid #d3cdb3;">
-  <div class="max-w-3xl mx-auto px-6">
-    <p class="eyebrow mb-4 text-center">Let Me Ask You Something Real</p>
-    <div class="gold-rule"></div>
-    <h2 style="font-size:clamp(28px,3.6vw,40px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;text-align:center;margin-bottom:32px;">
-      Are you functioning,<br/>but not truly living?
-    </h2>
-    <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">That fog between you and a clear thought. That tightness in your chest you&rsquo;ve learned to ignore. That version of yourself that snaps at the wrong moment, with the wrong people, for the tenth time.</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.45;color:#1a1a18;text-align:center;margin-top:32px;letter-spacing:-.01em;">
-      That isn&rsquo;t who you are. It&rsquo;s a pattern.<br/><span class="heading-script">And patterns can change.</span>
-    </p>
-  </div>
-</section>
-
-<!-- SECTION: NOBODY TOLD YOU -->
-<section class="photo-bg photo-bg-cream py-24" style="--bg:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/9ce6385b-d555-4251-ab17-eb3f9aa0fb95.jpeg');">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">Here&rsquo;s What Nobody Told You</p>
-    <div class="gold-rule"></div>
-    <h2 style="font-size:clamp(28px,3.6vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:28px;">
-      Your nervous system is<br/>the master operating system.
-    </h2>
-    <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">It runs your thoughts, your emotions, your relationships, your sleep, your health. All of it.</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.8vw,30px);line-height:1.4;color:#cc9924;font-style:italic;margin:32px 0;">
-      And your breath is the direct line into it.
-    </p>
-    <p style="font-size:17px;line-height:1.8;color:#4a4a46;margin-bottom:20px;">The body can move out of a stuck state faster than the mind believes it can. Sometimes the shift begins in a single breath.</p>
-    <p style="font-size:17px;line-height:1.8;color:#1a1a18;font-weight:400;">This isn&rsquo;t theory. It&rsquo;s biology. And on June 21st, you&rsquo;re going to feel it in your own body.</p>
-  </div>
-</section>
-
-<!-- SECTION: WHICH PATTERN -->
-<section class="py-24" style="background:#f9f8f5;">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-14">
-      <p class="eyebrow mb-4">Which Pattern Has You Stuck?</p>
-      <div class="section-divider mb-8"><span></span></div>
-      <h2 style="font-size:clamp(28px,3.5vw,40px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;max-width:640px;margin:0 auto;">
-        Three shapes. One root. All can change.
-      </h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-      <div class="pattern-card fade-up">
-        <p class="pattern-sub">Pattern 01</p>
-        <h3 class="pattern-label">The Pusher</h3>
-        <p style="font-size:15px;line-height:1.75;color:#4a4a46;">You call it drive. Your body calls it survival mode. You can&rsquo;t quite stop. The silence feels dangerous. That isn&rsquo;t ambition. It&rsquo;s your nervous system holding the throttle down.</p>
+    <div class="mini-gal">
+      <div class="mini-tile">
+        <span class="num">i</span>
+        <h4>The Pusher</h4>
+        <p>You call it drive. Your body calls it survival mode. You can&rsquo;t quite stop. The silence feels dangerous. That isn&rsquo;t ambition. It&rsquo;s your nervous system holding the throttle down.</p>
       </div>
-      <div class="pattern-card fade-up">
-        <p class="pattern-sub">Pattern 02</p>
-        <h3 class="pattern-label">The Thinker</h3>
-        <p style="font-size:15px;line-height:1.75;color:#4a4a46;">The mental loop never stops. Analysis. Planning. Worry. You&rsquo;ve built a fortress in your head because part of you doesn&rsquo;t trust what&rsquo;s underneath. And you&rsquo;re tired from the noise.</p>
+      <div class="mini-tile">
+        <span class="num">ii</span>
+        <h4>The Thinker</h4>
+        <p>The mental loop never stops. Analysis. Planning. Worry. You&rsquo;ve built a fortress in your head because part of you doesn&rsquo;t trust what&rsquo;s underneath. And you&rsquo;re tired from the noise.</p>
       </div>
-      <div class="pattern-card fade-up">
-        <p class="pattern-sub">Pattern 03</p>
-        <h3 class="pattern-label">The Withdrawer</h3>
-        <p style="font-size:15px;line-height:1.75;color:#4a4a46;">You&rsquo;ve gone quiet. Not dramatically, just slowly. The flatness. The &ldquo;no.&rdquo; The handbrake pulled on your own life. Your nervous system isn&rsquo;t broken. It&rsquo;s protecting you from something it thinks is still there.</p>
+      <div class="mini-tile">
+        <span class="num">iii</span>
+        <h4>The Withdrawer</h4>
+        <p>You&rsquo;ve gone quiet. Not dramatically, just slowly. The flatness. The &ldquo;no.&rdquo; The handbrake pulled on your own life. Your nervous system isn&rsquo;t broken. It&rsquo;s protecting you from something it thinks is still there.</p>
       </div>
     </div>
 
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:#1a1a18;text-align:center;font-style:italic;letter-spacing:-.005em;max-width:720px;margin:0 auto;">
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.18rem,2.2vw,1.5rem);line-height:1.55;color:var(--ink);text-align:center;max-width:720px;margin:48px auto 0;letter-spacing:-.005em">
       All three share one root. And all three can change the moment you give the body what it&rsquo;s actually been asking for.
     </p>
   </div>
 </section>
 
-<!-- SECTION: IMAGINE MONDAY -->
-<section class="photo-bg py-24" style="--bg:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0eba487150def7c1e.jpg');">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <p class="eyebrow mb-4">Imagine Waking Up Monday Morning</p>
-    <div class="gold-rule"></div>
-    <h2 style="font-size:clamp(28px,3.6vw,42px);line-height:1.2;letter-spacing:-.02em;color:#1a1a18;margin-bottom:36px;">
-      The fog has lifted.
-    </h2>
+<!-- ============ IMAGINE MONDAY ============ -->
+<section class="alt">
+  <div class="orb g" style="width:520px;height:520px;top:-180px;left:-200px"></div>
+  <div class="wrap" style="text-align:center;max-width:720px;margin:0 auto;padding:0 32px">
+    <span class="eyebrow centered">Imagine waking up Monday morning</span>
+    <h2><em>The fog has lifted.</em></h2>
 
-    <div style="max-width:560px;margin:0 auto;text-align:left;">
-      <div class="imagine-line">That background hum of anxiety, quieter.</div>
-      <div class="imagine-line">Your kids, your partner, the room, feeling you differently.</div>
-      <div class="imagine-line">Not performing calm. Being it.</div>
-    </div>
+    <ul class="imagine">
+      <li>That background hum of anxiety, quieter.</li>
+      <li>Your kids, your partner, the room, feeling you differently.</li>
+      <li>Not performing calm. Being it.</li>
+    </ul>
 
-    <p style="font-size:16px;line-height:1.75;color:#4a4a46;margin-top:36px;">This is what people describe after a single day of breathing together.</p>
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(22px,2.8vw,30px);line-height:1.4;color:#cc9924;font-style:italic;margin-top:14px;">
-      Not someday. Sunday.
-    </p>
+    <p style="font-size:1rem;color:var(--slate);margin-top:40px;line-height:1.7">This is what people describe after a single day of breathing together.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--gold-deep);margin-top:14px">Not someday. Sunday.</p>
   </div>
 </section>
 
-<!-- SECTION: THIS IS YOUR EVENT -->
-<section class="py-24" style="background:#1a1a18;color:#fff;">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.10) 0%,transparent 55%);"></div>
-  <div class="max-w-4xl mx-auto px-6 text-center relative">
-    <p class="eyebrow mb-4" style="color:rgba(204,153,36,.95);">This Is Your Event</p>
-    <div class="section-divider mb-8"><span></span></div>
-    <h2 style="font-family:'Marcellus',Georgia,serif;font-size:clamp(32px,4.4vw,52px);line-height:1.1;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">
-      Sunday 21 June 2026
-    </h2>
-    <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.78);max-width:620px;margin:0 auto 48px;">
-      Two live breathwork sessions with <b style="color:#cc9924;">Anthony Abbagnano</b> and <b style="color:#cc9924;">Amy Rachelle</b>, two of the world&rsquo;s most experienced facilitators.
-    </p>
-
-    <div class="grid md:grid-cols-2 gap-6 mb-12 text-left">
-      <div class="session-card" style="background:rgba(255,255,255,.04);border:1px solid rgba(204,153,36,.35);color:#fff;">
-        <p class="session-label" style="color:rgba(204,153,36,.95);">Morning Session</p>
-        <p class="session-time">9:30 &ndash; 11:30am UK</p>
-        <div style="width:32px;height:1px;background:rgba(204,153,36,.5);margin:16px 0;"></div>
-        <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.78);">The science, the context, and your first full breathwork journey.</p>
-      </div>
-      <div class="session-card" style="background:rgba(255,255,255,.04);border:1px solid rgba(204,153,36,.35);color:#fff;">
-        <p class="session-label" style="color:rgba(204,153,36,.95);">Evening Session</p>
-        <p class="session-time">5 &ndash; 7pm UK</p>
-        <div style="width:32px;height:1px;background:rgba(204,153,36,.5);margin:16px 0;"></div>
-        <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.78);">Go deeper. Help your body hold the shift.</p>
-      </div>
+<!-- ============ THIS IS YOUR EVENT ============ -->
+<section>
+  <div class="orb g" style="width:520px;height:520px;top:-200px;right:-180px"></div>
+  <div class="orb t" style="width:420px;height:420px;bottom:-140px;left:-140px"></div>
+  <div class="wrap">
+    <div style="text-align:center;max-width:680px;margin:0 auto 56px">
+      <span class="eyebrow centered">This is your event</span>
+      <h2>Two live sessions with <em>Anthony &amp; Amy.</em></h2>
     </div>
 
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:rgba(255,255,255,.9);font-style:italic;max-width:580px;margin:0 auto;">
-      Free to join. And the kind of experience you feel for a long time after.
-    </p>
+    <div class="event-card">
+      <div class="arch-photo">
+        <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/cbdad6b6-5b41-40ab-986a-e91948becd22.jpeg" alt="Breathwork session at ASHA" />
+      </div>
+      <div>
+        <span class="eyebrow">Sunday 21 June 2026</span>
+        <h3 class="date">Two live breathwork sessions with <em>Anthony Abbagnano</em> and <em>Amy Rachelle</em>, two of the world&rsquo;s most experienced facilitators.</h3>
+
+        <div class="sessions">
+          <div class="session">
+            <p class="label">Morning</p>
+            <p class="time">9:30 to 11:30am UK</p>
+            <p>The science, the context, and your first full breathwork journey.</p>
+          </div>
+          <div class="session">
+            <p class="label">Evening</p>
+            <p class="time">5 to 7pm UK</p>
+            <p>Go deeper. Help your body hold the shift.</p>
+          </div>
+        </div>
+
+        <p style="font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold-deep);margin-top:28px;line-height:1.5">
+          Free to join. And the kind of experience you feel for a long time after.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SECTION: REGISTER -->
-<section id="register" class="photo-bg py-24" style="--bg:url('https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0cab7f7d4b0790ab1.jpg');">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="text-center mb-14">
-      <p class="eyebrow mb-4">Register Now</p>
-      <div class="gold-rule"></div>
-      <h2 style="font-size:clamp(30px,4.2vw,48px);line-height:1.15;letter-spacing:-.02em;color:#1a1a18;margin-bottom:18px;">
-        Your nervous system<br/>has been waiting.
-      </h2>
-      <p style="font-size:17px;line-height:1.7;color:#4a4a46;max-width:520px;margin:0 auto;">
-        Free to register. If you feel the calling, come and breathe with us. Just show up as you are.
+<!-- ============ BONUS ============ -->
+<section class="alt">
+  <div class="orb g" style="width:580px;height:580px;top:-220px;right:-200px"></div>
+  <div class="wrap">
+    <div class="bonus-tile">
+      <span class="bonus-ribbon">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        A bonus, included
+      </span>
+      <h2>Everyone who registers receives <em>The Inner Journey,</em> self-paced.</h2>
+      <p style="font-size:1.1rem;line-height:1.75;color:var(--ink);margin-top:14px;max-width:620px">
+        Our self-paced course on the patterns that run your life, and how to begin working with them. Yours to keep, whether or not you make it to the live sessions on Sunday.
       </p>
+
+      <div class="meta">
+        <div>
+          <strong>Self-paced</strong>
+          <p>Move through it in your own time, in your own body.</p>
+        </div>
+        <div>
+          <strong>Yours to keep</strong>
+          <p>Lifetime access from the moment you register.</p>
+        </div>
+        <div>
+          <strong>A natural companion</strong>
+          <p>Designed to deepen what you&rsquo;ll feel on Sunday.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTER ============ -->
+<section id="register">
+  <div class="orb g" style="width:520px;height:520px;top:-160px;left:-180px"></div>
+  <div class="orb t" style="width:460px;height:460px;bottom:-160px;right:-180px"></div>
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <span class="eyebrow centered">Register now</span>
+      <h2>Your nervous system <em>has been waiting.</em></h2>
+      <p style="font-size:1.1rem;line-height:1.75;color:var(--ink);margin-top:18px">Free to register. If you feel the calling, come and breathe with us. Just show up as you are.</p>
     </div>
 
-    <!-- FORM -->
     <div class="form-frame">
       <iframe
         src="https://link.alchemyofbreath.com/widget/form/JXFlOEgAhMoElAqLBG1L"
-        style="width:100%;height:597px;border:none;border-radius:6px;display:block;background:#fff;"
+        style="width:100%;height:597px;border:none;border-radius:10px;display:block;background:#fff;"
         id="inline-JXFlOEgAhMoElAqLBG1L"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
@@ -291,56 +352,41 @@
         title="AOB | Event: QS Optin | ARM"
       ></iframe>
     </div>
-
   </div>
 </section>
 
-<!-- SECTION: TESTIMONIAL + CLOSE -->
-<section class="py-20" style="background:#f9f8f5;">
-  <div class="max-w-2xl mx-auto px-6 text-center">
+<!-- ============ TESTIMONIAL + SEND-OFF ============ -->
+<section class="alt">
+  <div class="orb g" style="width:380px;height:380px;top:-100px;right:-100px"></div>
+  <div class="wrap">
+    <div class="quote">
+      <p>&ldquo;I felt so amazing this morning. Like waking up after a great night&rsquo;s sleep. Fully rested and comfortable in my skin and my life.&rdquo;</p>
+      <span class="who">Nadja H.</span>
+    </div>
 
-    <figure style="margin:0 0 40px 0;">
-      <p style="font-family:'Marcellus',Georgia,serif;font-style:italic;font-size:clamp(20px,2.4vw,26px);line-height:1.55;color:#1a1a18;letter-spacing:-.005em;margin-bottom:18px;">
-        &ldquo;I felt so amazing this morning. Like waking up after a great night&rsquo;s sleep. Fully rested and comfortable in my skin and my life.&rdquo;
-      </p>
-      <figcaption style="display:inline-flex;align-items:center;gap:14px;">
-        <span style="width:32px;height:1px;background:#cc9924;"></span>
-        <span style="font-family:'Roboto',sans-serif;font-size:13px;letter-spacing:.06em;color:#4a4a46;">Nadja H.</span>
-      </figcaption>
-    </figure>
-
-    <p style="font-family:'Marcellus',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:#cc9924;font-style:italic;letter-spacing:-.005em;">
+    <p class="send-off">
       Take a breath; it will help.<br/>We&rsquo;ll see you Sunday.
     </p>
-
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background:#141412;padding:36px 24px 28px;">
-  <div class="max-w-6xl mx-auto text-center">
-    <img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" style="height:24px;margin:0 auto 16px;opacity:.7;" />
-    <p style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:6px;">
-      <a href="mailto:info@alchemyofbreath.com" style="color:rgba(255,255,255,.55);text-decoration:none;">info@alchemyofbreath.com</a>
-    </p>
-    <p style="font-size:11px;color:rgba(255,255,255,.22);">&copy; 2026 Alchemy of Breath</p>
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <img src="https://alchemyofbreath.com/wp-content/uploads/AoB-emblem-web-white.png" alt="Alchemy of Breath" />
+    <p style="text-align:center"><a href="mailto:info@alchemyofbreath.com">info@alchemyofbreath.com</a></p>
+    <p>&copy; 2026 Alchemy of Breath</p>
   </div>
 </footer>
 
 <script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 <script>
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
       const t=document.querySelector(a.getAttribute('href'));
       if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
     });
   });
-  // Fade-up on scroll
-  const obs=new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-  },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
 
 </body>
