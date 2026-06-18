@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Alchemy Regulation Method &middot; Founding Cohort 15% Off | Alchemy of Breath</title>
-  <meta name="description" content="Become a certified Alchemy Regulation Method Coach. A seven-day residential at ASHA in Tuscany, 19 to 25 July 2026. Founding cohort: 15% off through 10 June." />
+  <title>The Alchemy Regulation Method &middot; Founding Cohort 10% Off | Alchemy of Breath</title>
+  <meta name="description" content="Become a certified Alchemy Regulation Method Coach. A seven-day residential at ASHA in Tuscany, 19 to 25 July 2026. Founding cohort: 10% off through 17 July." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -102,7 +102,8 @@
     .accom-card { background:#fff; border:1px solid #d3cdb3; overflow:hidden; transition:transform .25s cubic-bezier(.4,0,.2,1), box-shadow .25s, border-color .25s; }
     .accom-card:hover { transform:translateY(-3px); border-color:rgba(204,153,36,.45); box-shadow:0 12px 32px rgba(53,77,76,.08), 0 0 60px -20px rgba(204,153,36,.22); }
     .eb-badge { background:#cc9924; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; box-shadow:0 2px 8px rgba(0,0,0,.15); }
-    .price-strike { color:#c5c3c2; text-decoration:line-through; font-size:13px; margin-right:8px; font-weight:400; }
+    .price-strike { color:#9a9794; text-decoration:line-through; text-decoration-color:#d94a3a; text-decoration-thickness:2px; font-size:13px; margin-right:8px; font-weight:400; }
+    .price-now { font-weight:700; color:#1a1a18; letter-spacing:-.01em; }
     /* Quantum Shift banner */
     .quantum-inner { display:flex; align-items:center; justify-content:center; gap:18px; padding:14px 12px; flex-wrap:wrap; text-align:center; }
     .qb-dot { width:9px; height:9px; border-radius:50%; background:#1a1a18; box-shadow:0 0 10px rgba(0,0,0,.4); animation:qbPulse 2s ease-in-out infinite; flex-shrink:0; }
@@ -200,9 +201,9 @@
     <span class="qb-copy">
       <strong class="qb-eyebrow">Founding Cohort</strong>
       <span class="qb-sep">|</span>
-      <strong class="qb-discount">15% off</strong>
+      <strong class="qb-discount">10% off</strong>
       <span class="qb-sep">|</span>
-      <span class="qb-meta">Expires Wednesday 10 June &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
+      <span class="qb-meta">Expires Friday 17 July &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
     </span>
     <a href="{{custom_values.arm__checkout_page__rg__20_off}}" target="_blank" rel="noopener" class="qb-cta">Reserve your place &rarr;</a>
   </div>
@@ -211,7 +212,7 @@
   (function(){
     var el = document.getElementById('qb-countdown');
     if (!el) return;
-    var deadline = new Date('2026-06-10T23:59:59').getTime();
+    var deadline = new Date('2026-07-17T23:59:59').getTime();
     function pad(n){ return n < 10 ? '0' + n : '' + n; }
     function tick(){
       var diff = deadline - Date.now();
@@ -309,18 +310,46 @@
   </div>
 </section>
 
-<!-- ===================== AS FEATURED IN ===================== -->
-<section style="background:#f9f8f5; border-bottom:1px solid #d3cdb3; padding:36px 24px;">
-  <div class="max-w-6xl mx-auto">
-    <p style="text-align:center; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#c5c3c2; margin-bottom:26px;">Featured in</p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:24px 48px;">
-      <span class="featured-name">YOGA WORLD</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">mindvalley</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">Shift</span>
-      <span class="featured-name">The Healing Company</span>
-      <span class="featured-name">USA Today</span>
-      <span class="featured-name">NBC</span>
-      <span class="featured-name" style="font-family:'Marcellus',Georgia,serif; text-transform:none;">yogabarn</span>
+<!-- ===================== AS FEATURED IN / LOGO MARQUEE ===================== -->
+<style>
+  @keyframes logoScroll { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+  .logo-marquee-section { position:relative; background:#f9f8f5; padding:56px 0; overflow:hidden; border-top:1px solid #ece8db; border-bottom:1px solid #ece8db; }
+  .logo-marquee-section .eyebrow-mq { font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#cc9924; text-align:center; margin:0 0 32px; opacity:.9; }
+  .logo-marquee { position:relative; overflow:hidden; mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%); -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%); }
+  .logo-marquee-track { display:flex; align-items:center; gap:80px; width:max-content; animation:logoScroll 40s linear infinite; }
+  .logo-marquee:hover .logo-marquee-track { animation-play-state:paused; }
+  .logo-mark { flex-shrink:0; display:flex; align-items:center; line-height:1; }
+  .logo-mark img { height:38px; width:auto; opacity:.7; transition:opacity .35s; display:block; }
+  .logo-mark:hover img { opacity:1; }
+  @media (prefers-reduced-motion:reduce) { .logo-marquee-track { animation:none; } }
+  @media (max-width:768px) { .logo-marquee-track { gap:48px; } .logo-mark img { height:28px; } }
+</style>
+<section class="logo-marquee-section">
+  <p class="eyebrow-mq">As Featured In &nbsp;&middot;&nbsp; Trusted By</p>
+  <div class="logo-marquee">
+    <div class="logo-marquee-track">
+      <!-- Set 1 -->
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="Trusted partner" loading="lazy" /></div>
+      <div class="logo-mark"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="Trusted partner" loading="lazy" /></div>
+      <!-- Set 2: duplicated for seamless loop -->
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165fa33d272edaba08d0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905e2.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e3c3aed7c637d90e2.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d66.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165e6cc0eead5c9905d0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ee05851175c3c8d64.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165c6cc0eead5c9905b0.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0878.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165ca33d272edaba0879.png" alt="" loading="lazy" /></div>
+      <div class="logo-mark" aria-hidden="true"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a10165cfe2210f89e39095b.png" alt="" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -1005,14 +1034,27 @@
     <div class="text-center mb-8">
       <div style="display:inline-flex; align-items:center; gap:14px; padding:10px 20px; background:rgba(204,153,36,.12); border:1px solid rgba(204,153,36,.45); margin-bottom:14px;">
         <span class="pulse-dot" style="width:7px; height:7px;"></span>
-        <span style="font-family:'Roboto',sans-serif; font-weight:600; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#1a1a18;">Founding Cohort &middot; 15% off applied below</span>
+        <span style="font-family:'Roboto',sans-serif; font-weight:600; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#1a1a18;">Founding Cohort &middot; 10% off applied below</span>
       </div>
       <p style="font-family:'Marcellus',Georgia,serif; font-size:clamp(22px,2.8vw,30px); color:#1a1a18; letter-spacing:-0.02em; margin-bottom:6px;">
-        Founding cohort rate: from &euro;241 per night
+        Founding cohort rate: from &euro;255 per night
       </p>
       <p style="font-size:14px; color:#4a4a46; line-height:1.6;">
         All-inclusive across 6 nights at ASHA &mdash; training, accommodation, three meals daily. The only difference between options is where you sleep.
       </p>
+    </div>
+
+    <!-- BONUS: The Inner Journey -->
+    <div style="background:#fff; border:1px solid #cc9924; padding:22px 28px; margin-bottom:32px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:20px; box-shadow:0 4px 24px rgba(204,153,36,.08);">
+      <div style="flex:1; min-width:260px;">
+        <p class="eyebrow mb-1" style="color:#cc9924;">Bonus &middot; Included Free</p>
+        <p style="font-size:18px; color:#1a1a18; font-family:'Marcellus',Georgia,serif; line-height:1.3; margin-bottom:6px;">The Inner Journey, self-paced course</p>
+        <p style="font-size:13px; color:#4a4a46; line-height:1.6;">A foundation in breath, presence and inner work. Yours to keep, the moment you reserve your place.</p>
+      </div>
+      <div style="text-align:right;">
+        <p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Value</p>
+        <p style="font-family:'Marcellus',Georgia,serif; font-size:24px; color:#1a1a18; line-height:1;"><span class="price-strike" style="font-size:16px;">&euro;499</span><span class="price-now" style="color:#cc9924;">Free</span></p>
+      </div>
     </div>
 
     <!-- PRIVATE -->
@@ -1021,28 +1063,28 @@
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/Private-Cottage-1-1-1-768x512.jpg" alt="Private Cottage" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:20px 22px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Private Cottage</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Premium private accommodation</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
-            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;">&euro;388</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;349</p></div>
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;456</span><span class="price-now">&euro;411</span></p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/single-ensuite-1-1-1-768x512.jpg" alt="Private Single Room, Ensuite" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:20px 22px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Private Single Room, Ensuite</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Your own room and bathroom</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
-            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;">&euro;342</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;308</p></div>
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;403</span><span class="price-now">&euro;362</span></p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
@@ -1054,42 +1096,42 @@
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/twin-ensuite-1-1-1-768x512.jpg" alt="Shared Room (2), Ensuite" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:20px 22px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (2), Ensuite</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with one other</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
-            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;">&euro;292</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;263</p></div>
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;344</span><span class="price-now">&euro;309</span></p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/twin-non-ensuite-1-1-1-768x512.jpg" alt="Shared Room (2), Shared Bathroom" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:20px 22px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (2), Shared Bath</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared bathroom</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
-            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;">&euro;284</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;255</p></div>
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;334</span><span class="price-now">&euro;300</span></p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/triple-ensuite-1-1-1-1-768x512.jpg" alt="Shared Room (3), Private Bathroom" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:20px 22px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Shared Room (3), Private Bath</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:14px;">Shared with two others</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:12px;">
-            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;">&euro;279</p></div>
-            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;251</p></div>
+            <div><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:22px; color:#1a1a18;"><span class="price-strike">&euro;328</span><span class="price-now">&euro;295</span></p></div>
+            <div style="text-align:right;"><p style="font-size:11px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:18px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
@@ -1101,56 +1143,56 @@
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-1-1-1-768x512.jpg" alt="Glamping, Solo" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:18px 20px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Glamping, Solo</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Solo tent</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
-            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;">&euro;284</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;255</p></div>
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;334</span><span class="price-now">&euro;300</span></p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/asha-glamping-5-1-1-768x512.jpg" alt="Glamping, Shared" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:18px 20px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Glamping, Shared</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Shared tent, per person</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
-            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;">&euro;271</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;243</p></div>
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;318</span><span class="price-now">&euro;286</span></p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-camper-1-1-1-1-1-768x492.jpg" alt="Camper Van" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:18px 20px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Camper Van</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Bring your own</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
-            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;">&euro;250</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;225</p></div>
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;294</span><span class="price-now">&euro;264</span></p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
       <div class="accom-card">
         <div style="aspect-ratio:3/2; overflow:hidden; position:relative;">
           <img src="https://alchemyofbreath.com/wp-content/uploads/accommodation-tent-1-1-1-1-1-768x453.jpg" alt="Bring Your Own Tent" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
-          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">15% off</span>
+          <span style="position:absolute; top:12px; left:12px;" class="eb-badge">10% off</span>
         </div>
         <div style="padding:18px 20px;">
           <h4 style="font-family:'Marcellus',Georgia,serif; font-size:17px; color:#1a1a18; margin-bottom:4px; line-height:1.3;">Bring Your Own Tent</h4>
           <p style="font-size:12px; color:#c5c3c2; margin-bottom:12px;">Personal tent</p>
           <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid #d3cdb3; padding-top:10px;">
-            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;">&euro;241</p></div>
-            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;217</p></div>
+            <div><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Per night</p><p style="font-family:'Marcellus',Georgia,serif; font-size:20px; color:#1a1a18;"><span class="price-strike" style="font-size:12px;">&euro;284</span><span class="price-now">&euro;255</span></p></div>
+            <div style="text-align:right;"><p style="font-size:10px; color:#4a4a46; letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px;">Deposit</p><p style="font-family:'Marcellus',Georgia,serif; font-size:16px; color:#cc9924;">&euro;249</p></div>
           </div>
         </div>
       </div>
@@ -1159,12 +1201,12 @@
     <div class="flex flex-col sm:flex-row gap-6 items-start">
       <div style="flex:1; background:#fff; border:1px solid #d3cdb3; padding:24px 28px;">
         <p class="eyebrow mb-2">Payment</p>
-        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your deposit to secure your spot. The balance is due before arrival. The 15% founding cohort discount is applied automatically at booking.</p>
+        <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your &euro;249 deposit to secure your spot. The balance is due before arrival. The 10% founding cohort discount is applied automatically at booking.</p>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; gap:12px; justify-content:center;">
         <a href="{{custom_values.arm__checkout_page__rg__20_off}}"
            class="btn-gold text-center" target="_blank" rel="noopener" style="display:block;">
-          Reserve Your Place at ASHA
+          Book your deposit for &euro;249 to secure your spot
         </a>
         <p style="font-size:13px; color:#4a4a46; text-align:center; line-height:1.6;">Not sure yet? <a href="{{custom_values.breathwork_facilitator_training__discovery_call_url}}" target="_blank" rel="noopener" style="color:#cc9924; text-decoration:underline; text-underline-offset:3px;">Book a discovery call &rarr;</a></p>
         <p style="font-size:12px; color:#c5c3c2; text-align:center; line-height:1.5;">Flights not included.</p>
@@ -1288,7 +1330,7 @@
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
       <a href="{{custom_values.arm__checkout_page__rg__20_off}}"
          class="btn-gold" target="_blank" rel="noopener" style="font-size:14px; padding:16px 40px;">
-        Reserve Your Place at ASHA
+        Book your deposit for &euro;249 to secure your spot
       </a>
       <a href="{{custom_values.breathwork_facilitator_training__discovery_call_url}}"
          class="btn-outline" target="_blank" rel="noopener" style="font-size:14px; padding:16px 40px;">
@@ -1296,7 +1338,7 @@
       </a>
     </div>
     <p style="font-size:12px; color:rgba(255,255,255,0.35); letter-spacing:0.04em;">
-      15% deposit secures your place &nbsp;&middot;&nbsp; All-inclusive pricing &nbsp;&middot;&nbsp; Founding cohort
+      &euro;249 deposit secures your place &nbsp;&middot;&nbsp; All-inclusive pricing &nbsp;&middot;&nbsp; Founding cohort
     </p>
   </div>
 </section>
