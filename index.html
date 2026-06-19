@@ -104,6 +104,16 @@
     .eb-badge { background:#cc9924; color:#fff; font-family:'Roboto',sans-serif; font-weight:500; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:5px 10px; box-shadow:0 2px 8px rgba(0,0,0,.15); }
     .price-strike { color:#9a9794; text-decoration:line-through; text-decoration-color:#d94a3a; text-decoration-thickness:2px; font-size:13px; margin-right:8px; font-weight:400; }
     .price-now { font-weight:700; color:#1a1a18; letter-spacing:-.01em; }
+    /* Date toggle */
+    .date-toggle { display:inline-flex; background:#fff; border:1px solid #d3cdb3; padding:4px; gap:2px; }
+    .date-toggle button { background:transparent; border:none; padding:10px 22px; font-family:'Roboto',sans-serif; font-size:13px; letter-spacing:.04em; color:#4a4a46; cursor:pointer; transition:background .2s,color .2s; font-weight:500; }
+    .date-toggle button[data-arm-active="true"] { background:#cc9924; color:#fff; }
+    .date-toggle button:hover:not([data-arm-active="true"]) { color:#1a1a18; background:rgba(204,153,36,.06); }
+    .date-toggle button:focus-visible { outline:2px solid #cc9924; outline-offset:2px; }
+    @media (max-width:540px) {
+      .date-toggle { flex-direction:column; width:100%; }
+      .date-toggle button { width:100%; text-align:center; }
+    }
     /* Quantum Shift banner */
     .quantum-inner { display:flex; align-items:center; justify-content:center; gap:18px; padding:14px 12px; flex-wrap:wrap; text-align:center; }
     .qb-dot { width:9px; height:9px; border-radius:50%; background:#1a1a18; box-shadow:0 0 10px rgba(0,0,0,.4); animation:qbPulse 2s ease-in-out infinite; flex-shrink:0; }
@@ -203,7 +213,7 @@
       <span class="qb-sep">|</span>
       <strong class="qb-discount">15% off</strong>
       <span class="qb-sep">|</span>
-      <span class="qb-meta">Expires Sunday 24 May &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
+      <span class="qb-meta">Expires Sunday 28 June &middot; <span id="qb-countdown" class="qb-countdown">--d --h --m --s</span></span>
     </span>
     <a href="#pricing" class="qb-cta">View rooms &amp; pricing &rarr;</a>
   </div>
@@ -212,7 +222,7 @@
   (function(){
     var el = document.getElementById('qb-countdown');
     if (!el) return;
-    var deadline = new Date('2026-05-24T23:59:59').getTime();
+    var deadline = new Date('2026-06-28T23:59:59').getTime();
     function pad(n){ return n < 10 ? '0' + n : '' + n; }
     function tick(){
       var diff = deadline - Date.now();
@@ -998,17 +1008,27 @@
     <div style="display:flex; justify-content:center; margin-bottom:28px;">
       <div style="display:inline-flex; align-items:center; gap:14px; padding:12px 24px; background:#fff; border:1px solid rgba(204,153,36,.5); box-shadow:0 4px 24px rgba(204,153,36,.12);">
         <span class="pulse-dot"></span>
-        <span style="font-family:'Roboto',sans-serif; font-weight:500; font-size:11px; letter-spacing:.18em; color:#1a1a18; text-transform:uppercase;">Founding cohort &middot; Limited places &middot; 19&ndash;25 July 2026</span>
+        <span style="font-family:'Roboto',sans-serif; font-weight:500; font-size:11px; letter-spacing:.18em; color:#1a1a18; text-transform:uppercase;">Founding cohort &middot; Limited places &middot; <span data-arm-date-label>19&ndash;25 July 2026</span></span>
       </div>
     </div>
 
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <p class="eyebrow mb-4">Investment</p>
       <div class="gold-rule centered"></div>
       <h2 style="font-size:clamp(28px,3.5vw,42px); line-height:1.2; letter-spacing:-.02em; color:#1a1a18; margin-bottom:14px;">Reserve your place for &euro;249.</h2>
       <p style="font-size:16px; color:#4a4a46; line-height:1.7; max-width:600px; margin:0 auto;">
         Pay your &euro;249 deposit today to secure your spot. After that, choose the accommodation that fits you. The Quantum Shift 15% discount is already applied to the totals below.
       </p>
+    </div>
+
+    <!-- Date toggle -->
+    <div style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:36px;">
+      <p style="font-family:'Roboto',sans-serif; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:#cc9924; font-weight:500;">Choose your date</p>
+      <div class="date-toggle" role="tablist" aria-label="Retreat date">
+        <button type="button" data-arm-date="july" data-arm-active="true" role="tab" aria-selected="true">19 &ndash; 25 July 2026</button>
+        <button type="button" data-arm-date="september" data-arm-active="false" role="tab" aria-selected="false">27 Sept &ndash; 3 Oct 2026</button>
+      </div>
+      <p style="font-size:12px; color:#4a4a46; line-height:1.5; margin-top:2px;">Same retreat, same price &mdash; pick the week that works for you.</p>
     </div>
 
     <!-- Quantum Shift discount banner -->
@@ -1181,11 +1201,13 @@
         <p style="font-size:15px; color:#4a4a46; line-height:1.7;">Pay your &euro;249 deposit to secure your spot. The remaining balance for your chosen accommodation (tuition included) is due before arrival &mdash; we&rsquo;ll send you a code to complete your booking.</p>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; gap:12px; justify-content:center;">
-        <a href="https://link.alchemyofbreath.com/payment-link/6a0971b0c58f48c13d666b93"
+        <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-2/?form=1&amp;lang=en"
+           data-arm-cta="deposit"
            class="btn-gold text-center" target="_blank" rel="noopener" style="display:block;">
           Book your deposit for &euro;249 to secure your spot
         </a>
-        <a href="{{custom_values.arm__checkout_page__rg__20_off}}"
+        <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-2/?form=1&amp;lang=en"
+           data-arm-cta="full"
            class="text-center" target="_blank" rel="noopener"
            style="display:block; background:#fff; color:#cc9924; border:1px solid #cc9924; font-family:'Roboto',sans-serif; font-weight:500; font-size:13px; letter-spacing:.12em; text-transform:uppercase; padding:13px 32px; text-decoration:none; transition:background .2s, color .2s;"
            onmouseover="this.style.background='#cc9924'; this.style.color='#fff';"
@@ -1313,7 +1335,8 @@
       Seven days in Tuscany. Six stages of regulation. Practices that live in your body, not your notebook. Come and let&rsquo;s train it together, for the peace you really want.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-      <a href="https://link.alchemyofbreath.com/payment-link/6a0971b0c58f48c13d666b93"
+      <a href="https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-2/?form=1&amp;lang=en"
+         data-arm-cta="deposit"
          class="btn-gold" target="_blank" rel="noopener" style="font-size:14px; padding:16px 40px;">
         Book your deposit for &euro;249 to secure your spot
       </a>
@@ -1464,6 +1487,37 @@
       });
     });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAll(); });
+  })();
+</script>
+
+<!-- Date toggle: switches displayed dates + CTA URLs between July and September sessions -->
+<script>
+  (function(){
+    var URLS = {
+      july:      'https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-2/?form=1&lang=en',
+      september: 'https://asha.secure.retreat.guru/program/functional-breathing-retreat-7-day-breathcamp-2/?form=1&lang=en'
+    };
+    var LABELS = {
+      july:      '19–25 July 2026',
+      september: '27 Sept–3 Oct 2026'
+    };
+    var toggleBtns = document.querySelectorAll('[data-arm-date]');
+    var ctaLinks   = document.querySelectorAll('[data-arm-cta]');
+    var dateLabels = document.querySelectorAll('[data-arm-date-label]');
+    if (!toggleBtns.length) return;
+    function apply(date){
+      toggleBtns.forEach(function(b){
+        var on = b.dataset.armDate === date;
+        b.dataset.armActive = on ? 'true' : 'false';
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      ctaLinks.forEach(function(a){ a.href = URLS[date]; });
+      dateLabels.forEach(function(el){ el.textContent = LABELS[date]; });
+    }
+    toggleBtns.forEach(function(b){
+      b.addEventListener('click', function(){ apply(b.dataset.armDate); });
+    });
+    apply('july');
   })();
 </script>
 
