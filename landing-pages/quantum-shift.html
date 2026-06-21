@@ -79,15 +79,44 @@
     .future-card p{font-size:15px;color:rgba(255,255,255,.8);line-height:1.7;}
     .for-you-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
     .for-you-item .icon{flex-shrink:0;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px;}
+    .live-banner{position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,#cc9924 0%,#b8861f 100%);box-shadow:0 2px 14px rgba(0,0,0,.25);}
+    .live-banner-inner{max-width:1152px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;}
+    .live-banner-text{display:flex;align-items:center;gap:10px;font-family:'Roboto',sans-serif;font-size:12px;color:#fff;font-weight:500;flex:1;min-width:0;}
+    .live-banner-text .live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#ff4d4d;box-shadow:0 0 0 0 rgba(255,77,77,.7);animation:livePulse 1.8s ease-out infinite;flex-shrink:0;}
+    .live-banner-text .label{text-transform:uppercase;font-weight:600;letter-spacing:.16em;}
+    .live-banner-text .times{opacity:.95;font-weight:400;letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .live-banner-cta{background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.45);color:#fff;padding:7px 18px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s;flex-shrink:0;}
+    .live-banner-cta:hover{background:rgba(0,0,0,.45);transform:translateY(-1px);}
+    @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(255,77,77,.7);}70%{box-shadow:0 0 0 10px rgba(255,77,77,0);}100%{box-shadow:0 0 0 0 rgba(255,77,77,0);}}
+    @media(max-width:640px){.live-banner-text .times{display:none;}.live-banner-inner{padding:0 16px;}}
+    @media(prefers-reduced-motion:reduce){.live-banner-text .live-dot{animation:none;}}
+    .zoom-frame-shell{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);border:1px solid rgba(204,153,36,.5);box-shadow:0 24px 64px rgba(0,0,0,.45),0 0 100px -20px rgba(204,153,36,.3),inset 0 1px 0 rgba(255,255,255,.06);padding:10px;}
+    .zoom-frame-shell iframe{display:block;width:100%;height:clamp(420px,55vh,580px);border:none;background:#0a0a08;}
+    .passcode-btn{background:rgba(204,153,36,.12);border:1px solid rgba(204,153,36,.5);color:#cc9924;padding:13px 26px;font-family:'Roboto',sans-serif;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s,border-color .2s,color .2s;display:inline-flex;align-items:center;gap:6px;}
+    .passcode-btn:hover{background:rgba(204,153,36,.22);transform:translateY(-1px);}
+    .passcode-btn.copied{background:rgba(82,187,144,.18);border-color:rgba(82,187,144,.55);color:#52bb90;}
+    .passcode-btn .hint{opacity:.55;font-size:9px;letter-spacing:.12em;margin-left:6px;font-weight:400;text-transform:none;letter-spacing:.06em;}
   </style>
 </head>
 <body>
 
+<!-- LIVE NOW BANNER -->
+<div class="live-banner" role="banner">
+  <div class="live-banner-inner">
+    <div class="live-banner-text">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span class="label">Live now</span>
+      <span class="times">&middot; Join now &middot; Morning 9:30am UK &middot; Evening 5pm UK</span>
+    </div>
+    <a href="#join" class="live-banner-cta">Join Zoom &rarr;</a>
+  </div>
+</div>
+
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50" style="background:#354d4c;">
+<nav class="fixed left-0 right-0 z-50" style="top:44px;background:#354d4c;">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="/aob/index.html" aria-label="Alchemy of Breath home"><img src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69c78cc9104e4ff7ea6eb72d.png" alt="Alchemy of Breath" class="h-7 w-auto"></a>
-    <a href="#reserve" class="btn-gold" style="padding:10px 22px;font-size:11px;">Reserve your place</a>
+    <a href="#join" class="btn-gold" style="padding:10px 22px;font-size:11px;">Join Zoom</a>
   </div>
 </nav>
 
@@ -121,7 +150,7 @@
     <span class="spark fly" style="top:86%;left:14%;--dx:60px;--dy:-500px;--dur:14s;--delay:2.6s;--peak:.85;"></span>
     <span class="spark fly" style="top:78%;left:50%;--dx:-40px;--dy:-440px;--dur:11.5s;--delay:6.4s;--peak:.95;"></span>
   </div>
-  <div class="relative z-10 max-w-3xl mx-auto px-6 pt-28 pb-20 w-full flex flex-col items-center text-center">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 pt-32 pb-20 w-full flex flex-col items-center text-center">
     <div class="date-pill mb-4">Quantum Shift &middot; Sunday 21 June 2026</div>
     <div class="hero-times">
       <span class="session-pill"><span class="dot"></span>Morning &middot; 9:30 to 11:30am UK</span>
@@ -129,15 +158,52 @@
     </div>
     <p class="eyebrow mb-4" style="font-size:12px;letter-spacing:.24em;">Alchemy Regulation Method: The Next Step</p>
     <h1 class="text-white mb-5 leading-tight" style="font-size:clamp(32px,4.6vw,58px);letter-spacing:-.02em;max-width:840px;">One Sunday. Two sessions. A nervous system that finally works for you.</h1>
-    <p class="mb-8" style="font-size:15px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.78);max-width:520px;">Sunday 21 June. Two live sessions with Anthony and Amy. Free to join.</p>
+    <p class="mb-8" style="font-size:15px;line-height:1.7;font-weight:300;color:rgba(255,255,255,.78);max-width:520px;">We're live today. Two sessions with Anthony and Amy. Join us in the Zoom room.</p>
 
-    <a href="#reserve" class="btn-gold" style="padding:18px 44px;font-size:13px;">Reserve your place</a>
+    <a href="#join" class="btn-gold" style="padding:18px 44px;font-size:13px;">Join the Zoom room</a>
 
     <p style="font-family:'Roboto',sans-serif;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.65);margin-top:24px;max-width:520px;font-style:italic;">From Alchemy of Breath, where Anthony Abbagnano has trained more than 2,000 breathwork practitioners across over 40 countries.</p>
   </div>
   <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
     <span style="font-size:10px;letter-spacing:.15em;color:#fff;text-transform:uppercase;font-weight:500;">Scroll</span>
     <div style="width:1px;height:40px;background:rgba(255,255,255,.4);"></div>
+  </div>
+</section>
+
+
+<!-- JOIN THE ZOOM ROOM -->
+<section id="join" class="py-24 grain relative overflow-hidden" style="background:#1a1a18;">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 50% 30%,rgba(204,153,36,.16) 0%,transparent 55%);"></div>
+  <div class="spark-field" aria-hidden="true">
+    <span class="spark sm" style="top:18%;left:14%;animation-duration:5s;animation-delay:.5s;--peak:.5;"></span>
+    <span class="spark" style="top:25%;left:84%;animation-duration:6s;animation-delay:1.8s;--peak:.65;"></span>
+    <span class="spark sm" style="top:78%;left:22%;animation-duration:4.5s;animation-delay:2.4s;--peak:.45;"></span>
+    <span class="spark" style="top:80%;left:78%;animation-duration:6.5s;animation-delay:.2s;--peak:.6;"></span>
+  </div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <div class="date-pill mb-6" style="background:rgba(255,77,77,.14);border-color:rgba(255,77,77,.55);color:#ff9a9a;">Live now &middot; Sunday 21 June</div>
+      <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.2;letter-spacing:-.02em;color:#fff;margin-bottom:14px;">Join the Zoom room</h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.88);max-width:560px;margin:0 auto;">Join us now. Morning starts at <strong style="color:#fff;">9:30am UK</strong>. Evening starts at <strong style="color:#fff;">5:00pm UK</strong>. Come into the room a few minutes early to settle.</p>
+    </div>
+
+    <div class="zoom-frame-shell fade-up">
+      <iframe
+        src="https://meet.alchemyofbreath.com/c/s/MTY/5HOKx/v/wgjC/OuQ/6bFWT1/UtbfG1kQz1/P/P/Fz"
+        title="Zoom meeting room"
+        allow="camera; microphone; fullscreen; speaker; display-capture; autoplay"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div style="margin-top:28px;display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <a href="https://meet.alchemyofbreath.com/c/s/MTY/5HOKx/v/wgjC/OuQ/6bFWT1/UtbfG1kQz1/P/P/Fz" target="_blank" rel="noopener" class="btn-gold" style="padding:18px 44px;font-size:13px;">Open Zoom room &nearr;</a>
+      <button type="button" id="copyPasscode" class="passcode-btn" data-passcode="Breathe" aria-label="Copy Zoom passcode">
+        <span>Passcode: Breathe</span>
+        <span class="hint">tap to copy</span>
+      </button>
+      <p style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;margin-top:6px;">Meeting ID &middot; 885 1581 3912</p>
+    </div>
   </div>
 </section>
 
@@ -469,6 +535,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
   let startX=0;track.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
   track.addEventListener('touchend',e=>{const diff=startX-e.changedTouches[0].clientX;if(Math.abs(diff)>40){diff>0?go(idx+1):go(idx-1);}},{passive:true});
   setInterval(()=>go(idx+1),8000);
+})();
+
+(function(){
+  const btn=document.getElementById('copyPasscode');
+  if(!btn)return;
+  btn.addEventListener('click',async()=>{
+    const code=btn.dataset.passcode||'Breathe';
+    let ok=false;
+    try{await navigator.clipboard.writeText(code);ok=true;}
+    catch(e){try{const ta=document.createElement('textarea');ta.value=code;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);ok=true;}catch(_){}}
+    const original=btn.innerHTML;
+    btn.classList.add('copied');
+    btn.innerHTML='<span>'+(ok?'✓ Copied':'Passcode')+': '+code+'</span>';
+    setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML=original;},1800);
+  });
 })();
 </script>
 <script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
