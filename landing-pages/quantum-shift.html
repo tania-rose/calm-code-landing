@@ -177,12 +177,19 @@ p{margin:0 0 1.1em}
 }
 .pill-dot{width:8px;height:8px;border-radius:50%;background:var(--gold)}
 
-.countdown{
-  display:inline-flex;align-items:baseline;gap:14px;margin-top:32px;padding:14px 22px;
-  border-top:1px solid rgba(230,197,118,0.25);border-bottom:1px solid rgba(230,197,118,0.25);
+/* ─── WHEN BLOCK (date + sessions above the fold) ─── */
+.when{margin-top:8px;display:flex;flex-direction:column;gap:18px}
+.when-date{
+  display:inline-flex;align-items:center;gap:14px;align-self:flex-start;
+  padding:14px 22px;background:rgba(204,153,36,0.10);
+  border:1px solid rgba(230,197,118,0.45);
 }
-.countdown-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-soft)}
-.countdown-time{font-family:var(--display);font-size:20px;color:var(--bg)}
+.when-date .when-label{
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-soft);
+}
+.when-date .when-value{
+  font-family:var(--display);font-size:22px;color:var(--bg);line-height:1;
+}
 
 /* ─── TRUST STRIP ─── */
 .trust-strip{background:var(--bg-dark);color:#d8d6cf;padding:18px 0;border-top:1px solid #2c2c28}
@@ -379,14 +386,15 @@ footer a:hover{color:var(--gold)}
       <span class="hero-meta">30 seconds &middot; no card needed</span>
     </div>
 
-    <div class="session-pills" role="list">
-      <span class="pill" role="listitem"><span class="pill-dot"></span>Morning &middot; 09:30 to 11:30 UK</span>
-      <span class="pill" role="listitem"><span class="pill-dot"></span>Evening &middot; 17:00 to 19:00 UK</span>
-    </div>
-
-    <div class="countdown" aria-live="polite">
-      <span class="countdown-label">Doors close in</span>
-      <span class="countdown-time" id="countdown">&nbsp;</span>
+    <div class="when">
+      <div class="when-date">
+        <span class="when-label">When</span>
+        <span class="when-value">Sunday &middot; 21 June 2026</span>
+      </div>
+      <div class="session-pills" role="list">
+        <span class="pill" role="listitem"><span class="pill-dot"></span>Morning &middot; 09:30 to 11:30 UK</span>
+        <span class="pill" role="listitem"><span class="pill-dot"></span>Evening &middot; 17:00 to 19:00 UK</span>
+      </div>
     </div>
   </div>
 </section>
@@ -614,23 +622,6 @@ try { document.getElementById('time_zone').value = Intl.DateTimeFormat().resolve
   });
   var ref = document.getElementById('referrer_url');
   if (ref) ref.value = document.referrer || '';
-})();
-
-// Countdown to morning session: Sunday 21 June 2026, 09:30 BST (08:30 UTC)
-(function(){
-  var target = new Date(Date.UTC(2026, 5, 21, 8, 30, 0)).getTime();
-  var el = document.getElementById('countdown');
-  if (!el) return;
-  function tick(){
-    var diff = target - Date.now();
-    if (diff <= 0) { el.textContent = 'Live now'; return; }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor((diff % 86400000) / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    el.textContent = d + 'd ' + String(h).padStart(2,'0') + 'h ' + String(m).padStart(2,'0') + 'm';
-  }
-  tick();
-  setInterval(tick, 60000);
 })();
 </script>
 
