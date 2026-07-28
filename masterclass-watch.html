@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome to the Masterclass | Alchemy of Breath</title>
-<meta name="description" content="The breathwork masterclass with Anthony Abbagnano. Watch when you are ready, and if something opens up, tell us where you are.">
+<meta name="description" content="The breathwork masterclass with Anthony Abbagnano. Watch when you are ready, then choose the path that meets you where you are.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://alchemyofbreath.com/masterclass-watch/">
 <meta name="theme-color" content="#FBF7EF">
@@ -131,21 +131,28 @@ section>.wrap{position:relative;z-index:1}
 .apply-meta .chip .val{font-size:.86rem;line-height:1.5;color:var(--ink)}
 @media(max-width:680px){.apply-meta{grid-template-columns:1fr;max-width:480px}}
 
-/* apply card with embedded survey */
-.apply-card{position:relative;background:#FFFFFF;border:1px solid rgba(225,182,104,.45);border-radius:24px;max-width:760px;margin:0 auto;overflow:hidden;box-shadow:0 2px 4px rgba(34,31,32,.05),0 18px 50px rgba(34,31,32,.10),0 40px 120px rgba(34,31,32,.08)}
+/* choose your path card */
+.apply-card{position:relative;background:#FFFFFF;border:1px solid rgba(225,182,104,.45);border-radius:24px;max-width:780px;margin:0 auto;overflow:hidden;box-shadow:0 2px 4px rgba(34,31,32,.05),0 18px 50px rgba(34,31,32,.10),0 40px 120px rgba(34,31,32,.08)}
 .apply-card::before{content:"";position:absolute;inset:-14px;border-radius:36px;border:1px solid rgba(0,165,178,.28);pointer-events:none;z-index:-1}
-.apply-card-head{padding:42px 44px 12px;text-align:center}
+.apply-card-head{padding:48px 44px 24px;text-align:center}
 .apply-card-head h3{font-size:1.65rem;margin:8px 0 12px}
-.apply-card-head p{font-size:.95rem;color:var(--slate);line-height:1.6;max-width:36em;margin:0 auto}
-.apply-survey-wrap{padding:14px 22px 24px;min-height:600px}
-.apply-survey-wrap iframe{width:100%;min-height:600px;border:0;display:block;background:transparent}
-.apply-reassure{padding:18px 44px 32px;text-align:center;font-size:.85rem;color:var(--slate);line-height:1.6;border-top:1px solid rgba(225,182,104,.2)}
+.apply-card-head p{font-size:.98rem;color:var(--slate);line-height:1.7;max-width:36em;margin:0 auto}
+.path-choices{padding:8px 44px 36px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.path{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:28px 26px;border-radius:16px;background:linear-gradient(180deg,#FDF6E9 0%,#FFFFFF 100%);border:1px solid rgba(225,182,104,.4);text-decoration:none;color:var(--ink);transition:transform .3s,box-shadow .3s,border-color .3s}
+.path:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(214,166,82,.22);border-color:var(--gold)}
+.path .path-label{font-family:var(--sans);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep)}
+.path h4{font-family:var(--serif);font-size:1.28rem;line-height:1.25;color:var(--ink);margin:6px 0 8px;font-weight:400}
+.path h4 em{color:var(--gold-deep);font-style:italic}
+.path p{font-size:.92rem;line-height:1.6;color:var(--slate);margin-bottom:8px}
+.path .path-cta{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;font-weight:500;color:var(--ink);letter-spacing:.02em}
+.path .path-cta .arr{transition:transform .25s}
+.path:hover .path-cta .arr{transform:translateX(4px)}
+.apply-reassure{padding:22px 44px 34px;text-align:center;font-size:.9rem;color:var(--slate);line-height:1.65;border-top:1px solid rgba(225,182,104,.2)}
 .apply-reassure strong{color:var(--ink);font-weight:500}
 @media(max-width:640px){
-  .apply-card-head{padding:34px 26px 8px}
-  .apply-survey-wrap{padding:8px 12px 18px;min-height:760px}
-  .apply-survey-wrap iframe{min-height:760px}
-  .apply-reassure{padding:16px 26px 28px}
+  .apply-card-head{padding:36px 26px 18px}
+  .path-choices{grid-template-columns:1fr;padding:4px 22px 26px}
+  .apply-reassure{padding:20px 26px 28px}
 }
 
 /* what happens next */
@@ -229,36 +236,51 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
 
 <div class="wrap"><div class="divider"></div></div>
 
-<!-- APPLY -->
+<!-- CHOOSE YOUR PATH -->
 <section class="apply" id="apply">
   <div class="orb g" style="width:480px;height:480px;top:-160px;right:-180px"></div>
   <div class="orb t" style="width:420px;height:420px;bottom:-160px;left:-180px"></div>
   <div class="wrap">
     <div class="apply-head">
       <span class="eyebrow reveal" style="justify-content:center">After the masterclass</span>
-      <h2 class="reveal d1">If something opened up, <em>tell us where you are</em>.</h2>
-      <p class="reveal d2" style="margin-top:18px;color:var(--ink);font-size:1.02rem">A few honest questions, so we can understand what is calling you. If there's a fit, we will invite you to a 30 minute conversation to walk you through the right next step, whether that is the facilitator training, an inner journey, or one of our shorter programs.</p>
+      <h2 class="reveal d1">If something opened up, <em>choose your path</em>.</h2>
+      <p class="reveal d2" style="margin-top:18px;color:var(--ink);font-size:1.02rem">Pick the door that speaks to you and book a 30 minute call with a success advisor. We will walk you through the right next step, whether that is becoming a facilitator, going deeper with your own breath practice, or something in between.</p>
     </div>
 
     <div class="apply-meta reveal d1">
-      <div class="chip"><span class="ico">&#8987;</span><span class="txt"><span class="lbl">Time</span><span class="val">Three or four minutes to complete</span></span></div>
+      <div class="chip"><span class="ico">&#8987;</span><span class="txt"><span class="lbl">30 minutes</span><span class="val">A real conversation with a success advisor</span></span></div>
       <div class="chip"><span class="ico">&#10003;</span><span class="txt"><span class="lbl">No pressure</span><span class="val">An honest match. We only invite you forward when it is right.</span></span></div>
-      <div class="chip"><span class="ico">&rarr;</span><span class="txt"><span class="lbl">If there is a fit</span><span class="val">You will be invited to book a 30 minute call right after</span></span></div>
+      <div class="chip"><span class="ico">&rarr;</span><span class="txt"><span class="lbl">On the call</span><span class="val">We walk you through the path that meets you where you are</span></span></div>
     </div>
 
     <div class="apply-card reveal d2">
       <div class="apply-card-head">
-        <span class="eyebrow" style="justify-content:center;display:flex">Short application</span>
-        <h3>Tell us what is <em>calling you</em>.</h3>
-        <p>A few questions about you, your practice, and what you are hoping for. Your answers stay private to our small team.</p>
+        <span class="eyebrow" style="justify-content:center;display:flex">Choose your path</span>
+        <h3>Which door <em>speaks to you?</em></h3>
+        <p>Both take you to the same short booking page. Pick whichever feels closest to what is calling you right now, and we will take it from there.</p>
       </div>
-      <div class="apply-survey-wrap">
-        <iframe src="https://link.alchemyofbreath.com/widget/survey/8EosGnlx0heXb1cGg1EW"
-                id="8EosGnlx0heXb1cGg1EW"
-                scrolling="no"
-                title="AOB application"></iframe>
+
+      <div class="path-choices">
+        <a href="https://go.alchemyofbreath.com/masterclass-book-your-call" class="path">
+          <div>
+            <span class="path-label">Path One</span>
+            <h4>Explore <em>becoming a facilitator</em>.</h4>
+            <p>You feel called to guide others through this work. Book a call to talk about the flagship 8 month breathwork facilitator training.</p>
+          </div>
+          <span class="path-cta">Book a call <span class="arr">&rarr;</span></span>
+        </a>
+
+        <a href="https://go.alchemyofbreath.com/masterclass-book-your-call" class="path">
+          <div>
+            <span class="path-label">Path Two</span>
+            <h4>Explore <em>going deeper with breath</em>.</h4>
+            <p>You want to experience this work more deeply for yourself. Book a call to explore healing journeys, retreats, and shorter programs.</p>
+          </div>
+          <span class="path-cta">Book a call <span class="arr">&rarr;</span></span>
+        </a>
       </div>
-      <p class="apply-reassure"><strong>What happens next:</strong> if there is alignment, you will see your booking link as soon as you submit. Pick a time that works for you.</p>
+
+      <p class="apply-reassure"><strong>What happens next:</strong> pick a time on the next page. A calendar invite lands in your inbox, and we will send a short reflection the day before.</p>
     </div>
   </div>
 </section>
@@ -273,13 +295,13 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
     <div class="next-grid">
       <div class="next-card reveal">
         <div class="step-num">i.</div>
-        <h4>Share where you are</h4>
-        <p>A few honest questions about your background with the breath, what is drawing you in, and what you are hoping for.</p>
+        <h4>Choose your path</h4>
+        <p>Facilitator training or going deeper with breath. Whichever feels closer to what is calling you.</p>
       </div>
       <div class="next-card reveal d1">
         <div class="step-num">ii.</div>
         <h4>Book your call</h4>
-        <p>If there's a fit, you will see your booking link as soon as you submit. Pick a time that works for you.</p>
+        <p>Pick a time that works for you. Thirty minutes on the phone with a success advisor.</p>
       </div>
       <div class="next-card reveal d2">
         <div class="step-num">iii.</div>
@@ -294,9 +316,9 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
 <section class="not-ready">
   <div class="wrap">
     <span class="eyebrow reveal" style="justify-content:center">No rush</span>
-    <h2 class="reveal d1">Not ready to apply? <em>That is also OK.</em></h2>
-    <p class="reveal d2">Sit with the masterclass for a day or two. When something settles, the application will still be here, and so will we.</p>
-    <a href="#apply" class="btn-outline reveal d2">Start the application <span class="arr">&rarr;</span></a>
+    <h2 class="reveal d1">Not ready to book? <em>That is also OK.</em></h2>
+    <p class="reveal d2">Sit with the masterclass for a day or two. When something settles, the doors will still be here, and so will we.</p>
+    <a href="#apply" class="btn-outline reveal d2">Choose your path <span class="arr">&rarr;</span></a>
   </div>
 </section>
 
@@ -313,7 +335,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
 </footer>
 
 <script src="https://player.vimeo.com/api/player.js"></script>
-<script src="https://link.alchemyofbreath.com/js/form_embed.js"></script>
 <script>
 (function(){
   var nav = document.getElementById('nav');
