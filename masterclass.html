@@ -269,20 +269,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
       </div>
     </div>
 
-    <div class="hv-frame reveal d1">
-      <div class="hv-poster" id="hvPoster" role="button" tabindex="0" aria-label="Play preview: a message from Anthony">
-        <div class="hv-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z" fill="#221F20"/></svg>
-        </div>
-        <div class="hv-duration">~ 1 hour</div>
-        <div class="hv-cap">
-          <strong>Release what therapy couldn't reach</strong>
-          <span>A masterclass with Anthony Abbagnano</span>
-        </div>
-      </div>
-      <video id="hvVideo" preload="none" playsinline controls poster="https://alchemyofbreath.com/wp-content/uploads/glow-head-578x600.jpg"><source src="https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/6a3a50af21502f4c61145ce1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-
     <div class="hero-proof reveal d3">
       <span><strong>50+</strong> years of practice</span>
       <span><strong>2,000+</strong> certified facilitators</span>
@@ -502,20 +488,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
     if(nav) nav.classList.toggle('scrolled',y>10);
   }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
-
-  var hvPoster=document.getElementById('hvPoster'), hvVideo=document.getElementById('hvVideo');
-  function playHv(){
-    hvPoster.classList.add('hidden');
-    if(hvVideo){
-      hvVideo.load();
-      var pr = hvVideo.play();
-      if(pr && typeof pr.catch==='function'){ pr.catch(function(){}); }
-    }
-  }
-  if(hvPoster){
-    hvPoster.addEventListener('click',playHv);
-    hvPoster.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();playHv();} });
-  }
 
   document.querySelectorAll('img').forEach(function(img){
     img.addEventListener('error',function(){ img.style.display='none'; });
