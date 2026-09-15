@@ -141,7 +141,6 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opa
 .cal-btn:hover{background:var(--gold-wash);border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 14px rgba(214,166,82,.2)}
 .cal-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;background:#FFFFFF;border-color:rgba(225,182,104,.3);box-shadow:none}
 .cal-btn svg{width:14px;height:14px;flex-shrink:0}
-.cal-hint{font-size:.72rem;color:var(--slate);margin-top:10px;font-style:italic}
 
 .back-link-wrap{text-align:center;margin-top:60px}
 .back-link{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--sans);font-weight:500;font-size:.86rem;letter-spacing:.18em;text-transform:uppercase;padding:15px 30px;border-radius:999px;border:1px solid rgba(34,31,32,.28);color:var(--ink);background:transparent;transition:border-color .25s,background .25s,transform .25s}
@@ -260,7 +259,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
               Apple / iCal
             </button>
           </div>
-          <p class="cal-hint" id="calHint" hidden>The event will open in your chosen calendar. Save it there.</p>
         </div>
       </div>
 
@@ -331,7 +329,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
 (function(){
   var data = document.getElementById('calData');
   var btns = document.querySelectorAll('#calBtns .cal-btn');
-  var hint = document.getElementById('calHint');
   if(!data || !btns.length) return;
 
   // Pull merged values
@@ -357,10 +354,9 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
     endDate = new Date(startDate.getTime() + 30*60*1000);
   }
 
-  // If we couldn't get a valid start date, disable the buttons
+  // If we couldn't get a valid start date, disable the buttons quietly
   if(!startDate || isNaN(startDate.getTime())){
     btns.forEach(function(b){ b.disabled = true; });
-    if(hint){ hint.hidden = false; hint.textContent = 'Calendar buttons will activate once your appointment is confirmed.'; }
     return;
   }
 
@@ -438,7 +434,6 @@ footer{background:var(--foot);border-top:1px solid rgba(225,182,104,.35);padding
   btns.forEach(function(b){
     b.addEventListener('click', function(){
       var provider = b.getAttribute('data-provider');
-      if(hint){ hint.hidden = false; }
       if(provider === 'google'){
         window.open(googleUrl(), '_blank', 'noopener');
       } else if(provider === 'outlook'){
