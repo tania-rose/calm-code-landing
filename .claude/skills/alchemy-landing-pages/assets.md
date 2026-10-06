@@ -27,7 +27,16 @@ Wix optimized URLs (smaller file, preferred for carousels):
 https://static.wixstatic.com/media/c2dd9b_[id]~mv2.jpg/v1/fill/w_800,h_534,al_c,q_85,enc_avif,quality_auto/[id]~mv2.jpg
 ```
 
-## Hero / background imagery
+## Canonical hero image per page
+
+Each page should use a distinct hero image. Confirmed assignments:
+
+- **Alchemy Regulation Method**: `https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69eb82499fe87a9994a74141.jpg`
+- **Inner Journey**: `https://static.wixstatic.com/media/c2dd9b_09ee1d8f65814030a6f5c5852eb71d36~mv2.jpg` (DSCF7077, golden hour ASHA)
+- **Facilitator Training**: Dark background with breathing mandala (no photographic hero)
+- **BreathCamp**: TBD — proposal is group/community shot `961c6a1a-7eb2-44e8-b085-af1c069cc0e1.jpeg`
+
+## Hero / background imagery (reserve pool)
 
 Tuscan landscape hero (dark brand):
 - `https://assets.cdn.filesafe.space/5lz2Wm44CNDwLSZWgAPf/media/69b2e9c0b4eb4d04025c4eef.jpg`
@@ -150,7 +159,7 @@ Personal Tent:          https://alchemyofbreath.com/wp-content/uploads/accommoda
 
 ## Free resources (for secondary CTA)
 
-**TODO**: User to confirm URL for free breathwork session / resources landing page. Current placeholders in existing pages point to the discovery call. Ask before building secondary CTAs linking to free resources.
+**TODO (unresolved, as of ARM page build 2026-10-06):** User to confirm the real URL for "Try a Free Breathwork Session". Current pages use `#free-resources` as a placeholder anchor. Replace globally once a destination is confirmed.
 
 Suggested target behaviors:
 - Free meditation / breath guide PDF download
