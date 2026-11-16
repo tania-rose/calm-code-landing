@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Earnings Calculator Preview</title>
+<style>
+body{margin:0;background:#faf7f1;padding:48px 20px}
+/* DUAL-PATH EARNINGS CALCULATOR COMPONENT */
+.aob-earnings{max-width:930px;margin:0 auto;color:#24333d;font-family:Arial,Helvetica,sans-serif;line-height:1.5}.aob-earnings *{box-sizing:border-box}.aob-earnings .aob-eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;color:#94703a;text-transform:uppercase}.aob-earnings h2{font-family:Georgia,serif;font-size:clamp(29px,4vw,42px);font-weight:400;line-height:1.18;margin:10px 0 15px}.aob-earnings .aob-sub{color:#62727c;max-width:710px;margin-bottom:25px}.aob-paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 24px}.aob-path{background:#fff;border:2px solid #e1ded8;border-radius:10px;padding:18px;text-align:left;cursor:pointer;color:#24333d;font:inherit;display:flex;flex-direction:column;gap:7px}.aob-path strong{font-size:16px}.aob-path span{font-size:13px;color:#61717a}.aob-path[aria-pressed="true"]{border-color:#ba9552;background:#fcf9f2;box-shadow:0 0 0 1px #ba9552}.aob-path:focus-visible,.aob-earnings input:focus-visible{outline:3px solid #76a8bf;outline-offset:2px}.aob-calc-panel{background:#fff;border:1px solid #e5e1db;border-radius:12px;padding:24px}.aob-calc-intro{margin:0 0 18px;color:#62727c}.aob-calc-main{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}.aob-controls-grid{display:grid;gap:16px}.aob-field{display:grid;grid-template-columns:1fr 112px;gap:8px 14px;align-items:center}.aob-field label{font-size:14px;font-weight:700}.aob-field input{min-width:0;max-width:100%;padding:10px;border:1px solid #bfc9cd;border-radius:5px;font:inherit;font-size:15px;text-align:right}.aob-field small{color:#62727c;font-weight:400}.aob-result{background:#f7f3eb;border:1px solid #e7dcc8;border-radius:10px;padding:20px;align-self:start}.aob-result .aob-result-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6c685f;font-weight:700}.aob-result output{display:block;font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#243a4a;margin:8px 0}.aob-result .aob-annual{font-size:15px;font-weight:700;color:#24333d}.aob-result .aob-breakdown{margin-top:18px;border-top:1px solid #ded4c2;padding-top:12px;font-size:13px;color:#5d6870}.aob-result .aob-breakdown div{display:flex;justify-content:space-between;gap:12px;margin:5px 0}.aob-footnote{font-size:12px;color:#64717a;line-height:1.5;margin:18px 0 0}
+@media(max-width:700px){.aob-paths,.aob-calc-main{grid-template-columns:1fr}.aob-calc-panel{padding:18px}.aob-field{grid-template-columns:1fr 100px}}
+</style>
+</head>
+<body>
+<div class="aob-earnings" id="aob-earnings-calculator">
+  <div class="aob-eyebrow">Explore Your Earning Potential</div>
+  <h2>What could breathwork make possible for you?</h2>
+  <p class="aob-sub">Whether you're starting something new or adding breathwork to your existing practice, explore an illustrative revenue scenario. You can change every number.</p>
+  <div class="aob-paths" role="group" aria-label="Choose your starting point">
+    <button type="button" class="aob-path" data-audience="new" aria-pressed="true"><strong>🌱 I'm starting something new</strong><span>Explore building a new breathwork practice, one client at a time.</span></button>
+    <button type="button" class="aob-path" data-audience="existing" aria-pressed="false"><strong>✦ I'm expanding my existing practice</strong><span>Explore adding private breathwork and workshops to the services you already offer.</span></button>
+  </div>
+  <div class="aob-calc-panel">
+    <p class="aob-calc-intro" id="aob-scenario-description">Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.</p>
+    <div class="aob-calc-main">
+      <div class="aob-controls-grid">
+        <div class="aob-field"><label for="aob-clients">Private sessions per week</label><input id="aob-clients" type="number" min="0" max="100" step="1" value="2" inputmode="numeric"></div>
+        <div class="aob-field"><label for="aob-fee">Price per private session <small>(USD)</small></label><input id="aob-fee" type="number" min="0" max="10000" step="5" value="125" inputmode="decimal"></div>
+        <div class="aob-field"><label for="aob-groups">Group workshops per month</label><input id="aob-groups" type="number" min="0" max="100" step="1" value="1" inputmode="numeric"></div>
+        <div class="aob-field"><label for="aob-groupfee">Revenue per workshop <small>(USD)</small></label><input id="aob-groupfee" type="number" min="0" max="100000" step="25" value="350" inputmode="decimal"></div>
+        <div class="aob-field"><label for="aob-weeks">Weeks of private sessions per year</label><input id="aob-weeks" type="number" min="0" max="52" step="1" value="52" inputmode="numeric"></div>
+      </div>
+      <div class="aob-result" aria-live="polite" aria-atomic="true">
+        <div class="aob-result-label">Illustrative monthly gross revenue</div>
+        <output id="aob-monthly" for="aob-clients aob-fee aob-groups aob-groupfee aob-weeks">$1,433</output>
+        <div class="aob-annual">Annual gross: <span id="aob-yearly">$17,200</span></div>
+        <div class="aob-breakdown"><div><span>Private sessions / month</span><strong id="aob-private-total">$1,083</strong></div><div><span>Workshops / month</span><strong id="aob-workshop-total">$350</strong></div></div>
+      </div>
+    </div>
+    <p class="aob-footnote">Illustrative revenue only, not average graduate earnings, guaranteed results, or net profit. Assumes all planned appointments and workshops are booked and paid. Figures exclude taxes, business expenses, cancellations, and other costs. Training does not guarantee clients or income.</p>
+  </div>
+</div>
+<script>
+(function(){
+ const root=document.getElementById('aob-earnings-calculator');if(!root)return;
+ const presets={new:{clients:2,fee:125,groups:1,groupfee:350,weeks:52,description:'Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.'},existing:{clients:4,fee:150,groups:2,groupfee:500,weeks:52,description:'Explore offering breathwork alongside your existing services. Existing clients and marketing channels may help, but bookings are never guaranteed.'}};
+ const ids={clients:'aob-clients',fee:'aob-fee',groups:'aob-groups',groupfee:'aob-groupfee',weeks:'aob-weeks'};
+ const fields=Object.fromEntries(Object.entries(ids).map(([k,v])=>[k,document.getElementById(v)]));
+ const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+ function number(k){const el=fields[k],lo=Number(el.min||0),hi=Number(el.max||1000000),n=Number(el.value);return Number.isFinite(n)?Math.max(lo,Math.min(hi,n)):0;}
+ function calc(){const privateAnnual=number('clients')*number('fee')*number('weeks');const workshopsAnnual=number('groups')*number('groupfee')*12;document.getElementById('aob-monthly').textContent=money((privateAnnual+workshopsAnnual)/12);document.getElementById('aob-yearly').textContent=money(privateAnnual+workshopsAnnual);document.getElementById('aob-private-total').textContent=money(privateAnnual/12);document.getElementById('aob-workshop-total').textContent=money(workshopsAnnual/12);}
+ function select(type){const p=presets[type]||presets.new;Object.keys(ids).forEach(k=>fields[k].value=p[k]);root.querySelectorAll('[data-audience]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.audience===type)));document.getElementById('aob-scenario-description').textContent=p.description;calc();}
+ root.querySelectorAll('[data-audience]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.audience)));
+ Object.values(fields).forEach(field=>field.addEventListener('input',calc));
+ const query=new URLSearchParams(window.location.search);select(query.get('audience')==='existing'||query.get('path')==='existing'?'existing':'new');
+})();
+</script>
+</body>
+</html>
