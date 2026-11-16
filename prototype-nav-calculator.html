@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AoB Facilitator Training | Sticky Navigation Prototype</title>
+<style>
+:root{--navy:#243a4a;--gold:#d7a349;--cream:#faf7f1;--ink:#24333d;--muted:#62727c;--line:#e5e1db;--height:76px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--height) + 20px)}body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;background:var(--cream);line-height:1.55}
+/* COMPONENT: copy nav/styles into the existing landing page */
+.aob-header{position:sticky;top:0;z-index:9999;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line);box-shadow:0 3px 20px rgba(24,42,52,.06)}
+.aob-nav{max-width:1200px;margin:auto;min-height:var(--height);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.aob-brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--navy);min-width:0}.aob-mark{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:Georgia,serif;font-size:30px;font-weight:400;flex:none}.aob-brand-title{font-size:13px;letter-spacing:.11em;font-weight:700;white-space:nowrap}.aob-brand-sub{font-size:11px;color:var(--muted);letter-spacing:.035em}
+.aob-controls{display:flex;align-items:center;gap:10px}.aob-call{padding:12px 18px;border-radius:5px;background:var(--navy);border:1px solid var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap}.aob-call:hover{background:#365367}.aob-toggle{width:45px;height:45px;background:#fff;border:1px solid #cfd7da;border-radius:5px;display:grid;place-items:center;cursor:pointer;color:var(--navy)}.aob-toggle:hover{background:#f4f6f7}.aob-toggle svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.aob-menu[hidden]{display:none!important}.aob-menu{border-top:1px solid var(--line);background:#fff;box-shadow:0 16px 28px rgba(24,42,52,.1)}.aob-menu-inner{max-width:1200px;margin:auto;padding:12px 24px 24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 24px}.aob-menu a{display:flex;justify-content:space-between;align-items:center;padding:12px 10px;color:var(--ink);text-decoration:none;font-size:15px;border-bottom:1px solid #f0eee9}.aob-menu a:hover,.aob-menu a:focus-visible{color:#9d7029;background:#fcfaf6}.aob-menu .aob-featured{color:#9d7029;font-weight:700}.aob-menu a span{color:#c6a16d}
+/* Prototype-only styles; not needed when embedding navigation in the live page */
+.demo-label{font-size:11px;letter-spacing:.13em;font-weight:bold;color:#9a793d;text-transform:uppercase}.hero{max-width:1040px;margin:0 auto;padding:84px 24px 90px;text-align:center}.hero h1{font-family:Georgia,serif;font-size:clamp(36px,5vw,62px);line-height:1.12;max-width:830px;margin:14px auto 22px;font-weight:400}.hero p{max-width:720px;font-size:18px;margin:0 auto 30px;color:#5f686e}.hero-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}.btn{border-radius:5px;text-decoration:none;padding:15px 22px;font-weight:700;font-size:14px;display:inline-block}.btn-primary{background:var(--navy);color:#fff}.btn-secondary{background:transparent;color:var(--navy);border:1px solid var(--navy)}.btn-tertiary{color:#89672f;text-decoration:underline;text-underline-offset:4px}.note{font-size:12px!important;margin-top:15px!important}.pillrow{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:30px 0 0}.pill{background:#fff;border:1px solid var(--line);border-radius:40px;padding:6px 14px;color:var(--muted);font-size:12px}.demo-section{max-width:1000px;margin:0 auto 22px;padding:48px 34px;background:#fff;border:1px solid var(--line);border-radius:12px;min-height:250px;scroll-margin-top:calc(var(--height) + 20px)}.demo-section h2{font-family:Georgia,serif;font-size:32px;font-weight:400;margin:8px 0 12px}.demo-section p{max-width:700px;color:var(--muted)}.demo-section .anchor{font-family:monospace;font-size:13px;background:#eef2f3;padding:4px 8px;border-radius:4px;color:#315266}.demo-section.calculator{border:2px solid #d7b572}.demo-callout{padding:20px;margin-top:20px;border-left:3px solid var(--gold);background:#faf7f1;color:#4f5c64}.end{padding:20px;text-align:center;font-size:12px;color:var(--muted)}
+@media(max-width:600px){:root{--height:68px}.aob-nav{padding:8px 15px;gap:8px}.aob-mark{width:34px;height:34px;font-size:24px}.aob-brand{gap:7px}.aob-brand-title{font-size:10px;letter-spacing:.06em}.aob-brand-sub{font-size:10px}.aob-call{font-size:11px;padding:10px 11px}.aob-toggle{width:39px;height:39px}.aob-controls{gap:6px}.aob-menu-inner{grid-template-columns:1fr;padding:7px 18px 17px}.aob-menu a{padding:12px 4px}.hero{padding:58px 20px 65px}.hero p{font-size:16px}.hero-actions{display:flex;flex-direction:column}.demo-section{margin:0 12px 14px;padding:30px 21px}.demo-section h2{font-size:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* DUAL-PATH EARNINGS CALCULATOR COMPONENT */
+.aob-earnings{max-width:930px;margin:0 auto;color:#24333d;font-family:Arial,Helvetica,sans-serif;line-height:1.5}.aob-earnings *{box-sizing:border-box}.aob-earnings .aob-eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;color:#94703a;text-transform:uppercase}.aob-earnings h2{font-family:Georgia,serif;font-size:clamp(29px,4vw,42px);font-weight:400;line-height:1.18;margin:10px 0 15px}.aob-earnings .aob-sub{color:#62727c;max-width:710px;margin-bottom:25px}.aob-paths{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 24px}.aob-path{background:#fff;border:2px solid #e1ded8;border-radius:10px;padding:18px;text-align:left;cursor:pointer;color:#24333d;font:inherit;display:flex;flex-direction:column;gap:7px}.aob-path strong{font-size:16px}.aob-path span{font-size:13px;color:#61717a}.aob-path[aria-pressed="true"]{border-color:#ba9552;background:#fcf9f2;box-shadow:0 0 0 1px #ba9552}.aob-path:focus-visible,.aob-earnings input:focus-visible{outline:3px solid #76a8bf;outline-offset:2px}.aob-calc-panel{background:#fff;border:1px solid #e5e1db;border-radius:12px;padding:24px}.aob-calc-intro{margin:0 0 18px;color:#62727c}.aob-calc-main{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}.aob-controls-grid{display:grid;gap:16px}.aob-field{display:grid;grid-template-columns:1fr 112px;gap:8px 14px;align-items:center}.aob-field label{font-size:14px;font-weight:700}.aob-field input{min-width:0;max-width:100%;padding:10px;border:1px solid #bfc9cd;border-radius:5px;font:inherit;font-size:15px;text-align:right}.aob-field small{color:#62727c;font-weight:400}.aob-result{background:#f7f3eb;border:1px solid #e7dcc8;border-radius:10px;padding:20px;align-self:start}.aob-result .aob-result-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6c685f;font-weight:700}.aob-result output{display:block;font-family:Georgia,serif;font-size:clamp(28px,4vw,42px);color:#243a4a;margin:8px 0}.aob-result .aob-annual{font-size:15px;font-weight:700;color:#24333d}.aob-result .aob-breakdown{margin-top:18px;border-top:1px solid #ded4c2;padding-top:12px;font-size:13px;color:#5d6870}.aob-result .aob-breakdown div{display:flex;justify-content:space-between;gap:12px;margin:5px 0}.aob-footnote{font-size:12px;color:#64717a;line-height:1.5;margin:18px 0 0}.aob-replace-note{padding:12px;border-left:3px solid #d7a349;background:#faf7f1;font-size:12px;color:#62727c;margin-top:18px}
+@media(max-width:700px){.aob-paths,.aob-calc-main{grid-template-columns:1fr}.aob-calc-panel{padding:18px}.aob-field{grid-template-columns:1fr 100px}}
+
+</style>
+</head>
+<body>
+<!-- NAVIGATION COMPONENT START: Replace existing header/nav; do not create a second sticky header. -->
+<header class="aob-header" id="aob-header">
+ <nav class="aob-nav" aria-label="Main navigation">
+  <a class="aob-brand" href="#top" aria-label="Alchemy of Breath, back to top">
+   <span class="aob-mark" aria-hidden="true">◌</span>
+   <span><span class="aob-brand-title" style="display:block">ALCHEMY OF BREATH</span><span class="aob-brand-sub" style="display:block">Facilitator Training</span></span>
+  </a>
+  <div class="aob-controls">
+   <a class="aob-call" href="#book-a-call">Book a Free Call</a>
+   <button type="button" class="aob-toggle" id="aob-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="aob-mobile-menu">
+    <svg id="aob-menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+   </button>
+  </div>
+ </nav>
+ <div class="aob-menu" id="aob-mobile-menu" hidden>
+  <div class="aob-menu-inner">
+   <a href="#experience">The Experience <span aria-hidden="true">↘</span></a>
+   <a href="#curriculum">What You'll Learn <span aria-hidden="true">↘</span></a>
+   <a href="#schedule">Schedule &amp; Commitment <span aria-hidden="true">↘</span></a>
+   <a class="aob-featured" href="#earning-potential">Earning Potential <span aria-hidden="true">↘</span></a>
+   <a href="#tuition">Tuition &amp; Payment Options <span aria-hidden="true">↘</span></a>
+   <a href="#graduate-stories">Graduate Stories <span aria-hidden="true">↘</span></a>
+   <a href="#faqs">FAQs <span aria-hidden="true">↘</span></a>
+  </div>
+ </div>
+</header>
+<!-- NAVIGATION COMPONENT END -->
+<main id="top">
+ <section class="hero" aria-labelledby="hero-title"><div class="demo-label">Breathwork Facilitator Certification</div><h1 id="hero-title">Become a certified breathwork facilitator, online.</h1><p>An eight-month, 400-hour training in Conscious Connected Breathwork. Begin with your own inner work, then learn the skills, care, and professional foundations of facilitating for others.</p><div class="hero-actions"><a href="#book-a-call" class="btn btn-primary">Book a Free Call</a><a href="#earning-potential" class="btn btn-secondary">Explore Your Earning Potential ↓</a><a href="#get-details" class="btn btn-tertiary">Send Me the Details</a></div><p class="note">The call is free and carries no obligation.</p><div class="pillrow"><span class="pill">8 months online</span><span class="pill">400 hours</span><span class="pill">Weekly live calls</span><span class="pill">Triple accredited</span></div></section>
+ <section id="experience" class="demo-section"><div class="demo-label">The Experience</div><h2>What is the Alchemy of Breath Facilitator Training?</h2><p>Replace this demonstration section with the existing overview, how learning works, ASHA experience, and training differentiation. Jump target: <span class="anchor">#experience</span></p></section>
+ <section id="schedule" class="demo-section"><div class="demo-label">Schedule &amp; Commitment</div><h2>How the eight months fit into your life</h2><p>Point this link to the live page's training-format section or a dedicated schedule section. Keep cohort dates and hours current. Jump target: <span class="anchor">#schedule</span></p></section>
+ <section id="tuition" class="demo-section"><div class="demo-label">Tuition &amp; Payment Options</div><h2>Understand your investment</h2><p>Point to the live tuition section. Clearly disclose online tuition, separate ASHA graduation costs, and additional travel expenses. Jump target: <span class="anchor">#tuition</span></p></section>
+ <section id="graduate-stories" class="demo-section"><div class="demo-label">Graduate Stories</div><h2>Hear from our graduates</h2><p>Connect to the live testimonial section. Jump target: <span class="anchor">#graduate-stories</span></p></section>
+ <section id="earning-potential" class="demo-section calculator"><!-- EARNINGS CALCULATOR COMPONENT START: insert INSIDE the existing earning-potential section; do not duplicate its ID -->
+<div class="aob-earnings" id="aob-earnings-calculator">
+  <div class="aob-eyebrow">Explore Your Earning Potential</div>
+  <h2>What could breathwork make possible for you?</h2>
+  <p class="aob-sub">Whether you're starting something new or adding breathwork to your existing practice, explore an illustrative revenue scenario. You can change every number.</p>
+  <div class="aob-paths" role="group" aria-label="Choose your starting point">
+    <button type="button" class="aob-path" data-audience="new" aria-pressed="true"><strong>🌱 I'm starting something new</strong><span>Explore building a new breathwork practice, one client at a time.</span></button>
+    <button type="button" class="aob-path" data-audience="existing" aria-pressed="false"><strong>✦ I'm expanding my existing practice</strong><span>Explore adding private breathwork and workshops to the services you already offer.</span></button>
+  </div>
+  <div class="aob-calc-panel">
+    <p class="aob-calc-intro" id="aob-scenario-description">Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.</p>
+    <div class="aob-calc-main">
+      <div class="aob-controls-grid">
+        <div class="aob-field"><label for="aob-clients">Private sessions per week</label><input id="aob-clients" type="number" min="0" max="100" step="1" value="2" inputmode="numeric"></div>
+        <div class="aob-field"><label for="aob-fee">Price per private session <small>(USD)</small></label><input id="aob-fee" type="number" min="0" max="10000" step="5" value="125" inputmode="decimal"></div>
+        <div class="aob-field"><label for="aob-groups">Group workshops per month</label><input id="aob-groups" type="number" min="0" max="100" step="1" value="1" inputmode="numeric"></div>
+        <div class="aob-field"><label for="aob-groupfee">Revenue per workshop <small>(USD)</small></label><input id="aob-groupfee" type="number" min="0" max="100000" step="25" value="350" inputmode="decimal"></div>
+        <div class="aob-field"><label for="aob-weeks">Weeks of private sessions per year</label><input id="aob-weeks" type="number" min="0" max="52" step="1" value="52" inputmode="numeric"></div>
+      </div>
+      <div class="aob-result" aria-live="polite" aria-atomic="true">
+        <div class="aob-result-label">Illustrative monthly gross revenue</div>
+        <output id="aob-monthly" for="aob-clients aob-fee aob-groups aob-groupfee aob-weeks">$1,433</output>
+        <div class="aob-annual">Annual gross: <span id="aob-yearly">$17,200</span></div>
+        <div class="aob-breakdown"><div><span>Private sessions / month</span><strong id="aob-private-total">$1,083</strong></div><div><span>Workshops / month</span><strong id="aob-workshop-total">$350</strong></div></div>
+      </div>
+    </div>
+    <p class="aob-footnote">Illustrative revenue only, not average graduate earnings, guaranteed results, or net profit. Assumes all planned appointments and workshops are booked and paid. Figures exclude taxes, business expenses, cancellations, and other costs. Training does not guarantee clients or income.</p>
+  </div>
+</div>
+<!-- EARNINGS CALCULATOR COMPONENT END --><div class="aob-replace-note"><strong>Implementation note:</strong> This working demonstration replaces the illustrative calculator placeholder. In production, integrate these two audience presets into the current AoB calculator or replace that calculator intentionally, rather than showing two calculators.</div></section>
+ <section id="curriculum" class="demo-section"><div class="demo-label">What You'll Learn</div><h2>Two journeys, woven into one training</h2><p>Connect to the existing curriculum carousel. Jump target: <span class="anchor">#curriculum</span></p></section>
+ <section id="book-a-call" class="demo-section"><div class="demo-label">Book a Free Call</div><h2>Speak with a Success Advisor</h2><p>Point to the existing call-booking section or use the current approved scheduling URL in the persistent button. Jump target: <span class="anchor">#book-a-call</span></p></section>
+ <section id="get-details" class="demo-section"><div class="demo-label">Send Me the Details</div><h2>Not ready for a call?</h2><p>Point to the existing lead form. Jump target: <span class="anchor">#get-details</span></p></section>
+ <section id="faqs" class="demo-section"><div class="demo-label">Frequently Asked Questions</div><h2>Questions, gently</h2><p>Connect to the existing FAQ section. Jump target: <span class="anchor">#faqs</span></p></section>
+</main>
+<footer class="end">AoB navigation concept for technical implementation · All section content here is illustrative; preserve existing live content.</footer>
+<script>
+(function(){
+ const toggle=document.getElementById('aob-menu-toggle');
+ const menu=document.getElementById('aob-mobile-menu');
+ const icon=document.getElementById('aob-menu-icon');
+ function setOpen(open){menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');icon.innerHTML=open?'<path d="M5 5l14 14M19 5L5 19"/>':'<path d="M4 7h16M4 12h16M4 17h16"/>';}
+ toggle.addEventListener('click',()=>setOpen(menu.hidden));
+ menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setOpen(false)));
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){setOpen(false);toggle.focus();}});
+ document.addEventListener('click',e=>{if(!menu.hidden&&!e.target.closest('#aob-header'))setOpen(false)});
+})();
+
+/* Dual-path calculator: audience=existing preselects the practitioner experience for ad campaigns.
+   Otherwise the neutral page defaults to new. Existing practice query: ?audience=existing#earning-potential
+   For compatibility also accepts ?path=existing and ?audience=new. */
+(function(){
+ const root=document.getElementById('aob-earnings-calculator');if(!root)return;
+ const presets={new:{clients:2,fee:125,groups:1,groupfee:350,weeks:52,description:'Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.'},existing:{clients:4,fee:150,groups:2,groupfee:500,weeks:52,description:'Explore offering breathwork alongside your existing services. Existing clients and marketing channels may help, but bookings are never guaranteed.'}};
+ const ids={clients:'aob-clients',fee:'aob-fee',groups:'aob-groups',groupfee:'aob-groupfee',weeks:'aob-weeks'};
+ const fields=Object.fromEntries(Object.entries(ids).map(([k,v])=>[k,document.getElementById(v)]));
+ const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+ function number(k){const el=fields[k],lo=Number(el.min||0),hi=Number(el.max||1000000),n=Number(el.value);return Number.isFinite(n)?Math.max(lo,Math.min(hi,n)):0;}
+ function calc(){const privateAnnual=number('clients')*number('fee')*number('weeks');const workshopsAnnual=number('groups')*number('groupfee')*12;document.getElementById('aob-monthly').textContent=money((privateAnnual+workshopsAnnual)/12);document.getElementById('aob-yearly').textContent=money(privateAnnual+workshopsAnnual);document.getElementById('aob-private-total').textContent=money(privateAnnual/12);document.getElementById('aob-workshop-total').textContent=money(workshopsAnnual/12);}
+ function select(type){const p=presets[type]||presets.new;Object.keys(ids).forEach(k=>fields[k].value=p[k]);root.querySelectorAll('[data-audience]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.audience===type)));document.getElementById('aob-scenario-description').textContent=p.description;calc();}
+ root.querySelectorAll('[data-audience]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.audience)));
+ Object.values(fields).forEach(field=>field.addEventListener('input',calc));
+ const query=new URLSearchParams(window.location.search);select(query.get('audience')==='existing'||query.get('path')==='existing'?'existing':'new');
+})();
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Breathwork Facilitator Training & Certification | Alchemy of Breath</title>
-  <meta name="description" content="Become a certified breathwork facilitator with Alchemy of Breath. An 8-month, 400-hour professional certification accredited by the GPBA and AADP, led by Anthony Abbagnano. Book your free discovery call."/>
+  <meta name="description" content="Become a certified breathwork facilitator with Alchemy of Breath. An 8-month, 400-hour professional certification, triple accredited by the FHT, GPBA, and AADP, led by Anthony Abbagnano. Tuition from €1,649. Book your free discovery call."/>
   <meta name="keywords" content="breathwork facilitator training, breathwork certification, breathwork teacher training, GPBA accredited breathwork, Alchemy of Breath, conscious connected breathing, trauma-informed breathwork"/>
   <link rel="canonical" href="https://alchemyofbreath.com/breathwork-training/"/>
   <meta name="robots" content="index, follow"/>
@@ -13,7 +13,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Breathwork Facilitator Training & Certification | Alchemy of Breath"/>
-  <meta property="og:description" content="An 8-month, 400-hour professional breathwork certification accredited by the GPBA and AADP. Train with Anthony Abbagnano and a global community in 60+ countries."/>
+  <meta property="og:description" content="An 8-month, 400-hour professional breathwork certification, triple accredited by the FHT, GPBA, and AADP. Train with Anthony Abbagnano and a global community in 60+ countries."/>
   <meta property="og:url" content="https://alchemyofbreath.com/breathwork-training/"/>
   <meta property="og:image" content="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80&auto=format&fit=crop"/>
   <meta property="og:site_name" content="Alchemy of Breath"/>
@@ -40,13 +40,20 @@
         "name": "Alchemy of Breath",
         "url": "https://alchemyofbreath.com",
         "founder": { "@type": "Person", "name": "Anthony Abbagnano" },
-        "description": "Internationally accredited breathwork school offering professional facilitator training, accredited by the Global Professional Breathwork Alliance (GPBA) and the American Association of Drugless Practitioners (AADP)."
+        "description": "Internationally accredited breathwork school offering professional facilitator training, triple accredited by the Federation of Holistic Therapies (FHT), the Global Professional Breathwork Alliance (GPBA), and the American Association of Drugless Practitioners (AADP), and a member of the International Breathwork Foundation."
       },
       {
         "@type": "Course",
         "name": "Breathwork Facilitator Training & Certification",
-        "description": "An 8-month, 400-hour professional breathwork facilitator certification combining live online training, mentorship, and a 7-day residential BreathCamp at ASHA in Tuscany. Accredited by the GPBA and AADP.",
+        "description": "An 8-month, 400-hour professional breathwork facilitator certification with live online and live residential pathways, triple accredited by the FHT, GPBA, and AADP. Tuition from €1,649 to €5,550 depending on pathway and options. The graduation BreathCamp at ASHA in Tuscany is a separate investment.",
         "provider": { "@id": "https://alchemyofbreath.com/#org" },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "EUR",
+          "lowPrice": "1649",
+          "highPrice": "5550",
+          "offerCount": "2"
+        },
         "hasCourseInstance": {
           "@type": "CourseInstance",
           "courseMode": ["online", "blended"],
@@ -63,8 +70,13 @@
           },
           {
             "@type": "Question",
-            "name": "Is the certification internationally recognised?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The training is accredited by the Global Professional Breathwork Alliance (GPBA) and the American Association of Drugless Practitioners (AADP), with graduates practising in more than 60 countries." }
+            "name": "Is the certification internationally recognized?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The training is triple accredited by the Federation of Holistic Therapies (FHT), the Global Professional Breathwork Alliance (GPBA), and the American Association of Drugless Practitioners (AADP), and Alchemy of Breath is a proud member of the International Breathwork Foundation. Graduates are practicing in more than 60 countries." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does the facilitator training cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Tuition for the online Facilitator Training ranges from €1,649 to €3,995. Tuition for the Live Residential Facilitator Training ranges from €1,649 to €5,550. The final figure depends on the options and payment plan you choose. The graduation BreathCamp at ASHA, Italy is a separate investment and is not included in tuition. Your Success Advisor will walk you through the exact figures on your discovery call." }
           },
           {
             "@type": "Question",
@@ -79,7 +91,7 @@
           {
             "@type": "Question",
             "name": "Can I really build a career as a breathwork facilitator?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The final phase of the training is dedicated to the business of breathwork: positioning, pricing, ethics, and client care. Graduates run private practices, retreats, corporate programmes, and online communities worldwide." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The final phase of the training is dedicated to the business of breathwork: positioning, pricing, ethics, and client care. Graduates run private practices, retreats, corporate programs, and online communities worldwide." }
           }
         ]
       }
@@ -532,6 +544,63 @@
   @media (max-width: 880px) { .outcomes-grid { grid-template-columns:1fr; } }
 
   /* ────────────────────────────────────────────
+     INVESTMENT / TUITION
+  ──────────────────────────────────────────── */
+  .invest { background: var(--white); }
+  .paths-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; align-items:stretch; }
+  .path-card {
+    background: var(--bg); border:1px solid rgba(225,182,104,.35); border-radius:26px;
+    padding:2.5rem 2.2rem; display:flex; flex-direction:column; position:relative;
+    transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+  }
+  .path-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .path-card.feat {
+    background: linear-gradient(165deg, var(--white) 0%, var(--bg-warm) 160%);
+    border-color: var(--gold); transform: rotate(.4deg); box-shadow: var(--shadow-sm);
+  }
+  .path-card.feat:hover { transform: translateY(-6px) rotate(0); box-shadow: var(--shadow-md); }
+  .path-tag {
+    display:inline-block; align-self:flex-start;
+    font-size:.64rem; font-weight:700; letter-spacing:.24em; text-transform:uppercase;
+    color:var(--teal-deep); border:1px solid rgba(0,165,178,.35); border-radius:999px;
+    padding:.5rem 1rem .4rem; margin-bottom:1.2rem;
+  }
+  .path-card.feat .path-tag { color:var(--ink); border-color:var(--gold-2); background: linear-gradient(135deg, var(--gold), var(--gold-2)); }
+  .path-card h3 { font-size:1.65rem; margin-bottom:.45rem; }
+  .path-lede { font-size:.92rem; color:var(--ink-soft); }
+  .path-price { display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap; margin:1.5rem 0 .3rem; }
+  .path-price .now { font-family:var(--serif); font-size:2.2rem; font-weight:600; color:var(--ink); line-height:1; }
+  .path-price .to { font-size:.95rem; color:var(--muted); }
+  .path-note { font-size:.8rem; color:var(--muted); }
+  .path-list { list-style:none; flex:1; margin:1.3rem 0 1.8rem; border-top:1px solid rgba(225,182,104,.3); padding-top:1.1rem; }
+  .path-list li { display:flex; gap:.75rem; align-items:flex-start; font-size:.92rem; color:var(--ink-soft); padding:.3rem 0; }
+  .path-list svg { flex:none; margin-top:.25rem; }
+  .path-card .btn { width:100%; }
+  .invest-callout {
+    display:flex; gap:1rem; align-items:flex-start;
+    background: var(--bg-teal); border:1px solid rgba(0,165,178,.28); border-radius:18px;
+    padding:1.3rem 1.5rem; margin:1.8rem 0 2.6rem; font-size:.93rem; color:var(--ink-soft);
+  }
+  .invest-callout svg { flex:none; margin-top:.15rem; }
+  .invest-callout b { color:var(--teal-deep); }
+  .compare-wrap {
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    border-radius:22px; border:1px solid rgba(34,31,32,.08);
+    box-shadow: var(--shadow-sm); background:var(--white);
+  }
+  .compare { width:100%; border-collapse:collapse; min-width:680px; font-size:.92rem; }
+  .compare th, .compare td { padding:1.05rem 1.4rem; text-align:left; border-bottom:1px solid rgba(34,31,32,.07); vertical-align:top; }
+  .compare thead th { font-family:var(--serif); font-size:1.18rem; font-weight:600; color:var(--teal-deep); background:var(--bg-teal); }
+  .compare tbody th { font-family:var(--sans); font-weight:700; font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); padding-top:1.25rem; }
+  .compare tr:last-child th, .compare tr:last-child td { border-bottom:none; }
+  .compare .price-row td { background: rgba(225,182,104,.1); }
+  .compare .price { font-family:var(--serif); font-size:1.35rem; font-weight:600; color:var(--ink); white-space:nowrap; }
+  .compare .sep { color:var(--gold-2); font-weight:700; }
+  .invest-fine { font-size:.78rem; color:var(--muted); margin-top:1rem; text-align:center; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  @media (max-width: 880px) { .paths-grid { grid-template-columns:1fr; } }
+
+  /* ────────────────────────────────────────────
      DISCOVERY CALL CTA
   ──────────────────────────────────────────── */
   .book {
@@ -665,6 +734,7 @@
       <ul class="nav-links">
         <li><a href="#about">The Training</a></li>
         <li><a href="#journey">Curriculum</a></li>
+        <li><a href="#investment">Tuition</a></li>
         <li><a href="#stories">Stories</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -688,7 +758,7 @@
       </div>
       <p class="hero-note rv">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#00a5b2" stroke-width="1.6"/><path d="m9 12 2 2 4-4" stroke="#E1B668" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        No pressure, no obligation. A 20-minute conversation to see if this path is yours.
+        The call is free and carries no obligation. Twenty minutes to see if this path is yours.
       </p>
       <div class="hero-stats rv">
         <div class="stat"><div class="n"><span data-count="400">0</span><sup>+</sup></div><div class="l">Training Hours</div></div>
@@ -719,7 +789,16 @@
 <!-- ──────────────── ACCREDITATION / AUTHORITY STRIP ──────────────── -->
 <section class="accred" aria-label="Accreditations and trust">
   <div class="wrap accred-inner">
-    <p class="accred-label">Accredited &amp; Trusted Worldwide</p>
+    <p class="accred-label">Triple Accredited &amp; Trusted Worldwide</p>
+
+    <div class="badge" title="Federation of Holistic Therapies">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="21" stroke="#E1B668" stroke-width="2"/>
+        <path d="M24 36c0-9 3-15 10-19-1 10-4 16-10 19zM24 36c0-9-3-15-10-19 1 10 4 16 10 19z" stroke="#00a5b2" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M24 36v4" stroke="#00a5b2" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+      <div class="t"><b>FHT Accredited</b>Federation of Holistic Therapies</div>
+    </div>
 
     <div class="badge" title="Global Professional Breathwork Alliance">
       <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -761,7 +840,7 @@
         <path d="M6 18h36M6 30h36" stroke="#00a5b2" stroke-width="1.4"/>
         <circle cx="33" cy="14" r="4.5" fill="#E1B668"/>
       </svg>
-      <div class="t"><b>Global Community</b>Graduates practising in 60+ countries</div>
+      <div class="t"><b>Global Community</b>Graduates practicing in 60+ countries</div>
     </div>
   </div>
 </section>
@@ -790,16 +869,16 @@
     <div>
       <p class="eyebrow rv">A School, A Method, A Movement</p>
       <h2 class="rv" style="font-size:clamp(2rem,3.6vw,3rem); margin-top:1.1rem;">More than a certification. <span class="em">A transformation</span> that becomes your profession.</h2>
-      <blockquote class="about-quote rv">“We don’t teach you techniques to perform. We train you to hold space so safely, so skilfully, that the breath can do what it has always known how to do.”</blockquote>
-      <p class="about-attr rv"><b>Anthony Abbagnano</b> — Founder, Alchemy of Breath</p>
+      <blockquote class="about-quote rv">“We don’t teach you techniques to perform. We train you to hold space so safely, so skillfully, that the breath can do what it has always known how to do.”</blockquote>
+      <p class="about-attr rv"><b>Anthony Abbagnano</b> · Founder, Alchemy of Breath</p>
       <ul class="checklist rv">
         <li>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Live, mentored training — not a library of videos you watch alone
+          Live, mentored training, not a library of videos you watch alone
         </li>
         <li>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Deep personal practice first, professional facilitation second — in that order
+          Deep personal practice first, professional facilitation second, in that order
         </li>
         <li>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -807,7 +886,7 @@
         </li>
         <li>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          An optional 7-day residential immersion at ASHA, our school in the Tuscan hills
+          An optional 7-day residential immersion at ASHA, our school in the Tuscan hills, offered as a separate investment
         </li>
       </ul>
     </div>
@@ -827,21 +906,21 @@
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4.5 4.5 0 0 1 7-3.7A4.5 4.5 0 0 1 19 11c0 5.6-7 10-7 10z" stroke="#00a5b2" stroke-width="1.7" stroke-linejoin="round"/></svg>
         </div>
         <h3>The Called</h3>
-        <p>You’ve experienced what the breath can do — in a session, a ceremony, a moment that changed everything — and you can’t un-know it. Now you feel pulled to give that experience to others, with real skill behind your intention.</p>
+        <p>You’ve experienced what the breath can do, in a session, a ceremony, a moment that changed everything, and you can’t un-know it. Now you feel pulled to give that experience to others, with real skill behind your intention.</p>
       </article>
       <article class="who-card rv">
         <div class="who-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 4a4 4 0 1 1-8 0M4 21c0-4 3.5-7 8-7s8 3 8 7" stroke="#00a5b2" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="5" r="3.4" stroke="#E1B668" stroke-width="1.7"/></svg>
         </div>
         <h3>The Practitioner</h3>
-        <p>You’re a coach, therapist, yoga teacher, or healer who wants a modality that goes deeper, faster — safely. Breathwork integrates into your existing practice and gives your clients somatic results talk alone can’t reach.</p>
+        <p>You’re a coach, therapist, yoga teacher, or healer who wants a modality that goes deeper, faster, and safely. Breathwork integrates into your existing practice and gives your clients somatic results talk alone can’t reach.</p>
       </article>
       <article class="who-card rv">
         <div class="who-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" stroke="#00a5b2" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6" stroke="#E1B668" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>The Career-Changer</h3>
-        <p>You’re done building someone else’s dream. You want meaningful work, location freedom, and a credential serious enough to build a real practice on — not a weekend certificate nobody recognises.</p>
+        <p>You’re done building someone else’s dream. You want meaningful work, location freedom, and a credential serious enough to build a real practice on, not a weekend certificate nobody recognizes.</p>
       </article>
     </div>
   </div>
@@ -853,7 +932,7 @@
     <div class="sec-head rv">
       <p class="eyebrow">The Curriculum</p>
       <h2>Your <span class="em-gold">8-month journey</span>, phase by phase</h2>
-      <p>Four hundred hours of live teaching, practice, mentorship, and supervised facilitation — sequenced so that every skill rests on embodied experience, never on theory alone.</p>
+      <p>Four hundred hours of live teaching, practice, mentorship, and supervised facilitation, sequenced so that every skill rests on embodied experience, never on theory alone.</p>
     </div>
 
     <div class="phase-track">
@@ -885,7 +964,7 @@
         <div class="phase-no">04<small>Phase</small></div>
         <div>
           <h3>Practicum &amp; Client Hours</h3>
-          <p>Real sessions with real people — one-to-one and group — logged, reviewed, and mentored. You graduate having already facilitated, not hoping you’ll one day be ready.</p>
+          <p>Real sessions with real people, one-to-one and group, logged, reviewed, and mentored. You graduate having already facilitated, not hoping you’ll one day be ready.</p>
         </div>
         <span class="phase-months">Month 7</span>
       </article>
@@ -893,7 +972,7 @@
         <div class="phase-no">05<small>Phase</small></div>
         <div>
           <h3>Certification &amp; The Business of Breath</h3>
-          <p>Final assessment and your GPBA- and AADP-accredited diploma, plus positioning, pricing, and client-care frameworks to launch a practice that sustains you.</p>
+          <p>Final assessment and your triple accredited diploma, recognized by the FHT, GPBA, and AADP, plus positioning, pricing, and client-care frameworks to launch a practice that sustains you.</p>
         </div>
         <span class="phase-months">Month 8</span>
       </article>
@@ -919,7 +998,7 @@
     <div class="camp-copy">
       <p class="eyebrow">The Crowning Experience</p>
       <h2>BreathCamp at ASHA, <span class="em-gold">Tuscany</span></h2>
-      <p>Complete your training with an optional 7-day residential immersion at the Alchemy School of Healing Arts. Seven days of breath, ceremony, and community in the Italian hills — the moment your cohort becomes your lifelong colleagues.</p>
+      <p>Complete your training with an optional 7-day residential immersion at the Alchemy School of Healing Arts. Seven days of breath, ceremony, and community in the Italian hills, the moment your cohort becomes your lifelong colleagues. BreathCamp is a separate investment, booked in addition to your training tuition.</p>
     </div>
   </div>
 </section>
@@ -947,7 +1026,7 @@
         <div class="t-stars" aria-label="5 out of 5 stars">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#E1B668" aria-hidden="true"><path d="m12 2 3 7 7 .7-5.3 4.8 1.6 7-6.3-3.8L5.7 21.5l1.6-7L2 9.7 9 9z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E1B668" aria-hidden="true"><path d="m12 2 3 7 7 .7-5.3 4.8 1.6 7-6.3-3.8L5.7 21.5l1.6-7L2 9.7 9 9z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E1B668" aria-hidden="true"><path d="m12 2 3 7 7 .7-5.3 4.8 1.6 7-6.3-3.8L5.7 21.5l1.6-7L2 9.7 9 9z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E1B668" aria-hidden="true"><path d="m12 2 3 7 7 .7-5.3 4.8 1.6 7-6.3-3.8L5.7 21.5l1.6-7L2 9.7 9 9z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#E1B668" aria-hidden="true"><path d="m12 2 3 7 7 .7-5.3 4.8 1.6 7-6.3-3.8L5.7 21.5l1.6-7L2 9.7 9 9z"/></svg>
         </div>
-        <blockquote class="t-quote">“As a psychotherapist I was sceptical of anything that promised transformation. The trauma-informed rigour here won me over. I now integrate breathwork with half my clients, and the results speak for themselves.”</blockquote>
+        <blockquote class="t-quote">“As a psychotherapist I was skeptical of anything that promised transformation. The trauma-informed rigor here won me over. I now integrate breathwork with half my clients, and the results speak for themselves.”</blockquote>
         <figcaption class="t-person">
           <span class="t-ava" aria-hidden="true">D</span>
           <span><span class="nm">Daniel R.</span><br/><span class="rl">Psychotherapist, Austin</span></span>
@@ -972,11 +1051,11 @@
   <div class="wrap outcomes-grid">
     <div>
       <p class="eyebrow rv">What You Walk Away With</p>
-      <h2 class="rv" style="font-size:clamp(2rem,3.6vw,3rem); margin:1.1rem 0 1.6rem;">Everything you need to <span class="em">practise professionally</span></h2>
+      <h2 class="rv" style="font-size:clamp(2rem,3.6vw,3rem); margin:1.1rem 0 1.6rem;">Everything you need to <span class="em">practice professionally</span></h2>
       <ul class="outcome-list">
         <li class="rv">
           <span class="o-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zm0 0a2 2 0 0 0 2 2h13" stroke="#04444b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><h3>A 400-hour accredited diploma</h3><p>Recognised by the GPBA and AADP — a professional credential, not a weekend certificate.</p></div>
+          <div><h3>A 400-hour accredited diploma</h3><p>Triple accredited by the FHT, GPBA, and AADP: a professional credential, not a weekend certificate.</p></div>
         </li>
         <li class="rv">
           <span class="o-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 8a5 5 0 1 0-10 0M3 21c0-3.5 4-6 9-6s9 2.5 9 6" stroke="#04444b" stroke-width="1.6" stroke-linecap="round"/></svg></span>
@@ -1001,11 +1080,101 @@
         <path d="m45 96 5 14 10-8 10 8 5-14" stroke="#E1B668" stroke-width="2" fill="none" stroke-linejoin="round"/>
       </svg>
       <h3>Certified Breathwork Facilitator</h3>
-      <p>Awarded upon completion of all five phases, your practicum hours, and final assessment — signed by Anthony Abbagnano and the Alchemy of Breath faculty.</p>
+      <p>Awarded upon completion of all five phases, your practicum hours, and final assessment, signed by Anthony Abbagnano and the Alchemy of Breath faculty.</p>
       <div class="cert-tags">
-        <span>GPBA</span><span>AADP</span><span>400 Hours</span><span>Trauma-Informed</span>
+        <span>FHT</span><span>GPBA</span><span>AADP</span><span>400 Hours</span><span>Trauma-Informed</span>
       </div>
     </aside>
+  </div>
+</section>
+
+<!-- ──────────────── INVESTMENT / TUITION ──────────────── -->
+<section class="invest sec" id="investment">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Two ways to walk it</p>
+      <h2>Your investment, <span class="em">stated plainly</span></h2>
+      <p>The certification is the same on both paths. Choose the format that fits your life, then let a Success Advisor walk you through the exact figures and payment plans on your discovery call. All tuition is in euros.</p>
+    </div>
+
+    <div class="paths-grid">
+      <article class="path-card rv">
+        <span class="path-tag">Online · 8 months</span>
+        <h3>Facilitator Training</h3>
+        <p class="path-lede">The full 400-hour certification, taught live online with weekly calls, mentorship, and practice pods. Train from anywhere in the world.</p>
+        <div class="path-price"><span class="now">€1,649</span><span class="to">to €3,995</span></div>
+        <p class="path-note">Tuition varies with the options and payment plan you choose.</p>
+        <ul class="path-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 400-hour, triple accredited certification</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Weekly live calls and Master Trainer mentorship</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Supervised practicum and client hours</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Lifetime access to the curriculum and community</li>
+        </ul>
+        <a href="#book" class="btn btn-ghost">Book your discovery call <span class="arr">→</span></a>
+      </article>
+
+      <article class="path-card feat rv">
+        <span class="path-tag">Live residential · ASHA, Tuscany</span>
+        <h3>Live Residential Facilitator Training</h3>
+        <p class="path-lede">The same certification, taught in person at the Alchemy School of Healing Arts in the Tuscan hills. Immersive days, shared meals, a cohort that becomes family.</p>
+        <div class="path-price"><span class="now">€1,649</span><span class="to">to €5,550</span></div>
+        <p class="path-note">Tuition varies with the options and payment plan you choose.</p>
+        <ul class="path-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 400-hour, triple accredited certification</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> In-person teaching with Anthony and Master Trainers</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Immersive residential practice at ASHA</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Lifetime access to the curriculum and community</li>
+        </ul>
+        <a href="#book" class="btn btn-gold">Book your discovery call <span class="arr">→</span></a>
+      </article>
+    </div>
+
+    <div class="invest-callout rv">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#00a5b2" stroke-width="1.7"/><path d="M12 8v5" stroke="#00a5b2" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1.2" fill="#E1B668"/></svg>
+      <div><b>BreathCamp is a separate investment.</b> The graduation BreathCamp at ASHA, Italy is not included in the tuition above. It is booked and paid separately, and your Success Advisor will share current BreathCamp pricing on your call.</div>
+    </div>
+    <!-- When the confirmed BreathCamp price range is available, state it in the callout and in the table row below. -->
+
+    <div class="compare-wrap rv">
+      <table class="compare">
+        <caption class="sr-only">Comparison of the online and live residential facilitator trainings</caption>
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Feature</span></th>
+            <th scope="col">Facilitator Training, online</th>
+            <th scope="col">Live Residential Facilitator Training</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Format</th>
+            <td>Live online over 8 months, from anywhere</td>
+            <td>In person at ASHA, Tuscany</td>
+          </tr>
+          <tr>
+            <th scope="row">Certification</th>
+            <td>400 hours, triple accredited: FHT, GPBA, AADP</td>
+            <td>400 hours, triple accredited: FHT, GPBA, AADP</td>
+          </tr>
+          <tr>
+            <th scope="row">Mentorship</th>
+            <td>Weekly live calls and practice pods</td>
+            <td>Daily in-person teaching and practice</td>
+          </tr>
+          <tr class="price-row">
+            <th scope="row">Tuition, in euros</th>
+            <td><span class="price">€1,649 to €3,995</span></td>
+            <td><span class="price">€1,649 to €5,550</span></td>
+          </tr>
+          <tr>
+            <th scope="row">BreathCamp at ASHA</th>
+            <td><span class="sep">Separate investment</span>, paid in addition to tuition</td>
+            <td><span class="sep">Separate investment</span>, paid in addition to tuition</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="invest-fine rv">All tuition is stated in euros. Payment plans are available on both paths; the exact figure depends on the options you choose. BreathCamp, travel, and accommodation are not included in tuition.</p>
   </div>
 </section>
 
@@ -1017,7 +1186,7 @@
       <h2 class="rv">Begin with a <span class="em">free discovery call</span></h2>
       <p class="rv" style="color:var(--ink-soft); max-width:34em;">Twenty unhurried minutes with our admissions team. We’ll listen to where you are, walk you through the curriculum and investment, and honestly tell you whether this training is the right fit. If it isn’t, we’ll say so.</p>
       <ul class="book-points">
-        <li class="rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Every question answered — curriculum, schedule, payment plans</li>
+        <li class="rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Every question answered: curriculum, tuition, payment plans, BreathCamp</li>
         <li class="rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> A clear-eyed assessment of fit, both ways</li>
         <li class="rv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#E1B668" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="#00a5b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Zero pressure. Admission is a mutual decision, never a sale</li>
       </ul>
@@ -1068,8 +1237,12 @@
         <p class="faq-body">No. The 8-month certification begins with foundations and builds progressively. Many of our most successful graduates began with nothing but their own breath and a calling to serve others.</p>
       </details>
       <details class="faq-item rv">
-        <summary>Is the certification internationally recognised? <span class="faq-x">+</span></summary>
-        <p class="faq-body">Yes. The training is accredited by the Global Professional Breathwork Alliance (GPBA) and the American Association of Drugless Practitioners (AADP), with graduates practising in more than 60 countries.</p>
+        <summary>Is the certification internationally recognized? <span class="faq-x">+</span></summary>
+        <p class="faq-body">Yes. The training is triple accredited by the Federation of Holistic Therapies (FHT), the Global Professional Breathwork Alliance (GPBA), and the American Association of Drugless Practitioners (AADP), and Alchemy of Breath is a proud member of the International Breathwork Foundation. Graduates are practicing in more than 60 countries.</p>
+      </details>
+      <details class="faq-item rv">
+        <summary>How much does the facilitator training cost? <span class="faq-x">+</span></summary>
+        <p class="faq-body">Tuition for the online Facilitator Training ranges from €1,649 to €3,995. Tuition for the Live Residential Facilitator Training ranges from €1,649 to €5,550. The final figure depends on the options and payment plan you choose. The graduation BreathCamp at ASHA, Italy is a separate investment and is not included in tuition. Your Success Advisor will walk you through the exact figures on your discovery call.</p>
       </details>
       <details class="faq-item rv">
         <summary>How much time do I need each week? <span class="faq-x">+</span></summary>
@@ -1081,7 +1254,7 @@
       </details>
       <details class="faq-item rv">
         <summary>Can I really build a career as a breathwork facilitator? <span class="faq-x">+</span></summary>
-        <p class="faq-body">Yes. The final phase of the training is dedicated to the business of breathwork: positioning, pricing, ethics, and client care. Graduates run private practices, retreats, corporate programmes, and online communities worldwide.</p>
+        <p class="faq-body">Yes. The final phase of the training is dedicated to the business of breathwork: positioning, pricing, ethics, and client care. Graduates run private practices, retreats, corporate programs, and online communities worldwide.</p>
       </details>
     </div>
     <div class="center rv" style="margin-top:3rem;">
@@ -1113,7 +1286,7 @@
     </div>
     <div class="foot-base">
       <span>© <span id="yr">2026</span> Alchemy of Breath. All rights reserved.</span>
-      <span>Accredited by the GPBA &amp; AADP · Trauma-informed · Est. 2015</span>
+      <span>Triple accredited: FHT, GPBA &amp; AADP · Trauma-informed · Est. 2015</span>
     </div>
   </div>
 </footer>
@@ -1148,7 +1321,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new IntersectionObserver(([e]) => { onBook = e.isIntersecting; update(); }, { threshold: 0.2 }).observe(bookSec);
   }
 
-  /* breathing orb word — synced to the 7s CSS cycle (rings peak mid-cycle) */
+  /* breathing orb word, synced to the 7s CSS cycle (rings peak mid-cycle) */
   const breathWord = document.getElementById('breathWord');
   if (breathWord && !reduceMotion) {
     const cycle = () => {
@@ -1166,7 +1339,7 @@ window.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (!form.reportValidity()) return;
     const btn = form.querySelector('button');
-    btn.textContent = 'Thank you — check your inbox ✓';
+    btn.textContent = 'Thank you. Check your inbox ✓';
     btn.disabled = true;
     /* TODO: POST to GHL webhook or redirect to booking calendar:
        window.location.href = 'https://alchemyofbreath.com/discovery-call'; */
@@ -1179,7 +1352,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   gsap.registerPlugin(ScrollTrigger);
 
-  /* hero entrance — staggered rise */
+  /* hero entrance: staggered rise */
   gsap.to('.hero-copy .rv, .hero .orb-stage', {
     opacity: 1, y: 0, duration: 1.1, ease: 'power3.out',
     stagger: 0.12, delay: 0.15
