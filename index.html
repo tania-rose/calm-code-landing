@@ -127,7 +127,7 @@
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
+  html { scroll-behavior:smooth; scroll-padding-top: 92px; }
   body {
     font-family: var(--sans);
     background: var(--bg);
@@ -181,6 +181,12 @@
   .btn-light:hover { transform: translateY(-3px); }
   .btn .arr { transition: transform .35s var(--ease); }
   .btn:hover .arr { transform: translateX(4px); }
+  .link-quiet {
+    font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+    color:var(--teal-deep); text-decoration:underline; text-underline-offset:5px;
+    text-decoration-color: var(--gold); transition: color .3s;
+  }
+  .link-quiet:hover { color: var(--teal); }
 
   /* ────────────────────────────────────────────
      NAV
@@ -210,7 +216,40 @@
   }
   .nav-links a:hover::after { width:100%; }
   .nav-cta { padding:.78rem 1.6rem; font-size:.72rem; }
-  @media (max-width: 880px) { .nav-links { display:none; } }
+  .nav-burger {
+    display:none; width:44px; height:44px; flex:none;
+    border-radius:12px; border:1.5px solid rgba(34,31,32,.18);
+    background:var(--white); color:var(--ink); cursor:pointer;
+    place-items:center; transition: border-color .3s;
+  }
+  .nav-burger:hover { border-color: var(--teal); }
+  .nav-burger svg { width:22px; height:22px; }
+  .nav-burger .ic-close { display:none; }
+  .nav-burger[aria-expanded="true"] .ic-close { display:block; }
+  .nav-burger[aria-expanded="true"] .ic-open { display:none; }
+  .nav-menu {
+    display:none;
+    border-top:1px solid rgba(34,31,32,.08);
+    background: rgba(247,244,239,.97);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-md);
+  }
+  .nav-menu.open { display:block; }
+  .nav-menu-inner { padding:.4rem 0 1.1rem; }
+  .nav-menu a {
+    display:flex; justify-content:space-between; align-items:center; gap:1rem;
+    padding:.9rem .2rem; text-decoration:none;
+    font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; font-weight:600;
+    color:var(--ink-soft); border-bottom:1px solid rgba(34,31,32,.06);
+  }
+  .nav-menu a:last-child { border-bottom:none; }
+  .nav-menu a .arr-d { color:var(--gold); }
+  .nav-menu a.featured { color:var(--gold-2); }
+  @media (max-width: 880px) {
+    .nav-links { display:none; }
+    .nav-burger { display:grid; }
+    .nav-cta { display:none; }
+  }
 
   /* ────────────────────────────────────────────
      HERO
@@ -601,6 +640,58 @@
   @media (max-width: 880px) { .paths-grid { grid-template-columns:1fr; } }
 
   /* ────────────────────────────────────────────
+     EARNING POTENTIAL CALCULATOR
+  ──────────────────────────────────────────── */
+  .earn { background: var(--white); }
+  .earn-paths { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-bottom:1.6rem; }
+  .earn-path {
+    font-family:var(--sans); text-align:left; cursor:pointer;
+    background:var(--bg); border:1.5px solid rgba(34,31,32,.12); border-radius:20px;
+    padding:1.4rem 1.5rem; transition: border-color .3s, background .3s, box-shadow .3s, transform .4s var(--ease);
+  }
+  .earn-path:hover { transform: translateY(-2px); }
+  .earn-path:focus-visible { outline:3px solid rgba(0,165,178,.5); outline-offset:2px; }
+  .earn-path strong { display:flex; align-items:center; gap:.6rem; font-size:.98rem; font-weight:600; color:var(--ink); }
+  .earn-path strong svg { flex:none; }
+  .earn-path span { display:block; font-size:.84rem; color:var(--muted); margin-top:.4rem; font-weight:300; }
+  .earn-path[aria-pressed="true"] {
+    border-color: var(--gold);
+    background: linear-gradient(165deg, var(--white), var(--bg-warm));
+    box-shadow: var(--shadow-sm), 0 0 0 1px var(--gold);
+  }
+  .earn-panel {
+    background:var(--bg); border:1px solid rgba(34,31,32,.08); border-radius:26px;
+    padding: clamp(1.4rem, 3vw, 2.2rem); box-shadow: var(--shadow-sm);
+  }
+  .earn-intro { font-size:.9rem; color:var(--muted); margin-bottom:1.5rem; max-width: 56em; }
+  .earn-main { display:grid; grid-template-columns:1.15fr .85fr; gap:2rem; }
+  .earn-fields { display:grid; gap:1rem; align-content:start; }
+  .earn-field { display:grid; grid-template-columns:1fr 110px; gap:.5rem 1rem; align-items:center; }
+  .earn-field label { font-size:.88rem; font-weight:600; color:var(--ink); }
+  .earn-field small { color:var(--muted); font-weight:300; }
+  .earn-field input {
+    width:100%; padding:.7rem .9rem; text-align:right;
+    border:1.5px solid rgba(34,31,32,.14); border-radius:12px;
+    font-family:var(--sans); font-size:.95rem; color:var(--ink);
+    background:var(--white); outline:none; transition: border-color .3s, box-shadow .3s;
+  }
+  .earn-field input:focus { border-color:var(--teal); box-shadow:0 0 0 4px rgba(0,165,178,.12); }
+  .earn-result {
+    background: linear-gradient(165deg, var(--bg-warm), rgba(225,182,104,.2));
+    border:1px solid rgba(225,182,104,.45); border-radius:20px;
+    padding:1.6rem; align-self:start;
+  }
+  .earn-result .lbl { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; font-weight:700; color:var(--muted); }
+  .earn-result output { display:block; font-family:var(--serif); font-size:clamp(2.2rem,4vw,2.9rem); font-weight:600; color:var(--teal-deep); margin:.45rem 0 .25rem; line-height:1; }
+  .earn-result .annual { font-size:.88rem; font-weight:600; color:var(--ink-soft); }
+  .earn-break { margin-top:1.1rem; border-top:1px solid rgba(225,182,104,.55); padding-top:.9rem; font-size:.82rem; color:var(--ink-soft); }
+  .earn-break div { display:flex; justify-content:space-between; gap:1rem; padding:.2rem 0; }
+  .earn-break b { font-weight:600; }
+  .earn-note { font-size:.74rem; color:var(--muted); margin-top:1.5rem; line-height:1.65; }
+  .earn-cta { text-align:center; margin-top:2.4rem; }
+  @media (max-width: 880px) { .earn-paths, .earn-main { grid-template-columns:1fr; } }
+
+  /* ────────────────────────────────────────────
      DISCOVERY CALL CTA
   ──────────────────────────────────────────── */
   .book {
@@ -734,12 +825,28 @@
       <ul class="nav-links">
         <li><a href="#about">The Training</a></li>
         <li><a href="#journey">Curriculum</a></li>
+        <li><a href="#earning-potential">Earnings</a></li>
         <li><a href="#investment">Tuition</a></li>
         <li><a href="#stories">Stories</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
     <a href="#book" class="btn btn-gold nav-cta">Book a Discovery Call</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+      <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <div class="nav-menu" id="navMenu">
+    <div class="wrap nav-menu-inner">
+      <a href="#about">The training <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#journey">Curriculum <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#earning-potential" class="featured">Earning potential <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#investment">Tuition &amp; payment options <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#stories">Graduate stories <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#faq">FAQ <span class="arr-d" aria-hidden="true">↘</span></a>
+      <a href="#book">Book a discovery call <span class="arr-d" aria-hidden="true">↘</span></a>
+    </div>
   </div>
 </header>
 
@@ -755,6 +862,7 @@
       <div class="hero-ctas rv">
         <a href="#book" class="btn btn-gold">Book Your Free Discovery Call <span class="arr">→</span></a>
         <a href="#journey" class="btn btn-ghost">Explore the Curriculum</a>
+        <a href="#earning-potential" class="link-quiet">Explore your earning potential ↓</a>
       </div>
       <p class="hero-note rv">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#00a5b2" stroke-width="1.6"/><path d="m9 12 2 2 4-4" stroke="#E1B668" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1042,6 +1150,55 @@
           <span><span class="nm">Priya K.</span><br/><span class="rl">Facilitator &amp; Retreat Leader, Bali</span></span>
         </figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────── EARNING POTENTIAL ──────────────── -->
+<section class="earn sec" id="earning-potential">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Explore your earning potential</p>
+      <h2>What could breathwork <span class="em">make possible</span> for you?</h2>
+      <p>Whether you're starting something new or adding breathwork to your existing practice, explore an illustrative revenue scenario. You can change every number.</p>
+    </div>
+
+    <div class="earn-paths rv" role="group" aria-label="Choose your starting point">
+      <button type="button" class="earn-path" data-audience="new" aria-pressed="true">
+        <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21v-7m0 0c0-5 3-8 8-8-1 6-3.5 8-8 8zm0 0c0-4-2.5-6-7-6 .8 5 3 6 7 6z" stroke="#00a5b2" stroke-width="1.7" stroke-linejoin="round"/></svg> I'm starting something new</strong>
+        <span>Explore building a new breathwork practice, one client at a time.</span>
+      </button>
+      <button type="button" class="earn-path" data-audience="existing" aria-pressed="false">
+        <strong><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18" stroke="#E1B668" stroke-width="1.7" stroke-linecap="round"/></svg> I'm expanding my existing practice</strong>
+        <span>Explore adding private breathwork and workshops to the services you already offer.</span>
+      </button>
+    </div>
+
+    <div class="earn-panel rv" id="aob-earnings-calculator">
+      <p class="earn-intro" id="aob-scenario-description">Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.</p>
+      <div class="earn-main">
+        <div class="earn-fields">
+          <div class="earn-field"><label for="aob-clients">Private sessions per week</label><input id="aob-clients" type="number" min="0" max="100" step="1" value="2" inputmode="numeric"></div>
+          <div class="earn-field"><label for="aob-fee">Price per private session <small>(USD)</small></label><input id="aob-fee" type="number" min="0" max="10000" step="5" value="125" inputmode="decimal"></div>
+          <div class="earn-field"><label for="aob-groups">Group workshops per month</label><input id="aob-groups" type="number" min="0" max="100" step="1" value="1" inputmode="numeric"></div>
+          <div class="earn-field"><label for="aob-groupfee">Revenue per workshop <small>(USD)</small></label><input id="aob-groupfee" type="number" min="0" max="100000" step="25" value="350" inputmode="decimal"></div>
+          <div class="earn-field"><label for="aob-weeks">Weeks of private sessions per year</label><input id="aob-weeks" type="number" min="0" max="52" step="1" value="52" inputmode="numeric"></div>
+        </div>
+        <div class="earn-result" aria-live="polite" aria-atomic="true">
+          <div class="lbl">Illustrative monthly gross revenue</div>
+          <output id="aob-monthly" for="aob-clients aob-fee aob-groups aob-groupfee aob-weeks">$1,433</output>
+          <div class="annual">Annual gross: <span id="aob-yearly">$17,200</span></div>
+          <div class="earn-break">
+            <div><span>Private sessions / month</span><b id="aob-private-total">$1,083</b></div>
+            <div><span>Workshops / month</span><b id="aob-workshop-total">$350</b></div>
+          </div>
+        </div>
+      </div>
+      <p class="earn-note">Illustrative revenue only, not average graduate earnings, guaranteed results, or net profit. Assumes all planned appointments and workshops are booked and paid. Figures exclude taxes, business expenses, cancellations, and other costs. Training does not guarantee clients or income.</p>
+    </div>
+
+    <div class="earn-cta rv">
+      <a href="#book" class="btn btn-gold">Talk it through on a discovery call <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -1344,6 +1501,67 @@ window.addEventListener('DOMContentLoaded', () => {
     /* TODO: POST to GHL webhook or redirect to booking calendar:
        window.location.href = 'https://alchemyofbreath.com/discovery-call'; */
   });
+
+  /* mobile jump menu (icons toggled via CSS, so outside-click detection stays reliable) */
+  const burger = document.getElementById('navBurger');
+  const navMenu = document.getElementById('navMenu');
+  if (burger && navMenu) {
+    const setMenu = (open) => {
+      navMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+    burger.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) { setMenu(false); burger.focus(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('open') && !e.target.closest('#nav')) setMenu(false);
+    });
+  }
+
+  /* dual-path earnings calculator
+     ?audience=existing preselects the practitioner scenario for ad campaigns
+     (also accepts ?path=existing); the neutral page defaults to new. */
+  (function () {
+    const calcRoot = document.getElementById('aob-earnings-calculator');
+    if (!calcRoot) return;
+    const presets = {
+      new: { clients: 2, fee: 125, groups: 1, groupfee: 350, weeks: 52,
+        description: 'Start with a modest number of private clients and a small group workshop. Adjust the assumptions to fit your goals.' },
+      existing: { clients: 4, fee: 150, groups: 2, groupfee: 500, weeks: 52,
+        description: 'Explore offering breathwork alongside your existing services. Existing clients and marketing channels may help, but bookings are never guaranteed.' }
+    };
+    const ids = { clients: 'aob-clients', fee: 'aob-fee', groups: 'aob-groups', groupfee: 'aob-groupfee', weeks: 'aob-weeks' };
+    const fields = Object.fromEntries(Object.entries(ids).map(([k, v]) => [k, document.getElementById(v)]));
+    const money = (n) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
+    const num = (k) => {
+      const el = fields[k], lo = Number(el.min || 0), hi = Number(el.max || 1000000), n = Number(el.value);
+      return Number.isFinite(n) ? Math.max(lo, Math.min(hi, n)) : 0;
+    };
+    const calc = () => {
+      const privateAnnual = num('clients') * num('fee') * num('weeks');
+      const workshopsAnnual = num('groups') * num('groupfee') * 12;
+      document.getElementById('aob-monthly').textContent = money((privateAnnual + workshopsAnnual) / 12);
+      document.getElementById('aob-yearly').textContent = money(privateAnnual + workshopsAnnual);
+      document.getElementById('aob-private-total').textContent = money(privateAnnual / 12);
+      document.getElementById('aob-workshop-total').textContent = money(workshopsAnnual / 12);
+    };
+    const select = (type) => {
+      const p = presets[type] || presets.new;
+      Object.keys(ids).forEach(k => { fields[k].value = p[k]; });
+      document.querySelectorAll('.earn-path[data-audience]').forEach(b =>
+        b.setAttribute('aria-pressed', String(b.dataset.audience === type)));
+      document.getElementById('aob-scenario-description').textContent = p.description;
+      calc();
+    };
+    document.querySelectorAll('.earn-path[data-audience]').forEach(b =>
+      b.addEventListener('click', () => select(b.dataset.audience)));
+    Object.values(fields).forEach(f => f.addEventListener('input', calc));
+    const query = new URLSearchParams(window.location.search);
+    select(query.get('audience') === 'existing' || query.get('path') === 'existing' ? 'existing' : 'new');
+  })();
 
   /* GSAP animations (graceful if CDN blocked) */
   if (typeof gsap === 'undefined' || reduceMotion) {

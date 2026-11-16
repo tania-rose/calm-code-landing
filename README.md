@@ -21,9 +21,11 @@ optimised to book free discovery calls.
 - Sticky mobile CTA bar that hides when the booking section is in view
 
 ## Sections
-Nav · Hero (orb + trust stats) · Accreditation strip · About/Founder · Who It's For ·
-8-Month Curriculum (dark) · BreathCamp Tuscany banner · Testimonials · Outcomes +
-Certificate card · Discovery-call booking · FAQ (accordion) · Footer
+Nav (sticky, with mobile jump menu) · Hero (orb + trust stats) · Accreditation strip ·
+About/Founder · Who It's For · 8-Month Curriculum (dark) · BreathCamp Tuscany banner ·
+Testimonials · Earning Potential (dual-path USD calculator, `?audience=existing` preselects
+the practitioner scenario for ad traffic) · Outcomes + Certificate card · Investment
+(euro tuition, BreathCamp separate) · Discovery-call booking · FAQ (accordion) · Footer
 
 ## SEO
 - Title/meta/canonical, Open Graph + Twitter cards
